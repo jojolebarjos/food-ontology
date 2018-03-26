@@ -23,23 +23,23 @@ seasoning
 #
 
 salt
-  is_a seasoning
+  kind_of seasoning
   label Salt
   foodb 666
   wikipedia Salt
 
 himalayan_salt
-  is_a salt
+  kind_of salt
   label Himalayan salt
   wikipedia Himalayan_salt
 
 kosher_salt
-  is_a salt
+  kind_of salt
   label Kosher salt
   wikipedia Kosher_salt
 
 sea_salt
-  is_a salt
+  kind_of salt
   label Sea salt
   wikipedia Sea_salt
 
@@ -58,50 +58,50 @@ sweetener
 # Common sugars
 
 sugar
-  is_a sweetener
+  kind_of sweetener
   label Sugar
   foodb 670
 
 brown_sugar
-  is_a sugar
+  kind_of sugar
   label Brown sugar
 
 granulated_sugar
-  is_a sugar
+  kind_of sugar
   label Granulated sugar
 
 powdered_sugar
-  is_a sugar
+  kind_of sugar
   label Powdered sugar
 
 turbinado_sugar
-  is_a sugar
+  kind_of sugar
   label Turbinado sugar
 
 sugar_substitute
-  is_a sweetener
+  kind_of sweetener
   label Sugar substitute
   foodb 676
 
 aspartame
-  is_a sugar_substitute
+  kind_of sugar_substitute
   label Aspartame
 
 fructose
-  is_a sugar_substitute
+  kind_of sugar_substitute
   label Fructose
 
 saccharin
-  is_a sugar_substitute
+  kind_of sugar_substitute
   label Saccharin
 
 stevia
-  is_a sugar_substitute
+  kind_of sugar_substitute
   label Stevia
   wikipedia Stevia
 
 sucralose
-  is_a sugar_substitute
+  kind_of sugar_substitute
   label Sucralose
   wikipedia Sucralose
 
@@ -109,43 +109,43 @@ sucralose
 # Sugar syrups
 
 syrup
-  is_a sweetener
+  kind_of sweetener
   label Syrup
   foodb 695
 
 agave_syrup
-  is_a syrup
+  kind_of syrup
   label Agave syrup
 
 cane_syrup
-  is_a syrup
+  kind_of syrup
   label Cane syrup
 
 chocolate_syrup
-  is_a syrup
+  kind_of syrup
   label Chocolate syrup
 
 corn_syrup
-  is_a syrup
+  kind_of syrup
   label Corn syrup
 
 malt_syrup
-  is_a syrup
+  kind_of syrup
   label Malt syrup
 
 maple_syrup
-  is_a syrup
+  kind_of syrup
   label Maple syrup
 
 sorghum_syrup
-  is_a syrup
+  kind_of syrup
   label Sorghum syrup
 
 
 # Flavored syrups, used as beverage
 
 fruit_syrup
-  is_a syrup
+  kind_of syrup
   # TODO how to classify fruit syrup?
   label Fruit syrup
   wikipedia Fruit_syrup
@@ -154,14 +154,14 @@ fruit_syrup
 # Miscellaneous sweeteners
 
 honey
-  is_a sweetener
+  kind_of sweetener
   product_of bee
   label Honey
   foodb 643
   wikipedia Honey
 
 molasses
-  is_a sweetener
+  kind_of sweetener
   label Molasses
   foodb 811
   wikipedia Molasses
@@ -178,13 +178,13 @@ jelly
   label Jelly
 
 gelatin
-  is_a jelly
+  kind_of jelly
   label Gelatin
   foodb 684
   wikipedia Gelatin
 
 pectin
-  is_a jelly
+  kind_of jelly
   label Pectin
   foodb 758
 
@@ -200,22 +200,22 @@ leavening_agent
   wikipedia Leavening_agent
 
 baking_powder
-  is_a leavening_agent
+  kind_of leavening_agent
   label Baking powder
   wikipedia Baking_powder
 
 baking_soda
-  is_a leavening_agent
+  kind_of leavening_agent
   label Baking soda
   wikipedia Sodium_bicarbonate
 
 cream_of_tartar
-  is_a leavening_agent
+  kind_of leavening_agent
   label Cream of tartar
   wikipedia Potassium_bitartrate
 
 yeast
-  is_a leavening_agent
+  kind_of leavening_agent
   label Yeast
   wikipedia Yeast
 
@@ -228,13 +228,13 @@ yeast
 # TODO connect vinegars to their sources
 
 vinegar
-  is_a seasoning
+  kind_of seasoning
   label Vinegar
   foodb 645
   wikipedia Vinegar
 
 balsamic_vinegar
-  is_a vinegar
+  kind_of vinegar
   label Balsamic vinegar
   wikipedia Balsamic_vinegar
 
@@ -247,7 +247,7 @@ balsamic_vinegar
 # TODO relate sauces to their sources
 
 sauce
-  is_a seasoning
+  kind_of seasoning
   label Sauce
   foodb 665
 
@@ -255,12 +255,12 @@ sauce
 # Tomato-based sauces and extract
 
 tomato_sauce
-  is_a sauce
-  is_a tomato_product
+  kind_of sauce
+  kind_of tomato_product
   label Tomato sauce
 
 ketchup
-  is_a tomato_sauce
+  kind_of tomato_sauce
   label Ketchup
   foodb 781
 
@@ -268,167 +268,167 @@ ketchup
 # Miscellaneous sauces
 
 dressing
-  is_a sauce
+  kind_of sauce
   label Dressing
 
 creamy_dressing
-  is_a dressing
+  kind_of dressing
   label Creamy dressing
 
 salad_dressing
-  is_a dressing
+  kind_of dressing
   label Salad dressing
   foodb 664
 
 blue_cheese_dressing
-  is_a salad_dressing
+  kind_of salad_dressing
   label Blue cheese dressing
 
 caesar_dressing
-  is_a salad_dressing
+  kind_of salad_dressing
   label Caesar dressing
 
 coleslaw_dressing
-  is_a salad_dressing
+  kind_of salad_dressing
   label Coleslaw dressing
 
 french_dressing
-  is_a salad_dressing
+  kind_of salad_dressing
   label French dressing
 
 honey_mustard_dressing
-  is_a salad_dressing
+  kind_of salad_dressing
   label Honey mustard dressing
 
 italian_dressing
-  is_a salad_dressing
+  kind_of salad_dressing
   label Italian dressing
 
 mayonnaise_dressing
-  is_a salad_dressing
+  kind_of salad_dressing
   label Mayonnaise dressing
 
 ranch_dressing
-  is_a salad_dressing
+  kind_of salad_dressing
   label Ranch dressing
 
 russian_dressing
-  is_a salad_dressing
+  kind_of salad_dressing
   label Russian dressing
 
 thousand_island_dressing
-  is_a salad_dressing
+  kind_of salad_dressing
   label Thousand island dressing
 
 sour_dressing
-  is_a dressing
+  kind_of dressing
   label Sour dressing
 
 barbecue_sauce
-  is_a sauce
+  kind_of sauce
   label Barbecue sauce
 
 bean_sauce
-  is_a sauce
+  kind_of sauce
   label Bean sauce
 
 cheese_sauce
-  is_a sauce
+  kind_of sauce
   label Cheese sauce
 
 chili_sauce
-  is_a sauce
+  kind_of sauce
   label Chili sauce
   wikipedia Salsa_(sauce)
 
 cocktail_sauce
-  is_a sauce
+  kind_of sauce
   label Cocktail sauce
 
 cranberry_sauce
-  is_a sauce
+  kind_of sauce
   label Cranberry sauce
 
 duck_sauce
-  is_a sauce
+  kind_of sauce
   label Duck sauce
 
 fish_sauce
-  is_a sauce
+  kind_of sauce
   label Fish sauce
 
 gravy
-  is_a sauce
+  kind_of sauce
   label Gravy
 
 green_sauce
-  is_a sauce
+  kind_of sauce
   label Green sauce
   wikipedia Green_sauce
 
 guava_sauce
-  is_a sauce
+  kind_of sauce
   label Guava sauce
 
 hoisin_sauce
-  is_a sauce
+  kind_of sauce
   label Hoisin
 
 horseradish_sauce
-  is_a sauce
+  kind_of sauce
   label Horseradish sauce
 
 mayonnaise
-  is_a sauce
+  kind_of sauce
   label Mayonnaise
 
 mustard
-  is_a sauce
+  kind_of sauce
   label Mustard
   foodb 673
 
 oyster_sauce
-  is_a sauce
+  kind_of sauce
   label Oyster sauce
 
 peanut_sauce
-  is_a sauce
+  kind_of sauce
   label Peanut sauce
 
 pesto
-  is_a sauce
+  kind_of sauce
   label Pesto
 
 plum_sauce
-  is_a sauce
+  kind_of sauce
   label Plum sauce
 
 sriracha
-  is_a sauce
+  kind_of sauce
   label Sriracha
 
 steak_sauce
-  is_a sauce
+  kind_of sauce
   label Steak sauce
 
 sweet_sour_sauce
-  is_a sauce
+  kind_of sauce
   label Sweet and sour sauce
 
 tartar_sauce
-  is_a sauce
+  kind_of sauce
   label Tartar sauce
 
 teriyaki
-  is_a sauce
+  kind_of sauce
   label Teriyaki
 
 white_sauce
-  is_a sauce
+  kind_of sauce
   label White sauce
 
 worcestershire_sauce
-  is_a sauce
+  kind_of sauce
   label Worcestershire sauce
 
 
@@ -441,7 +441,7 @@ worcestershire_sauce
 # TODO fix herbs and spices naming convention (e.g. seeds)
 
 herb_and_spice
-  is_a seasoning
+  kind_of seasoning
   label Herb and spice
   foodb 897
 
@@ -449,363 +449,363 @@ herb_and_spice
 # Herbs
 
 herb
-  is_a herb_and_spice
+  kind_of herb_and_spice
   label Herb
   wikipedia Herb
 
 alfalfa
-  is_a herb
+  kind_of herb
   label Alfalfa
   foodb 287
   wikipedia Alfalfa
 
 amaranth
-  is_a herb
+  kind_of herb
   label Amaranth
   foodb 289
   wikipedia Amaranth
 
 angelica
-  is_a herb
+  kind_of herb
   label Angelica
   foodb 1
   wikipedia Angelica_archangelica
 
 anise
-  is_a herb
+  kind_of herb
   label Anise
   foodb 137
   wikipedia Anise
 
 basil
-  is_a herb
+  kind_of herb
   label Basil
   foodb 119
   wikipedia Basil
 
 bay
-  is_a herb
+  kind_of herb
   label Bay leaf
   foodb 97
   wikipedia Laurus_nobilis
 
 chive
-  is_a herb
+  kind_of herb
   label Chive
   foodb 9
   wikipedia Chives
 
 coriander
-  is_a herb
+  kind_of herb
   label Coriander
   foodb 61
   wikipedia Coriander
 
 dandelion
-  is_a herb
+  kind_of herb
   label Dandelion
   foodb 181
   wikipedia Taraxacum
 
 dill
-  is_a herb
+  kind_of herb
   label Dill
   foodb 13
   wikipedia Dill
 
 dock
-  is_a herb
+  kind_of herb
   label Dock
   foodb 355
   wikipedia Rumex
 
 sorrel
-  is_a dock
+  kind_of dock
   label Sorrel
   foodb 164
   wikipedia Sorrel
 
 sourdock
-  is_a dock
+  kind_of dock
   label Sourdock
   foodb 572
   wikipedia Rumex_arcticus
 
 epazote
-  is_a herb
+  kind_of herb
   label Epazote
   foodb 566
   wikipedia Dysphania_ambrosioides
 
 fennel
-  is_a herb
+  kind_of herb
   label Fennel
   foodb 82
   wikipedia Fennel
 
 fenugreek
-  is_a herb
+  kind_of herb
   label Fenugreek
   foodb 186
   wikipedia Fenugreek
 
 fireweed
-  is_a herb
+  kind_of herb
   label Fireweed
   foodb 370
   wikipedia Chamaenerion_angustifolium
 
 garden_chamomile
-  is_a herb
+  kind_of herb
   label Garden chamomile
   foodb 46
   wikipedia Chamaemelum_nobile
 
 garden_cress
-  is_a herb
+  kind_of herb
   label Garden cress
   foodb 99
   wikipedia Garden_cress
 
 garlic_chive
-  is_a herb
+  kind_of herb
   label Garlic chive
   foodb 216
   wikipedia Allium_tuberosum
 
 hyssop
-  is_a herb
+  kind_of herb
   label Hyssop
   foodb 89
   wikipedia Hyssopus_officinalis
 
 leaf_celery
-  is_a herb
+  kind_of herb
   label Leaf celery
   foodb 249
   wikipedia Leaf_celery
 
 lemon_balm
-  is_a herb
+  kind_of herb
   label Lemon balm
   foodb 108
   wikipedia Lemon_balm
 
 lemon_grass
-  is_a herb
+  kind_of herb
   label Lemon grass
   foodb 70
   wikipedia Cymbopogon_citratus
 
 lemon_thyme
-  is_a herb
+  kind_of herb
   label Lemon thyme
   foodb 238
   wikipedia Thymus_pulegioides
 
 lemon_verbena
-  is_a herb
+  kind_of herb
   label Lemon verbena
   foodb 10
   wikipedia Aloysia_citrodora
 
 linden
-  is_a herb
+  kind_of herb
   label Linden
   foodb 184
   wikipedia Tilia
 
 silver_linden
-  is_a linden
+  kind_of linden
   label Silver linden
   foodb 3
   wikipedia Tilia_tomentosa
 
-small-leaf_linden
-  is_a linden
+small_leaf_linden
+  kind_of linden
   label Small-leaf linden
   foodb 185
   wikipedia Tilia_cordata
 
 lovage
-  is_a herb
+  kind_of herb
   label Lovage
   foodb 100
   wikipedia Lovage
 
 marjoram
-  is_a herb
+  kind_of herb
   label Marjoram
   foodb 122
   wikipedia Marjoram
 
 mexican_oregano
-  is_a herb
+  kind_of herb
   label Mexican oregano
   foodb 102
   wikipedia Lippia_graveolens
 
 mint
-  is_a herb
+  kind_of herb
   label Mint
   foodb 109
   wikipedia Mentha
 
 corn_mint
-  is_a mint
+  kind_of mint
   label Corn mint
   foodb 111
   wikipedia Mentha_arvensis
 
 peppermint
-  is_a mint
+  kind_of mint
   label Peppermint
   foodb 113
   wikipedia Peppermint
 
 spearmint
-  is_a mint
+  kind_of mint
   label Spearmint
   foodb 112
   wikipedia Spearmint
 
 water_mint
-  is_a mint
+  kind_of mint
   label Water mint
   foodb 110
   wikipedia Mentha_citrata
 
 mugwort
-  is_a herb
+  kind_of herb
   label Mugwort
   foodb 20
   wikipedia Mugwort
 
 oregano
-  is_a herb
+  kind_of herb
   label Oregano
   foodb 124
   wikipedia Oregano
 
 italian_oregano
-  is_a oregano
+  kind_of oregano
   label Italian oregano
   foodb 259
 
 parsley
-  is_a herb
+  kind_of herb
   label Parsley
   foodb 131
   wikipedia Parsley
 
 pineapple_sage
-  is_a herb
+  kind_of herb
   label Pineapple sage
   foodb 266
   wikipedia Salvia_elegans
 
 pot_marjoram
-  is_a herb
+  kind_of herb
   label Pot marjoram
   foodb 123
   wikipedia Origanum_onites
 
 purslane
-  is_a herb
+  kind_of herb
   label Purslane
   foodb 142
   wikipedia Portulaca_oleracea
 
 rose_hip
-  is_a herb
+  kind_of herb
   label Rose hip
   foodb 456
   wikipedia Rose_hip
 
 roselle
-  is_a herb
+  kind_of herb
   label Roselle
   foodb 457
   wikipedia Roselle_(plant)
 
 rosemary
-  is_a herb
+  kind_of herb
   label Rosemary
   foodb 159
   wikipedia Rosemary
 
 sage
-  is_a herb
+  kind_of herb
   label Sage
   foodb 165
   wikipedia Salvia_officinalis
 
 savory
-  is_a herb
+  kind_of herb
   label Savory
   wikipedia Satureja
 
 summer_savory
-  is_a savory
+  kind_of savory
   label Summer savory
   foodb 167
   wikipedia Summer_savory
 
 winter_savory
-  is_a savory
+  kind_of savory
   label Winter savory
   foodb 168
   wikipedia Winter_savory
 
 tarragon
-  is_a herb
+  kind_of herb
   label Tarragon
   foodb 19
   wikipedia Tarragon
 
 teff
-  is_a herb
+  kind_of herb
   label Teff
   foodb 500
   wikipedia Eragrostis_tef
 
 thyme
-  is_a herb
+  kind_of herb
   label Thyme
   foodb 183
   wikipedia Thymus_vulgaris
 
 verbena
-  is_a herb
+  kind_of herb
   label Verbena
   foodb 196
   wikipedia Verbena_officinalis
 
 watercress
-  is_a herb
+  kind_of herb
   label Watercress
   foodb 158
   wikipedia Watercress
 
 wild_chamomile
-  is_a herb
+  kind_of herb
   label Wild chamomile
   foodb 107
   wikipedia Matricaria_chamomilla
 
 willow
-  is_a herb
+  kind_of herb
   label Willow
   wikipedia Willow
 
 tea_leaf_willow
-  is_a willow
+  kind_of willow
   label Tea leaf willow
   foodb 517
   wikipedia Salix_pulchra
 
 yellow_waterlily
-  is_a herb
+  kind_of herb
   label Yellow water-lily
   foodb 863
   wikipedia Nuphar_lutea
@@ -814,175 +814,175 @@ yellow_waterlily
 # Spices
 
 spice
-  is_a herb_and_spice
+  kind_of herb_and_spice
   label Spice
   wikipedia Spice
 
 allspice
-  is_a spice
+  kind_of spice
   label Allspice
   foodb 288
   wikipedia Allspice
 
 caper
-  is_a spice
+  kind_of spice
   label Caper
   foodb 39
   wikipedia Caper
 
 caraway
-  is_a spice
+  kind_of spice
   label Caraway
   foodb 43
   wikipedia Caraway
 
 cardamom
-  is_a spice
+  kind_of spice
   label Cardamom
   foodb 74
   wikipedia Cardamom
 
 cayenne_pepper
-  is_a spice
+  kind_of spice
   made_of capsicum_annuum
   label Cayenne pepper
   wikipedia Cayenne_pepper
 
 chervil
-  is_a spice
+  kind_of spice
   label Chervil
   foodb 332
   wikipedia Chervil
 
 chili_powder
-  is_a spice
+  kind_of spice
   # TODO what is chili powder?
   label Chili powder
   wikipedia Chili_powder
 
 cinnamon
-  is_a spice
+  kind_of spice
   label Cinnamon
   foodb 586
   wikipedia Cinnamon
 
 ceylon_cinnamon
-  is_a cinnamon
+  kind_of cinnamon
   label Ceylon cinnamon
   foodb 51
   wikipedia Cinnamomum_verum
 
 chinese_cinnamon
-  is_a cinnamon
+  kind_of cinnamon
   label Chinese cinnamon
   foodb 50
   wikipedia Cinnamomum_cassia
 
 clove
-  is_a spice
+  kind_of spice
   label Clove
   foodb 179
   wikipedia Clove
 
 cumin
-  is_a spice
+  kind_of spice
   label Cumin
   foodb 67
   wikipedia Cumin
 
 garlic_powder
-  is_a spice
+  kind_of spice
   made_of garlic
   label Garlic powder
   wikipedia Garlic_powder
 
 ginger_powder
-  is_a spice
+  kind_of spice
   made_of ginger
   label Ginger powder
 
 ginseng
-  is_a spice
+  kind_of spice
   label Ginseng
   foodb 219
   wikipedia Ginseng
 
 horseradish
-  is_a spice
+  kind_of spice
   label Horseradish
   foodb 18
   wikipedia Horseradish
 
 nutmeg
-  is_a spice
+  kind_of spice
   label Nutmeg
   foodb 118
   wikipedia Nutmeg
 
 mace
-  is_a nutmeg
+  kind_of nutmeg
   label Mace
 
 onion_powder
-  is_a spice
+  kind_of spice
   made_of onion
   label Onion powder
   wikipedia Onion_powder
 
 paprika
-  is_a spice
+  kind_of spice
   label Paprika
   wikipedia Paprika
 
 pepper
-  is_a spice
+  kind_of spice
   label Pepper
   foodb 139
   wikipedia Black_pepper
 
 black_pepper
-  is_a pepper
+  kind_of pepper
   label Black pepper
 
 green_pepper
-  is_a pepper
+  kind_of pepper
   label Green pepper
 
 white_pepper
-  is_a pepper
+  kind_of pepper
   label White pepper
 
 saffron
-  is_a spice
+  kind_of spice
   label Saffron
   foodb 63
   wikipedia Saffron
 
 star_anise
-  is_a spice
+  kind_of spice
   label Star anise
   foodb 90
   wikipedia Illicium_verum
 
 turmeric
-  is_a spice
+  kind_of spice
   label Turmeric
   foodb 68
   wikipedia Turmeric
 
 vanilla
-  is_a spice
+  kind_of spice
   label Vanilla
   foodb 195
   wikipedia Vanilla
 
 vanilla_extract
-  is_a vanilla
+  kind_of vanilla
   label Vanilla extract
   wikipedia Vanilla_extract
 
 wasabi
-  is_a spice
+  kind_of spice
   label Wasabi
   foodb 509
   wikipedia Wasabi
@@ -992,23 +992,23 @@ wasabi
 # TODO improve herb and spice mixes taxonomy
 
 herb_and_spice_mixture
-  is_a herb_and_spice
+  kind_of herb_and_spice
   label Spice mix
   wikipedia Spice_mix
 
 curry_powder
-  is_a herb_and_spice_mixture
+  kind_of herb_and_spice_mixture
   label Curry powder
   foodb 700
   wikipedia Curry_powder
 
 pumpkin_pie_spice
-  is_a herb_and_spice_mixture
+  kind_of herb_and_spice_mixture
   label Pumpkin pie spice
   wikipedia Pumpkin_pie_spice
 
 seasoning_mix
-  is_a herb_and_spice_mixture
+  kind_of herb_and_spice_mixture
   label Seasoning mix
 
 
@@ -1032,7 +1032,7 @@ plant
 #
 
 fruit
-  is_a plant
+  kind_of plant
   label Fruit
   foodb 903
   wikipedia Fruit
@@ -1041,377 +1041,377 @@ fruit
 # Berries
 
 berry
-  is_a fruit
+  kind_of fruit
   label Berry
   wikipedia Berry
 
 bayberry
-  is_a berry
+  kind_of berry
   label Bayberry
   foodb 209
   wikipedia Myrica
 
 chinese_bayberry
-  is_a bayberry
+  kind_of bayberry
   label Chinese bayberry
   foodb 882
   wikipedia Myrica_rubra
 
 black_crowberry
-  is_a berry
+  kind_of berry
   label Black crowberry
   foodb 75
   wikipedia Empetrum_nigrum
 
 boysenberry
-  is_a berry
+  kind_of berry
   label Boysenberry
   foodb 556
   wikipedia Boysenberry
 
 chokeberry
-  is_a berry
+  kind_of berry
   label Chokeberry
   wikipedia Aronia
 
 black_chokeberry
-  is_a chokeberry
+  kind_of chokeberry
   label Black chokeberry
   foodb 136
   wikipedia Aronia_melanocarpa
 
 cloudberry
-  is_a berry
+  kind_of berry
   label Cloudberry
   foodb 161
   wikipedia Rubus_chamaemorus
 
 currant
-  is_a berry
+  kind_of berry
   label Currant
   wikipedia Ribes
 
 blackcurrant
-  is_a currant
+  kind_of currant
   label Blackcurrant
   foodb 155
   wikipedia Blackcurrant
 
 golden_currant
-  is_a currant
+  kind_of currant
   label Golden currant
   foodb 213
   wikipedia Ribes_aureum
 
 jostaberry
-  is_a currant
+  kind_of currant
   label Jostaberry
   foodb 257
   wikipedia Jostaberry
 
 redcurrant
-  is_a currant
+  kind_of currant
   label Redcurrant
   foodb 156
   wikipedia Redcurrant
 
 skunk_currant
-  is_a currant
+  kind_of currant
   label Skunk currant
   foodb 267
   wikipedia Ribes_glandulosum
 
 white_currant
-  is_a currant
+  kind_of currant
   label White currant
   wikipedia White_currant
 
 zante_currant
-  is_a currant
+  kind_of currant
   label Zante currant
 
 elderberry
-  is_a berry
+  kind_of berry
   label Elderberry
   foodb 363
   wikipedia Sambucus
 
 black_elderberry
-  is_a elderberry
+  kind_of elderberry
   label Black elderberry
   foodb 166
   wikipedia Sambucus_nigra
 
 gooseberry
-  is_a berry
+  kind_of berry
   label Gooseberry
   foodb 157
   wikipedia Gooseberry
 
 grape
-  is_a berry
+  kind_of berry
   label Grape
   foodb 374
   wikipedia Grape
 
 common_grape
-  is_a grape
+  kind_of grape
   label Common grape
   foodb 204
   wikipedia Vitis_vinifera
 
 fox_grape
-  is_a grape
+  kind_of grape
   label Fox grape
   foodb 228
   wikipedia Vitis_labrusca
 
 grape_leaf
-  is_a grape
+  kind_of grape
   label Grape leaf
 
 muscadine_grape
-  is_a grape
+  kind_of grape
   label Muscadine grape
   foodb 203
   wikipedia Vitis_rotundifolia
 
 raisin
   # TODO maybe should define raisin as a transformed grape
-  is_a grape
+  kind_of grape
   label Raisin
   wikipedia Raisin
 
 summer_grape
-  is_a grape
+  kind_of grape
   label Summer grape
   foodb 227
-  wikipedia Vitis_aestivalis
+  wikipedia Vitkind_ofestivalis
 
 loganberry
-  is_a berry
+  kind_of berry
   label Loganberry
   foodb 405
   wikipedia Loganberry
 
 mulberry
-  is_a berry
+  kind_of berry
   label Mulberry
   foodb 116
   wikipedia Morus_(plant)
 
 black_mulberry
-  is_a mulberry
+  kind_of mulberry
   label Black mulberry
   foodb 117
   wikipedia Morus_nigra
 
 oheloberry
-  is_a berry
+  kind_of berry
   label Ohelo berry
   foodb 426
   wikipedia Vaccinium_reticulatum
 
 rowanberry
-  is_a berry
+  kind_of berry
   label Rowanberry
   foodb 176
   wikipedia Sorbus_aucuparia
 
 sweet_rowanberry
-  is_a rowanberry
+  kind_of rowanberry
   label Sweet rowanberry
   foodb 265
 
 rubus
-  is_a berry
+  kind_of berry
   label Rubus
   foodb 160
   wikipedia Rubus
 
 blackberry
-  is_a rubus
+  kind_of rubus
   label Blackberry
   wikipedia Blackberry
 
 arctic_blackberry
-  is_a blackberry
+  kind_of blackberry
   label Arctic blackberry
   foodb 207
   wikipedia Rubus_arcticus
 
 raspberry
-  is_a rubus
+  kind_of rubus
   label Raspberry
   wikipedia Raspberry
 
 black_raspberry
-  is_a raspberry
+  kind_of raspberry
   label Black raspberry
   foodb 163
   wikipedia Black_raspberry
 
 red_raspberry
-  is_a raspberry
+  kind_of raspberry
   label Red raspberry
   foodb 162
   wikipedia Rubus_idaeus
 
 salmonberry
-  is_a berry
+  kind_of berry
   label Salmonberry
   foodb 466
   wikipedia Rubus_spectabilis
 
 saskatoon_berry
-  is_a berry
+  kind_of berry
   label Saskatoon berry
   foodb 916
   wikipedia Amelanchier_alnifolia
 
 sea_buckthornberry
-  is_a berry
+  kind_of berry
   label Sea-buckthornberry
   foodb 87
   wikipedia Hippophae_rhamnoides
 
 squashberry
-  is_a berry
+  kind_of berry
   label Squashberry
   foodb 349
   wikipedia Viburnum_edule
 
 strawberry
-  is_a berry
+  kind_of berry
   label Strawberry
   foodb 83
   wikipedia Strawberry
 
 strawberry_guava
-  is_a berry
+  kind_of berry
   label Strawberry guava
   foodb 493
   wikipedia Psidium_cattleyanum
 
 vaccinium
-  is_a berry
+  kind_of berry
   label Vaccinium
   foodb 188
   wikipedia Vaccinium
 
 bilberry
-  is_a vaccinium
+  kind_of vaccinium
   label Bilberry
   foodb 193
   wikipedia Bilberry
 
 bog_bilberry
-  is_a bilberry
+  kind_of bilberry
   label Bog bilberry
   foodb 212
   wikipedia Vaccinium_uliginosum
 
 blueberry
-  is_a vaccinium
+  kind_of vaccinium
   label Blueberry
   wikipedia Blueberry
 
 alaska_blueberry
-  is_a blueberry
+  kind_of blueberry
   label Alaska blueberry
   foodb 385
   wikipedia Vaccinium_ovalifolium
 
 canada_blueberry
-  is_a blueberry
+  kind_of blueberry
   label Canada blueberry
   foodb 211
   wikipedia Vaccinium_myrtilloides
 
 elliott_blueberry
-  is_a blueberry
+  kind_of blueberry
   label Elliott's blueberry
   foodb 210
   wikipedia Vaccinium_elliottii
 
 half_highbush_blueberry
-  is_a blueberry
+  kind_of blueberry
   label Half-highbush blueberry
   foodb 248
 
 highbush_blueberry
-  is_a blueberry
+  kind_of blueberry
   label Highbush blueberry
   foodb 191
   wikipedia Vaccinium_corymbosum
 
 lowbush_blueberry
-  is_a blueberry
+  kind_of blueberry
   label Lowbush blueberry
   foodb 189
   wikipedia Vaccinium_angustifolium
 
 cranberry
-  is_a vaccinium
+  kind_of vaccinium
   label Cranberry
   wikipedia Cranberry
 
 american_cranberry
-  is_a cranberry
+  kind_of cranberry
   label American cranberry
   foodb 192
   wikipedia Vaccinium_macrocarpon
 
 european_cranberry
-  is_a cranberry
+  kind_of cranberry
   label European cranberry
   foodb 217
   wikipedia Vaccinium_oxycoccos
 
 huckleberry
-  is_a vaccinium
+  kind_of vaccinium
   label Huckleberry
   wikipedia Huckleberry
 
 black_huckleberry
-  is_a huckleberry
+  kind_of huckleberry
   label Black huckleberry
   foodb 84
 
 cascade_huckleberry
-  is_a huckleberry
+  kind_of huckleberry
   label Cascade huckleberry
   foodb 220
 
 deerberry
-  is_a huckleberry
+  kind_of huckleberry
   label Deerberry
   foodb 218
   wikipedia Vaccinium_stamineum
 
 evergreen_huckleberry
-  is_a huckleberry
+  kind_of huckleberry
   label Evergreen huckleberry
   foodb 222
 
 oval_leaf_huckleberry
-  is_a huckleberry
+  kind_of huckleberry
   label Oval-leaf huckleberry
   foodb 221
 
 red_huckleberry
-  is_a huckleberry
+  kind_of huckleberry
   label Red huckleberry
   foodb 223
 
 lingonberry
-  is_a vaccinium
+  kind_of vaccinium
   label Lingonberry
   foodb 194
   wikipedia Vaccinium_vitis-idaea
 
 sparkleberry
-  is_a vaccinium
+  kind_of vaccinium
   label Sparkleberry
   foodb 190
   wikipedia Vaccinium_arboreum
@@ -1420,68 +1420,68 @@ sparkleberry
 # Citrus
 
 citrus
-  is_a fruit
+  kind_of fruit
   label Citrus
   foodb 889
   wikipedia Citrus
 
 grapefruit
-  is_a citrus
+  kind_of citrus
   label Grapefruit
   foodb 256
 
 grapefruit_pummelo_hybrid
-  is_a citrus
+  kind_of citrus
   label Grapefruit/Pummelo hybrid
   foodb 255
 
 lemon
-  is_a citrus
+  kind_of citrus
   label Lemon
   foodb 54
 
 lemon_peel
-  is_a lemon
+  kind_of lemon
   label Lemon peel
 
 lime
-  is_a citrus
+  kind_of citrus
   label Lime
   foodb 53
 
 mandarin
-  is_a citrus
+  kind_of citrus
   label Mandarin
   foodb 56
 
 clementine
-  is_a mandarin
+  kind_of mandarin
   label Clementine
   wikipedia Clementine
 
 tangerine
-  is_a mandarin
+  kind_of mandarin
   label Tangerine
   wikipedia Tangerine
 
 orange
-  is_a citrus
+  kind_of citrus
   label Orange
   foodb 57
   wikipedia Orange_(fruit)
 
 orange_peel
-  is_a orange
+  kind_of orange
   label Orange peel
 
 persian_lime
-  is_a citrus
+  kind_of citrus
   label Persian lime
   foodb 557
   wikipedia Persian_lime
 
 pummelo
-  is_a citrus
+  kind_of citrus
   label Pummelo
   foodb 55
 
@@ -1489,48 +1489,48 @@ pummelo
 # Pomes
 
 pome
-  is_a fruit
+  kind_of fruit
   label Pome
   foodb 886
   wikipedia Pome
 
 apple
-  is_a pome
+  kind_of pome
   label Apple
   foodb 105
   wikipedia Apple
 
 applesauce
-  is_a apple
+  kind_of apple
   label Apple sauce
   wikipedia Apple_sauce
 
 crabapple
-  is_a apple
+  kind_of apple
   label Crabapple
   foodb 348
   wikipedia Malus
 
 medlar
-  is_a pome
+  kind_of pome
   label Medlar
   foodb 114
   wikipedia Mespilus_germanica
 
 pear
-  is_a pome
+  kind_of pome
   label Pear
   foodb 152
   wikipedia Pear
 
 asian_pear
-  is_a pear
+  kind_of pear
   label Asian pear
   foodb 292
   wikipedia Pyrus_pyrifolia
 
 quince
-  is_a pome
+  kind_of pome
   label Quince
   foodb 69
 
@@ -1538,63 +1538,63 @@ quince
 # Stone fruits
 
 stone_fruit
-  is_a fruit
+  kind_of fruit
   label Stone fruit
   foodb 143
   wikipedia Prunus
 
 apricot
-  is_a stone_fruit
+  kind_of stone_fruit
   label Apricot
   foodb 144
   wikipedia Apricot
 
 cherry
-  is_a stone_fruit
+  kind_of stone_fruit
   label Cherry
   wikipedia Cherry
 
 sour_cherry
-  is_a cherry
+  kind_of cherry
   label Sour cherry
   foodb Prunus_cerasus
 
 sweet_cherry
-  is_a cherry
+  kind_of cherry
   label Sweet cherry
   foodb 145
 
 maraschino_cherry
-  is_a sweet_cherry
+  kind_of sweet_cherry
   label Maraschino cherry
   wikipedia Maraschino_cherry
 
 nanking_cherry
-  is_a stone_fruit
+  kind_of stone_fruit
   label Nanking cherry
   foodb 917
   wikipedia Prunus_tomentosa
 
 peach
-  is_a stone_fruit
+  kind_of stone_fruit
   label Peach
   foodb 149
   wikipedia Peach
 
 nectarine
-  is_a peach
+  kind_of peach
   label Nectarine
   foodb 229
 
 plum
-  is_a stone_fruit
+  kind_of stone_fruit
   label Plum
   foodb 147
   wikipedia Prunus_domestica
 
 prune
   # TODO maybe should define prune as a transformed plum
-  is_a plum
+  kind_of plum
   label Prune
   wikipedia Prune
 
@@ -1602,247 +1602,247 @@ prune
 # Miscellaneous tropical fruits
 
 tropical_fruit
-  is_a fruit
+  kind_of fruit
   label Tropical fruit
 
 abiyuch
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Abiyuch
   foodb 281
   wikipedia Crateva_religiosa
 
 acerola
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Acerola
   foodb 282
   wikipedia Malpighia_emarginata
 
 banana
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Banana
   foodb 208
   wikipedia Banana
 
 breadfruit
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Breadfruit
   foodb 312
 
 carambola
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Carambola
   foodb 23
   wikipedia Carambola
 
 carissa
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Carissa
   foodb 325
   wikipedia Carissa
 
 cherimoya
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Cherimoya
   foodb 331
 
 coconut
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Coconut
   foodb 341
 
 cupuacu
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Cupuaçu
   foodb 799
   wikipedia Cupuaçu
 
 custard_apple
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Custard apple
   foodb 14
 
 durian
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Durian
   foodb 360
 
 feijoa
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Feijoa
   foodb 558
 
 goji_berry
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Goji berry
   wikipedia Goji
 
 guava
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Guava
   foodb 150
 
 jackfruit
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label jackfruit
   foodb 389
 
 java_plum
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Java plum
   foodb 391
 
 kiwi
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Kiwi
   foodb 4
 
 kumquat
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Kumquat
   foodb 398
 
 litchi
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Litchi
   foodb 103
 
 longan
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Longan
   foodb 224
 
 loquat
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Loquat
   foodb 76
 
 malabar_plum
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Malabar plum
   foodb 455
   wikipedia Syzygium_jambos
 
 mamey_sapote
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Mamey sapote
   foodb 469
   wikipedia Pouteria_sapota
 
 mammy_apple
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Mammy apple
   foodb 410
   wikipedia Mammea_americana
 
 mango
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Mango
   foodb 106
 
 mangosteen
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Mangosteen
   foodb 411
   wikipedia Purple_mangosteen
 
 nance
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Nance
   foodb 813
 
 naranjilla
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Naranjilla
   foodb 814
 
 papaya
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Papaya
   foodb 41
 
 passion_fruit
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Passion-fruit
 
 persimmon
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Persimmon
   foodb 608
 
 common_persimmon
-  is_a persimmon
+  kind_of persimmon
   label Common persimmon
   foodb 437
 
 japanese_persimmon
-  is_a persimmon
+  kind_of persimmon
   label Japanese persimmon
   foodb 73
 
 pineapple
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Pineapple
   foodb 12
 
 pitanga
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Pitanga
   foodb 442
 
 plantain
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Plantain
   foodb 444
 
 pomegranate
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Pomegranate
   foodb 151
   wikipedia Pomegranate
 
 prickly_pear
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Prickly pear
   foodb 449
   wikipedia Opuntia
 
 plains_prickly_pear
-  is_a prickly_pear
+  kind_of prickly_pear
   label Plains prickly pear
   foodb 443
 
 rambutan
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Rambutan
   foodb 234
 
 rose_apple
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Rose apple
   wikipedia Syzygium_samarangense
 
 sapodilla
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Sapodilla
   foodb 468
 
 soursop
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Soursop
   foodb 488
 
 sugar_apple
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Sugar apple
   foodb 496
 
 tamarind
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Tamarind
   foodb 180
 
 wax_apple
-  is_a tropical_fruit
+  kind_of tropical_fruit
   label Wax apple
   foodb 78
   wikipedia Syzygium_samarangense
@@ -1851,17 +1851,17 @@ wax_apple
 # Miscellaneous fruits
 
 date
-  is_a fruit
+  kind_of fruit
   label Date
   foodb 135
 
 fig
-  is_a fruit
+  kind_of fruit
   label Fig
   foodb 81
 
 jujube
-  is_a fruit
+  kind_of fruit
   label Jujube
   foodb 393
 
@@ -1871,69 +1871,69 @@ jujube
 #
 
 vegetable
-  is_a plant
+  kind_of plant
   label Vegetable
 
 
 # Onion-like vegetables
 
 allium
-  is_a vegetable
+  kind_of vegetable
   label Allium
   foodb 5
   wikipedia Allium
 
 garlic
-  is_a allium
+  kind_of allium
   label Garlic
   foodb 8
   wikipedia Garlic
 
 soft_garlic
-  is_a garlic
+  kind_of garlic
   label Soft-necked garlic
   foodb 880
 
 leek
-  is_a allium
+  kind_of allium
   label Leek
   foodb 7
   wikipedia Leek
 
 onion
-  is_a allium
+  kind_of allium
   label Onion
   foodb 6
 
 sweet_onion
-  is_a onion
+  kind_of onion
   label Sweet onion
   wikipedia Sweet_onion
 
 welsh_onion
-  is_a onion
+  kind_of onion
   label Welsh onion
   foodb 241
   wikipedia Allium_fistulosum
 
 yellow_onion
-  is_a onion
+  kind_of onion
   label Yellow onion
   wikipedia Yellow_onion
 
 scallion
-  is_a allium
+  kind_of allium
   label Scallion
   wikipedia Scallion
 
 shallot
-  is_a allium
+  kind_of allium
   label Shallot
   foodb 243
   wikipedia Shallot
 
 wild_leek
-  is_a allium
+  kind_of allium
   label Wild leek
   foodb 401
   wikipedia Allium_ampeloprasum
@@ -1942,110 +1942,110 @@ wild_leek
 # Cabbages
 
 cabbage
-  is_a vegetable
+  kind_of vegetable
   label Cabbage
   foodb 30
   wikipedia Cabbage
 
 broccoli
-  is_a cabbage
+  kind_of cabbage
   label Broccoli
   foodb 34
   wikipedia Broccoli
 
 brussel_sprouts
-  is_a cabbage
+  kind_of cabbage
   label Brussel sprouts
   foodb 32
   wikipedia Brussels_sprout
 
 cauliflower
-  is_a cabbage
+  kind_of cabbage
   label Cauliflower
   foodb 31
   wikipedia Cauliflower
 
 chinese_cabbage
-  is_a cabbage
+  kind_of cabbage
   label Chinese cabbage
   foodb 35
 
 napa_cabbage
-  is_a chinese_cabbage
+  kind_of chinese_cabbage
   label Napa cabbage
   foodb 253
   wikipedia Napa_cabbage
 
 pak_choy
-  is_a chinese_cabbage
+  kind_of chinese_cabbage
   label Pak choy
   foodb 252
 
 pe_tsai
-  is_a chinese_cabbage
+  kind_of chinese_cabbage
   label Pe tsai
 
 chinese_mustard
-  is_a cabbage
+  kind_of cabbage
   label Chinese mustard
   foodb 27
   wikipedia Brassica_juncea
 
 collard
-  is_a cabbage
+  kind_of cabbage
   label Collard green
   wikipedia Collard_greens
 
 common_cabbage
-  is_a cabbage
+  kind_of cabbage
   label Common cabbage
   foodb 881
 
 black_cabbage
-  is_a common_cabbage
+  kind_of common_cabbage
   label Black cabbage
   foodb 247
 
 white_cabbage
-  is_a common_cabbage
+  kind_of common_cabbage
   label White cabbage
   foodb 919
 
 gai_lan
-  is_a cabbage
+  kind_of cabbage
   label Gai lan
   foodb 335
   wikipedia Gai_lan
 
 kale
-  is_a cabbage
+  kind_of cabbage
   label Kale
   foodb 395
 
 oxheart_cabbage
-  is_a cabbage
+  kind_of cabbage
   label Oxheart cabbage
   foodb 260
 
 rapini
-  is_a cabbage
+  kind_of cabbage
   label Rapini
   foodb 314
   wikipedia Rapini
 
 savoy_cabbage
-  is_a cabbage
+  kind_of cabbage
   label Savoy cabbage
   foodb 2
   wikipedia Savoy_cabbage
 
 skunk_cabbage
-  is_a cabbage
+  kind_of cabbage
   label Skunk cabbage
   wikipedia Symplocarpus_foetidus
 
 tronchuda_cabbage
-  is_a cabbage
+  kind_of cabbage
   label Tronchuda cabbage
   wikipedia 239
 
@@ -2053,168 +2053,168 @@ tronchuda_cabbage
 # Gourds
 
 gourd
-  is_a vegetable
+  kind_of vegetable
   label Gourd
   wikipedia Gourd
 
 bitter_gourd
-  is_a gourd
+  kind_of gourd
   label Bitter melon
   foodb 115
   wikipedia Momordica_charantia
 
 calabash
-  is_a gourd
+  kind_of gourd
   label Calabash
   foodb 322
   wikipedia Calabash
 
 kanpyo
-  is_a calabash
+  kind_of calabash
   label Kanpyō
   wikipedia Kanpyō_(food)
 
 chayote
-  is_a gourd
+  kind_of gourd
   label Chayote
   foodb 330
   wikipedia Chayote
 
 melon
-  is_a gourd
+  kind_of gourd
   label Melon
   wikipedia Melon
 
 banana_melon
-  is_a melon
+  kind_of melon
   label Banana melon
 
 honeydew_melon
-  is_a melon
+  kind_of melon
   label Honeydew melon
   wikipedia Honeydew_(melon)
 
 horned_melon
-  is_a melon
+  kind_of melon
   label Horned melon
   foodb 786
   wikipedia Cucumis_metuliferus
 
 muskmelon
-  is_a melon
+  kind_of melon
   label Muskmelon
   foodb 64
   wikipedia Muskmelon
 
 sponge_gourd
-  is_a gourd
+  kind_of gourd
   label Sponge gourd
   foodb 503
   wikipedia Luffa_aegyptiaca
 
 squash
-  is_a gourd
+  kind_of gourd
   label Squash
   foodb 66
   wikipedia Cucurbita
 
 cucumber
-  is_a squash
+  kind_of squash
   label Cucumber
   foodb 65
   wikipedia Cucumber
 
 pickle
-  is_a cucumber
+  kind_of cucumber
   label Pickle
   wikipedia Pickled_cucumber
 
 indian_squash
-  is_a squash
+  kind_of squash
   label Indian squash
 
 pumpkin
-  is_a squash
+  kind_of squash
   label Pumpkin
   wikipedia Pumpkin
 
 pumpkin_flower
-  is_a pumpkin
+  kind_of pumpkin
   label Pumpkin flower
 
 pumpkin_leaf
-  is_a pumpkin
+  kind_of pumpkin
   label Pumpkin leaf
 
 summer_squash
-  is_a squash
+  kind_of squash
   label Summer squash
   wikipedia Summer_squash
 
 crookneck_squash
-  is_a summer_squash
+  kind_of summer_squash
   label Crookneck squash
   wikipedia Crookneck_squash
 
 pattypan_squash
-  is_a summer_squash
+  kind_of summer_squash
   label Pattypan squash
   foodb 906
   wikipedia Pattypan_squash
 
 zucchini_squash
-  is_a summer_squash
+  kind_of summer_squash
   label Zucchini
   foodb 907
   wikipedia Zucchini
 
 winter_squash
-  is_a squash
+  kind_of squash
   label Winter squash
   foodb 284
   wikipedia Winter_squash
 
 acorn_squash
-  is_a winter_squash
+  kind_of winter_squash
   label Acorn squash
   wikipedia Acorn_squash
 
 butternut_squash
-  is_a winter_squash
+  kind_of winter_squash
   label Butternut squash
   foodb 321
   wikipedia Butternut_squash
 
 hubbard_squash
-  is_a winter_squash
+  kind_of winter_squash
   label Hubbard squash
   wikipedia Cucurbita_maxima
 
 kabocha_squash
-  is_a winter_squash
+  kind_of winter_squash
   label Kabocha
   foodb 918
   wikipedia Kabocha
 
 spaghetti_squash
-  is_a winter_squash
+  kind_of winter_squash
   label Spaghetti squash
   wikipedia Spaghetti_squash
 
 tinda
-  is_a gourd
+  kind_of gourd
   label Tinda
   foodb 573
   wikipedia Tinda
 
 watermelon
-  is_a gourd
+  kind_of gourd
   label Watermelon
   foodb 52
   wikipedia Watermelon
 
 wax_gourd
-  is_a gourd
+  kind_of gourd
   label Wax gourd
   foodb 510
   wikipedia Wax_gourd
@@ -2223,139 +2223,139 @@ wax_gourd
 # Leaf vegetables
 
 leaf_vegetables
-  is_a vegetable
+  kind_of vegetable
   label Leaf vegetables
   foodb 904
 
 arugula
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Arugula
   foodb 77
   wikipedia Eruca_sativa
 
 celtuce
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Celtuce
   wikipedia Celtuce
 
 chicory_leaf
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Chicory leaf
   foodb 250
   wikipedia Chicory
 
 radicchio
-  is_a chicory_leaf
+  kind_of chicory_leaf
   label Radicchio
   wikipedia Radicchio
 
 common_beet
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Common beet
   foodb 25
   wikipedia Beetroot
 
 beet_green
-  is_a common_beet
+  kind_of common_beet
   label Beet green
 
 corn_salad
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Corn salad
   foodb 345
   wikipedia Valerianella_locusta
 
 endive
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Endive
   foodb 48
   wikipedia Endive
 
 fiddlehead
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Fiddlehead
   wikipedia Fiddlehead_fern
 
 garland_chrysanthemum
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Garland chrysanthemum
   foodb 338
 
 jute
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Jute
   foodb 394
 
 lambsquarter
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Lambsquarters
   foodb 399
 
 lettuce
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Lettuce
   foodb 95
 
 romaine_lettuce
-  is_a lettuce
+  kind_of lettuce
   label Romaine lettuce
   foodb 920
 
 malabar_spinach
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Malabar spinach
   foodb 409
   wikipedia Basella_alba
 
 mustard_green
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Mustard green
 
 mustard_spinach
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Mustard spinach
   foodb 421
 
 komatsuna
-  is_a mustard_spinach
+  kind_of mustard_spinach
   label Komatsuna
   foodb 251
   wikipedia Komatsuna
 
 new_zealand_spinach
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label New Zealand spinach
   foodb 422
   wikipedia Tetragonia_tetragonioides
 
 ostrich_fern
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Ostrich fern
   foodb 570
   wikipedia Matteuccia
 
 spinach
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Spinach
   foodb 178
 
 stinging_nettle
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Stinging Nettle
   wikipedia Urtica_dioica
 
 swamp_cabbage
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Swamp cabbage
   foodb 91
 
 swiss_chard
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Swiss chard
   foodb 237
 
 yautia
-  is_a leaf_vegetables
+  kind_of leaf_vegetables
   label Yautia
   foodb 521
   wikipedia Xanthosoma
@@ -2364,131 +2364,131 @@ yautia
 # Root vegetables
 
 root_vegetables
-  is_a vegetable
+  kind_of vegetable
   label Root vegetables
   foodb 905
 
 black_radish
-  is_a root_vegetables
+  kind_of root_vegetables
   label Black radish
   foodb 262
 
 burdock_root
-  is_a root_vegetables
+  kind_of root_vegetables
   label Burdock
   foodb 17
   wikipedia Arctium_lappa
 
 carrot
-  is_a root_vegetables
+  kind_of root_vegetables
   label Carrot
   foodb 245
 
 wild_carrot
-  is_a carrot
+  kind_of carrot
   label Wild carrot
   foodb 72
 
 celeriac
-  is_a root_vegetables
+  kind_of root_vegetables
   label Celeriac
   foodb 214
   wikipedia Celeriac
 
 chicory
-  is_a root_vegetables
+  kind_of root_vegetables
   label Chicory
   foodb 49
 
 chicory_roots
-  is_a chicory
+  kind_of chicory
   label Chicory roots
   foodb 254
 
 daikon_radish
-  is_a root_vegetables
+  kind_of root_vegetables
   label Daikon radish
   foodb 261
 
 eppaw
-  is_a root_vegetables
+  kind_of root_vegetables
   label Eppaw
   foodb 366
   wikipedia Perideridia_oregana
 
 ginger
-  is_a root_vegetables
+  kind_of root_vegetables
   label Ginger
   foodb 206
   wikipedia Ginger
 
 jicama
-  is_a root_vegetables
+  kind_of root_vegetables
   label Jicama
   foodb 520
 
 kohlrabi
-  is_a root_vegetables
+  kind_of root_vegetables
   label Kohlrabi
   foodb 33
 
 parsnip
-  is_a root_vegetables
+  kind_of root_vegetables
   label Parsnip
   foodb 129
 
 prairie_turnip
-  is_a root_vegetables
+  kind_of root_vegetables
   label Prairie turnip
   foodb 448
   wikipedia Psoralea_esculenta
 
 radish
-  is_a root_vegetables
+  kind_of root_vegetables
   label Radish
   foodb 153
 
 rape
-  is_a root_vegetables
+  kind_of root_vegetables
   label Rape
   foodb 29
 
 red_beetroot
-  is_a root_vegetables
+  kind_of root_vegetables
   label Red beetroot
   foodb 264
 
 salsify
-  is_a root_vegetables
+  kind_of root_vegetables
   label Salsify
 
 black_salsify
-  is_a salsify
+  kind_of salsify
   label Black salsify
   foodb 613
 
 common_salsify
-  is_a salsify
+  kind_of salsify
   label Common salsify
   foodb 467
 
 swede
-  is_a root_vegetables
+  kind_of root_vegetables
   label Swede
   foodb 28
 
 taro
-  is_a root_vegetables
+  kind_of root_vegetables
   label Taro
   foodb 499
 
 thistle
-  is_a root_vegetables
+  kind_of root_vegetables
   label Thistle
   foodb 620
 
 turnip
-  is_a root_vegetables
+  kind_of root_vegetables
   label Turnip
   foodb 36
   wikipedia Turnip
@@ -2497,34 +2497,34 @@ turnip
 # Shoot vegetables
 
 shoot_vegetable
-  is_a vegetable
+  kind_of vegetable
   label Shoot vegetable
 
 artichoke
-  is_a shoot_vegetable
+  kind_of shoot_vegetable
   label Artichoke
   foodb 71
   wikipedia Artichoke
 
 asparagus
-  is_a shoot_vegetable
+  kind_of shoot_vegetable
   label Asparagus
   foodb 21
   wikipedia Asparagus
 
 bamboo
-  is_a shoot_vegetable
+  kind_of shoot_vegetable
   label Bamboo shoot
   foodb 298
   wikipedia Bamboo_shoot
 
 cardoon
-  is_a shoot_vegetable
+  kind_of shoot_vegetable
   label Cardoon
   foodb 323
 
 pokeweed
-  is_a shoot_vegetable
+  kind_of shoot_vegetable
   label Pokeweed shoot
   foodb 445
   wikipedia Phytolacca_americana
@@ -2533,54 +2533,54 @@ pokeweed
 # Tubers
 
 tuber
-  is_a vegetable
+  kind_of vegetable
   label Tuber
 
 arrowhead
-  is_a tuber
+  kind_of tuber
   label Arrowhead
   foodb 290
   wikipedia Sagittaria_latifolia
 
 arrowroot
-  is_a tuber
+  kind_of tuber
   label Arrowroot
   foodb 291
   wikipedia Maranta_arundinacea
 
 cassava
-  is_a tuber
+  kind_of tuber
   label Cassava
   foodb 328
   wikipedia Cassava
 
 tapioca
-  is_a cassava
+  kind_of cassava
   label Tapioca
 
 jerusalem_artichoke
-  is_a tuber
+  kind_of tuber
   label Jerusalem artichoke
   foodb 392
 
 potato
-  is_a tuber
+  kind_of tuber
   label Potato
   foodb 175
 
 sweet_potato
-  is_a tuber
+  kind_of tuber
   label Sweet potato
   foodb 92
 
 yam
-  is_a tuber
+  kind_of tuber
   label Yam
   foodb 519
   wikipedia Yam_(vegetable)
 
 mountain_yam
-  is_a yam
+  kind_of yam
   label Mountain yam
   foodb 417
   wikipedia Dioscorea_pentaphylla
@@ -2589,110 +2589,110 @@ mountain_yam
 # Miscellaneous vegetables
 
 agave
-  is_a vegetable
+  kind_of vegetable
   label Agave
   foodb 577
   wikipedia Agave
 
 butterbur
-  is_a vegetable
+  kind_of vegetable
   label Butterbur
   foodb 318
 
 carob
-  is_a vegetable
+  kind_of vegetable
   label Carob
   foodb 326
   wikipedia Ceratonia_siliqua
 
 cattail
-  is_a vegetable
+  kind_of vegetable
   label Narrowleaf cattail
   foodb 578
   wikipedia Typha_angustifolia
 
 celery
-  is_a vegetable
+  kind_of vegetable
   label Celery stalk
   foodb 215
 
 chinese_water_chestnut
-  is_a vegetable
+  kind_of vegetable
   label Chinese water chestnut
   foodb 337
   wikipedia Eleocharis_dulcis
 
 chokecherry
-  is_a vegetable
+  kind_of vegetable
   label Common chokecherry
   foodb 576
   wikipedia Prunus_virginiana
 
 horseradish_tree
-  is_a vegetable
+  kind_of vegetable
   label Horseradish tree
   foodb 384
   wikipedia Moringa_oleifera
 
 drumstick_leaf
-  is_a horseradish_tree
+  kind_of horseradish_tree
   label Drumstick leaf
 
 drumstick_pod
-  is_a horseradish_tree
+  kind_of horseradish_tree
   label Drumstick pod
 
 mashu_root
-  is_a vegetable
+  kind_of vegetable
   label Mashu root
 
 nopal
-  is_a vegetable
+  kind_of vegetable
   label Nopal
   foodb 423
 
 okra
-  is_a vegetable
+  kind_of vegetable
   label Okra
   foodb 427
 
 palm_heart
-  is_a vegetable
+  kind_of vegetable
   label Heart of palm
   foodb 743
 
 rhubarb
-  is_a vegetable
+  kind_of vegetable
   label Rhubarb
 
 alaska_wild_rhubarb
-  is_a rhubarb
+  kind_of rhubarb
   label Alaska wild rhubarb
   foodb 551
 
 garden_rhubarb
-  is_a rhubarb
+  kind_of rhubarb
   label Garden rhubarb
   foodb 154
 
 rutabaga
-  is_a vegetable
+  kind_of vegetable
   label Rutabaga
   wikipedia Rutabaga
 
 sacred_lotus
-  is_a vegetable
+  kind_of vegetable
   label Sacred lotus
   foodb 407
   wikipedia Nelumbo_nucifera
 
 sesbania_flower
-  is_a vegetable
+  kind_of vegetable
   label Sesbania flower
   foodb 479
 
 tree_fern
-  is_a vegetable
+  kind_of vegetable
   label Tree fern
   foodb 823
 
@@ -2702,74 +2702,74 @@ tree_fern
 #
 
 fruit_vegetable
-  is_a fruit
-  is_a vegetable
+  kind_of fruit
+  kind_of vegetable
   label Fruit vegetable
 
 
 # Peppers
 
 capsicum
-  is_a fruit_vegetable
+  kind_of fruit_vegetable
   label Capsicum
   foodb 233
 
 capsicum_annuum
-  is_a capsicum
+  kind_of capsicum
   label Capsicum annuum
   foodb 40
 
 bell_pepper
-  is_a capsicum_annuum
+  kind_of capsicum_annuum
   label Bell pepper
   wikipedia Bell_pepper
 
 green_bell_pepper
-  is_a bell_pepper
+  kind_of bell_pepper
   label Green bell pepper
   foodb 909
 
 orange_bell_pepper
-  is_a bell_pepper
+  kind_of bell_pepper
   label Orange bell pepper
   foodb 911
 
 red_bell_pepper
-  is_a bell_pepper
+  kind_of bell_pepper
   label Red bell pepper
   foodb 912
 
 yellow_bell_pepper
-  is_a bell_pepper
+  kind_of bell_pepper
   label Yellow bell pepper
   foodb 910
 
 chili_pepper
-  is_a capsicum_annuum
+  kind_of capsicum_annuum
   label Chili pepper
 
 italian_sweet_red_pepper
-  is_a capsicum_annuum
+  kind_of capsicum_annuum
   label Italian sweet red pepper
   foodb 913
 
 capsicum_baccatum
-  is_a capsicum
+  kind_of capsicum
   label Capsicum baccatum
   foodb 231
 
 capsicum_chinense
-  is_a capsicum
+  kind_of capsicum
   label Capsicum chinense
   foodb 232
 
 capsicum_frutescens
-  is_a capsicum
+  kind_of capsicum
   label Capsicum frutescens
   foodb 436
 
 capsicum_pubescens
-  is_a capsicum
+  kind_of capsicum
   label Capsicum pubescens
   foodb 879
 
@@ -2777,58 +2777,58 @@ capsicum_pubescens
 # Tomatoes
 
 tomato
-  is_a fruit_vegetable
+  kind_of fruit_vegetable
   label Tomato
   foodb 171
 
 cherry_tomato
-  is_a tomato
+  kind_of tomato
   label Cherry tomato
   foodb 172
 
 green_tomato
-  is_a tomato
+  kind_of tomato
   label Green tomato
 
 orange_tomato
-  is_a tomato
+  kind_of tomato
   label Orange tomato
 
 yellow_tomato
-  is_a tomato
+  kind_of tomato
   label Yellow tomato
 
 
 # Miscellaneous fruit vegetables
 
 avocado
-  is_a fruit_vegetable
+  kind_of fruit_vegetable
   label Avocado
   foodb 130
   wikipedia Avocado
 
 eggplant
-  is_a fruit_vegetable
+  kind_of fruit_vegetable
   label Eggplant
   foodb 174
 
 groundcherry
-  is_a fruit_vegetable
+  kind_of fruit_vegetable
   label Groundcherry
   foodb 376
 
 mexican_groundcherry
-  is_a groundcherry
+  kind_of groundcherry
   label Mexican groundcherry
   foodb 502
 
 olive
-  is_a fruit_vegetable
+  kind_of fruit_vegetable
   label Olive
   foodb 121
 
 tomatillo
-  is_a fruit_vegetable
+  kind_of fruit_vegetable
   label Tomatillo
   foodb Tomatillo
   wikipedia Tomatillo
@@ -2839,7 +2839,7 @@ tomatillo
 #
 
 legume
-  is_a plant
+  kind_of plant
   label Legume
   foodb 898
   wikipedia Legume
@@ -2848,197 +2848,197 @@ legume
 # Beans
 
 bean
-  is_a legume
+  kind_of legume
   label Bean
   foodb 638
   wikipedia Bean
 
 adzuki_bean
-  is_a bean
+  kind_of bean
   label Adzuki bean
   foodb 198
   wikipedia Adzuki_bean
 
 black_bean
-  is_a bean
+  kind_of bean
   label Black bean
 
 broad_bean
-  is_a bean
+  kind_of bean
   label Broad bean
   foodb 197
 
 climbing_bean
-  is_a bean
+  kind_of bean
   label Climbing bean
   foodb 201
   wikipedia Vigna_umbellata
 
 common_bean
-  is_a bean
+  kind_of bean
   label Common bean
   foodb 134
   wikipedia Phaseolus_vulgaris
 
 green_bean
-  is_a common_bean
+  kind_of common_bean
   label Green bean
   foodb 915
 
 yellow_wax_bean
-  is_a common_bean
+  kind_of common_bean
   label Yellow wax bean
   foodb 914
 
 cranberry_bean
-  is_a bean
+  kind_of bean
   label Cranberry bean
 
 gram_bean
-  is_a bean
+  kind_of bean
   label Gram bean
   foodb 199
   wikipedia Vigna_mungo
 
 hyacinth_bean
-  is_a bean
+  kind_of bean
   label Hyacinth bean
   foodb 386
 
 kidney_bean
-  is_a bean
+  kind_of bean
   label Kidney bean
 
 lima_bean
-  is_a bean
+  kind_of bean
   label Lima bean
   foodb 133
 
 lupin
-  is_a bean
+  kind_of bean
   label Lupin
   foodb 104
   wikipedia Lupinus
 
 white_lupine
-  is_a lupin
+  kind_of lupin
   label White lupine
   foodb 408
   wikipedia Lupinus_albus
 
 moth_bean
-  is_a bean
+  kind_of bean
   label Moth bean
   foodb 416
 
 mung_bean
-  is_a bean
+  kind_of bean
   label Mung bean
   foodb 200
 
 mungo_bean
-  is_a bean
+  kind_of bean
   label Mungo bean
 
 navy_bean
-  is_a bean
+  kind_of bean
   label Navy bean
 
 pink_bean
-  is_a bean
+  kind_of bean
   label Pink bean
 
 pinto_bean
-  is_a bean
+  kind_of bean
   label Pinto bean
 
 scarlet_bean
-  is_a bean
+  kind_of bean
   label Scarlet bean
   foodb 132
   wikipedia Phaseolus_coccineus
 
 snap_bean
-  is_a bean
+  kind_of bean
   label Snap bean
 
 soy_bean
-  is_a bean
+  kind_of bean
   label Soy bean
   foodb 85
 
 white_bean
-  is_a bean
+  kind_of bean
   label White bean
 
 winged_bean
-  is_a bean
+  kind_of bean
   label Winged bean
   foodb 518
 
 yambean
-  is_a bean
+  kind_of bean
   label Yam bean
 
 yardlong_bean
-  is_a bean
+  kind_of bean
   label Yardlong bean
   foodb 553
 
 yellow_bean
-  is_a bean
+  kind_of bean
   label Yellow bean
 
 
 # Other legumes and peas
 
 alpine_sweetvetch
-  is_a legume
+  kind_of legume
   label Alpine sweetvetch
   foodb 412
   wikipedia Hedysarum_alpinum
 
 chickpea
-  is_a legume
+  kind_of legume
   label Chickpea
   foodb 47
 
 common_pea
-  is_a legume
+  kind_of legume
   label Common pea
   foodb 141
   wikipedia Pea
 
 cowpea
-  is_a legume
+  kind_of legume
   label Cow pea
   foodb 202
   wikipedia Cowpea
 
 black_eyed_pea
-  is_a cowpea
+  kind_of cowpea
   label Black-eyed pea
   foodb 534
   wikipedia Black-eyed_pea
 
 catjang_pea
-  is_a cowpea
+  kind_of cowpea
   label Catjang pea
   foodb 347
 
 grass_pea
-  is_a legume
+  kind_of legume
   label Grass pea
   foodb 96
   wikipedia Lathyrus_sativus
 
 lentil
-  is_a legume
+  kind_of legume
   label Lentil
   foodb 98
 
 pigeon_pea
-  is_a legume
+  kind_of legume
   label Pigeon pea
   foodb 37
 
@@ -3048,173 +3048,173 @@ pigeon_pea
 #
 
 nut
-  is_a plant
+  kind_of plant
   label Nut
   foodb 901
   wikipedia Nut_(fruit)
 
 acorn
-  is_a nut
+  kind_of nut
   label Acorn
   foodb 283
   wikipedia Acorn
 
 almond
-  is_a nut
+  kind_of nut
   label Almond
   foodb 148
   wikipedia Almond
 
 beech_nut
-  is_a nut
+  kind_of nut
   label Beech nut
   foodb 301
   wikipedia Beech
 
 brazil_nut
-  is_a nut
+  kind_of nut
   label Brazil nut
   foodb 24
   wikipedia Brazil_nut
 
 cashew
-  is_a nut
+  kind_of nut
   label Cashew
   foodb 11
   wikipedia Cashew
 
 chestnut
-  is_a nut
+  kind_of nut
   label Chestnut
   foodb 45
   wikipedia Chestnut
 
 chinese_chestnut
-  is_a chestnut
+  kind_of chestnut
   label Chinese chestnut
   foodb 336
   wikipedia Castanea_mollissima
 
 european_chestnut
-  is_a chestnut
+  kind_of chestnut
   label European chestnut
   foodb 368
   wikipedia Castanea_sativa
 
 japanese_chestnut
-  is_a chestnut
+  kind_of chestnut
   label Japanese chestnut
   foodb 390
   wikipedia Castanea_crenata
 
 hazelnut
-  is_a nut
+  kind_of nut
   label Hazelnut
   foodb 381
   wikipedia Hazelnut
 
 common_hazelnut
-  is_a hazelnut
+  kind_of hazelnut
   label Common hazelnut
   foodb 62
   wikipedia Corylus_avellana
 
 hickory_nut
-  is_a nut
+  kind_of nut
   label Hickory nut
   foodb 382
   wikipedia Hickory
 
 macadamia_nut
-  is_a nut
+  kind_of nut
   label Macadamia nut
   foodb 536
   wikipedia Macadamia
 
 prickly_macadamia
-  is_a macadamia_nut
+  kind_of macadamia_nut
   label Prickly macadamia nut
   foodb 225
   wikipedia Macadamia_tetraphylla
 
 mouse_nut
-  is_a nut
+  kind_of nut
   label Mouse nut
 
 peanut
-  is_a nut
+  kind_of nut
   label Peanut
   foodb 16
   wikipedia Peanut
 
 spanish_peanut
-  is_a peanut
+  kind_of peanut
   label Spanish peanut
 
 valencia_peanut
-  is_a peanut
+  kind_of peanut
   label Valencia peanut
 
 virginia_peanut
-  is_a peanut
+  kind_of peanut
   label Virginia peanut
 
 pecan_nut
-  is_a nut
+  kind_of nut
   label Pecan nut
   foodb 44
   wikipedia Pecan
 
 pili_nut
-  is_a nut
+  kind_of nut
   label Pili nut
   foodb 440
   wikipedia Canarium_ovatum
 
 pine_nut
-  is_a nut
+  kind_of nut
   label Pine nut
   foodb 138
   wikipedia Pine_nut
 
 colorado_pinyon
-  is_a pine_nut
+  kind_of pine_nut
   label Colorado pinyon
   foodb 441
   wikipedia Pinus_edulis
 
 pistachio_nut
-  is_a nut
+  kind_of nut
   label Pistachio
   foodb 140
   wikipedia Pistachio
 
 walnut
-  is_a nut
+  kind_of nut
   label Walnut
   foodb 622
   wikipedia Walnut
 
 black_walnut
-  is_a walnut
+  kind_of walnut
   label Black walnut
   foodb 93
   wikipedia Juglans_nigra
 
 common_walnut
-  is_a walnut
+  kind_of walnut
   label Common walnut
   foodb 94
   wikipedia Juglans_regia
 
 japanese_walnut
-  is_a walnut
+  kind_of walnut
   label Japanese walnut
   foodb 240
   wikipedia Juglans_ailantifolia
 
 white_walnut
-  is_a walnut
+  kind_of walnut
   label White walnut
   foodb 320
   wikipedia Juglans_cinerea
@@ -3225,78 +3225,78 @@ white_walnut
 #
 
 mushroom
-  is_a plant
+  kind_of plant
   label Mushroom
   foodb 883
   wikipedia Mushroom
 
 chanterelle
-  is_a mushroom
+  kind_of mushroom
   label Chanterelle
   foodb 583
   wikipedia Chanterelle
 
 cloud_ear_fungus
-  is_a mushroom
+  kind_of mushroom
   label Cloud ear
   foodb 568
   wikipedia Cloud_ear_fungus
 
 common_mushroom
-  is_a mushroom
+  kind_of mushroom
   label Common mushroom
   foodb 561
   wikipedia Agaricus_bisporus
 
 brown_mushroom
-  is_a common_mushroom
+  kind_of common_mushroom
   label Brown mushroom
 
 portobello_mushroom
-  is_a common_mushroom
+  kind_of common_mushroom
   label Portobello mushroom
 
 white_mushroom
-  is_a common_mushroom
+  kind_of common_mushroom
   label White mushroom
 
 enokitake
-  is_a mushroom
+  kind_of mushroom
   label Enokitake
   foodb 565
   wikipedia Enokitake
 
 maitake
-  is_a mushroom
+  kind_of mushroom
   label Maitake
   foodb 569
   wikipedia Grifola_frondosa
 
 morel
-  is_a mushroom
+  kind_of mushroom
   label Morel
   foodb 756
   wikipedia Morchella
 
 oyster_mushroom
-  is_a mushroom
+  kind_of mushroom
   label Oyster mushroom
   foodb 567
   wikipedia Pleurotus_ostreatus
 
 shiitake
-  is_a mushroom
+  kind_of mushroom
   label Shiitake
   foodb 562
   wikipedia Shiitake
 
 straw_mushroom
-  is_a mushroom
+  kind_of mushroom
   label Straw mushroom
   wikipedia Volvariella_volvacea
 
 wood_ear
-  is_a mushroom
+  kind_of mushroom
   label Wood ear
 
 
@@ -3311,189 +3311,189 @@ seed
   label Seed
 
 alfalfa_seed
-  is_a seed
+  kind_of seed
   label Alfalfa seed
   foodb 287
   wikipedia Alfalfa
 
 babassu_seed
-  is_a seed
+  kind_of seed
   label Babassu seed
   foodb 798
   wikipedia Attalea_speciosa
 
 borage
-  is_a seed
+  kind_of seed
   label Borage
   foodb 26
   wikipedia Borage
 
 breadfruit_seed
-  is_a seed
+  kind_of seed
   label Breadfruit seed
 
 breadnut_seed
-  is_a seed
+  kind_of seed
   label Breadnut seed
   foodb 313
   wikipedia Brosimum_alicastrum
 
 canola_seed
-  is_a seed
+  kind_of seed
   label Canola seed
   foodb 797
   wikipedia Canola
 
 celery_seed
-  is_a seed
+  kind_of seed
   label Celery seed
   foodb 15
   wikipedia Celery
 
 chia_seed
-  is_a seed
+  kind_of seed
   label Chia seed
   foodb 333
   wikipedia Salvia_hispanica
 
 coriander_seed
-  is_a seed
+  kind_of seed
   label Coriander seed
 
 cottonseed
-  is_a seed
+  kind_of seed
   label Cottonseed
   foodb 346
   wikipedia Cottonseed
 
 dill_seed
-  is_a seed
+  kind_of seed
   label Dill seed
 
 fennel_seed
-  is_a seed
+  kind_of seed
   label Fennel seed
 
 fenugreek_seed
-  is_a seed
+  kind_of seed
   label Fenugreek seed
 
 flaxseed
-  is_a seed
+  kind_of seed
   label Flaxseed
   foodb 101
   wikipedia Flax
 
 ginkgo_nut
-  is_a seed
+  kind_of seed
   label Ginkgo nut
   foodb 372
   wikipedia Ginkgo_biloba
 
 hedge_mustard_seed
-  is_a seed
+  kind_of seed
   label Hedge mustard seed
   foodb 485
   wikipedia Sisymbrium_officinale
 
 hemp_seed
-  is_a seed
+  kind_of seed
   label Hemp seed
   wikipedia Hemp
 
 lotus_seed
-  is_a seed
+  kind_of seed
   label Lotus seed
   foodb 406
   wikipedia Lotus_seed
 
 mustard_seed
-  is_a seed
+  kind_of seed
   label Mustard seed
   foodb 420
   wikipedia White_mustard
 
 palm_seed
-  is_a seed
+  kind_of seed
   label Palm seed
   foodb 605
 
 poppy_seed
-  is_a seed
+  kind_of seed
   label Poppy seed
   foodb 447
   wikipedia Poppy_seed
 
 primrose_seed
-  is_a seed
+  kind_of seed
   label Evening primrose
   foodb 120
   wikipedia Oenothera
 
 pumpkin_seed
-  is_a seed
+  kind_of seed
   label Pumpkin seed
 
 quinoa
-  is_a seed
+  kind_of seed
   label Quinoa
   foodb 450
   wikipedia Quinoa
 
 radish_seed
-  is_a seed
+  kind_of seed
   label Radish seed
 
 rowal_seed
-  is_a seed
+  kind_of seed
   label Rowal seed
   foodb 559
   wikipedia Pangium_edule
 
 safflower_seed
-  is_a seed
+  kind_of seed
   label Safflower seed
   foodb 42
   wikipedia Safflower
 
 sago_seed
-  is_a seed
+  kind_of seed
   label Sago seed
   foodb 607
   wikipedia Metroxylon_sagu
 
 sesame_seed
-  is_a seed
+  kind_of seed
   label Sesame seed
   foodb 170
   wikipedia Sesame
 
 shea_nut
-  is_a seed
+  kind_of seed
   label Shea nut
   foodb 800
   wikipedia Vitellaria
 
 sunflower_seed
-  is_a seed
+  kind_of seed
   label Sunflower seed
   foodb 86
   wikipedia Sunflower_seed
 
 tea_oil_camellia
-  is_a seed
+  kind_of seed
   label Tea oil camellia
   foodb 801
   wikipedia Camellia_oleifera
 
 ucuhuba_seed
-  is_a seed
+  kind_of seed
   label Ucuhuba seed
   foodb 802
   wikipedia Virola_surinamensis
 
 watermelon_seed
-  is_a seed
+  kind_of seed
   label Watermelon seed
   wikipedia Watermelon
 
@@ -3501,112 +3501,112 @@ watermelon_seed
 # Grains are grass seeds
 
 grain
-  is_a seed
+  kind_of seed
   label Grain
 
 amaranth_grain
-  is_a grain
+  kind_of grain
   label Amaranth grain
   wikipedia Amaranth_grain
 
 barley
-  is_a grain
+  kind_of grain
   label Barley
   foodb 88
   wikipedia Barley
 
 buckwheat
-  is_a grain
+  kind_of grain
   label Buckwheat
   foodb 79
   # TODO foodb tartary_buckwheat 80
 
 bulgur
-  is_a grain
+  kind_of grain
   label Bulgur
   foodb 766
 
 corn
-  is_a grain
+  kind_of grain
   label Corn
   foodb 205
 
 millet_grain
-  is_a grain
+  kind_of grain
   label Millet
   foodb 126
 
 oat_grain
-  is_a grain
+  kind_of grain
   label Oat
   foodb 22
 
 rice
-  is_a grain
+  kind_of grain
   label Rice
   foodb 125
   # TODO foodb red_rice 235
 
 brown_rice
-  is_a rice
+  kind_of rice
   label Brown rice
 
 long_brown_rice
-  is_a brown_rice
+  kind_of brown_rice
   label Long-grain brown rice
 
 medium_brown_rice
-  is_a brown_rice
+  kind_of brown_rice
   label Medium-grain brown rice
 
 white_rice
-  is_a rice
+  kind_of rice
   label White rice
 
 glutinous_white_rice
-  is_a white_rice
+  kind_of white_rice
   label Glutinous white rice
 
 long_white_rice
-  is_a white_rice
+  kind_of white_rice
   label Long-grain white rice
 
 medium_white_rice
-  is_a white_rice
+  kind_of white_rice
   label Medium-grain white rice
 
 short_white_rice
-  is_a white_rice
+  kind_of white_rice
   label Short-grain white rice
 
 wild_rice
-  is_a rice
+  kind_of rice
   label Wild rice
   foodb 516
   # TODO foodb annual_wild_rice 236
 
 rye_grain
-  is_a grain
+  kind_of grain
   label Rye grain
   foodb 169
 
 sorghum_grain
-  is_a grain
+  kind_of grain
   label Sorghum grain
   foodb 177
 
 spelt
-  is_a grain
+  kind_of grain
   label Spelt
   foodb 489
 
 triticale
-  is_a grain
+  kind_of grain
   label Triticale
   foodb 246
 
 wheat
-  is_a grain
+  kind_of grain
   label Wheat
   foodb 575
   # TODO foodb common_wheat 187
@@ -3629,106 +3629,106 @@ animal
 # TODO review bird taxonomy (e.g. poultry is used only for domesticated birds)
 
 poultry
-  is_a animal
+  kind_of animal
   label Poultry
 
 anatidae
-  is_a poultry
+  kind_of poultry
   label Anatidae
   foodb 590
 
 duck
-  is_a anatidae
+  kind_of anatidae
   label Duck
 
 mallard_duck
-  is_a duck
+  kind_of duck
   label Mallard duck
   foodb 358
 
 velvet_duck
-  is_a duck
+  kind_of duck
   label Velvet duck
   foodb 435
 
 goose
-  is_a anatidae
+  kind_of anatidae
   label Goose
 
 greylag_goose
-  is_a goose
+  kind_of goose
   label Greylag goose
   foodb 373
 
 swan
-  is_a anatidae
+  kind_of anatidae
   label Swan
 
 chicken
-  is_a poultry
+  kind_of poultry
   label Chicken
   foodb 334
 
 columbidae
-  is_a poultry
+  kind_of poultry
   label Columbidae
   foodb 624
 
 dove
-  is_a columbidae
+  kind_of columbidae
   label Dove
 
 squab
-  is_a columbidae
+  kind_of columbidae
   label Squab
   foodb 491
 
 emu
-  is_a poultry
+  kind_of poultry
   label Emu
   foodb 365
 
 grouse
-  is_a poultry
+  kind_of poultry
   label Grouse
 
 rock_ptarmigan
-  is_a grouse
+  kind_of grouse
   label Rock ptarmigan
   foodb 611
 
 ruffed_grouse
-  is_a grouse
+  kind_of grouse
   label Ruffed grouse
   wikipedia Ruffed_grouse
 
 guinea_hen
-  is_a poultry
+  kind_of poultry
   label Guinea hen
   foodb 378
 
 horned_owl
-  is_a poultry
+  kind_of poultry
   label Horned owl
   foodb 554
 
 ostrich
-  is_a poultry
+  kind_of poultry
   label Ostrich
   foodb 430
 
 pheasant
-  is_a poultry
+  kind_of poultry
   label Pheasant
   foodb 438
 
 quail
-  is_a poultry
+  kind_of poultry
   label Quail
   foodb 555
 
 turkey
-  is_a poultry
+  kind_of poultry
   label Turkey
   foodb 505
 
@@ -3737,48 +3737,48 @@ turkey
 # TODO bovidae taxonomy
 
 beef
-  is_a animal
+  kind_of animal
   label Beef
   foodb 506
   wikipedia Beef
 
 veal
-  is_a beef
+  kind_of beef
   label Veal
 
 beefalo
-  is_a animal
+  kind_of animal
   label Beefalo
   foodb 542
   wikipedia Beefalo
 
 bison
-  is_a animal
+  kind_of animal
   label Bison
   foodb 303
   wikipedia Bison
 
 buffalo
-  is_a animal
+  kind_of animal
   label Buffalo
   foodb 316
 
 goat
-  is_a animal
+  kind_of animal
   label Goat
   foodb 541
 
 mutton
-  is_a animal
+  kind_of animal
   label Mutton
   foodb 483
 
 lamb
-  is_a mutton
+  kind_of mutton
   label Lamb
 
 horse
-  is_a animal
+  kind_of animal
   label Horse
   foodb 383
 
@@ -3786,16 +3786,16 @@ horse
 # Pork-related animals
 
 swine
-  is_a animal
+  kind_of animal
   label Swine
 
 boar
-  is_a swine
+  kind_of swine
   label Boar
   foodb 310
 
 pork
-  is_a swine
+  kind_of swine
   label Pork
   foodb 549
 
@@ -3804,22 +3804,22 @@ pork
 # TODO maybe define taxonomy related to game meat
 
 bear
-  is_a animal
+  kind_of animal
   label Bear
   wikipedia Bear
 
 black_bear
-  is_a bear
+  kind_of bear
   label Black bear
   foodb 304
 
 brown_bear
-  is_a bear
+  kind_of bear
   label Brown bear
   foodb 315
 
 polar_bear
-  is_a bear
+  kind_of bear
   label Polar bear
   foodb 446
 
@@ -3827,33 +3827,33 @@ polar_bear
 # Venison animals (deer-like)
 
 antelope
-  is_a animal
+  kind_of animal
   label Antelope
   foodb 543
   wikipedia Antelope
 
 caribou
-  is_a animal
+  kind_of animal
   label Caribou
   foodb 324
 
 deer
-  is_a animal
+  kind_of animal
   label Deep
   foodb 535
 
 mule_deer
-  is_a deer
+  kind_of deer
   label Mule deer
   foodb 353
 
 elk
-  is_a animal
+  kind_of animal
   label Elk
   foodb 364
 
 moose
-  is_a animal
+  kind_of animal
   label Moose
   foodb 415
 
@@ -3862,49 +3862,49 @@ moose
 # TODO rodent taxonomy (e.g. lagomorphs)
 
 opossum
-  is_a animal
+  kind_of animal
   label Opossum
   foodb 429
 
 european_rabbit
-  is_a animal
+  kind_of animal
   label European rabbit
   foodb 451
 
 mountain_hare
-  is_a animal
+  kind_of animal
   label Mountain hare
   foodb 595
 
 rabbit
-  is_a animal
+  kind_of animal
   label Rabbit
   foodb 540
 
 raccoon
-  is_a animal
+  kind_of animal
   label Raccoon
   foodb 452
 
 beaver
-  is_a animal
+  kind_of animal
   label Beaver
   foodb 300
   wikipedia Beaver
 
 ground_squirrel
-  is_a animal
+  kind_of animal
   label Ground squirrel
   foodb 539
   wikipedia Ground_squirrel
 
 muskrat
-  is_a animal
+  kind_of animal
   label Muskrat
   foodb 419
 
 squirrel
-  is_a animal
+  kind_of animal
   label Squirrel
   foodb 492
 
@@ -3913,29 +3913,29 @@ squirrel
 # TODO maybe define taxonomy for aquatic (freshwater and/or marine) mammals
 
 dolphin
-  is_a animal
+  kind_of animal
   label Dolphin
   wikipedia Dolphin
 
 porpoise
-  is_a animal
+  kind_of animal
   label Porpoise
   wikipedia Porpoise
 
 whale
-  is_a animal
+  kind_of animal
   label Whale
   foodb 623
   wikipedia Whale
 
 beluga_whale
-  is_a whale
+  kind_of whale
   label Beluga whale
   foodb 302
   wikipedia Beluga_whale
 
 bowhead_whale
-  is_a whale
+  kind_of whale
   label Bowhead whale
   foodb 311
   wikipedia Bowhead_whale
@@ -3945,42 +3945,42 @@ bowhead_whale
 # TODO refine pinnipeds and other marine mammals
 
 seal
-  is_a animal
+  kind_of animal
   label Seal
 
 bearded_seal
-  is_a seal
+  kind_of seal
   label Bearded seal
   foodb 476
 
 ringed_seal
-  is_a seal
+  kind_of seal
   label Ringed seal
   foodb 477
 
 spotted_seal
-  is_a seal
+  kind_of seal
   label Spotted seal
   foodb 431
 
 true_seal
-  is_a seal
+  kind_of seal
   label True seal
   foodb 614
 
 sea_lion
-  is_a animal
+  kind_of animal
   label Sea lion
   wikipedia Sea_lion
   
 steller_sea_lion
-  is_a sea_lion
+  kind_of sea_lion
   label Steller sea lion
   foodb 475
   wikipedia Steller_sea_lion
 
 walrus
-  is_a animal
+  kind_of animal
   label Walrus
   foodb 550
 
@@ -3988,13 +3988,13 @@ walrus
 # Miscellaneous animals
 
 frog
-  is_a animal
+  kind_of animal
   label Frog
   foodb 592
   wikipedia Frog
 
 turtle
-  is_a animal
+  kind_of animal
   label Turtle
   foodb 726
   wikipedia Turtle
@@ -4007,11 +4007,11 @@ turtle
 # TODO need to create taxonomies for these species
 
 insect
-  is_a animal
+  kind_of animal
   label Insect
 
 bee
-  is_a insect
+  kind_of insect
   label Bee
 
 
@@ -4030,72 +4030,72 @@ seafood
 # TODO improve sea weeds, especially for Asian cuisine
 
 seaweed
-  is_a
+  kind_of
     seafood
     plant
   label Seaweed
   wikipedia Seaweed
 
 brown_alga
-  is_a seaweed
+  kind_of seaweed
   label Brown alga
   wikipedia Brown_algae
 
 green_alga
-  is_a seaweed
+  kind_of seaweed
   label Green alga
   wikipedia Green_algae
 
 red_alga
-  is_a seaweed
+  kind_of seaweed
   label Red alga
   foodb 615
   wikipedia Red_algae
   
 agar
-  is_a red_alga
+  kind_of red_alga
   label Agar
   foodb 285
   wikipedia Agar
 
 irish_moss
-  is_a red_alga
+  kind_of red_alga
   label Irish moss
   foodb 387
   wikipedia Chondrus_crispus
 
 kelp
-  is_a red_alga
+  kind_of red_alga
   label Kelp
   foodb 396
   wikipedia Kelp
 
 kombu
-  is_a kelp
+  kind_of kelp
   label Kombu
   foodb 616
   wikipedia Kombu
 
 wakame
-  is_a kelp
+  kind_of kelp
   label Wakame
   foodb 564
   wikipedia Wakame
 
 laver
-  is_a red_alga
+  kind_of red_alga
   label Laver
   wikipedia Laver_(seaweed)
 
 purple_laver
-  is_a laver
+  kind_of laver
   label Purple laver
   foodb 563
   wikipedia Porphyra
 
 spirulina
   # NOTE technically, this is a bacteria
-  is_a seaweed
+  kind_of seaweed
   label Spirulina
   wikipedia Spirulina_(dietary_supplement)
   foodb 490
@@ -4106,843 +4106,843 @@ spirulina
 # TODO need to properly handle vernacular names, especially if they refer to multiple unrelated families (e.g. trout, whitefish...)
 
 fish
-  is_a seafood
+  kind_of seafood
   label Fish
   foodb 896
   wikipedia Fish
 
 bony_fish
-  is_a fish
+  kind_of fish
   label Bony fish
   wikipedia Osteichthyes
 
 anchovy
-  is_a bony_fish
+  kind_of bony_fish
   label Anchovy
   foodb 580
   wikipedia Anchovy
 
 european_anchovy
-  is_a anchovy
+  kind_of anchovy
   label European anchovy
   foodb 367
   wikipedia European_anchovy
 
 anglerfish
-  is_a bony_fish
+  kind_of bony_fish
   label Anglerfish
   wikipedia Anglerfish
 
 monkfish
-  is_a anglerfish
+  kind_of anglerfish
   label Monkfish
   foodb 414
   wikipedia Lophius
 
 carp
-  is_a bony_fish
+  kind_of bony_fish
   label Carp
   wikipedia Cyprinidae
 
 carp_bream
-  is_a carp
+  kind_of carp
   label Carp bream
   foodb 582
   wikipedia Common_bream
 
 common_carp
-  is_a carp
+  kind_of carp
   label Common carp
   foodb 327
   wikipedia Common_carp
 
 catfish
-  is_a bony_fish
+  kind_of bony_fish
   label Catfish
   foodb 619
   wikipedia Catfish
 
 channel_catfish
-  is_a catfish
+  kind_of catfish
   label Channel catfish
   foodb 329
   wikipedia Channel_catfish
 
 cod
-  is_a bony_fish
+  kind_of bony_fish
   label Cod
   foodb 594
   wikipedia Gadiformes
 
 common_cod
-  is_a cod
+  kind_of cod
   label Common cod
   foodb 526
   wikipedia Gadus
 
 atlantic_cod
-  is_a common_cod
+  kind_of common_cod
   label Atlantic cod
   foodb 343
   wikipedia Atlantic_cod
 
 pacific_cod
-  is_a common_cod
+  kind_of common_cod
   label Pacific cod
   foodb 342
   wikipedia Pacific_cod
 
 pollock
-  is_a cod
+  kind_of cod
   label Pollock
   foodb 524
   wikipedia Pollock
 
 alaska_pollock
-  is_a pollock
+  kind_of pollock
   label Alaska pollock
   foodb 508
   wikipedia Alaska_pollock
 
 atlantic_pollock
-  is_a pollock
+  kind_of pollock
   label Atlantic pollock
   foodb 296
 
 coalfish_pollock
-  is_a pollock
+  kind_of pollock
   label Coalfish pollock
   foodb 512
   wikipedia Pollachius_virens
 
 rockling
-  is_a cod
+  kind_of cod
   label Rockling
   wikipedia Lotidae
 
 burbot
-  is_a rockling
+  kind_of rockling
   label Burbot
   foodb 317
   wikipedia Burbot
 
 common_ling
-  is_a rockling
+  kind_of rockling
   label Common ling
   foodb 402
   wikipedia Common_ling
 
 cusk
-  is_a rockling
+  kind_of rockling
   label Cusk
   foodb 351
   wikipedia Cusk_(fish)
 
 true_cod
-  is_a cod
+  kind_of cod
   label True cod
   wikipedia Gadidae
 
 blue_whiting
-  is_a true_cod
+  kind_of true_cod
   label Blue whiting
   foodb 581
   wikipedia Blue_whiting
 
 haddock
-  is_a true_cod
+  kind_of true_cod
   label Haddock
   foodb 379
   wikipedia Haddock
 
 norway_pout
-  is_a true_cod
+  kind_of true_cod
   label Norway pout
   foodb 604
   wikipedia Trisopterus_esmarkii
 
 whiting
-  is_a true_cod
+  kind_of true_cod
   label Whiting
   foodb 515
   wikipedia Merlangius
 
 devilfish
-  is_a bony_fish
+  kind_of bony_fish
   label Devilfish
   foodb 354
   wikipedia Myoxocephalus
 
 eel
-  is_a bony_fish
+  kind_of bony_fish
   label Eel
   foodb 591
   wikipedia Eel
 
 freshwater_eel
-  is_a eel
+  kind_of eel
   label Freshwater eel
   foodb 362
   wikipedia Anguillidae
 
 flatfish
-  is_a bony_fish
+  kind_of bony_fish
   label Flatfish
   foodb 548
   wikipedia Flatfish
 
 righteye_flounder
-  is_a flatfish
+  kind_of flatfish
   label Righteye flounder
   foodb 610
   wikipedia Pleuronectidae
 
 common_dab
-  is_a righteye_flounder
+  kind_of righteye_flounder
   label Common dab
   foodb 588
   wikipedia Common_dab
 
 halibut
-  is_a righteye_flounder
+  kind_of righteye_flounder
   label Halibut
   foodb 380
   wikipedia Halibut
 
 atlantic_halibut
-  is_a halibut
+  kind_of halibut
   label Atlantic halibut
   foodb 527
   wikipedia Atlantic_halibut
 
 greenland_halibut
-  is_a halibut
+  kind_of halibut
   label Greenland halibut
   foodb 375
   wikipedia Greenland_halibut
 
 pacific_halibut
-  is_a halibut
+  kind_of halibut
   label Pacific halibut
   foodb 528
   wikipedia Pacific_halibut
 
 lemon_sole
-  is_a righteye_flounder
+  kind_of righteye_flounder
   label Lemon sole
   foodb 597
   wikipedia Lemon_sole
 
 plaice
-  is_a righteye_flounder
+  kind_of righteye_flounder
   label Plaice
   wikipedia Plaice
 
 true_sole
-  is_a flatfish
+  kind_of flatfish
   label True sole
   foodb 618
   wikipedia Soleidae
 
 turbot
-  is_a flatfish
+  kind_of flatfish
   label Turbot
   foodb 369
   wikipedia Turbot
 
 herring
-  is_a bony_fish
+  kind_of bony_fish
   label Herring
   foodb 531
   wikipedia Herring
 
 atlantic_herring
-  is_a herring
+  kind_of herring
   label Atlantic herring
   foodb 293
   wikipedia Atlantic_herring
 
 hilsa
-  is_a herring
+  kind_of herring
   label Hilsa
   wikipedia Ilish
 
 menhaden
-  is_a herring
+  kind_of herring
   label Menhaden
   wikipedia Menhaden
 
 atlantic_menhaden
-  is_a menhaden
+  kind_of menhaden
   label Atlantic menhaden
   foodb 574
   wikipedia Atlantic_menhaden
 
 pacific_herring
-  is_a herring
+  kind_of herring
   label Pacific herring
   foodb 432
   wikipedia Pacific_herring
 
 sardine
-  is_a herring
+  kind_of herring
   label Sardine
   wikipedia Sardine
 
 pacific_sardine
-  is_a sardine
+  kind_of sardine
   label Pacific sardine
   foodb 471
   wikipedia South_American_pilchard
 
 shad
-  is_a herring
+  kind_of herring
   label Shad
   wikipedia Alosinae
 
 american_shad
-  is_a shad
+  kind_of shad
   label American shad
   foodb 480
   wikipedia American_shad
 
 lingcod
-  is_a bony_fish
+  kind_of bony_fish
   label Lingcod
   foodb 403
   wikipedia Lingcod
 
 lumpsucker
-  is_a bony_fish
+  kind_of bony_fish
   label Lumpsucker
   foodb 599
   wikipedia Lumpsucker
 
 milkfish
-  is_a bony_fish
+  kind_of bony_fish
   label Milkfish
   foodb 413
   wikipedia Milkfish
 
 mullet
-  is_a bony_fish
+  kind_of bony_fish
   label Mullet
   wikipedia Mullet_(fish)
 
 striped_mullet
-  is_a mullet
+  kind_of mullet
   label Striped mullet
   foodb 418
   wikipedia Flathead_grey_mullet
 
 needlefish
-  is_a bony_fish
+  kind_of bony_fish
   label Needlefish
   wikipedia Needlefish
 
 garfish
-  is_a needlefish
+  kind_of needlefish
   label Garfish
   foodb 593
   wikipedia Garfish
 
 perciforme
-  is_a bony_fish
+  kind_of bony_fish
   label Perciforme
   foodb 538
   wikipedia Perciformes
 
 amberjack
-  is_a perciforme
+  kind_of perciforme
   label Amberjack
   wikipedia Seriola
 
 yellowtail_amberjack
-  is_a amberjack
+  kind_of amberjack
   label Yellowtail amberjack
   foodb 523
   wikipedia Yellowtail_amberjack
 
 bluefish
-  is_a perciforme
+  kind_of perciforme
   label Bluefish
   foodb 309
   wikipedia Bluefish
 
 butterfish
-  is_a perciforme
+  kind_of perciforme
   label Butterfish
   wikipedia Stromateidae
 
 american_butterfish
-  is_a butterfish
+  kind_of butterfish
   label American butterfish
   foodb 319
   wikipedia American_butterfish
 
 croaker
-  is_a perciforme
+  kind_of perciforme
   label Croaker
   wikipedia Sciaenidae
 
 atlantic_croaker
-  is_a croaker
+  kind_of croaker
   label Atlantic croaker
   foodb 350
   wikipedia Atlantic_croaker
 
 freshwater_drum
-  is_a croaker
+  kind_of croaker
   label Freshwater drum
   foodb 357
   wikipedia Freshwater_drum
 
 spot_croaker
-  is_a croaker
+  kind_of croaker
   label Spot croaker
   foodb 571
   wikipedia Spot_(fish)
 
 dolphin_fish
-  is_a perciforme
+  kind_of perciforme
   label Mahi-mahi
   foodb 356
   wikipedia Mahi-mahi
 
 eelpout
-  is_a perciforme
+  kind_of perciforme
   label Eelpout
   wikipedia Eelpout
 
 ocean_pout
-  is_a eelpout
+  kind_of eelpout
   label Ocean pout
   foodb 424
   wikipedia Ocean_pout
 
 pacific_jack_mackerel
-  is_a perciforme
+  kind_of perciforme
   label Pacific jack mackerel
   foodb 388
   wikipedia Pacific_jack_mackerel
 
 perch
-  is_a perciforme
+  kind_of perciforme
   label Perch
   wikipedia Percidae
 
 sander
-  is_a perch
+  kind_of perch
   label Sander
   wikipedia Sander_(genus)
 
 walleye
-  is_a sander
+  kind_of sander
   label Walleye
   foodb 507
   wikipedia Walleye
 
 zander
-  is_a sander
+  kind_of sander
   label Zander
   foodb 609
   wikipedia Zander
 
 percoidei
-  is_a perciforme
+  kind_of perciforme
   label Percoidei
   foodb 537
   wikipedia Percoidei
 
 bass
-  is_a percoidei
+  kind_of percoidei
   label Bass
 
 striped_bass
-  is_a bass
+  kind_of bass
   label Striped bass
   foodb 299
 
 seatrout
-  is_a percoidei
+  kind_of percoidei
   label Seatrout
   foodb 478
   wikipedia Cynoscion
 
 pompano
-  is_a perciforme
+  kind_of perciforme
   label Pompano
   wikipedia Pompano
 
 florida_pompano
-  is_a pompano
+  kind_of pompano
   label Florida pompano
   foodb 371
   wikipedia Florida_pompano
 
 scombridae
-  is_a perciforme
+  kind_of perciforme
   label Scombridae
   foodb 600
   wikipedia Scombridae
 
 bonito
-  is_a scombridae
+  kind_of scombridae
   label Bonito
   wikipedia Bonito
 
 mackerel
-  is_a scombridae
+  kind_of scombridae
   label Mackerel
   wikipedia Mackerel
 
 atlantic_mackerel
-  is_a mackerel
+  kind_of mackerel
   label Atlantic mackerel
   foodb 294
   wikipedia Atlantic_mackerel
 
 king_mackerel
-  is_a mackerel
+  kind_of mackerel
   label King mackerel
   foodb 397
   wikipedia King_mackerel
 
 spanish_mackerel
-  is_a mackerel
+  kind_of mackerel
   label Spanish mackerel
   foodb 470
   wikipedia Spanish_mackerel
 
 tuna
-  is_a scombridae
+  kind_of scombridae
   label Tuna
   foodb 621
   wikipedia Thunnus
 
 albacore_tuna
-  is_a tuna
+  kind_of tuna
   label Albacore tuna
   foodb 525
   wikipedia Albacore
 
 bluefin_tuna
-  is_a tuna
+  kind_of tuna
   label Bluefin tuna
   wikipedia Bluefin_tuna
 
 northern_bluefin_tuna
-  is_a bluefin_tuna
+  kind_of bluefin_tuna
   label Northern bluefin tuna
   foodb 308
   wikipedia Atlantic_bluefin_tuna
 
 skipjack_tuna
-  is_a tuna
+  kind_of tuna
   label Skipjack tuna
   foodb 486
   wikipedia Skipjack_tuna
 
 yellowfin_tuna
-  is_a tuna
+  kind_of tuna
   label Yellowfin tuna
   foodb 522
   wikipedia Yellowfin_tuna
 
 sea_bass
-  is_a perciforme
+  kind_of perciforme
   label Sea bass
   wikipedia Serranidae
 
 grouper
-  is_a sea_bass
+  kind_of sea_bass
   label Grouper
   foodb 377
   wikipedia Grouper
 
 painted_comber
-  is_a sea_bass
+  kind_of sea_bass
   label Painted comber
   foodb 295
   wikipedia Painted_comber
 
 sea_bream
-  is_a perciforme
+  kind_of perciforme
   label Sea bream
   wikipedia Sparidae
 
 scup
-  is_a sea_bream
+  kind_of sea_bream
   label Scup
   foodb 473
   wikipedia Scup
 
 sheepshead
-  is_a sea_bream
+  kind_of sea_bream
   label Sheepshead
   foodb 484
   wikipedia Archosargus_probatocephalus
 
 snapper
-  is_a perciforme
+  kind_of perciforme
   label Snapper
   foodb 487
   wikipedia Lutjanidae
 
 sunfish
-  is_a perciforme
+  kind_of perciforme
   label Sunfish
   wikipedia Centrarchidae
 
 pumpkinseed_sunfish
-  is_a sunfish
+  kind_of sunfish
   label Pumpkinseed sunfish
   foodb 497
   wikipedia Pumpkinseed
 
 swordfish
-  is_a perciforme
+  kind_of perciforme
   label Swordfish
   foodb 498
   wikipedia Swordfish
 
 tilefish
-  is_a perciforme
+  kind_of perciforme
   label Tilefish
   foodb 501
   wikipedia Tilefish
 
 wolffish
-  is_a perciforme
+  kind_of perciforme
   label Wolffish
   wikipedia Anarhichadidae
 
 atlantic_wolffish
-  is_a wolffish
+  kind_of wolffish
   label Atlantic wolffish
   foodb 297
   wikipedia Atlantic_wolffish
 
 pike
-  is_a bony_fish
+  kind_of bony_fish
   label Pike
   wikipedia Esox
 
 alaska_blackfish
-  is_a pike
+  kind_of pike
   label Alaska blackfish
   foodb 305
   wikipedia Alaska_blackfish
 
 northern_pike
-  is_a pike
+  kind_of pike
   label Northern pike
   foodb 439
   wikipedia Northern_pike
 
 rockfish
-  is_a bony_fish
+  kind_of bony_fish
   label Rockfish
   foodb 434
   wikipedia Sebastes
 
 ocean_perch
-  is_a rockfish
+  kind_of rockfish
   label Ocean perch
   foodb 602
   wikipedia Rose_fish
 
 pacific_rockfish
-  is_a rockfish
+  kind_of rockfish
   label Pacific rockfish
   foodb 612
   wikipedia Pacific_ocean_perch
 
 roughy
-  is_a bony_fish
+  kind_of bony_fish
   label Roughy
   wikipedia Slimehead
 
 orange_roughy
-  is_a roughy
+  kind_of roughy
   label Orange roughy
   foodb 458
   wikipedia Orange_roughy
 
 sablefish
-  is_a bony_fish
+  kind_of bony_fish
   label Sablefish
   foodb 459
   wikipedia Sablefish
 
 salmonidae
-  is_a bony_fish
+  kind_of bony_fish
   label Salmonidae
   foodb 504
   wikipedia Salmonidae
 
 charr
-  is_a salmonidae
+  kind_of salmonidae
   label Charr
   foodb 585
   wikipedia Salvelinus
 
 brook_trout
-  is_a charr
+  kind_of charr
   label Brook trout
   wikipedia Brook_trout
 
 lake_trout
-  is_a charr
+  kind_of charr
   label Lake trout
   foodb 596
   wikipedia Lake_trout
 
 cisco
-  is_a salmonidae
+  kind_of salmonidae
   label Cisco
   foodb 339
   wikipedia Cisco_(fish)
 
 salmon
-  is_a salmonidae
+  kind_of salmonidae
   label Salmon
   wikipedia Salmon
 
 atlantic_salmon
-  is_a salmon
+  kind_of salmon
   label Atlantic salmon
   foodb 465
   wikipedia Atlantic_salmon
 
 pacific_salmon
-  is_a salmon
+  kind_of salmon
   label Pacific salmon
   foodb 529
   wikipedia Oncorhynchus
 
 chinook_salmon
-  is_a pacific_salmon
+  kind_of pacific_salmon
   label Chinook salmon
   foodb 464
   wikipedia Chinook_salmon
 
 chum_salmon
-  is_a pacific_salmon
+  kind_of pacific_salmon
   label Chum salmon
   foodb 461
   wikipedia Chum_salmon
 
 coho_salmon
-  is_a pacific_salmon
+  kind_of pacific_salmon
   label Coho salmon
   foodb 462
   wikipedia Coho_salmon
 
 pink_salmon
-  is_a pacific_salmon
+  kind_of pacific_salmon
   label Pink salmon
   foodb 460
   wikipedia Pink_salmon
 
 rainbow_trout
-  is_a pacific_salmon
+  kind_of pacific_salmon
   label Rainbow trout
   foodb 454
   wikipedia Rainbow_trout
 
 sockeye_salmon
-  is_a pacific_salmon
+  kind_of pacific_salmon
   label Sockeye salmon
   foodb 463
   wikipedia Sockeye_salmon
 
 sheefish
-  is_a salmonidae
+  kind_of salmonidae
   label Sheefish
   foodb 482
   wikipedia Nelma
 
 trout
-  is_a salmonidae
+  kind_of salmonidae
   label Trout
   wikipedia Trout
 
 whitefish
-  is_a salmonidae
+  kind_of salmonidae
   label Whitefish
   foodb 514
   wikipedia Coregonus
 
 broad_whitefish
-  is_a whitefish
+  kind_of whitefish
   label Broad whitefish
   foodb 513
   wikipedia Broad_whitefish
 
 smelt
-  is_a bony_fish
+  kind_of bony_fish
   label Smelt
   foodb 530
   wikipedia Smelt_(fish)
 
 rainbow_smelt
-  is_a smelt
+  kind_of smelt
   label Rainbow smelt
   foodb 453
   wikipedia Rainbow_smelt
 
 sturgeon
-  is_a bony_fish
+  kind_of bony_fish
   label Sturgeon
   foodb 584
   wikipedia Sturgeon
 
 greater_sturgeon
-  is_a sturgeon
+  kind_of sturgeon
   label Greater sturgeon
   foodb 494
 
 sucker
-  is_a bony_fish
+  kind_of bony_fish
   label Sucker
   wikipedia Catostomus
 
 white_sucker
-  is_a sucker
+  kind_of sucker
   label White sucker
   foodb 495
   wikipedia White_sucker
 
 tilapia
-  is_a bony_fish
+  kind_of bony_fish
   label Tilapia
   foodb 723
   wikipedia Tilapia
 
 cartilaginous_fish
-  is_a fish
+  kind_of fish
   label Cartilaginous fish
   wikipedia Chondrichthyes
 
 dogfish
-  is_a cartilaginous_fish
+  kind_of cartilaginous_fish
   label Dogfish
   wikipedia Squalidae
 
 spiny_dogfish
-  is_a dogfish
+  kind_of dogfish
   label Spiny dogfish
   foodb 589
   wikipedia Spiny_dogfish
 
 ray
-  is_a cartilaginous_fish
+  kind_of cartilaginous_fish
   label Ray
   wikipedia Batoidea
 
 shark
-  is_a cartilaginous_fish
+  kind_of cartilaginous_fish
   label Shark
   foodb 481
   wikipedia Shark
@@ -4951,247 +4951,247 @@ shark
 # Shellfishes (crustaceans and mollusks)
 
 shellfish
-  is_a seafood
+  kind_of seafood
   label Shellfish
   wikipedia Shellfish
 
 crustacean
-  is_a shellfish
+  kind_of shellfish
   label Crustacean
   foodb 892
   wikipedia Crustacean
 
 crab
-  is_a crustacean
+  kind_of crustacean
   label Crab
   foodb 587
   wikipedia Crab
 
 blue_crab
-  is_a crab
+  kind_of crab
   label Blue crab
   foodb 306
   wikipedia Callinectes_sapidus
 
 dungeness_crab
-  is_a crab
+  kind_of crab
   label Dungeness crab
   foodb 359
   wikipedia Dungeness_crab
 
 king_crab
-  is_a crab
+  kind_of crab
   label King crab
   wikipedia King_crab
 
 red_king_crab
-  is_a king_crab
+  kind_of king_crab
   label Red king crab
   foodb 286
   wikipedia Red_king_crab
 
 snow_crab
-  is_a crab
+  kind_of crab
   label Snow crab
   foodb 533
   wikipedia Chionoecetes
 
 crayfish
-  is_a crustacean
+  kind_of crustacean
   label Crayfish
   foodb 547
   wikipedia Crayfish
 
 lobster
-  is_a crustacean
+  kind_of crustacean
   label Lobster
   foodb 598
   wikipedia Lobster
 
 american_lobster
-  is_a lobster
+  kind_of lobster
   label American lobster
   foodb 404
   wikipedia American_lobster
 
 norway_lobster
-  is_a lobster
+  kind_of lobster
   label Norway lobster
   foodb 603
   wikipedia Nephrops_norvegicus
 
 spiny_lobster
-  is_a lobster
+  kind_of lobster
   label Spiny lobster
   foodb 532
   wikipedia Spiny_lobster
 
 prawn
-  is_a crustacean
+  kind_of crustacean
   label Prawn
   wikipedia Prawn
 
 shrimp
-  is_a crustacean
+  kind_of crustacean
   label Shrimp
   foodb 546
   wikipedia Shrimp
 
 echinoderm
-  is_a shellfish
+  kind_of shellfish
   label Echinoderm
   wikipedia Echinoderm
 
 sea_cucumber
-  is_a echinoderm
+  kind_of echinoderm
   label Sea cucumber
   foodb 474
   wikipedia Sea_cucumber
 
 sea_urchin
-  is_a echinoderm
+  kind_of echinoderm
   label Sea urchin
   wikipedia Sea_urchin
 
 mollusk
-  is_a shellfish
+  kind_of shellfish
   label Mollusk
   foodb 900
   wikipedia Mollusca
 
 bivalvia
-  is_a mollusk
+  kind_of mollusk
   label Bivalvia
   foodb 544
   wikipedia Bivalvia
 
 clam
-  is_a bivalvia
+  kind_of bivalvia
   label Clam
   wikipedia Clam
 
 nuttall_cockle
-  is_a clam
+  kind_of clam
   label Nuttall's cockle
   foodb 340
   wikipedia Clinocardium_nuttallii
 
 cockle
-  is_a bivalvia
+  kind_of bivalvia
   label Cockle
   wikipedia Cockle_(bivalve)
 
 mussel
-  is_a bivalvia
+  kind_of bivalvia
   label Mussel
   foodb 601
   wikipedia Mussel
 
 blue_mussel
-  is_a mussel
+  kind_of mussel
   label Blue mussel
   foodb 307
   wikipedia Blue_mussel
 
 oyster
-  is_a bivalvia
+  kind_of bivalvia
   label Oyster
   foodb 606
   wikipedia Oyster
 
 eastern_oyster
-  is_a oyster
+  kind_of oyster
   label Eastern oyster
   foodb 361
   wikipedia Eastern_oyster
 
 pacific_oyster
-  is_a oyster
+  kind_of oyster
   label Pacific oyster
   foodb 433
   wikipedia Pacific_oyster
 
 scallop
-  is_a bivalvia
+  kind_of bivalvia
   label Scallop
   foodb 472
   wikipedia Scallop
 
 cephalopod
-  is_a mollusk
+  kind_of mollusk
   label Cephalopod
   wikipedia Cephalopod
 
 cuttlefish
-  is_a cephalopod
+  kind_of cephalopod
   label Cuttlefish
   foodb 352
   wikipedia Cuttlefish
 
 octopus
-  is_a cephalopod
+  kind_of cephalopod
   label Octopus
   wikipedia Octopus
 
 common_octopus
-  is_a octopus
+  kind_of octopus
   label Common octopus
   foodb 344
   wikipedia Common_octopus
 
 north_pacific_giant_octopus
-  is_a octopus
+  kind_of octopus
   label North Pacific giant octopus
   foodb 425
   wikipedia Enteroctopus_dofleini
 
 squid
-  is_a cephalopod
+  kind_of cephalopod
   label Squid
   foodb 545
   wikipedia Squid
 
 chiton
-  is_a mollusk
+  kind_of mollusk
   label Chiton
   wikipedia Chiton
 
 gumboot_chiton
-  is_a chiton
+  kind_of chiton
   label Gumboot chiton
   wikipedia Gumboot_chiton
 
 leather_chiton
-  is_a chiton
+  kind_of chiton
   label Leather chiton
   foodb 400
   wikipedia Katharina_tunicata
 
 conch
-  is_a mollusk
+  kind_of mollusk
   label Conch
   foodb 625
   wikipedia Conch
 
 sea_snail
-  is_a mollusk
+  kind_of mollusk
   label Sea snail
   wikipedia Sea_snail
 
 abalone
-  is_a sea_snail
+  kind_of sea_snail
   label Abalone
   foodb 280
   wikipedia Abalone
 
 whelk
-  is_a sea_snail
+  kind_of sea_snail
   label Whelk
   foodb 511
   wikipedia Whelk
 
 snail
-  is_a mollusk
+  kind_of mollusk
   # TODO is snail really a seafood?
   label Snail
   foodb 617
@@ -5201,19 +5201,19 @@ snail
 #  Miscellaneous sea animals
 
 tunicate
-  is_a seafood
+  kind_of seafood
   label Tunicate
   foodb 428
   wikipedia Tunicate
 
 ascidian
-  is_a tunicate
+  kind_of tunicate
   label Ascidian
   foodb 861
   wikipedia Ascidiacea
 
 jellyfish
-  is_a seafood
+  kind_of seafood
   label Jellyfish
   foodb 579
   wikipedia Jellyfish
@@ -5223,7 +5223,7 @@ jellyfish
 # TODO other seafood eggs (e.g. sea urchin eggs)
 
 roe
-  is_a seafood
+  kind_of seafood
   product_of fish
   # TODO maybe relate to avian eggs?
   label Roe
@@ -5231,18 +5231,18 @@ roe
   wikipedia Roe
 
 herring_roe
-  is_a roe
+  kind_of roe
   product_of herring
   label Herring roe
 
 sturgeon_roe
-  is_a roe
+  kind_of roe
   product_of sturgeon
   label Caviar
   wikipedia Caviar
 
 whitefish_roe
-  is_a roe
+  kind_of roe
   product_of whitefish
   label Whitefish roe
 
@@ -5273,17 +5273,17 @@ egg_white
 # Chicken eggs
 
 chicken_egg
-  is_a egg
+  kind_of egg
   product_of chicken
   label Chicken egg
 
 chicken_egg_yolk
-  is_a egg_yolk
+  kind_of egg_yolk
   part_of chicken_egg
   label Chicken egg yolk
 
 chicken_egg_white
-  is_a egg_white
+  kind_of egg_white
   part_of chicken_egg
   label Chicken egg white
 
@@ -5306,21 +5306,21 @@ fat
 # Butter and derivatives
 
 butter
-  is_a fat
+  kind_of fat
   label Butter
   foodb 667
 
 salted_butter
-  is_a butter
+  kind_of butter
   label Salted butter
 
 butter_oil
-  is_a fat
+  kind_of fat
   label Butter oil
   foodb 785
 
 butterfat
-  is_a fat
+  kind_of fat
   label Butterfat
   foodb 785
 
@@ -5328,19 +5328,19 @@ butterfat
 # Shortening and margarine-like
 
 shortening
-  is_a fat
+  kind_of fat
   # TODO shortening is sometimes used for lard and butter (i.e. add links to these products?)
   label Shortening
   foodb 808
   wikipedia Shortening
 
 butter_substitute
-  is_a fat
+  kind_of fat
   label Butter substitute
   foodb 668
 
 margarine
-  is_a butter_substitute
+  kind_of butter_substitute
   label Margarine
   foodb 872
 
@@ -5348,206 +5348,206 @@ margarine
 # Animal and fish fats
 
 animal_fat
-  is_a fat
+  kind_of fat
   label Animal_fat
   foodb 704
   wikipedia Animal_fat
 
 chicken_fat
-  is_a animal_fat
+  kind_of animal_fat
   label Chicken fat
 
 dripping
-  is_a animal_fat
+  kind_of animal_fat
   label Dripping
   foodb 857
   wikipedia Dripping
 
 duck_fat
-  is_a animal_fat
+  kind_of animal_fat
   label Duck fat
 
 goose_fat
-  is_a animal_fat
+  kind_of animal_fat
   label Goose fat
 
 lard
-  is_a animal_fat
+  kind_of animal_fat
   label Lard
   foodb 703
   wikipedia Lard
 
 seal_oil
-  is_a animal_fat
+  kind_of animal_fat
   label Seal oil
 
 tallow
-  is_a animal_fat
+  kind_of animal_fat
   label Tallow
   foodb 696
 
 turkey_fat
-  is_a animal_fat
+  kind_of animal_fat
   label Turkey fat
 
 walrus_oil
-  is_a animal_fat
+  kind_of animal_fat
   label Walrus oil
 
 whale_oil
-  is_a animal_fat
+  kind_of animal_fat
   label Whale oil
 
 fish_oil
-  is_a animal_fat
+  kind_of animal_fat
   label Fish oil
 
 cod_oil
-  is_a fish_oil
+  kind_of fish_oil
   label Cod oil
 
 herring_oil
-  is_a fish_oil
+  kind_of fish_oil
   label Herring oil
 
 menhaden_oil
-  is_a fish_oil
+  kind_of fish_oil
   label Menhaden oil
 
 salmon_oil
-  is_a fish_oil
+  kind_of fish_oil
   label Salmon oil
 
 sardine_oil
-  is_a fish_oil
+  kind_of fish_oil
   label Sardine oil
 
 
 # Vegetable oils
 
 vegetable_oil
-  is_a fat
+  kind_of fat
   label vegetable oil
   foodb 804
 
 almond_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Almond oil
 
 apricot_kernel_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Apricot kernel oil
 
 avocado_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Avocado oil
 
 babassu_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Babassu oil
 
 canola_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Canola oil
 
 coconut_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Coconut oil
 
 corn_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Corn oil
 
 cottonseed_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Cottonseed oil
 
 cupu_assu_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Cupu assu oil
 
 flaxseed_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Flaxseed oil
 
 grapeseed_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Grapeseed oil
 
 hazelnut_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Hazelnut oil
 
 mustard_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Mustard oil
 
 nutmeg_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Nutmeg oil
 
 oat_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Oat oil
 
 olive_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Olive oil
 
 palm_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Palm oil
 
 peanut_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Peanut oil
 
 poppyseed_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Poppyseed oil
 
 rice_bran_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Rice bran oil
 
 safflower_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Safflower oil
 
 sesame_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Sesame oil
 
 shea_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Shea oil
 
 soybean_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Soybean oil
 
 sunflower_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Sunflower oil
 
 teaseed_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Teaseed oil
 
 tomatoseed_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Tomatoseed oil
 
 ucuhuba_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Ucuhuba oil
 
 walnut_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Walnut oil
 
 wheat_germ_oil
-  is_a vegetable_oil
+  kind_of vegetable_oil
   label Wheat germ oil
 
 
@@ -5567,17 +5567,17 @@ beverage
 #
 
 water
-  is_a beverage
+  kind_of beverage
   label Water
   foodb 685
 
 carbonated_water
   # TODO relate carbonated water to carbonated drinks
-  is_a water
+  kind_of water
   label Carbonated water
 
 ice
-  is_a water
+  kind_of water
   # TODO what is ice?
   label Ice
 
@@ -5590,158 +5590,158 @@ ice
 # TODO think about juice taxonomy (to avoid duplication with fruit taxonomy)
 
 juice
-  is_a beverage
+  kind_of beverage
   label Juice
 
 smoothie
   # TODO what is a smoothie?
-  is_a juice
+  kind_of juice
   label Smoothie
 
 
 # Fruit juices
 
 fruit_juice
-  is_a juice
+  kind_of juice
   made_of fruit
   label Fruit juice
   foodb 788
 
 berry_juice
-  is_a fruit_juice
+  kind_of fruit_juice
   made_of berry
   label Berry juice
 
 blackberry_juice
-  is_a berry_juice
+  kind_of berry_juice
   made_of blackberry
   label Blackberry juice
 
 cranberry_juice
-  is_a berry_juice
-  madeof cranberry
+  kind_of berry_juice
+  made_of cranberry
   label Cranberry juice
 
 grape_juice
-  is_a berry_juice
+  kind_of berry_juice
   made_of grape
   label Grape juice
 
 citrus_juice
-  is_a fruit_juice
+  kind_of fruit_juice
   made_of citrus
   label Citrus juice
 
 grapefruit_juice
-  is_a citrus_juice
+  kind_of citrus_juice
   made_of grapefruit
   label Grapefruit juice
 
 lemon_juice
-  is_a citrus_juice
+  kind_of citrus_juice
   made_of lemon
   label Lemon juice
 
 lime_juice
-  is_a citrus_juice
+  kind_of citrus_juice
   made_of lime
   label Lime juice
 
 orange_juice
-  is_a citrus_juice
+  kind_of citrus_juice
   made_of orange
   label Orange juice
 
 tangerine_juice
-  is_a citrus_juice
+  kind_of citrus_juice
   made_of tangerine
   label Tangerine juice
 
 pomegranate_juice
-  is_a fruit_juice
+  kind_of fruit_juice
   made_of pomegranate
   label Pomegranate juice
 
 pome_juice
-  is_a fruit_juice
+  kind_of fruit_juice
   made_of pome
   label Pome juice
 
 apple_juice
-  is_a pome_juice
+  kind_of pome_juice
   made_of apple
   label Apple juice
 
 stone_fruit_juice
-  is_a fruit_juice
+  kind_of fruit_juice
   made_of stone_fruit
   label Stone fruit juice
 
 apricot_juice
-  is_a stone_fruit_juice
+  kind_of stone_fruit_juice
   made_of apricot
   label Apricot juice
 
 peach_juice
-  is_a stone_fruit_juice
+  kind_of stone_fruit_juice
   made_of peach
   label Peach juice
 
 tropical_fruit_juice
-  is_a fruit_juice
+  kind_of fruit_juice
   made_of tropical_fruit
   label Tropical fruit juice
 
 acerola_juice
-  is_a tropical_fruit_juice
+  kind_of tropical_fruit_juice
   made_of acerola
   label Acerola juice
 
 guava_juice
-  is_a tropical_fruit_juice
+  kind_of tropical_fruit_juice
   made_of guava
   label Guava juice
 
 mango_juice
-  is_a tropical_fruit_juice
+  kind_of tropical_fruit_juice
   made_of mango
   label Mango juice
 
 papaya_juice
-  is_a tropical_fruit_juice
+  kind_of tropical_fruit_juice
   made_of papaya
   label Papaya juice
 
 passion_fruit_juice
-  is_a tropical_fruit_juice
+  kind_of tropical_fruit_juice
   made_of passion_fruit
   label Passion-fruit juice
 
 pineapple_juice
-  is_a tropical_fruit_juice
+  kind_of tropical_fruit_juice
   made_of pineapple
   label Pineapple juice
 
 tamarind_juice
-  is_a tropical_fruit_juice
+  kind_of tropical_fruit_juice
   made_of tamarind
   label Tamarind juice
 
 vegetable_juice
-  is_a juice
+  kind_of juice
   made_of vegetable
   label Vegetable juice
   foodb 851
 
 fruit_vegetable_juice
-  is_a
+  kind_of
     fruit_juice
     vegetable_juice
   made_of fruit_vegetable
   label Fruit vegetable juice
 
 tomato_juice
-  is_a fruit_vegetable_juice
+  kind_of fruit_vegetable_juice
   made_of tomato
   label Tomato juice
 
@@ -5754,128 +5754,128 @@ tomato_juice
 # TODO refine alcohol taxonomy
 
 alcohol
-  is_a beverage
+  kind_of beverage
   label Alcohol
   foodb 884
   wikipedia Alcohol
 
 beer
-  is_a alcohol
+  kind_of alcohol
   label Beer
   foodb 268
   wikipedia Beer
 
 cider
-  is_a alcohol
+  kind_of alcohol
   label Cider
   foodb 629
 
 distilled_alcohol
-  is_a alcohol
+  kind_of alcohol
   label Distilled alcohol
 
 gin
-  is_a distilled_alcohol
+  kind_of distilled_alcohol
   label Gin
   foodb 642
 
 rum
-  is_a distilled_alcohol
+  kind_of distilled_alcohol
   label Rum
   foodb 646
 
 vodka
-  is_a distilled_alcohol
+  kind_of distilled_alcohol
   label Vodka
   foodb 639
 
 whiskey
-  is_a distilled_alcohol
+  kind_of distilled_alcohol
   label Whiskey
   foodb 640
 
 fortified_wine
-  is_a alcohol
+  kind_of alcohol
   label Fortified wine
   foodb 278
 
 madeira_wine
-  is_a fortified_wine
+  kind_of fortified_wine
   label Madeira wine
   foodb 650
 
 port_wine
-  is_a fortified_wine
+  kind_of fortified_wine
   label Port wine
   foodb 647
 
 sherry
-  is_a fortified_wine
+  kind_of fortified_wine
   label Sherry
   foodb 649
 
 vermouth
-  is_a fortified_wine
+  kind_of fortified_wine
   label Vermouth
   foodb 648
 
 liqueur
-  is_a alcohol
+  kind_of alcohol
   label Liqueur
 
 coffee_liqueur
-  is_a liqueur
+  kind_of liqueur
   label Coffee liqueur
 
 liquor
-  is_a alcohol
+  kind_of alcohol
   label Liquor
   foodb 630
 
 tequila
-  is_a alcohol
+  kind_of alcohol
   label Tequila
 
 wine
-  is_a alcohol
+  kind_of alcohol
   label Wine
   foodb 628
 
 berry_wine
-  is_a wine
+  kind_of wine
   label Berry wine
   foodb 627
 
 grape_wine
-  is_a wine
+  kind_of wine
   label Grape wine
   foodb 626
 
 dessert_wine
-  is_a grape_wine
+  kind_of grape_wine
   label Dessert wine
 
 red_wine
-  is_a grape_wine
+  kind_of grape_wine
   label Red wine
 
 rose_wine
-  is_a grape_wine
+  kind_of grape_wine
   label Rosé wine
   wikipedia Rosé
 
 white_wine
-  is_a grape_wine
+  kind_of grape_wine
   label White wine
 
 rice_wine
-  is_a wine
+  kind_of wine
   label Rice wine
   foodb 763
 
 wine_substitute
   # TODO where do we put non-alcoholic substitutes?
-  is_a wine
+  kind_of wine
   label Wine substitute
 
 
@@ -5889,56 +5889,56 @@ wine_substitute
 # TODO how do we handle unbrewed tea (e.g. macha powder)?
 
 tea
-  is_a beverage
+  kind_of beverage
   label Tea
   foodb 38
 
 brewed_tea
-  is_a tea
+  kind_of tea
   label Brewed tea
 
 brewed_black_tea
-  is_a brewed_tea
+  kind_of brewed_tea
   label Brewed black tea
 
 brewed_green_tea
-  is_a brewed_tea
+  kind_of brewed_tea
   label Brewed green tea
 
 brewed_herb_tea
-  is_a brewed_tea
+  kind_of brewed_tea
   label Brewed herb tea
 
 brewed_greenthread_tea
-  is_a brewed_herb_tea
+  kind_of brewed_herb_tea
   label Greenthread tea
   foodb 849
 
 brewed_hibiscus_tea
-  is_a brewed_herb_tea
+  kind_of brewed_herb_tea
   label Brewed hibiscus tea
   foodb 748
 
 brewed_oolong_tea
-  is_a brewed_tea
+  kind_of brewed_tea
   label Brewed oolong tea
 
 # TODO maybe ice tea should not be considered as tea
 
 ice_tea
-  is_a tea
+  kind_of tea
   label Ice tea
 
 black_ice_tea
-  is_a ice_tea
+  kind_of ice_tea
   label Black ice tea
 
 green_ice_tea
-  is_a ice_tea
+  kind_of ice_tea
   label Green ice tea
 
 lemon_ice_tea
-  is_a ice_tea
+  kind_of ice_tea
   label Lemon ice tea
 
 
@@ -5949,38 +5949,38 @@ lemon_ice_tea
 # TODO refine coffee taxonomy
 
 coffee_product
-  is_a beverage
+  kind_of beverage
   # TODO coffee product is not necessarily a beverage
   label Coffee product
   foodb 891
 
 coffee
-  is_a coffee_product
+  kind_of coffee_product
   label Coffee
   foodb 58
 
 arabica_coffee
-  is_a coffee
+  kind_of coffee
   label Arabica coffee
   foodb 59
 
 instant_coffee
-  is_a coffee
+  kind_of coffee
   label Instant coffee
 
 robusta_coffee
-  is_a coffee
+  kind_of coffee
   label Robusta coffee
   foodb 60
 
 coffee_mocha
-  is_a coffee_product
+  kind_of coffee_product
   label Coffee mocha
   foodb 768
 
 coffee_substitute
   # TODO what do we do with coffee substitutes?
-  is_a coffee_product
+  kind_of coffee_product
   label Coffee substitute
   foodb 767
 
@@ -5993,70 +5993,70 @@ coffee_substitute
 # TODO what do we do with drink powders/mixes?
 
 carbonated_drink
-  is_a beverage
+  kind_of beverage
   label Carbonated drink
 
 cola
   # TODO improve soda taxonomy
-  is_a carbonated_drink
+  kind_of carbonated_drink
   label Cola
 
 lemonade
-  is_a carbonated_drink
+  kind_of carbonated_drink
   label Lemonade
 
 drink_powder
-  is_a beverage
+  kind_of beverage
   label Drink powder
 
 protein_drink_powder
-  is_a drink_powder
+  kind_of drink_powder
   label Protein drink powder
 
 energy_drink
-  is_a beverage
+  kind_of beverage
   label Energy drink
   foodb 727
 
 # TODO relate fruit flavored drinks to associated juices?
 
 flavored_water
-  is_a beverage
+  kind_of beverage
   label Flavored water
 
 fruit_drink
-  is_a beverage
+  kind_of beverage
   label Fruit-flavor drink
   foodb 850
 
 horchata
-  is_a beverage
+  kind_of beverage
   label Horchata
   foodb 852
 
 malted_drink
-  is_a beverage
+  kind_of beverage
   label Malted drink
 
 milk_drink
   # TODO properly handle milk drinks (i.e. overlap with dairies)
-  is_a beverage
+  kind_of beverage
   label Milk drink
 
 milkshake
-  is_a beverage
+  kind_of beverage
   label Milkshake
   foodb 855
 
 nutritional_drink
-  is_a beverage
+  kind_of beverage
   label Nutritional drink
   foodb 779
 
 # TODO relate fruit-based nutritional drinks to associated juices?
 
 sport_drink
-  is_a nutritional_drink
+  kind_of nutritional_drink
   label Sport drink
 
 
@@ -6088,20 +6088,20 @@ plant_product
 # Tomato products
 
 tomato_product
-  is_a plant_product
+  kind_of plant_product
   made_of tomato
   label Tomato product
 
 tomato_dried
-  is_a tomato_product
+  kind_of tomato_product
   label Dried tomato
 
 tomato_powder
-  is_a tomato_product
+  kind_of tomato_product
   label Tomato powder
 
 tomato_puree
-  is_a tomato_product
+  kind_of tomato_product
   label Tomato purée
 
 
@@ -6110,12 +6110,12 @@ tomato_puree
 # TODO maybe add tags for fermented/canned vegetables
 
 kimchi
-  is_a plant_product
+  kind_of plant_product
   made_of chinese_cabbage
   label Kimchi
 
 sauerkraut
-  is_a plant_product
+  kind_of plant_product
   made_of common_cabbage
   label Sauerkraut
 
@@ -6129,19 +6129,19 @@ sauerkraut
 # TODO maybe handle nut pastes as spread (i.e. similar to meat spread and jam)
 
 almond_butter
-  is_a plant_product
+  kind_of plant_product
   made_of almond
   label Almond butter
   wikipedia Almond_butter
 
 almond_paste
-  is_a plant_product
+  kind_of plant_product
   made_of almond
   label Almond paste
   wikipedia Almond_paste
 
 cashew_butter
-  is_a plant_product
+  kind_of plant_product
   made_of cashew
   label Cashew butter
   wikipedia Cashew_butter
@@ -6149,27 +6149,27 @@ cashew_butter
 # TODO maybe add a peanut product category
 
 peanut_butter
-  is_a plant_product
+  kind_of plant_product
   made_of peanut
   label Peanut butter
   wikipedia Peanut_butter
 
 chunky_peanut_butter
-  is_a peanut_butter
+  kind_of peanut_butter
   label Chunky peanut butter
 
 smooth_peanut_butter
-  is_a peanut_butter
+  kind_of peanut_butter
   label Smooth peanut butter
 
 sesame_butter
-  is_a plant_product
+  kind_of plant_product
   made_of sesame_seed
   label Tahini
   wikipedia Tahini
 
 sunflower_butter
-  is_a plant_product
+  kind_of plant_product
   made_of sunflower_seed
   label Sunflower butter
   wikipedia Sunflower_butter
@@ -6179,50 +6179,50 @@ sunflower_butter
 # TODO properly annotate soy products (e.g. soy meal)
 
 soy_product
-  is_a plant_product
+  kind_of plant_product
   made_of soy_bean
   label Soy product
   foodb 272
 
 edamame
-  is_a soy_product
+  kind_of soy_product
   label Edamame
   wikipedia Edamame
 
 soy_cream
-  is_a soy_product
+  kind_of soy_product
   label Soy cream
   foodb 809
 
 soy_milk
-  is_a soy_product
+  kind_of soy_product
   # TODO soy milk is a milk
   label Soy milk
   foodb 761
 
 miso
-  is_a soy_product
+  kind_of soy_product
   label Miso
   foodb 717
 
 natto
-  is_a soy_product
+  kind_of soy_product
   label Natto
   foodb 815
 
 soy_sauce
-  is_a soy_product
+  kind_of soy_product
   label Soy sauce
   foodb 716
 
 soy_yoghurt
-  is_a soy_product
+  kind_of soy_product
   # TODO soy yoghurt is a yoghurt
   label Soy yoghurt
   foodb 792
 
 tofu
-  is_a soy_product
+  kind_of soy_product
   label Tofu
   foodb 718
 
@@ -6251,149 +6251,149 @@ cereal_product
 # Brans
 
 bran
-  is_a cereal_product
+  kind_of cereal_product
   label Bran
 
 corn_bran
-  is_a bran
+  kind_of bran
   label Corn bran
 
 oat_bran
-  is_a bran
+  kind_of bran
   label Oat bran
 
 rice_bran
-  is_a bran
+  kind_of bran
   label Rice bran
 
 wheat_bran
-  is_a bran
+  kind_of bran
   label Wheat bran
 
 
 # Flours
 
 flour
-  is_a cereal_product
+  kind_of cereal_product
   label Flour
   foodb 825
 
 acorn_flour
-  is_a flour
+  kind_of flour
   label Acorn flour
 
 arrowroot_flour
-  is_a flour
+  kind_of flour
   label Arrowroot flour
   wikipedia Arrowroot
 
 barley_flour
-  is_a flour
+  kind_of flour
   label Barley flour
   wikipedia Barley_flour
 
 buckwheat_flour
-  is_a flour
+  kind_of flour
   label Buckwheat flour
 
 carob_flour
-  is_a flour
+  kind_of flour
   label Carob flour
 
 corn_flour
-  is_a flour
+  kind_of flour
   label Corn flour
 
 cottonseed_flour
-  is_a flour
+  kind_of flour
   label Cottonseed flour
 
 millet_flour
-  is_a flour
+  kind_of flour
   label Millet flour
 
 oat_flour
-  is_a flour
+  kind_of flour
   label Oat flour
 
 peanut_flour
-  is_a flour
+  kind_of flour
   label Peanut flour
   wikipedia Peanut flour
 
 rice_flour
-  is_a flour
+  kind_of flour
   label Rice flour
 
 rye_flour
-  is_a flour
+  kind_of flour
   label Rye flour
 
 sesame_flour
-  is_a flour
+  kind_of flour
   label Sesame flour
 
 sorghum_flour
-  is_a flour
+  kind_of flour
   label Sorghum flour
 
 soy_flour
-  is_a flour
+  kind_of flour
   label Soy flour
 
 sunflower_flour
-  is_a flour
+  kind_of flour
   label Sunflower flour
 
 wheat_flour
-  is_a flour
+  kind_of flour
   label Wheat flour
 
 
 # Meals
 
 meal
-  is_a cereal_product
+  kind_of cereal_product
   label Meal
 
 barley_meal
-  is_a meal
+  kind_of meal
   label Barley meal
 
 cornmeal
-  is_a meal
+  kind_of meal
   label Cornmeal
 
 cottonseed_meal
-  is_a meal
+  kind_of meal
   label Cottonseed meal
 
 cracker_meal
-  is_a meal
+  kind_of meal
   label Cracker meal
 
 safflower_meal
-  is_a meal
+  kind_of meal
   label Safflower meal
 
 sesame_meal
-  is_a meal
+  kind_of meal
   label Sesame meal
 
 soy_meal
-  is_a meal
+  kind_of meal
   label Soy meal
 
 
 # Starches
 
 starch
-  is_a cereal_product
+  kind_of cereal_product
   label Starch
   wikipedia Starch
 
 corn_starch
-  is_a starch
+  kind_of starch
   label Corn starch
   wikipedia Corn_starch
 
@@ -6401,16 +6401,16 @@ corn_starch
 # Miscellaneous cereal derivatives
 
 bulgur
-  is_a cereal_product
+  kind_of cereal_product
   label Bulgur
   foodb 766
 
 couscous
-  is_a cereal_product
+  kind_of cereal_product
   label Couscous
 
 semolina
-  is_a cereal_product
+  kind_of cereal_product
   label Semolina
   foodb 770
 
@@ -6420,13 +6420,13 @@ semolina
 #
 
 dough
-  is_a cereal_product
+  kind_of cereal_product
   label Dough
   foodb 828
   wikipedia Dough
 
 sourdough
-  is_a dough
+  kind_of dough
   label Sourdough
   foodb 276
   wikipedia Sourdough
@@ -6436,32 +6436,32 @@ sourdough
 # TODO add missing pasta
 
 pasta
-  is_a dough
+  kind_of dough
   label Pasta
   foodb 274
 
 corn_pasta
-  is_a pasta
+  kind_of pasta
   label Corn pasta
 
 macaroni
-  is_a pasta
+  kind_of pasta
   label Macaroni
 
 noodle
-  is_a pasta
+  kind_of pasta
   label Noodle
 
 rice_pasta
-  is_a pasta
+  kind_of pasta
   label Rice pasta
 
 rice_noodle
-  is_a rice_pasta
+  kind_of rice_pasta
   label Rice noodle
 
 spaghetti
-  is_a pasta
+  kind_of pasta
   label Spaghetti
 
 
@@ -6473,67 +6473,67 @@ spaghetti
 
 breakfast_cereal
   # TODO maybe relate breakfast cereals to dishes/snacks
-  is_a cereal_product
+  kind_of cereal_product
   label Breakfast cereal
   foodb 270
   wikipedia Breakfast_cereal
 
 cold_cereal
-  is_a breakfast_cereal
+  kind_of breakfast_cereal
   label Cold cereal
 
 puffed_cereal
-  is_a cold_cereal
+  kind_of cold_cereal
   label Puffed cereal
 
 puffed_millet
-  is_a puffed_cereal
+  kind_of puffed_cereal
   label Puffed millet
 
 puffed_rice
-  is_a puffed_cereal
+  kind_of puffed_cereal
   label Puffed rice
 
 puffed_wheat
-  is_a puffed_cereal
+  kind_of puffed_cereal
   label Puffed wheat
 
 granola
-  is_a breakfast_cereal
+  kind_of breakfast_cereal
   label Granola
 
 hot_cereal
-  is_a breakfast_cereal
+  kind_of breakfast_cereal
   label Hot cereal
 
 grits
-  is_a hot_cereal
+  kind_of hot_cereal
   label Grits
   foodb 841
   wikipedia Grits
 
 porridge
-  is_a hot_cereal
+  kind_of hot_cereal
   label Porridge
 
 malt_porridge
-  is_a porridge
+  kind_of porridge
   label Malt porridge
 
 oat_porridge
-  is_a porridge
+  kind_of porridge
   label Oat porridge
 
 rice_porridge
-  is_a porridge
+  kind_of porridge
   label Rice porridge
 
 wheat_porridge
-  is_a porridge
+  kind_of porridge
   label Wheat porridge
 
 farina
-  is_a wheat_porridge
+  kind_of wheat_porridge
   label Farina
   wikipedia Farina_(food)
 
@@ -6543,116 +6543,116 @@ farina
 #
 
 baked_product
-  is_a cereal_product
+  kind_of cereal_product
   label Baked product
 
 
 # Breads
 
 bread
-  is_a baked_product
+  kind_of baked_product
   label Bread
   foodb 269
 
 leavened_bread
-  is_a bread
+  kind_of bread
   label Leavened bread
 
 bagel
-  is_a leavened_bread
+  kind_of leavened_bread
   label Bagel
   foodb 831
   wikipedia Bagel
 
 breadcrumb
-  is_a leavened_bread
+  kind_of leavened_bread
   label Breadcrumb
 
 french_toast
-  is_a leavened_bread
+  kind_of leavened_bread
   label French toast
   foodb 831
 
 multigrain_bread
-  is_a leavened_bread
+  kind_of leavened_bread
   label Multigrain bread
   foodb 842
 
 oat_bread
-  is_a leavened_bread
+  kind_of leavened_bread
   label Oat bread
   foodb 838
 
 pan_dulce
-  is_a leavened_bread
+  kind_of leavened_bread
   label Pan dulce
   foodb 844
 
 rice_bread
-  is_a leavened_bread
+  kind_of leavened_bread
   label Rice bread
   foodb 843
 
 rye_bread
-  is_a leavened_bread
+  kind_of leavened_bread
   label Rye bread
   foodb 837
 
 wheat_bread
-  is_a leavened_bread
+  kind_of leavened_bread
   label Wheat bread
   foodb 836
 
 zwieback
-  is_a leavened_bread
+  kind_of leavened_bread
   label Zwieback
   foodb 721
 
 flat_bread
-  is_a bread
+  kind_of bread
   label Flat bread
 
 cornbread
-  is_a flat_bread
+  kind_of flat_bread
   label Cornbread
   foodb 840
 
 crisp_bread
-  is_a flat_bread
+  kind_of flat_bread
   label Crisp bread
   foodb 659
 
 focaccia
-  is_a flat_bread
+  kind_of flat_bread
   label Focaccia
   foodb 830
 
 piki_bread
-  is_a flat_bread
+  kind_of flat_bread
   label Piki bread
   foodb 834
 
 pita_bread
-  is_a flat_bread
+  kind_of flat_bread
   label Pita bread
   foodb 829
 
 tortilla
-  is_a flat_bread
+  kind_of flat_bread
   label Tortilla
   foodb 733
 
 potato_bread
-  is_a bread
+  kind_of bread
   label Potato bread
   foodb 839
 
 sweet_bread
-  is_a bread
+  kind_of bread
   label Sweet bread
 
 raisin_bread
-  is_a sweet_bread
+  kind_of sweet_bread
   label Raisin bread
   foodb 845
 
@@ -6661,21 +6661,21 @@ raisin_bread
 # TODO refine baked components (wrappers, crusts...)
 
 wrapper
-  is_a baked_product
+  kind_of baked_product
   label Wrapper
 
 wonton_wrapper
-  is_a wrapper
+  kind_of wrapper
   label Wonton wrapper
   foodb 846
 
 crust
-  is_a wrapper
+  kind_of wrapper
   label Crust
   foodb 805
 
 ice_cream_cone_crust
-  is_a wrapper
+  kind_of wrapper
   label Ice cream cone crust
   foodb 810
 
@@ -6684,56 +6684,56 @@ ice_cream_cone_crust
 # TODO handle pie flavors
 
 pie
-  is_a baked_product
+  kind_of baked_product
   label Pie
   foodb 807
 
 apple_pie
-  is_a pie
+  kind_of pie
   label Apple pie
 
 banana_pie
-  is_a pie
+  kind_of pie
   label Banana pie
 
 blueberry_pie
-  is_a pie
+  kind_of pie
   label Blueberry pie
 
 cherry_pie
-  is_a pie
+  kind_of pie
   label Cherry pie
 
 chocolate_pie
-  is_a pie
+  kind_of pie
   label Chocolate pie
 
 coconut_pie
-  is_a pie
+  kind_of pie
   label Coconut pie
 
 fried_pie
-  is_a pie
+  kind_of pie
   label Fried pie
 
 lemon_pie
-  is_a pie
+  kind_of pie
   label Lemon pie
 
 peach_pie
-  is_a pie
+  kind_of pie
   label Peach pie
 
 pecan_pie
-  is_a pie
+  kind_of pie
   label Pecan pie
 
 pumpkin_pie
-  is_a pie
+  kind_of pie
   label Pumpkin pie
 
 vanilla_pie
-  is_a pie
+  kind_of pie
   label Vanilla pie
 
 
@@ -6741,97 +6741,97 @@ vanilla_pie
 # TODO refine baked goods
 
 apple_strudel
-  is_a baked_product
+  kind_of baked_product
   label Apple strudel
 
 biscuit
-  is_a baked_product
+  kind_of baked_product
   label Biscuit
   foodb 275
   wikipedia Biscuit
 
 bread_roll
-  is_a baked_product
+  kind_of baked_product
   label Bread roll
   wikipedia Bread_roll
 
 sweet_bread_roll
-  is_a bread_roll
+  kind_of bread_roll
   label Sweet bread roll
 
 cake
-  is_a baked_product
+  kind_of baked_product
   label Cake
   foodb 654
 
 cracker
-  is_a baked_product
+  kind_of baked_product
   label Cracker
   foodb 812
   wikipedia Cracker_(food)
 
 graham_cracker
-  is_a cracker
+  kind_of cracker
   label Graham cracker
 
 cookie
-  is_a baked_product
+  kind_of baked_product
   label Cookie
 
 brownie
-  is_a cookie
+  kind_of cookie
   label Brownie
 
 croissant
-  is_a baked_product
+  kind_of baked_product
   label Croissant
 
 danish_pastry
-  is_a baked_product
+  kind_of baked_product
   label Danish pastry
 
 doughnut
-  is_a baked_product
+  kind_of baked_product
   label Doughnut
 
 english_muffin
-  is_a baked_product
+  kind_of baked_product
   label English muffin
   wikipedia English_muffin
 
 hushpuppy
-  is_a baked_product
+  kind_of baked_product
   label Hushpuppy
   wikipedia Hushpuppy
 
 muffin
-  is_a baked_product
+  kind_of baked_product
   label Muffin
 
 pancake
-  is_a baked_product
+  kind_of baked_product
   label Pancake
   foodb 757
 
 papad
-  is_a baked_product
+  kind_of baked_product
   label Papad
   wikipedia Papadum
 
 tart
-  is_a baked_product
+  kind_of baked_product
   label Tart
 
 toaster_pastry
-  is_a baked_product
+  kind_of baked_product
   label Toaster pastry
 
 wafer
-  is_a baked_product
+  kind_of baked_product
   label Wafer
 
 waffle
-  is_a baked_product
+  kind_of baked_product
   label Waffle
   foodb 760
 
@@ -6859,92 +6859,92 @@ fish_product
 #
 
 sausage
-  is_a meat_product
+  kind_of meat_product
   label Sausage
   foodb 671
 
 bierwurst
-  is_a sausage
+  kind_of sausage
   label Bierwurst
   wikipedia Bierwurst
 
 blood_sausage
-  is_a sausage
+  kind_of sausage
   label Blood sausage
 
 bockwurst
-  is_a sausage
+  kind_of sausage
   label Bockwurst
   wikipedia Bockwurst
 
 bologna
-  is_a sausage
+  kind_of sausage
   label Bologna
 
 bratwurst
-  is_a sausage
+  kind_of sausage
   label Bratwurst
 
 cervelat
-  is_a sausage
+  kind_of sausage
   label Cervelat
   wikipedia Cervelat
 
 chorizo
-  is_a sausage
+  kind_of sausage
   label Chorizo
 
 frankfurter
-  is_a sausage
+  kind_of sausage
   label Frankfurter
 
 italian_sausage
-  is_a sausage
+  kind_of sausage
   label Italian sausage
   wikipedia Italian_sausage
 
 mortadella
-  is_a italian_sausage
+  kind_of italian_sausage
   label Mortadella
   wikipedia Mortadella
 
 kielbasa
-  is_a sausage
+  kind_of sausage
   label Kielbasa
   wikipedia Kielbasa
 
 knackwurst
-  is_a sausage
+  kind_of sausage
   label Knackwurst
   wikipedia Knackwurst
 
 liver_sausage
-  is_a sausage
+  kind_of sausage
   label Liver sausage
 
 pastrami
-  is_a sausage
+  kind_of sausage
   label Pastrami
   wikipedia Pastrami
 
 pepperoni
-  is_a sausage
+  kind_of sausage
   label Pepperoni
 
 salami
-  is_a sausage
+  kind_of sausage
   label Salami
 
 smoked_sausage
-  is_a sausage
+  kind_of sausage
   label Smoked sausage
 
 vienna_sausage
-  is_a sausage
+  kind_of sausage
   label Vienna sausage
 
 yachtwurst
-  is_a sausage
+  kind_of sausage
   label Yachtwurst
 
 
@@ -6953,39 +6953,39 @@ yachtwurst
 #
 
 corned_beef
-  is_a meat_product
+  kind_of meat_product
   label Corned beef
 
 luncheon_meat
-  is_a meat_product
+  kind_of meat_product
   label Luncheon meat
 
 meat_ball
-  is_a meat_product
+  kind_of meat_product
   label Meat ball
   foodb 672
 
 meat_loaf
-  is_a meat_product
+  kind_of meat_product
   label Meat loaf
   foodb 762
 
 meat_spread
-  is_a meat_product
+  kind_of meat_product
   label Meat spread
 
 pate
-  is_a meat_product
+  kind_of meat_product
   label Pâté
   foodb 674
   wikipedia Pâté
 
 roast_beef
-  is_a meat_product
+  kind_of meat_product
   label Roast beef
 
 scrapple
-  is_a meat_product
+  kind_of meat_product
   label Scrapple
 
 
@@ -7006,7 +7006,7 @@ milk_product
 #
 
 casein
-  is_a milk_product
+  kind_of milk_product
   label Casein
   foodb 680
 
@@ -7021,91 +7021,91 @@ casein
 # TODO annotate milk as beverage, when appropriate
 
 milk_like
-  is_a milk_product
+  kind_of milk_product
   label Milk-like
 
 animal_milk
-  is_a milk_like
+  kind_of milk_like
   label Animal milk
   foodb 712
 
 buffalo_milk
-  is_a animal_milk
+  kind_of animal_milk
   label Buffalo milk
 
 cow_milk
-  is_a animal_milk
+  kind_of animal_milk
   label Cow milk
   foodb 632
 
 condensed_milk
-  is_a cow_milk
+  kind_of cow_milk
   label Condensed milk
   foodb 871
 
 dried_milk
-  is_a cow_milk
+  kind_of cow_milk
   label Dried milk
   foodb 711
 
 evaporated_milk
-  is_a cow_milk
+  kind_of cow_milk
   label Evaporated milk
   foodb 824
 
 filled_milk
-  is_a cow_milk
+  kind_of cow_milk
   label Filled milk
   wikipedia Filled_milk
 
 flavored_milk
   # TODO properly annotate/classify flavored milk
-  is_a cow_milk
+  kind_of cow_milk
   label Flavoured cow milk
 
 lowfat_milk
-  is_a cow_milk
+  kind_of cow_milk
   label Lowfat milk
 
 whey
-  is_a cow_milk
+  kind_of cow_milk
   label Whey
   foodb 679
 
 goat_milk
-  is_a animal_milk
+  kind_of animal_milk
   label Goat milk
 
 human_milk
   # TODO maybe mark human milk as baby food
-  is_a animal_milk
+  kind_of animal_milk
   label Human milk
   foodb 687
 
 sheep_milk
-  is_a animal_milk
+  kind_of animal_milk
   label Sheep milk
 
 vegetable_milk
-  is_a milk_like
+  kind_of milk_like
   label Vegetable milk
 
 almond_milk
-  is_a vegetable_milk
+  kind_of vegetable_milk
   label Almond milk
   wikipedia Almond_milk
 
 coconut_milk
-  is_a vegetable_milk
+  kind_of vegetable_milk
   label Coconut milk
 
 milk_substitute
-  is_a vegetable_milk
+  kind_of vegetable_milk
   label Milk substitute
   foodb 878
 
 rice_milk
-  is_a vegetable_milk
+  kind_of vegetable_milk
   label Rice milk
 
 
@@ -7119,154 +7119,154 @@ rice_milk
 # TODO handle cheese substitutes
 
 cheese
-  is_a milk_product
+  kind_of milk_product
   label Cheese
   foodb 631
 
 american_cheese
-  is_a cheese
+  kind_of cheese
   label American cheese
 
 processed_cheese
-  is_a american_cheese
+  kind_of american_cheese
   label Processed cheese
   foodb 735
 
 blue_cheese
-  is_a cheese
+  kind_of cheese
   label Blue cheese
 
 brick_cheese
-  is_a cheese
+  kind_of cheese
   label Brick cheese
 
 brie_cheese
-  is_a cheese
+  kind_of cheese
   label Brie cheese
 
 camembert_cheese
-  is_a cheese
+  kind_of cheese
   label Camembert cheese
 
 caraway_cheese
-  is_a cheese
+  kind_of cheese
   label Caraway cheese
 
 cheddar_cheese
-  is_a cheese
+  kind_of cheese
   label Cheddar cheese
 
 cheese_product
-  is_a cheese
+  kind_of cheese
   label Cheese product
 
 cheesecake
-  is_a cheese
+  kind_of cheese
   label Cheesecake
 
 cheshire_cheese
-  is_a cheese
+  kind_of cheese
   label Cheshire cheese
 
 colby_cheese
-  is_a cheese
+  kind_of cheese
   label Colby cheese
 
 cottage_cheese
-  is_a cheese
+  kind_of cheese
   label Cottage cheese
 
 cream_cheese
-  is_a cheese
+  kind_of cheese
   label Cream cheese
 
 edam_cheese
-  is_a cheese
+  kind_of cheese
   label Edam cheese
 
 feta_cheese
-  is_a cheese
+  kind_of cheese
   label Feta cheese
 
 fontina_cheese
-  is_a cheese
+  kind_of cheese
   label Fontina cheese
 
 gjetost_cheese
-  is_a cheese
+  kind_of cheese
   label Gjetost cheese
 
 goat_cheese
-  is_a cheese
+  kind_of cheese
   label Goat cheese
 
 gouda_cheese
-  is_a cheese
+  kind_of cheese
   label Gouda cheese
 
 gruyere_cheese
-  is_a cheese
+  kind_of cheese
   label Gruyere cheese
 
 limburger_cheese
-  is_a cheese
+  kind_of cheese
   label Limburger cheese
 
 mexican_cheese
-  is_a cheese
+  kind_of cheese
   label Mexican cheese
 
 monterey_cheese
-  is_a cheese
+  kind_of cheese
   label Monterey cheese
 
 mozzarella_cheese
-  is_a cheese
+  kind_of cheese
   label Mozzarella
 
 muenster_cheese
-  is_a cheese
+  kind_of cheese
   label Muenster cheese
 
 neufchatel_cheese
-  is_a cheese
+  kind_of cheese
   label Neufchatel cheese
 
 parmesan_cheese
-  is_a cheese
+  kind_of cheese
   label Parmesan cheese
 
 port_de_salut_cheese
-  is_a cheese
+  kind_of cheese
   label Port de salut cheese
 
 provolone_cheese
-  is_a cheese
+  kind_of cheese
   label Provolone cheese
 
 ricotta_cheese
-  is_a cheese
+  kind_of cheese
   label Ricotta cheese
 
 romano_cheese
-  is_a cheese
+  kind_of cheese
   label Romano cheese
 
 roquefort_cheese
-  is_a cheese
+  kind_of cheese
   label Roquefort cheese
 
 swiss_cheese
-  is_a cheese
+  kind_of cheese
   label Swiss cheese
   wikipedia Swiss_cheese
 
 tilsit_cheese
-  is_a cheese
+  kind_of cheese
   label Tilsit cheese
 
 ymer
-  is_a cheese
+  kind_of cheese
   label Ymer
   foodb 656
 
@@ -7278,25 +7278,25 @@ ymer
 # TODO handle cream substitutes
 
 cream
-  is_a milk_product
+  kind_of milk_product
   label Cream
   wikipedia 669
 
 cream_substitute
-  is_a cream
+  kind_of cream
   label Cream substitute
   foodb 737
 
 sour_cream
-  is_a cream
+  kind_of cream
   label Sour cream
 
 whipped_cream
-  is_a cream
+  kind_of cream
   label Whipped cream
 
 whipped_cream_substitute
-  is_a whipped_cream
+  kind_of whipped_cream
   label Whipped cream substitute
 
 
@@ -7309,44 +7309,44 @@ whipped_cream_substitute
 # TODO maybe annotate yoghurts as fast_food/snack?
 
 fermented_milk
-  is_a milk_product
+  kind_of milk_product
   label Fermented milk
   foodb 715
 
 buttermilk
-  is_a fermented_milk
+  kind_of fermented_milk
   label Buttermilk
   foodb 714
 
 kefir
   # TODO what is kefir? maybe should be put in smoothies-like products
-  is_a fermented_milk
+  kind_of fermented_milk
   label Kefir
   foodb 713
 
 yoghurt
-  is_a fermented_milk
+  kind_of fermented_milk
   label Yoghurt
   foodb 634
 
 flavored_yoghurt
-  is_a yoghurt
+  kind_of yoghurt
   label Flavored yoghurt
 
 chocolate_yoghurt
-  is_a flavored_yoghurt
+  kind_of flavored_yoghurt
   label Chocolate yoghurt
 
 fruit_yoghurt
-  is_a flavored_yoghurt
+  kind_of flavored_yoghurt
   label Fruit yoghurt
 
 vanilla_yoghurt
-  is_a flavored_yoghurt
+  kind_of flavored_yoghurt
   label Vanilla yoghurt
 
 greek_yoghurt
-  is_a yoghurt
+  kind_of yoghurt
   label Greek yoghurt
 
 
@@ -7361,38 +7361,38 @@ greek_yoghurt
 # TODO maybe relate ice creams to ice cubes
 
 ice_cream
-  is_a milk_product
+  kind_of milk_product
   label Ice cream
   foodb 641
 
 chocolate_ice_cream
-  is_a ice_cream
+  kind_of ice_cream
   label Chocolate ice cream
 
 frozen_yoghurt
-  is_a ice_cream
+  kind_of ice_cream
   label Frozen yoghurt
   foodb 854
 
 ice_cream_bar
-  is_a ice_cream
+  kind_of ice_cream
   label Ice cream bar
 
 ice_cream_cone
-  is_a ice_cream
+  kind_of ice_cream
   label Ice cream cone
 
 ice_cream_sandwich
-  is_a ice_cream
+  kind_of ice_cream
   label Ice cream sandwich
 
 sherbet
   # TODO sherbet is not a dairy product
-  is_a ice_cream
+  kind_of ice_cream
   label Sherbet
 
 vanilla_ice_cream
-  is_a ice_cream
+  kind_of ice_cream
   label Vanilla ice cream
 
 
@@ -7421,13 +7421,13 @@ cocoa_product
   foodb 890
 
 cocoa_butter
-  is_a cocoa_product
-  is_a fat
+  kind_of cocoa_product
+  kind_of fat
   label Cocoa butter
   foodb 706
 
 cocoa_powder
-  is_a cocoa_product
+  kind_of cocoa_product
   label Cocoa powder
   foodb 707
 
@@ -7436,28 +7436,28 @@ cocoa_powder
 
 chocolate
   # TODO relate chocolates to cocoa powder, cocoa butter, milk products...
-  is_a cocoa_product
+  kind_of cocoa_product
   label Chocolate
   foodb 709
 
 dark_chocolate
-  is_a chocolate
+  kind_of chocolate
   label Dark chocolate
 
 baking_chocolate
-  is_a dark_chocolate
+  kind_of dark_chocolate
   label Baking chocolate
 
 milk_chocolate
-  is_a chocolate
+  kind_of chocolate
   label Milk chocolate
 
 white_chocolate
-  is_a chocolate
+  kind_of chocolate
   label White chocolate
 
 chocolate_powder
-  is_a cocoa_product
+  kind_of cocoa_product
   made_of chocolate
   label Chocolate powder
 
@@ -7467,20 +7467,20 @@ chocolate_powder
 
 cocoa_liquor
   # TODO what is cocoa liquor?
-  is_a cocoa_product
-  is_a beverage
+  kind_of cocoa_product
+  kind_of beverage
   label Cocoa liquor
   foodb 708
 
 hot_chocolate
-  is_a cocoa_product
-  is_a beverage
+  kind_of cocoa_product
+  kind_of beverage
   label Hot chocolate
   foodb 710
 
 chocolate_drink
-  is_a cocoa_product
-  is_a beverage
+  kind_of cocoa_product
+  kind_of beverage
   label Chocolate drink
 
 
@@ -7495,17 +7495,17 @@ dish
   label Dish
 
 baby_food
-  is_a dish
+  kind_of dish
   label Baby food
   foodb 690
   wikipedia Baby_food
 
 fast_food
-  is_a dish
+  kind_of dish
   label Fast food
 
 snack
-  is_a dish
+  kind_of dish
   label Snack
 
 # TODO egg dishes
@@ -7518,7 +7518,7 @@ snack
 #
 
 soup
-  is_a dish
+  kind_of dish
   label Soup
   foodb 692
 
@@ -7527,36 +7527,36 @@ soup
 # TODO improve bouillons and relate to their sources
 
 stock_broth
-  is_a soup
-  is_a seasoning
+  kind_of soup
+  kind_of seasoning
   label Stock broth
 
 beef_broth
-  is_a stock_broth
+  kind_of stock_broth
   label Beef broth
 
 beef_stock
-  is_a stock_broth
+  kind_of stock_broth
   label Beef stock
 
 chicken_broth
-  is_a stock_broth
+  kind_of stock_broth
   label Chicken broth
 
 chicken_stock
-  is_a stock_broth
+  kind_of stock_broth
   label Chicken stock
 
 fish_broth
-  is_a stock_broth
+  kind_of stock_broth
   label Fish broth
 
 fish_stock
-  is_a stock_broth
+  kind_of stock_broth
   label Fish stock
 
 vegetable_broth
-  is_a stock_broth
+  kind_of stock_broth
   label Vegetable broth
 
 
@@ -7564,7 +7564,7 @@ vegetable_broth
 # TODO define soup taxonomy
 
 stew
-  is_a soup
+  kind_of soup
   label Stew
   foodb 749
 
@@ -7579,45 +7579,45 @@ sweet
   label Sweet
 
 pudding
-  is_a sweet
+  kind_of sweet
   label Pudding
   foodb 759
 
 banana_pudding
-  is_a pudding
+  kind_of pudding
   label Banana pudding
 
 caramel_custard
-  is_a pudding
+  kind_of pudding
   label Caramel custard
 
 chocolate_pudding
-  is_a pudding
+  kind_of pudding
   label Chocolate pudding
 
 coconut_pudding
-  is_a pudding
+  kind_of pudding
   label Coconut pudding
 
 egg_custard
-  is_a pudding
+  kind_of pudding
   label Egg custard
   wikipedia Custard
 
 lemon_pudding
-  is_a pudding
+  kind_of pudding
   label Lemon pudding
 
 rice_pudding
-  is_a pudding
+  kind_of pudding
   label Rice pudding
 
 tapioca_pudding
-  is_a pudding
+  kind_of pudding
   label Tapioca pudding
 
 vanilla_pudding
-  is_a pudding
+  kind_of pudding
   label Vanilla pudding
 
 
@@ -7628,45 +7628,45 @@ vanilla_pudding
 
 
 chewing_gum
-  is_a sweet
+  kind_of sweet
   label Chewing gum
   foodb 662
 
 marshmallow
-  is_a sweet
+  kind_of sweet
   label Marshmallow
   foodb 683
 
 jam
-  is_a sweet
+  kind_of sweet
   label Jam
 
 marmalade
-  is_a jam
+  kind_of jam
   label Marmalade
   wikipedia Marmalade
 
 nougat
-  is_a sweet
+  kind_of sweet
   label Nougat
   foodb 651
 
 frosting
-  is_a sweet
+  kind_of sweet
   label Frosting
 
 fudge
-  is_a sweet
+  kind_of sweet
   label Fudge
   foodb 869
 
 pie_filling
-  is_a sweet
+  kind_of sweet
   label Pie filling
   foodb 806
 
 praline
-  is_a sweet
+  kind_of sweet
   label Praline
 
 
