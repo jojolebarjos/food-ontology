@@ -51,11 +51,12 @@ sea_salt
 # TODO improve sweeteners, especially regarding granularity and source
 
 sweetener
-  # TODO has sweetener a broader parent?
+  # TODO has sweetener a broader parent (e.g. seasoning)?
   label Sweetener
 
 
 # Common sugars
+# TODO report sugars sources
 
 sugar
   kind_of sweetener
@@ -107,6 +108,7 @@ sucralose
 
 
 # Sugar syrups
+# TODO report syrups sources
 
 syrup
   kind_of sweetener
@@ -146,7 +148,7 @@ sorghum_syrup
 
 fruit_syrup
   kind_of syrup
-  # TODO how to classify fruit syrup?
+  # TODO how to classify fruit syrup? maybe link to "drink powders"?
   label Fruit syrup
   wikipedia Fruit_syrup
 
@@ -174,7 +176,7 @@ molasses
 # TODO improve jellies (e.g. agar)
 
 jelly
-  # TODO has sweetener a broader parent?
+  # TODO has jelly a broader parent?
   label Jelly
 
 gelatin
@@ -237,6 +239,18 @@ balsamic_vinegar
   kind_of vinegar
   label Balsamic vinegar
   wikipedia Balsamic_vinegar
+
+cider_vinegar
+  kind_of vinegar
+  derivative_of cider
+  label Cider vinegar
+  wikipedia Apple_cider_vinegar
+
+rice_vinegar
+  kind_of vinegar
+  derivative_of rice
+  label Rice vinegar
+  wikipedia Rice_vinegar
 
 
 #
@@ -320,9 +334,17 @@ thousand_island_dressing
   kind_of salad_dressing
   label Thousand island dressing
 
+vinaigrette
+  kind_of salad_dressing
+  label Vinaigrette
+
 sour_dressing
   kind_of dressing
   label Sour dressing
+
+yoghurt_dressing
+  kind_of dressing
+  label Yoghurt dressing
 
 barbecue_sauce
   kind_of sauce
@@ -844,7 +866,7 @@ cardamom
 
 cayenne_pepper
   kind_of spice
-  made_of capsicum_annuum
+  derivative_of capsicum_annuum
   label Cayenne pepper
   wikipedia Cayenne_pepper
 
@@ -892,13 +914,13 @@ cumin
 
 garlic_powder
   kind_of spice
-  made_of garlic
+  derivative_of garlic
   label Garlic powder
   wikipedia Garlic_powder
 
 ginger_powder
   kind_of spice
-  made_of ginger
+  derivative_of ginger
   label Ginger powder
 
 ginseng
@@ -925,7 +947,7 @@ mace
 
 onion_powder
   kind_of spice
-  made_of onion
+  derivative_of onion
   label Onion powder
   wikipedia Onion_powder
 
@@ -3225,10 +3247,16 @@ white_walnut
 #
 
 mushroom
+  # NOTE while technically not a plant, let's consider mushrooms as such
   kind_of plant
   label Mushroom
   foodb 883
   wikipedia Mushroom
+
+bolete
+  kind_of mushroom
+  label Bolete
+  wikipedia Bolete
 
 chanterelle
   kind_of mushroom
@@ -3559,9 +3587,15 @@ medium_brown_rice
   kind_of brown_rice
   label Medium-grain brown rice
 
+parboiled_rice
+  kind_of rice
+  label Parboiled rice
+  wikipedia Parboiled_rice
+
 white_rice
   kind_of rice
   label White rice
+  wikipedia White_rice
 
 glutinous_white_rice
   kind_of white_rice
@@ -3623,6 +3657,7 @@ wheat
 
 animal
   label Animal
+  wikipedia Animal
 
 
 # Birds
@@ -3737,6 +3772,7 @@ turkey
 # TODO bovidae taxonomy
 
 beef
+  # NOTE here beef is used to describe cows, while this is usually related to any cattle meat
   kind_of animal
   label Beef
   foodb 506
@@ -5373,6 +5409,7 @@ goose_fat
 
 lard
   kind_of animal_fat
+  part_of pork
   label Lard
   foodb 703
   wikipedia Lard
@@ -5603,133 +5640,133 @@ smoothie
 
 fruit_juice
   kind_of juice
-  made_of fruit
+  derivative_of fruit
   label Fruit juice
   foodb 788
 
 berry_juice
   kind_of fruit_juice
-  made_of berry
+  derivative_of berry
   label Berry juice
 
 blackberry_juice
   kind_of berry_juice
-  made_of blackberry
+  derivative_of blackberry
   label Blackberry juice
 
 cranberry_juice
   kind_of berry_juice
-  made_of cranberry
+  derivative_of cranberry
   label Cranberry juice
 
 grape_juice
   kind_of berry_juice
-  made_of grape
+  derivative_of grape
   label Grape juice
 
 citrus_juice
   kind_of fruit_juice
-  made_of citrus
+  derivative_of citrus
   label Citrus juice
 
 grapefruit_juice
   kind_of citrus_juice
-  made_of grapefruit
+  derivative_of grapefruit
   label Grapefruit juice
 
 lemon_juice
   kind_of citrus_juice
-  made_of lemon
+  derivative_of lemon
   label Lemon juice
 
 lime_juice
   kind_of citrus_juice
-  made_of lime
+  derivative_of lime
   label Lime juice
 
 orange_juice
   kind_of citrus_juice
-  made_of orange
+  derivative_of orange
   label Orange juice
 
 tangerine_juice
   kind_of citrus_juice
-  made_of tangerine
+  derivative_of tangerine
   label Tangerine juice
 
 pomegranate_juice
   kind_of fruit_juice
-  made_of pomegranate
+  derivative_of pomegranate
   label Pomegranate juice
 
 pome_juice
   kind_of fruit_juice
-  made_of pome
+  derivative_of pome
   label Pome juice
 
 apple_juice
   kind_of pome_juice
-  made_of apple
+  derivative_of apple
   label Apple juice
 
 stone_fruit_juice
   kind_of fruit_juice
-  made_of stone_fruit
+  derivative_of stone_fruit
   label Stone fruit juice
 
 apricot_juice
   kind_of stone_fruit_juice
-  made_of apricot
+  derivative_of apricot
   label Apricot juice
 
 peach_juice
   kind_of stone_fruit_juice
-  made_of peach
+  derivative_of peach
   label Peach juice
 
 tropical_fruit_juice
   kind_of fruit_juice
-  made_of tropical_fruit
+  derivative_of tropical_fruit
   label Tropical fruit juice
 
 acerola_juice
   kind_of tropical_fruit_juice
-  made_of acerola
+  derivative_of acerola
   label Acerola juice
 
 guava_juice
   kind_of tropical_fruit_juice
-  made_of guava
+  derivative_of guava
   label Guava juice
 
 mango_juice
   kind_of tropical_fruit_juice
-  made_of mango
+  derivative_of mango
   label Mango juice
 
 papaya_juice
   kind_of tropical_fruit_juice
-  made_of papaya
+  derivative_of papaya
   label Papaya juice
 
 passion_fruit_juice
   kind_of tropical_fruit_juice
-  made_of passion_fruit
+  derivative_of passion_fruit
   label Passion-fruit juice
 
 pineapple_juice
   kind_of tropical_fruit_juice
-  made_of pineapple
+  derivative_of pineapple
   label Pineapple juice
 
 tamarind_juice
   kind_of tropical_fruit_juice
-  made_of tamarind
+  derivative_of tamarind
   label Tamarind juice
 
 vegetable_juice
   kind_of juice
-  made_of vegetable
+  derivative_of vegetable
   label Vegetable juice
   foodb 851
 
@@ -5737,12 +5774,12 @@ fruit_vegetable_juice
   kind_of
     fruit_juice
     vegetable_juice
-  made_of fruit_vegetable
+  derivative_of fruit_vegetable
   label Fruit vegetable juice
 
 tomato_juice
   kind_of fruit_vegetable_juice
-  made_of tomato
+  derivative_of tomato
   label Tomato juice
 
 
@@ -5759,95 +5796,127 @@ alcohol
   foodb 884
   wikipedia Alcohol
 
+
+# Beers
+# TODO refine beer taxonomy
+
 beer
   kind_of alcohol
   label Beer
   foodb 268
   wikipedia Beer
 
-cider
-  kind_of alcohol
-  label Cider
-  foodb 629
 
-distilled_alcohol
-  kind_of alcohol
-  label Distilled alcohol
-
-gin
-  kind_of distilled_alcohol
-  label Gin
-  foodb 642
-
-rum
-  kind_of distilled_alcohol
-  label Rum
-  foodb 646
-
-vodka
-  kind_of distilled_alcohol
-  label Vodka
-  foodb 639
-
-whiskey
-  kind_of distilled_alcohol
-  label Whiskey
-  foodb 640
-
-fortified_wine
-  kind_of alcohol
-  label Fortified wine
-  foodb 278
-
-madeira_wine
-  kind_of fortified_wine
-  label Madeira wine
-  foodb 650
-
-port_wine
-  kind_of fortified_wine
-  label Port wine
-  foodb 647
-
-sherry
-  kind_of fortified_wine
-  label Sherry
-  foodb 649
-
-vermouth
-  kind_of fortified_wine
-  label Vermouth
-  foodb 648
-
-liqueur
-  kind_of alcohol
-  label Liqueur
-
-coffee_liqueur
-  kind_of liqueur
-  label Coffee liqueur
+# Distilled alcohols (a.k.a. spirits or liquor)
+# TODO improve distilled alcohol taxonomy (see https://en.wikipedia.org/wiki/Category:Distilled_drinks)
 
 liquor
   kind_of alcohol
   label Liquor
   foodb 630
+  wikipedia Distilled_beverage
+
+applejack
+  kind_of liquor
+  derivative_of apple
+  label Applejack
+  wikipedia Applejack_(drink)
+
+calvados
+  kind_of liquor
+  derivative_of apple
+  label Calvados
+  wikipedia Calvados
+
+gin
+  kind_of liquor
+  label Gin
+  foodb 642
+  wikipedia Gin
+
+kirsch
+  kind_of liquor
+  derivative_of sour_cherry
+  label Kirsch
+  wikipedia Kirsch
+
+rum
+  kind_of liquor
+  label Rum
+  foodb 646
 
 tequila
-  kind_of alcohol
+  kind_of liquor
+  derivative_of agave
   label Tequila
+  wikipedia Tequila
+
+vodka
+  kind_of liquor
+  label Vodka
+  foodb 639
+
+whisky
+  kind_of liquor
+  label Whisky
+  foodb 640
+
+liqueur
+  kind_of liquor
+  label Liqueur
+
+absinthe
+  kind_of liquor
+  derivative_of anise
+  label Absinthe
+  wikipedia Absinthe
+
+amaretto
+  kind_of liqueur
+  derivative_of almond
+  label Amaretto
+  wikipedia Amaretto
+
+coffee_liqueur
+  kind_of liqueur
+  label Coffee liqueur
+
+
+# Wines
 
 wine
   kind_of alcohol
   label Wine
   foodb 628
 
-berry_wine
+fruit_wine
   kind_of wine
+  label Fruit wine
+  wikipedia Fruit_wine
+
+berry_wine
+  kind_of fruit_wine
   label Berry wine
   foodb 627
 
+cider
+  # NOTE historically, cider is not considered as a fruit wine
+  kind_of fruit_wine
+  derivative_of apple
+  label Cider
+  foodb 629
+
+perry
+  # NOTE historically, perry is not considered as a fruit wine
+  kind_of fruit_wine
+  derivative_of pear
+  label Perry
+
+# TODO mead/honey-wine (see https://en.wikipedia.org/wiki/Mead)
+
 grape_wine
-  kind_of wine
+  # NOTE usually, grape wines are separated from fruit wines
+  kind_of berry_wine
   label Grape wine
   foodb 626
 
@@ -5868,15 +5937,81 @@ white_wine
   kind_of grape_wine
   label White wine
 
+sparkling_wine
+  kind_of grape_wine
+  label Sparkling wine
+  wikipedia Sparkling_wine
+
 rice_wine
+  # TODO detailed taxonomy of rice wines
   kind_of wine
   label Rice wine
   foodb 763
+  wikipedia Rice_wine
 
 wine_substitute
-  # TODO where do we put non-alcoholic substitutes?
+  # TODO where do we put non-alcoholic substitutes? Maybe need substitute_of annotations
   kind_of wine
   label Wine substitute
+
+
+# Wines mixed with spirits
+
+fortified_wine
+  kind_of alcohol
+  made_of wine
+  made_of distilled_alcohol
+  label Fortified wine
+  foodb 278
+  wikipedia Fortified_wine
+
+madeira_wine
+  kind_of fortified_wine
+  label Madeira wine
+  foodb 650
+  wikipedia Madeira_wine
+
+marsala_wine
+  kind_of fortified_wine
+  label Marsala wine
+  wikipedia Marsala_wine
+
+port_wine
+  kind_of fortified_wine
+  label Port wine
+  foodb 647
+  wikipedia Port_wine
+
+sherry
+  kind_of fortified_wine
+  label Sherry
+  foodb 649
+  wikipedia Sherry
+
+aromatised_wine
+  kind_of fortified_wine
+  label Aromatised wine
+  wikipedia Aromatised_wine
+
+vermouth
+  kind_of aromatised_wine
+  label Vermouth
+  foodb 648
+  wikipedia Vermouth
+
+
+# TODO refine cocktails
+
+cocktail
+  kind_of alcohol
+  label Cocktail
+
+spritzer
+  kind_of cocktail
+  made_of white_wine
+  made_of carbonated_water
+  label Spritzer
+  wikipedia Spritzer
 
 
 
@@ -6039,12 +6174,12 @@ malted_drink
   label Malted drink
 
 milk_drink
-  # TODO properly handle milk drinks (i.e. overlap with dairies)
   kind_of beverage
+  kind_of milk_product
   label Milk drink
 
 milkshake
-  kind_of beverage
+  kind_of milk_drink
   label Milkshake
   foodb 855
 
@@ -6068,7 +6203,7 @@ sport_drink
 # TODO plant product detailed taxonomy
 
 plant_product
-  made_of plant
+  derivative_of plant
   label Plant product
 
 
@@ -6089,7 +6224,7 @@ plant_product
 
 tomato_product
   kind_of plant_product
-  made_of tomato
+  derivative_of tomato
   label Tomato product
 
 tomato_dried
@@ -6111,12 +6246,12 @@ tomato_puree
 
 kimchi
   kind_of plant_product
-  made_of chinese_cabbage
+  derivative_of chinese_cabbage
   label Kimchi
 
 sauerkraut
   kind_of plant_product
-  made_of common_cabbage
+  derivative_of common_cabbage
   label Sauerkraut
 
 
@@ -6130,19 +6265,19 @@ sauerkraut
 
 almond_butter
   kind_of plant_product
-  made_of almond
+  derivative_of almond
   label Almond butter
   wikipedia Almond_butter
 
 almond_paste
   kind_of plant_product
-  made_of almond
+  derivative_of almond
   label Almond paste
   wikipedia Almond_paste
 
 cashew_butter
   kind_of plant_product
-  made_of cashew
+  derivative_of cashew
   label Cashew butter
   wikipedia Cashew_butter
 
@@ -6150,7 +6285,7 @@ cashew_butter
 
 peanut_butter
   kind_of plant_product
-  made_of peanut
+  derivative_of peanut
   label Peanut butter
   wikipedia Peanut_butter
 
@@ -6164,13 +6299,13 @@ smooth_peanut_butter
 
 sesame_butter
   kind_of plant_product
-  made_of sesame_seed
+  derivative_of sesame_seed
   label Tahini
   wikipedia Tahini
 
 sunflower_butter
   kind_of plant_product
-  made_of sunflower_seed
+  derivative_of sunflower_seed
   label Sunflower butter
   wikipedia Sunflower_butter
 
@@ -6180,7 +6315,7 @@ sunflower_butter
 
 soy_product
   kind_of plant_product
-  made_of soy_bean
+  derivative_of soy_bean
   label Soy product
   foodb 272
 
@@ -6238,7 +6373,7 @@ tofu
 
 
 cereal_product
-  made_of grain
+  derivative_of grain
   label Cereal product
   foodb 273
 
@@ -6994,9 +7129,10 @@ scrapple
 # Milk products #
 #################
 
-# TODO handle dairies substitutes at higher level
+# TODO associate animal/plant source when applicable
 
 milk_product
+  derivative_of milk
   label Milk product
   foodb 893
 
@@ -7015,98 +7151,106 @@ casein
 # Fluid milk and direct derivatives
 #
 
-# TODO relate milks to their sources, if applicable
-# TODO vegetable milk and milk substitute need to be refactored
-# TODO milk derivatives taxonomy need to be improved (e.g. whey)
-# TODO annotate milk as beverage, when appropriate
-
-milk_like
-  kind_of milk_product
+milk
+  kind_of beverage
   label Milk-like
 
+milk_substitute
+  # TODO refine milk substitutes?
+  substitute_of milk
+  label Milk substitute
+  foodb 878
+
 animal_milk
-  kind_of milk_like
+  kind_of milk
+  product_of animal
   label Animal milk
   foodb 712
 
 buffalo_milk
   kind_of animal_milk
+  product_of buffalo
   label Buffalo milk
 
 cow_milk
   kind_of animal_milk
+  product_of beef
   label Cow milk
   foodb 632
 
-condensed_milk
-  kind_of cow_milk
-  label Condensed milk
-  foodb 871
-
-dried_milk
-  kind_of cow_milk
-  label Dried milk
-  foodb 711
-
-evaporated_milk
-  kind_of cow_milk
-  label Evaporated milk
-  foodb 824
-
-filled_milk
-  kind_of cow_milk
-  label Filled milk
-  wikipedia Filled_milk
-
-flavored_milk
-  # TODO properly annotate/classify flavored milk
-  kind_of cow_milk
-  label Flavoured cow milk
-
-lowfat_milk
-  kind_of cow_milk
-  label Lowfat milk
-
-whey
-  kind_of cow_milk
-  label Whey
-  foodb 679
-
 goat_milk
   kind_of animal_milk
+  product_of goat
   label Goat milk
 
 human_milk
   # TODO maybe mark human milk as baby food
   kind_of animal_milk
+  product_of human
   label Human milk
   foodb 687
 
 sheep_milk
   kind_of animal_milk
+  product_of sheep
   label Sheep milk
 
 vegetable_milk
-  kind_of milk_like
+  # NOTE vegetable milk are often referred as milk substitutes
+  kind_of milk
+  derivative_of plant
   label Vegetable milk
 
 almond_milk
   kind_of vegetable_milk
+  derivative_of almond
   label Almond milk
   wikipedia Almond_milk
 
 coconut_milk
   kind_of vegetable_milk
+  derivative_of coconut
   label Coconut milk
-
-milk_substitute
-  kind_of vegetable_milk
-  label Milk substitute
-  foodb 878
 
 rice_milk
   kind_of vegetable_milk
+  derivative_of rice
   label Rice milk
+
+
+#
+# Milk variations
+#
+
+condensed_milk
+  kind_of milk_product
+  label Condensed milk
+  foodb 871
+
+dried_milk
+  kind_of milk_product
+  label Dried milk
+  foodb 711
+
+evaporated_milk
+  kind_of milk_product
+  label Evaporated milk
+  foodb 824
+
+filled_milk
+  kind_of milk_product
+  label Filled milk
+  wikipedia Filled_milk
+
+lowfat_milk
+  # TODO refine lowfat (and other modifications) for milks (and other milk products)
+  kind_of milk
+  label Lowfat milk
+
+whey
+  kind_of milk_product
+  label Whey
+  foodb 679
 
 
 #
@@ -7155,14 +7299,6 @@ caraway_cheese
 cheddar_cheese
   kind_of cheese
   label Cheddar cheese
-
-cheese_product
-  kind_of cheese
-  label Cheese product
-
-cheesecake
-  kind_of cheese
-  label Cheesecake
 
 cheshire_cheese
   kind_of cheese
@@ -7275,17 +7411,26 @@ ymer
 # Cream and direct derivatives
 #
 
-# TODO handle cream substitutes
-
 cream
   kind_of milk_product
   label Cream
   wikipedia 669
 
 cream_substitute
-  kind_of cream
+  # TODO refine cream substitutes
+  substitute_of cream
   label Cream substitute
   foodb 737
+
+# TODO properly handle fatness of cream products
+
+coffee_cream
+  kind_of cream
+  label Coffee cream
+
+heavy_cream
+  kind_of cream
+  label Heavy cream
 
 sour_cream
   kind_of cream
@@ -7296,7 +7441,7 @@ whipped_cream
   label Whipped cream
 
 whipped_cream_substitute
-  kind_of whipped_cream
+  substitute_of whipped_cream
   label Whipped cream substitute
 
 
@@ -7305,7 +7450,6 @@ whipped_cream_substitute
 #
 
 # TODO maybe fermented milk category is irrelevant (i.e. put yoghurt as top-level)
-# TODO properly annotate flavored yoghurts
 # TODO maybe annotate yoghurts as fast_food/snack?
 
 fermented_milk
@@ -7323,27 +7467,13 @@ kefir
   kind_of fermented_milk
   label Kefir
   foodb 713
+  wikipedia Kefir
 
 yoghurt
+  # TODO is yoghurt a dish?
   kind_of fermented_milk
   label Yoghurt
   foodb 634
-
-flavored_yoghurt
-  kind_of yoghurt
-  label Flavored yoghurt
-
-chocolate_yoghurt
-  kind_of flavored_yoghurt
-  label Chocolate yoghurt
-
-fruit_yoghurt
-  kind_of flavored_yoghurt
-  label Fruit yoghurt
-
-vanilla_yoghurt
-  kind_of flavored_yoghurt
-  label Vanilla yoghurt
 
 greek_yoghurt
   kind_of yoghurt
@@ -7355,22 +7485,21 @@ greek_yoghurt
 #
 
 # TODO fix/improve ice cream taxonomies
-# TODO maybe annotate ice creams as fast food/sweet/snack
-# TODO properly handle ice cream flavors
-# TODO mark ice creams as fast foods/snacks
 # TODO maybe relate ice creams to ice cubes
 
 ice_cream
+  # TODO is ice cream a dish?
   kind_of milk_product
   label Ice cream
   foodb 641
 
-chocolate_ice_cream
+ice_cream
   kind_of ice_cream
-  label Chocolate ice cream
+  label Vanilla ice cream
 
 frozen_yoghurt
   kind_of ice_cream
+  made_of yoghurt
   label Frozen yoghurt
   foodb 854
 
@@ -7390,10 +7519,6 @@ sherbet
   # TODO sherbet is not a dairy product
   kind_of ice_cream
   label Sherbet
-
-vanilla_ice_cream
-  kind_of ice_cream
-  label Vanilla ice cream
 
 
 
@@ -7416,7 +7541,7 @@ cocoa_bean
 #
 
 cocoa_product
-  made_of cocoa_bean
+  derivative_of cocoa_bean
   label Cocoa product
   foodb 890
 
@@ -7425,6 +7550,13 @@ cocoa_butter
   kind_of fat
   label Cocoa butter
   foodb 706
+
+cocoa_liquor
+  # NOTE do not confuse with chocolate liqueur
+  kind_of cocoa_product
+  label Cocoa liquor
+  foodb 708
+  wikipedia Chocolate_liquor
 
 cocoa_powder
   kind_of cocoa_product
@@ -7465,13 +7597,6 @@ chocolate_powder
 # Beverages
 # TODO Refine cocoa and chocolate beverages, relate to dairies and beverages
 
-cocoa_liquor
-  # TODO what is cocoa liquor?
-  kind_of cocoa_product
-  kind_of beverage
-  label Cocoa liquor
-  foodb 708
-
 hot_chocolate
   kind_of cocoa_product
   kind_of beverage
@@ -7490,6 +7615,7 @@ chocolate_drink
 ###################
 
 # TODO improve compound dishes taxonomies
+# TODO apply modifiers, when relevant (e.g. cooked)
 
 dish
   label Dish
@@ -7508,7 +7634,38 @@ snack
   kind_of dish
   label Snack
 
-# TODO egg dishes
+
+#
+# Egg dishes
+#
+
+egg_dish
+  kind_of dish
+  made_of egg
+  label Egg dish
+
+fried_egg
+  kind_of egg_dish
+  label Fried egg
+
+hard_boiled_egg
+  kind_of egg_dish
+  label Hard-boiled egg
+
+omelet
+  kind_of egg_dish
+  label Omelet
+
+poached_egg
+  kind_of egg_dish
+  label Poached egg
+
+scrambled_egg
+  kind_of egg_dish
+  label Scrambled egg
+
+
+
 # TODO whole dish/snack taxonomies
 
 
