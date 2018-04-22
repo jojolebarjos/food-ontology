@@ -179,6 +179,13 @@ jelly
   # TODO has jelly a broader parent?
   label Jelly
 
+agar
+  kind_of jelly
+  derivative_of red_alga
+  label Agar
+  foodb 285
+  wikipedia Agar
+
 gelatin
   kind_of jelly
   label Gelatin
@@ -395,6 +402,10 @@ guava_sauce
 hoisin_sauce
   kind_of sauce
   label Hoisin
+
+hollandaise_sauce
+  kind_of sauce
+  label Hollandaise sauce
 
 horseradish_sauce
   kind_of sauce
@@ -1199,8 +1210,8 @@ muscadine_grape
   wikipedia Vitis_rotundifolia
 
 raisin
-  # TODO maybe should define raisin as a transformed grape
   kind_of grape
+  modifier dried
   label Raisin
   wikipedia Raisin
 
@@ -1591,6 +1602,12 @@ maraschino_cherry
   label Maraschino cherry
   wikipedia Maraschino_cherry
 
+mirabelle_plum
+  kind_of stone_fruit
+  label Mirabelle plum
+  label Yellow plum
+  wikipedia Mirabelle_plum
+
 nanking_cherry
   kind_of stone_fruit
   label Nanking cherry
@@ -1615,10 +1632,15 @@ plum
   wikipedia Prunus_domestica
 
 prune
-  # TODO maybe should define prune as a transformed plum
   kind_of plum
+  modifier dried
   label Prune
   wikipedia Prune
+
+damson_plum
+  kind_of plum
+  label Damson plum
+  wikipedia Damson
 
 
 # Miscellaneous tropical fruits
@@ -2028,6 +2050,11 @@ black_cabbage
   label Black cabbage
   foodb 247
 
+red_cabbage
+  kind_of common_cabbage
+  label Red cabbage
+  wikipedia Red_cabbage
+
 white_cabbage
   kind_of common_cabbage
   label White cabbage
@@ -2252,6 +2279,7 @@ leaf_vegetables
 arugula
   kind_of leaf_vegetables
   label Arugula
+  label Rocket
   foodb 77
   wikipedia Eruca_sativa
 
@@ -2274,6 +2302,7 @@ radicchio
 common_beet
   kind_of leaf_vegetables
   label Common beet
+  label Beetroot
   foodb 25
   wikipedia Beetroot
 
@@ -2849,6 +2878,14 @@ olive
   label Olive
   foodb 121
 
+black_olive
+  kind_of olive
+  label Black olive
+
+green_olive
+  kind_of olive
+  label Green olive
+
 tomatillo
   kind_of fruit_vegetable
   label Tomatillo
@@ -2899,6 +2936,7 @@ climbing_bean
 common_bean
   kind_of bean
   label Common bean
+  label Green bean
   foodb 134
   wikipedia Phaseolus_vulgaris
 
@@ -3028,6 +3066,7 @@ chickpea
 common_pea
   kind_of legume
   label Common pea
+  label Green pea
   foodb 141
   wikipedia Pea
 
@@ -3386,6 +3425,7 @@ chia_seed
 
 coriander_seed
   kind_of seed
+  part_of coriander
   label Coriander seed
 
 cottonseed
@@ -3396,14 +3436,17 @@ cottonseed
 
 dill_seed
   kind_of seed
+  part_of dill
   label Dill seed
 
 fennel_seed
   kind_of seed
+  part_of fennel
   label Fennel seed
 
 fenugreek_seed
   kind_of seed
+  part_of fenugreek
   label Fenugreek seed
 
 flaxseed
@@ -3565,6 +3608,7 @@ millet_grain
   foodb 126
 
 oat_grain
+  # TODO review various levels of treatment for grains (see https://wholegrainscouncil.org/whole-grains-101/easy-ways-enjoy-whole-grains/grain-month-calendar/oats-%E2%80%93-january-grain-month/types)
   kind_of grain
   label Oat
   foodb 22
@@ -3659,6 +3703,8 @@ animal
   label Animal
   wikipedia Animal
 
+
+# TODO provide culinary taxonomies (e.g. red meat, white meat)
 
 # Birds
 # TODO review bird taxonomy (e.g. poultry is used only for domesticated birds)
@@ -4087,12 +4133,6 @@ red_alga
   label Red alga
   foodb 615
   wikipedia Red_algae
-  
-agar
-  kind_of red_alga
-  label Agar
-  foodb 285
-  wikipedia Agar
 
 irish_moss
   kind_of red_alga
@@ -5770,6 +5810,10 @@ vegetable_juice
   label Vegetable juice
   foodb 851
 
+carrot_juice
+  kind_of vegetable_juice
+  label Carrot juice
+
 fruit_vegetable_juice
   kind_of
     fruit_juice
@@ -6238,6 +6282,7 @@ tomato_powder
 tomato_puree
   kind_of tomato_product
   label Tomato purée
+  label Tomato paste
 
 
 # Cabbage products
@@ -6373,7 +6418,8 @@ tofu
 
 
 cereal_product
-  derivative_of grain
+  # NOTE most cereal products are derived from seeds, mainly grains
+  derivative_of plant
   label Cereal product
   foodb 273
 
@@ -6391,18 +6437,22 @@ bran
 
 corn_bran
   kind_of bran
+  derivative_of corn
   label Corn bran
 
 oat_bran
   kind_of bran
+  derivative_of oat_grain
   label Oat bran
 
 rice_bran
   kind_of bran
+  derivative_of rice
   label Rice bran
 
 wheat_bran
   kind_of bran
+  derivative_of wheat
   label Wheat bran
 
 
@@ -6415,73 +6465,95 @@ flour
 
 acorn_flour
   kind_of flour
+  derivative_of acorn
   label Acorn flour
 
 arrowroot_flour
   kind_of flour
+  derivative_of arrowroot
   label Arrowroot flour
   wikipedia Arrowroot
 
 barley_flour
   kind_of flour
+  derivative_of barley
   label Barley flour
   wikipedia Barley_flour
 
 buckwheat_flour
   kind_of flour
+  derivative_of buckwheat
   label Buckwheat flour
 
 carob_flour
   kind_of flour
+  derivative_of carob
   label Carob flour
 
 corn_flour
   kind_of flour
+  derivative_of corn
   label Corn flour
 
 cottonseed_flour
   kind_of flour
+  derivative_of cottonseed
   label Cottonseed flour
 
 millet_flour
   kind_of flour
+  derivative_of millet_grain
   label Millet flour
 
 oat_flour
   kind_of flour
+  derivative_of oat_grain
   label Oat flour
 
 peanut_flour
   kind_of flour
+  derivative_of peanut
   label Peanut flour
   wikipedia Peanut flour
 
 rice_flour
   kind_of flour
+  derivative_of rice
   label Rice flour
 
 rye_flour
   kind_of flour
+  derivative_of rye_grain
   label Rye flour
 
 sesame_flour
   kind_of flour
+  derivative_of sesame_seed
   label Sesame flour
 
 sorghum_flour
   kind_of flour
+  derivative_of sorghum_grain
   label Sorghum flour
 
 soy_flour
   kind_of flour
+  derivative_of soy_bean
   label Soy flour
+
+spelt_flour
+  kind_of flour
+  derivative_of spelt
+  label Spelt flour
 
 sunflower_flour
   kind_of flour
+  derivative_of sunflower_seed
   label Sunflower flour
 
 wheat_flour
   kind_of flour
+  derivative_of wheat
   label Wheat flour
 
 
@@ -6493,30 +6565,37 @@ meal
 
 barley_meal
   kind_of meal
+  derivative_of barley
   label Barley meal
 
 cornmeal
   kind_of meal
+  derivative_of corn
   label Cornmeal
 
 cottonseed_meal
   kind_of meal
+  derivative_of cottonseed
   label Cottonseed meal
 
 cracker_meal
   kind_of meal
+  derivative_of cracker
   label Cracker meal
 
 safflower_meal
   kind_of meal
+  derivative_of safflower_seed
   label Safflower meal
 
 sesame_meal
   kind_of meal
+  derivative_of sesame_seed
   label Sesame meal
 
 soy_meal
   kind_of meal
+  derivative_of soy_bean
   label Soy meal
 
 
@@ -6529,8 +6608,20 @@ starch
 
 corn_starch
   kind_of starch
+  derivative_of corn
   label Corn starch
+  label Maize starch
   wikipedia Corn_starch
+
+potato_starch
+  kind_of starch
+  derivative_of potato
+  label Potato starch
+
+wheat_starch
+  kind_of starch
+  derivative_of wheat
+  label Wheat starch
 
 
 # Miscellaneous cereal derivatives
@@ -6699,9 +6790,32 @@ bagel
   foodb 831
   wikipedia Bagel
 
+baguette
+  kind_of leavened_bread
+  label Baguette
+  wikipedia Baguette
+
 breadcrumb
   kind_of leavened_bread
   label Breadcrumb
+
+bread_roll
+  kind_of leavened_bread
+  label Bread roll
+  wikipedia Bread_roll
+
+sweet_bread_roll
+  kind_of bread_roll
+  label Sweet bread roll
+
+lye_roll
+  kind_of bread_roll
+  label Lye roll
+  wikipedia Lye_roll
+
+braided_bread
+  kind_of leavened_bread
+  label Braided bread
 
 french_toast
   kind_of leavened_bread
@@ -6728,6 +6842,16 @@ rice_bread
   label Rice bread
   foodb 843
 
+rusk
+  kind_of leavened_bread
+  label Rusk
+  wikipedia Rusk
+
+zwieback
+  kind_of rusk
+  label Zwieback
+  foodb 721
+
 rye_bread
   kind_of leavened_bread
   label Rye bread
@@ -6738,24 +6862,23 @@ wheat_bread
   label Wheat bread
   foodb 836
 
-zwieback
-  kind_of leavened_bread
-  label Zwieback
-  foodb 721
-
 flat_bread
+  # TODO acquire flatbread taxonomy from wikipedia
   kind_of bread
   label Flat bread
+  wikipedia Flatbread
 
 cornbread
   kind_of flat_bread
   label Cornbread
   foodb 840
 
-crisp_bread
+crispbread
+  # TODO maybe crispbread is related to crackers?
   kind_of flat_bread
   label Crisp bread
   foodb 659
+  wikipedia Crispbread
 
 focaccia
   kind_of flat_bread
@@ -6885,15 +7008,6 @@ biscuit
   foodb 275
   wikipedia Biscuit
 
-bread_roll
-  kind_of baked_product
-  label Bread roll
-  wikipedia Bread_roll
-
-sweet_bread_roll
-  kind_of bread_roll
-  label Sweet bread roll
-
 cake
   kind_of baked_product
   label Cake
@@ -6920,6 +7034,10 @@ brownie
 croissant
   kind_of baked_product
   label Croissant
+
+pretzel_croissant
+  kind_of croissant
+  label pretzel_croissant
 
 danish_pastry
   kind_of baked_product
@@ -6952,6 +7070,17 @@ papad
   kind_of baked_product
   label Papad
   wikipedia Papadum
+
+rice_cake
+  kind_of baked_product
+  derivative_of rice
+  label Rice cake
+  wikipedia Rice_cake
+
+puffed_rice_cake
+  kind_of rice_cake
+  label Puffed rice cake
+  wikipedia Puffed_rice_cakes
 
 tart
   kind_of baked_product
@@ -6987,6 +7116,75 @@ meat_product
 fish_product
   label Fish product
   foodb 686
+
+
+#
+# Parts and cuts
+#
+
+
+meat_cut
+  # NOTE while this mainly focus on animal meat, this taxonomy is also used for vegetal meat-like products
+  label Meat cut
+
+breast
+  kind_of meat_cut
+  label Breast
+
+entrecote
+  kind_of meat_cut
+  label Entrecôte
+  wikipedia Entrecôte
+
+fillet
+  kind_of meat_cut
+  label Fillet
+  label Filet
+  wikipedia Fillet_(cut)
+
+ground_meat
+  kind_of meat_cut
+  label Ground meat
+  wikipedia Ground_meat
+
+liver
+  kind_of meat_cut
+  label Liver
+  wikipedia Liver_(food)
+
+minced_meat
+  kind_of meat_cut
+  label Shredded meat
+  label Sliced meat
+  label Shredded meat
+
+meat_chop
+  kind_of meat_cut
+  label Meat chop
+  wikipedia Meat_chop
+
+patty
+  kind_of meat_cut
+  label Patty
+  wikipedia Patty
+
+round_steak
+  kind_of meat_cut
+  label Round steak
+  wikipedia Round_steak
+
+scaloppine
+  kind_of meat_cut
+  label Scaloppine
+  wikipedia Scaloppine
+
+shoulder
+  kind_of meat_cut
+  label Shoulder
+
+tongue
+  kind_of meat_cut
+  label tongue
 
 
 #
@@ -7194,6 +7392,7 @@ sheep_milk
   kind_of animal_milk
   product_of sheep
   label Sheep milk
+  label Ewes' milk
 
 vegetable_milk
   # NOTE vegetable milk are often referred as milk substitutes
@@ -7226,6 +7425,7 @@ condensed_milk
   kind_of milk_product
   label Condensed milk
   foodb 871
+  wikipedia Condensed_milk
 
 dried_milk
   kind_of milk_product
@@ -7236,6 +7436,7 @@ evaporated_milk
   kind_of milk_product
   label Evaporated milk
   foodb 824
+  wikipedia Evaporated_milk
 
 filled_milk
   kind_of milk_product
@@ -7246,6 +7447,11 @@ lowfat_milk
   # TODO refine lowfat (and other modifications) for milks (and other milk products)
   kind_of milk
   label Lowfat milk
+
+skimmed_milk
+  kind_of milk_product
+  label Skimmed milk
+  wikpedia Skimmed_milk
 
 whey
   kind_of milk_product
@@ -7803,6 +8009,14 @@ marmalade
   label Marmalade
   wikipedia Marmalade
 
+marzipan
+  label Marzipan
+  foodb 663
+
+meringue
+  label Meringue
+  foodb 702
+
 nougat
   kind_of sweet
   label Nougat
@@ -7858,8 +8072,6 @@ praline
 #      sweet_custard 740
 #    other_confectioneries
 #      icing 724
-#      marzipan 663
-#      meringue 702
 #      toffee 653
 #    spreads
 #      chocolate_spread 698

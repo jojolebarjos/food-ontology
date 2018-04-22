@@ -9,10 +9,10 @@ This ontology is designed to handle culinary needs. Biological, chemical and nut
 Items are mostly everything, from raw ingredients to compound dishes. This is not limited to edible concepts (e.g. brands and processing indications). Together, a directed acyclic graph is built, as commonly done in ontologies. For simplicity sake's, a custom format with weak annotation is used, which is closer to thesauri formalism than RDF-based ontologies.
 
 In particular, the following relationships exist between items:
- * _product-of_ links attach a food to its producer, usually used to highlight the origin of milk, eggs and honey. Not to be confused with the remaining relationships, used to represents direct extraction or transformation (i.e. a steak is not a beef derivate, not a beef product).
+ * _product-of_ links attach a food to its producer, usually used to highlight the origin of milk, eggs and honey. Not to be confused with the remaining relationships, used to represents direct extraction or transformation (i.e. a steak is a beef derivate, not a beef product).
  * _derivative-of_ is the most generic relationship, which simply indicate the presence of an item, regardless of its transformation or extraction scheme. In particular, future versions are likely to introduce new specializations of this concept.
  * _part-of_ is a kind of derivate relationship, which indicates the usage of only some parts (e.g. seeds are part of fruits).
- * _made-of_ is the opposite derivate relationship, used for compositions with minimal transformations (e.g. egg dishes are made of eggs). In practice, non-straightforward transformations use __derivate-of_ links (e.g. wine is derivated from grape).
+ * _made-of_ is the opposite derivate relationship, used for compositions with minimal transformations (e.g. egg dishes are made of eggs). In practice, non-straightforward transformations use __derivate-of__ links (e.g. wine is derivated from grape).
  * _kind-of_ dependencies are traditional __is-a__ relations, providing inheritance (more on transitivity below), which is the strongest derivation process. Multiple inheritance is allowed (e.g. tomatoes are both vegetables and fruits).
 
 Implicit information is provided using inheritance and transitivity:
