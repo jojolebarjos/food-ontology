@@ -46,13 +46,13 @@ chopped	VERB	O
 # 8 ounces bittersweet chocolate or 8 ounces semisweet chocolate
 8	NUM	B-AMOUNT
 ounces	NOUN	B-UNIT
-bittersweet	ADJ	B-UNIT
-chocolate	NOUN	B-ITEM
+bittersweet	ADJ	B-ITEM
+chocolate	NOUN	I-ITEM
 or	CCONJ	O
 8	NUM	B-AMOUNT
 ounces	NOUN	B-UNIT
-semisweet	ADJ	B-UNIT
-chocolate	NOUN	B-ITEM
+semisweet	ADJ	B-ITEM
+chocolate	NOUN	I-ITEM
 
 # 8 snow peas, cut the same way
 8	NUM	B-AMOUNT

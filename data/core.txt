@@ -71,6 +71,13 @@ granulated_sugar
   kind_of sugar
   label Granulated sugar
 
+muscovado_sugar
+  kind_of sugar
+  label Muscovado
+  label Khandsari
+  label Khand
+  wikipedia Muscovado
+
 powdered_sugar
   kind_of sugar
   label Powdered sugar
@@ -2905,6 +2912,7 @@ legume
 
 
 # Beans
+# TODO use cultivars/varieties to improve beans (https://en.wikipedia.org/wiki/Phaseolus_vulgaris)
 
 bean
   kind_of legume
@@ -2943,7 +2951,22 @@ common_bean
 green_bean
   kind_of common_bean
   label Green bean
+  label Snap bean
+  label French bean
+  label String bean
+  label Snap
   foodb 915
+  wikipedia Green_bean
+
+navy_bean
+  kind_of common_bean
+  label Navy bean
+  label Haricot bean
+  label Pearl haricot bean
+  label Boston bean
+  label White pea bean
+  label Pea bean
+  wikipedia Navy_bean
 
 yellow_wax_bean
   kind_of common_bean
@@ -3000,10 +3023,6 @@ mungo_bean
   kind_of bean
   label Mungo bean
 
-navy_bean
-  kind_of bean
-  label Navy bean
-
 pink_bean
   kind_of bean
   label Pink bean
@@ -3017,10 +3036,6 @@ scarlet_bean
   label Scarlet bean
   foodb 132
   wikipedia Phaseolus_coccineus
-
-snap_bean
-  kind_of bean
-  label Snap bean
 
 soy_bean
   kind_of bean
@@ -3051,6 +3066,7 @@ yellow_bean
 
 
 # Other legumes and peas
+# TODO improve peas (and the edible-pod issue, associated to beans)
 
 alpine_sweetvetch
   kind_of legume
@@ -3075,6 +3091,17 @@ cowpea
   label Cow pea
   foodb 202
   wikipedia Cowpea
+
+snap_pea
+  kind_of pea
+  label Snap pea
+  wikipedia Snap_pea
+
+snow_pea
+  kind_of pea
+  label Snow pea
+  label Mangetout
+  wikipedia Snow_pea
 
 black_eyed_pea
   kind_of cowpea
@@ -3102,6 +3129,7 @@ pigeon_pea
   kind_of legume
   label Pigeon pea
   foodb 37
+  
 
 
 #
@@ -7994,6 +8022,9 @@ chewing_gum
   kind_of sweet
   label Chewing gum
   foodb 662
+
+food_coloring
+  label food_coloring
 
 marshmallow
   kind_of sweet

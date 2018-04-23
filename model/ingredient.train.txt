@@ -1,0 +1,43 @@
+
+# lettuce or other salad greens
+lettuce	lettuce
+other salad greens	misc
+
+# 6 hard-boiled eggs, separated
+hard-boiled eggs	hard_boiled_egg
+
+# 3 firm ripe pears
+pears	pear
+
+# 4 green bell peppers, chopped
+green bell peppers	green_bell_pepper
+
+# 1 (4 ounce) jar pimientos, with juice, chopped
+pimientos	chili_pepper
+
+# 8 ounces bittersweet chocolate or 8 ounces semisweet chocolate
+bittersweet chocolate	dark_chocolate
+semisweet chocolate	dark_chocolate
+
+# 8 snow peas, cut the same way
+snow peas	snow_pea
+
+# 1 green capsicum, seeded and sliced
+green capsicum	green_bell_pepper
+
+# 1/2 cup parmesan cheese (grated extra)
+parmesan cheese	parmesan_cheese
+
+# 1 1/2 cups peanut butter (I used creamy)
+peanut butter	peanut_butter
+
+# food coloring (I like the new neon colors)
+food coloring	food_coloring
+
+# 1/4 cup muscovado sugar or 1/4 cup brown sugar
+muscovado sugar	muscovado_sugar
+brown sugar	brown_sugar
+
+# 2 cups four cheese blend, shredded (8 oz.)
+four cheese blend	cheese
+

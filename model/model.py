@@ -12,6 +12,7 @@ import random
 HERE = os.path.dirname(os.path.realpath(__file__))
 POS_CRFSUITE = os.path.join(HERE, 'pos.crfsuite')
 FOOD_CRFSUITE = os.path.join(HERE, 'food.crfsuite')
+INGREDIENT_CRFSUITE = os.path.join(HERE, 'ingredient.crfsuite')
 
 
 # Use simple rules to tokenize text
@@ -86,6 +87,7 @@ def from_conllu(file):
 # Import tab separated dataset
 def from_tab(file):
   samples = []
+  text = None
   tokens = []
   pos_tags = []
   food_tags = []
@@ -97,15 +99,17 @@ def from_tab(file):
     # Empty line marks end-of-sample
     if len(line) == 0:
       if len(tokens) > 0:
-        sample = (tokens, pos_tags, food_tags)
+        sample = (text, tokens, pos_tags, food_tags)
         samples.append(sample)
+      text = None
       tokens = []
       pos_tags = []
       food_tags = []
       continue
     
-    # Ignore comments
+    # Keep comments as text reference
     if line[0] == '#':
+      text = line[2:]
       continue
     
     # Accumulate tokens
@@ -118,8 +122,26 @@ def from_tab(file):
   return samples
 
 
+# Import row dataset (sentence fragments and label)
+def from_row(file):
+  samples = []
+  for line in file:
+    line = line.rstrip()
+    if len(line) == 0 or line[0] == '#':
+      continue
+    parts = line.split('\t')
+    text = parts[0]
+    label = parts[1]
+    tokens = [token for token, _, _ in tokenize(text)]
+    sample = (tokens, label)
+    samples.append(sample)
+  return samples
+
+
 # Generate features for Part-of-Speech tagger
 def pos_extract_features(tokens):
+  # TODO improve features, especially regarding lemmatization
+  # TODO maybe also use embeddings and clusters
   
   # Prepare tokens
   words = [simplify(token) for token in tokens]
@@ -163,7 +185,7 @@ def pos_train():
   path = os.path.join(HERE, 'entity.train.txt')
   if os.path.exists(path):
     with io.open(path, 'r', newline='\n', encoding='utf-8') as file:
-      for tokens, pos_tags, food_tags in from_tab(file):
+      for _, tokens, pos_tags, food_tags in from_tab(file):
         sample = (tokens, pos_tags)
         for _ in range(5):
           samples.append(sample)
@@ -234,7 +256,7 @@ def food_train():
   })
   
   # Generate training samples
-  for tokens, pos_tags, food_tags in samples:
+  for _, tokens, pos_tags, food_tags in samples:
     features = food_extract_features(tokens, pos_tags)
     trainer.append(features, food_tags)
   
@@ -242,7 +264,7 @@ def food_train():
   trainer.train(FOOD_CRFSUITE)
   
   # TODO print infos
-  # TODO test model on each corpus (separately)
+  # TODO test model
 
 
 # Create food entity tagger
@@ -263,22 +285,76 @@ def get_food_tagger(pos_tagger=None):
   return tag
 
 
+# Extract BIO entities as spans
+def entity_ranges(tags):
+  entities = []
+  index = 0
+  while index < len(tags):
+    if '-' in tags[index]:
+      tag = tags[index][2:]
+      start = index
+      index += 1
+      while index < len(tags) and tags[index] == 'I-' + tag:
+        index += 1
+      entity = (tag, start, index)
+      entities.append(entity)
+    else:
+      index += 1
+  return entities
+
+
 # Generate features for ingredient classifier
 def ingredient_extract_features(tokens):
-  # TODO
-  pass
+  # TODO improve features, especially regarding lemmatization
+  # TODO maybe also use embeddings and clusters
+  # TODO maybe use PoS tags?
+  # TODO also consider bigrams and trigrams
+  features = [simplify(token) for token in tokens]
+  return features
 
 
 # Train ingredient classifier
 def ingredient_train():
-  # TODO
-  pass
+  
+  # Import specialized ingredient file
+  path = os.path.join(HERE, 'ingredient.train.txt')
+  with io.open(path, 'r', newline='\n', encoding='utf-8') as file:
+    samples = from_row(file)
+  
+  # Create trainer
+  trainer = pycrfsuite.Trainer(verbose=True)
+  trainer.set_params({
+    'c1': 1.0,
+    'c2': 1e-3,
+    'max_iterations': 50,
+    'feature.possible_transitions': True
+  })
+  
+  # Generate training samples
+  for tokens, label in samples:
+    features = ingredient_extract_features(tokens)
+    trainer.append([features], [label])
+  
+  # Train
+  trainer.train(INGREDIENT_CRFSUITE)
+  
+  # TODO print infos
+  # TODO test model
 
 
 # Create ingredient classifier
 def get_ingredient_classifier():
-  # TODO
-  pass
+  # TODO ingredient classification should use ontology to improve accuracy
+  try:
+    tagger = pycrfsuite.Tagger()
+    tagger.open(INGREDIENT_CRFSUITE)
+    def tag(tokens):
+      features = ingredient_extract_features(tokens)
+      return tagger.tag([features])[0]
+  except:
+    def tag(tokens, pos_tags=None):
+      return 'misc'
+  return tag
 
 
 # Generate additional samples for Part-of-Speech and food entities
@@ -311,3 +387,24 @@ def food_generate(input_path, output_path, count=50):
       for token, pos_tag, food_tag in zip(tokens, pos_tags, food_tags):
         file.write(token + '\t' + pos_tag + '\t' + food_tag + '\n')
       file.write('\n')
+
+
+# Generate additional samples for ingredient classification
+def ingredient_generate(input_path, output_path):
+  
+  # Use specified tab dataset (ground truth or predicted)
+  with io.open(input_path, 'r', newline='\n', encoding='utf-8') as file:
+    samples = from_tab(file)
+  
+  # Extract items
+  ingredient_classifier = get_ingredient_classifier()
+  with io.open(output_path, 'w', newline='\n', encoding='utf-8') as file:
+    file.write('\n')
+    for text, tokens, _, food_tags in samples:
+      entities = [(start, end) for tag, start, end in entity_ranges(food_tags) if tag == 'ITEM']
+      if len(entities) > 0:
+        file.write('# ' + text + '\n')
+        for start, end in entities:
+          tag = ingredient_classifier(tokens[start : end])
+          file.write(' '.join(tokens[start : end]) + '\t' + tag + '\n')
+        file.write('\n')
