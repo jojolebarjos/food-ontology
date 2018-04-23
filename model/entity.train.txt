@@ -1,0 +1,152 @@
+
+# lettuce or other salad greens
+lettuce	NOUN	B-ITEM
+or	CCONJ	O
+other	DET	B-ITEM
+salad	NOUN	I-ITEM
+greens	NOUN	I-ITEM
+
+# 6 hard-boiled eggs, separated
+6	NUM	B-AMOUNT
+hard	ADJ	B-ITEM
+-	PUNCT	I-ITEM
+boiled	VERB	I-ITEM
+eggs	NOUN	I-ITEM
+,	PUNCT	O
+separated	VERB	O
+
+# 3 firm ripe pears
+3	NUM	B-AMOUNT
+firm	ADJ	O
+ripe	ADJ	O
+pears	NOUN	B-ITEM
+
+# 4 green bell peppers, chopped
+4	NUM	B-AMOUNT
+green	ADJ	B-ITEM
+bell	NOUN	I-ITEM
+peppers	NOUN	I-ITEM
+,	PUNCT	O
+chopped	VERB	O
+
+# 1 (4 ounce) jar pimientos, with juice, chopped
+1	NUM	B-AMOUNT
+(	PUNCT	O
+4	NUM	B-AMOUNT
+ounce	NOUN	B-UNIT
+)	PUNCT	O
+jar	NOUN	B-UNIT
+pimientos	NOUN	B-ITEM
+,	PUNCT	O
+with	ADP	O
+juice	NOUN	O
+,	PUNCT	O
+chopped	VERB	O
+
+# 8 ounces bittersweet chocolate or 8 ounces semisweet chocolate
+8	NUM	B-AMOUNT
+ounces	NOUN	B-UNIT
+bittersweet	ADJ	B-UNIT
+chocolate	NOUN	B-ITEM
+or	CCONJ	O
+8	NUM	B-AMOUNT
+ounces	NOUN	B-UNIT
+semisweet	ADJ	B-UNIT
+chocolate	NOUN	B-ITEM
+
+# 8 snow peas, cut the same way
+8	NUM	B-AMOUNT
+snow	NOUN	B-ITEM
+peas	NOUN	I-ITEM
+,	PUNCT	O
+cut	VERB	O
+the	DET	O
+same	ADJ	O
+way	NOUN	O
+
+# 1 green capsicum, seeded and sliced
+1	NUM	B-AMOUNT
+green	ADJ	B-ITEM
+capsicum	NOUN	I-ITEM
+,	PUNCT	O
+seeded	VERB	O
+and	CCONJ	O
+sliced	VERB	O
+
+# 1/2 cup parmesan cheese (grated extra)
+1	NUM	B-AMOUNT
+/	PUNCT	I-AMOUNT
+2	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+parmesan	NOUN	B-ITEM
+cheese	NOUN	I-ITEM
+(	PUNCT	O
+grated	VERB	O
+extra	ADJ	O
+)	PUNCT	O
+
+# 1 1/2 cups peanut butter (I used creamy)
+1	NUM	B-AMOUNT
+1	NUM	I-AMOUNT
+/	PUNCT	I-AMOUNT
+2	NUM	I-AMOUNT
+cups	NOUN	B-UNIT
+peanut	NOUN	B-ITEM
+butter	NOUN	I-ITEM
+(	PUNCT	O
+I	PRON	O
+used	VERB	O
+creamy	ADJ	O
+)	PUNCT	O
+
+# food coloring (I like the new neon colors)
+food	NOUN	B-ITEM
+coloring	NOUN	I-ITEM
+(	PUNCT	O
+I	PRON	O
+like	VERB	O
+the	DET	O
+new	ADJ	O
+neon	NOUN	O
+colors	NOUN	O
+)	PUNCT	O
+
+# 1/4 cup muscovado sugar or 1/4 cup brown sugar
+1	NUM	B-AMOUNT
+/	PUNCT	I-AMOUNT
+4	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+muscovado	NOUN	B-ITEM
+sugar	NOUN	I-ITEM
+or	CCONJ	O
+1	NUM	B-AMOUNT
+/	PUNCT	I-AMOUNT
+4	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+brown	NOUN	B-ITEM
+sugar	NOUN	I-ITEM
+
+# 2 cups four cheese blend, shredded (8 oz.)
+2	NUM	B-AMOUNT
+cups	NUM	B-UNIT
+four	NUM	B-ITEM
+cheese	NOUN	I-ITEM
+blend	NOUN	I-ITEM
+,	PUNCT	O
+shredded	VERB	O
+(	PUNCT	O
+8	NUM	B-AMOUNT
+oz	NOUN	B-UNIT
+.	PUNCT	O
+)	PUNCT	O
+
+# 2 (10 ounce) packages Hershey chocolate kisses
+2	NUM	B-AMOUNT
+(	PUNCT	O
+10	NUM	B-AMOUNT
+ounce	NOUN	B-UNIT
+)	PUNCT	O
+packages	NOUN	B-UNIT
+Hershey	PROPN	B-ITEM
+chocolate	NOUN	I-ITEM
+kisses	NOUN	I-ITEM
