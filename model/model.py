@@ -16,7 +16,7 @@ INGREDIENT_CRFSUITE = os.path.join(HERE, 'ingredient.crfsuite')
 
 
 # Use simple rules to tokenize text
-_token = re.compile(r'\s*((?:\p{L}|\d)+|\S)', re.UNICODE)
+_token = re.compile(r'\s*(\p{L}+|\d+|\S)', re.UNICODE)
 def tokenize(text):
   pos = 0
   while True:

@@ -9,7 +9,7 @@ greens	NOUN	I-ITEM
 # 6 hard-boiled eggs, separated
 6	NUM	B-AMOUNT
 hard	ADJ	B-ITEM
--	PUNCT	I-ITEM
+-	NUM	I-ITEM
 boiled	VERB	I-ITEM
 eggs	NOUN	I-ITEM
 ,	PUNCT	O
@@ -75,7 +75,7 @@ sliced	VERB	O
 
 # 1/2 cup parmesan cheese (grated extra)
 1	NUM	B-AMOUNT
-/	PUNCT	I-AMOUNT
+/	NUM	I-AMOUNT
 2	NUM	I-AMOUNT
 cup	NOUN	B-UNIT
 parmesan	NOUN	B-ITEM
@@ -88,7 +88,7 @@ extra	ADJ	O
 # 1 1/2 cups peanut butter (I used creamy)
 1	NUM	B-AMOUNT
 1	NUM	I-AMOUNT
-/	PUNCT	I-AMOUNT
+/	NUM	I-AMOUNT
 2	NUM	I-AMOUNT
 cups	NOUN	B-UNIT
 peanut	NOUN	B-ITEM
@@ -113,14 +113,14 @@ colors	NOUN	O
 
 # 1/4 cup muscovado sugar or 1/4 cup brown sugar
 1	NUM	B-AMOUNT
-/	PUNCT	I-AMOUNT
+/	NUM	I-AMOUNT
 4	NUM	I-AMOUNT
 cup	NOUN	B-UNIT
 muscovado	NOUN	B-ITEM
 sugar	NOUN	I-ITEM
 or	CCONJ	O
 1	NUM	B-AMOUNT
-/	PUNCT	I-AMOUNT
+/	NUM	I-AMOUNT
 4	NUM	I-AMOUNT
 cup	NOUN	B-UNIT
 brown	NOUN	B-ITEM
@@ -150,3 +150,487 @@ packages	NOUN	B-UNIT
 Hershey	PROPN	B-ITEM
 chocolate	NOUN	I-ITEM
 kisses	NOUN	I-ITEM
+
+# 1/3 cup feta cheese, crumbled (for garnish)
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+3	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+feta	NOUN	B-ITEM
+cheese	NOUN	I-ITEM
+,	PUNCT	O
+crumbled	PROPN	O
+(	PUNCT	O
+for	ADP	O
+garnish	NOUN	O
+)	PUNCT	O
+
+# 2 wiennie franks or 1 small potato, peeled and diced
+2	NUM	B-AMOUNT
+wiennie	NOUN	B-UNIT
+franks	NOUN	B-ITEM
+or	CCONJ	O
+1	NUM	B-AMOUNT
+small	ADJ	B-ITEM
+potato	NOUN	I-ITEM
+,	PUNCT	O
+peeled	VERB	O
+and	CCONJ	O
+diced	VERB	O
+
+# 1 stalk lemongrass, white part only, very finely shredded
+1	NUM	B-AMOUNT
+stalk	NOUN	B-ITEM
+lemongrass	NOUN	I-ITEM
+,	PUNCT	O
+white	ADJ	O
+part	NOUN	O
+only	ADV	O
+,	PUNCT	O
+very	ADV	O
+finely	ADJ	O
+shredded	VERB	O
+
+# 1 cup whipping cream, whipped stiff
+1	NUM	B-AMOUNT
+cup	NOUN	B-UNIT
+whipping	NOUN	B-ITEM
+cream	NOUN	I-ITEM
+,	PUNCT	O
+whipped	VERB	O
+stiff	ADJ	O
+
+# 8 tablespoons , crem fraiche or 8 tablespoons sour cream
+8	NUM	B-AMOUNT
+tablespoons	NOUN	B-UNIT
+,	PUNCT	O
+crem	NOUN	B-ITEM
+fraiche	NOUN	I-ITEM
+or	CCONJ	O
+8	NUM	B-AMOUNT
+tablespoons	NOUN	B-UNIT
+sour	NOUN	B-ITEM
+cream	NOUN	I-ITEM
+
+# 1/8 cup red chili powder (to sprinkle on meat)
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+8	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+red	NOUN	B-ITEM
+chili	NOUN	I-ITEM
+powder	NOUN	I-ITEM
+(	PUNCT	O
+to	PART	O
+sprinkle	VERB	O
+on	ADP	O
+meat	NOUN	O
+)	PUNCT	O
+
+# 8 ounces broccoli stems, finely chopped
+8	NUM	B-AMOUNT
+ounces	NOUN	B-UNIT
+broccoli	NOUN	B-ITEM
+stems	NOUN	I-ITEM
+,	PUNCT	O
+finely	ADV	O
+chopped	VERB	O
+
+# 1 lb chorizo sausage (optional)
+1	NUM	B-AMOUNT
+lb	NOUN	B-UNIT
+chorizo	NOUN	B-ITEM
+sausage	NOUN	I-ITEM
+(	PUNCT	O
+optional	ADJ	O
+)	PUNCT	O
+
+# 1/3 cup heath almond toffee pieces
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+3	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+heath	NOUN	B-ITEM
+almond	NOUN	I-ITEM
+toffee	NOUN	I-ITEM
+pieces	NOUN	I-ITEM
+
+# 4 cups potatoes, sliced 1/8 inch thick
+4	NUM	B-AMOUNT
+cups	NOUN	B-UNIT
+potatoes	NOUN	B-ITEM
+,	PUNCT	O
+sliced	VERB	O
+1	NUM	O
+/	NUM	O
+8	NUM	O
+inch	NOUN	O
+thick	NOUN	O
+
+# 1/2 jalapeno pepper (finely chopped) (optional)
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+jalapeno	NOUN	B-ITEM
+pepper	NOUN	I-ITEM
+(	PUNCT	O
+finely	ADV	O
+chopped	VERB	O
+)	PUNCT	O
+(	PUNCT	O
+optional	ADJ	O
+)	PUNCT	O
+
+# 16 reduced-fat vanilla wafers, finely ground in a food processor
+16	NUM	B-AMOUNT
+reduced	NOUN	B-ITEM
+-	NUM	I-ITEM
+fat	ADJ	I-ITEM
+vanilla	NOUN	I-ITEM
+wafers	NOUN	I-ITEM
+,	PUNCT	O
+finely	ADV	O
+ground	VERB	O
+in	ADP	O
+a	DET	O
+food	NOUN	O
+processor	NOUN	O
+
+# 1/2 cup cooked bacon, pieces
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+cooked	NOUN	B-ITEM
+bacon	NOUN	I-ITEM
+,	PUNCT	O
+pieces	NOUN	O
+
+# 20 ml tequila liqueur
+20	NUM	B-AMOUNT
+ml	NOUN	B-UNIT
+tequila	NOUN	B-ITEM
+liqueur	NOUN	I-ITEM
+
+# 1 medium banana (frozen or fresh)
+1	NUM	B-AMOUNT
+medium	ADJ	B-ITEM
+banana	NOUN	I-ITEM
+(	PUNCT	O
+frozen	VERB	O
+or	CCONJ	O
+fresh	ADJ	O
+)	PUNCT	O
+
+# 1 cup coarse polenta (cornmeal)
+1	NUM	B-AMOUNT
+cup	NOUN	B-UNIT
+coarse	ADJ	B-ITEM
+polenta	NOUN	I-ITEM
+(	PUNCT	O
+cornmeal	NOUN	O
+)	PUNCT	O
+
+# 3-4 teaspoons massel vegetable stock
+3	NUM	B-AMOUNT
+-	NUM	I-AMOUNT
+4	NUM	I-AMOUNT
+teaspoons	NOUN	B-UNIT
+massel	NOUN	B-ITEM
+vegetable	NOUN	I-ITEM
+stock	NOUN	I-ITEM
+
+# 2 tablespoons prepared yellow mustard (no other kind will taste right!)
+2	NUM	B-AMOUNT
+tablespoons	NOUN	B-UNIT
+prepared	VERB	B-ITEM
+yellow	ADJ	I-ITEM
+mustard	NOUN	I-ITEM
+(	PUNCT	O
+no	DET	O
+other	ADJ	O
+kind	NOUN	O
+will	AUX	O
+taste	VERB	O
+right	ADV	O
+!	PUNCT	O
+)	PUNCT	O
+
+# 3 medium poblano peppers, seeded and white ribs removed, finely diced (about 4 ounces each)
+3	NUM	B-AMOUNT
+medium	ADJ	B-ITEM
+poblano	NOUN	I-ITEM
+peppers	NOUN	I-ITEM
+,	PUNCT	O
+seeded	VERB	O
+and	CCONJ	O
+white	ADJ	O
+ribs	NOUN	O
+removed	VERB	O
+,	PUNCT	O
+finely	ADV	O
+diced	VERB	O
+(	PUNCT	O
+about	ADP	O
+4	NUM	B-AMOUNT
+ounces	NOUN	B-UNIT
+each	DET	O
+)	PUNCT	O
+
+# 1 cup soft tofu
+1	NUM	B-AMOUNT
+cup	NOUN	B-UNIT
+soft	ADJ	B-ITEM
+tofu	NOUN	I-ITEM
+
+# 2 cups cubed cooked ham (10 oz.)
+2	NUM	B-AMOUNT
+cups	NOUN	B-UNIT
+cubed	VERB	O
+cooked	VERB	O
+ham	NOUN	B-ITEM
+(	PUNCT	O
+10	NUM	B-AMOUNT
+oz	NOUN	B-UNIT
+.	PUNCT	O
+)	PUNCT	O
+
+# 1 cup frozen vegetables, thawed and drained
+1	NUM	B-AMOUNT
+cup	NOUN	B-UNIT
+frozen	ADJ	B-ITEM
+vegetables	NOUN	I-ITEM
+,	PUNCT	O
+thawed	VERB	O
+and	CCONJ	O
+drained	VERB	O
+
+# salt and pepper, freshly ground
+salt	NOUN	B-ITEM
+and	CCONJ	O
+pepper	NOUN	B-ITEM
+,	PUNCT	O
+freshly	ADV	O
+ground	VERB	O
+
+# 1 lb lean beef chuck, trimmed and cut into cubes
+1	NUM	B-AMOUNT
+lb	NOUN	B-UNIT
+lean	ADJ	B-ITEM
+beef	NOUN	I-ITEM
+chuck	NOUN	I-ITEM
+,	PUNCT	O
+trimmed	VERB	O
+and	CCONJ	O
+cut	VERB	O
+into	ADP	O
+cubes	NOUN	O
+
+# 1/4 cup loosely packed fresh oregano leaves
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+4	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+loosely	ADV	O
+packed	VERB	O
+fresh	ADJ	B-ITEM
+oregano	NOUN	I-ITEM
+leaves	NOUN	I-ITEM
+
+# 1 pinch dried tarragon leaf
+1	NUM	B-AMOUNT
+pinch	NOUN	B-UNIT
+dried	ADJ	B-ITEM
+tarragon	NOUN	I-ITEM
+leaf	NOUN	I-ITEM
+
+# milk, little at a time
+milk	NOUN	B-ITEM
+,	PUNCT	O
+little	DET	O
+at	ADP	O
+a	DET	O
+time	NOUN	O
+
+# 2 large red peppers, seeded, cut into 2 inch squares
+2	NUM	B-AMOUNT
+large	ADJ	B-ITEM
+red	ADJ	I-ITEM
+peppers	NOUN	I-ITEM
+,	PUNCT	O
+seeded	VERB	O
+,	PUNCT	O
+cut	VERB	O
+into	ADP	O
+2	NUM	B-AMOUNT
+inch	NOUN	B-UNIT
+squares	NOUN	I-UNIT
+
+# 500 g macaroni pasta shells
+500	NUM	B-AMOUNT
+g	NOUN	B-UNIT
+macaroni	NOUN	B-ITEM
+pasta	NOUN	I-ITEM
+shells	NOUN	I-ITEM
+
+# 1-20 ounce cherry pie filling
+1	NUM	B-AMOUNT
+-	NUM	I-AMOUNT
+20	NUM	I-AMOUNT
+ounce	NOUN	B-UNIT
+cherry	NOUN	B-ITEM
+pie	NOUN	I-ITEM
+filling	NOUN	I-ITEM
+
+# 2 (16 ounce) boxes chicken broth
+2	NUM	B-AMOUNT
+(	PUNCT	O
+16	NUM	B-AMOUNT
+ounce	NOUN	B-UNIT
+)	PUNCT	O
+boxes	NOUN	B-UNIT
+chicken	NOUN	B-ITEM
+broth	NOUN	I-ITEM
+
+# 1/2 cup mesquite barbecue sauce
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+mesquite	NOUN	B-ITEM
+barbecue	NOUN	I-ITEM
+sauce	NOUN	I-ITEM
+
+# 1 cup thousand island dressing
+1	NUM	B-AMOUNT
+cup	NOUN	B-UNIT
+thousand	NOUN	B-ITEM
+island	NOUN	I-ITEM
+dressing	NOUN	I-ITEM
+
+# 12 ounces fat-free cool whip
+12	NUM	B-AMOUNT
+ounces	NOUN	B-UNIT
+fat	NOUN	B-ITEM
+-	NUM	I-ITEM
+free	ADJ	I-ITEM
+cool	PROPN	I-ITEM
+whip	PROPN	I-ITEM
+
+# 1/3 cup sliced Spanish olives with pimento
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+3	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+sliced	VERB	O
+Spanish	ADJ	B-ITEM
+olives	NOUN	I-ITEM
+with	ADP	I-ITEM
+pimento	NOUN	I-ITEM
+
+# 1 1/2 tablespoons yeast
+1	NUM	B-AMOUNT
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+tablespoons	NOUN	B-UNIT
+yeast	NOUN	B-ITEM
+
+# 1/4 cup light rum (or pineapple flavored works good in this)
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+4	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+light	ADJ	B-ITEM
+rum	NOUN	I-ITEM
+(	PUNCT	O
+or	CCONJ	O
+pineapple	NOUN	O
+flavored	ADJ	O
+works	VERB	O
+good	ADJ	O
+in	ADP	O
+this	PRON	O
+)	PUNCT	O
+
+# 6 sprigs fresh thyme or 2-3 teaspoons dried thyme
+6	NUM	B-AMOUNT
+sprigs	NOUN	B-UNIT
+fresh	ADJ	B-ITEM
+thyme	NOUN	I-ITEM
+or	CCONJ	O
+2	NUM	B-AMOUNT
+-	NUM	I-AMOUNT
+3	NUM	I-AMOUNT
+teaspoons	NOUN	B-UNIT
+dried	ADJ	B-ITEM
+thyme	NOUN	I-ITEM
+
+# 3 ounces carrots, medium dice
+3	NUM	B-AMOUNT
+ounces	NOUN	B-UNIT
+carrots	NOUN	B-ITEM
+,	PUNCT	O
+medium	ADJ	O
+dice	NOUN	O
+
+# 3 cups of diced vegetables (Onions, carrots, broccoli, cauliflower, and celery)
+3	NUM	B-AMOUNT
+cups	NOUN	B-UNIT
+of	ADP	O
+diced	ADJ	O
+vegetables	NOUN	B-ITEM
+(	PUNCT	O
+Onions	NOUN	B-ITEM
+,	PUNCT	O
+carrots	NOUN	B-ITEM
+,	PUNCT	O
+broccoli	NOUN	B-ITEM
+,	PUNCT	O
+cauliflower	NOUN	B-ITEM
+,	PUNCT	O
+and	CCONJ	O
+celery	NOUN	B-ITEM
+)	PUNCT	O
+
+# 1 1/2 kg chicken or 1 1/2 kg chicken pieces
+1	NUM	B-AMOUNT
+1	NUM	I-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+kg	NOUN	B-UNIT
+chicken	NOUN	B-ITEM
+or	CCONJ	O
+1	NUM	B-AMOUNT
+1	NUM	I-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+kg	NOUN	B-UNIT
+chicken	NOUN	B-ITEM
+pieces	NOUN	I-ITEM
+
+# 1/2 cup oil, we use Smart Balance
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+oil	NOUN	B-ITEM
+,	PUNCT	O
+we	PRON	O
+use	VERB	O
+Smart	PROPN	O
+Balance	PROPN	O
+
+# 2 avocados, sliced lengthwise in 1/4 inch slices
+2	NUM	B-AMOUNT
+avocados	NOUN	B-ITEM
+,	PUNCT	O
+sliced	VERB	O
+lengthwise	ADV	O
+in	ADP	O
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+4	NUM	I-AMOUNT
+inch	NOUN	B-UNIT
+slices	NOUN	O
+
