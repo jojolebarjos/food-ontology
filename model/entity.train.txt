@@ -9,7 +9,7 @@ greens	NOUN	I-ITEM
 # 6 hard-boiled eggs, separated
 6	NUM	B-AMOUNT
 hard	ADJ	B-ITEM
--	NUM	I-ITEM
+-	PUNCT	I-ITEM
 boiled	VERB	I-ITEM
 eggs	NOUN	I-ITEM
 ,	PUNCT	O
@@ -284,7 +284,7 @@ optional	ADJ	O
 # 16 reduced-fat vanilla wafers, finely ground in a food processor
 16	NUM	B-AMOUNT
 reduced	NOUN	B-ITEM
--	NUM	I-ITEM
+-	PUNCT	I-ITEM
 fat	ADJ	I-ITEM
 vanilla	NOUN	I-ITEM
 wafers	NOUN	I-ITEM
@@ -512,7 +512,7 @@ dressing	NOUN	I-ITEM
 12	NUM	B-AMOUNT
 ounces	NOUN	B-UNIT
 fat	NOUN	B-ITEM
--	NUM	I-ITEM
+-	PUNCT	I-ITEM
 free	ADJ	I-ITEM
 cool	PROPN	I-ITEM
 whip	PROPN	I-ITEM

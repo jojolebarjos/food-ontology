@@ -3,9 +3,11 @@
 
 import os
 import io
+import csv
 import regex as re
 import pycrfsuite
 import random
+from tqdm import tqdm
 
 
 # Get local directory
@@ -122,18 +124,25 @@ def from_tab(file):
   return samples
 
 
-# Import row dataset (sentence fragments and label)
+# Import row dataset (label and sentence fragment)
 def from_row(file):
   samples = []
+  previous = None
   for line in file:
     line = line.rstrip()
     if len(line) == 0 or line[0] == '#':
       continue
     parts = line.split('\t')
-    text = parts[0]
-    label = parts[1]
-    tokens = [token for token, _, _ in tokenize(text)]
-    sample = (tokens, label)
+    if parts[0] == '':
+      assert parts[0] is not None
+      label = previous
+    else:
+      label = parts[0]
+      previous = label
+    if parts[1] == '':
+      continue
+    text = parts[1]
+    sample = (text, label)
     samples.append(sample)
   return samples
 
@@ -321,6 +330,8 @@ def ingredient_train():
   with io.open(path, 'r', newline='\n', encoding='utf-8') as file:
     samples = from_row(file)
   
+  # TODO also acquire samples from ontology
+  
   # Create trainer
   trainer = pycrfsuite.Trainer(verbose=True)
   trainer.set_params({
@@ -331,9 +342,13 @@ def ingredient_train():
   })
   
   # Generate training samples
-  for tokens, label in samples:
+  for text, label in samples:
+    tokens = [token for token, _, _ in tokenize(text)]
     features = ingredient_extract_features(tokens)
     trainer.append([features], [label])
+  
+  # Additional sample to "force" miscellaneous label on unknown words
+  trainer.append(ingredient_extract_features([]), 'misc')
   
   # Train
   trainer.train(INGREDIENT_CRFSUITE)
@@ -369,6 +384,7 @@ def food_generate(input_path, output_path, count=50):
     existing_lines = {line[1:].strip() for line in file if line.startswith('#')}
   
   # Select random samples
+  # TODO add option to output most common lines
   lines.difference_update(existing_lines)
   lines = list(lines)
   random.shuffle(lines)
@@ -392,19 +408,43 @@ def food_generate(input_path, output_path, count=50):
 # Generate additional samples for ingredient classification
 def ingredient_generate(input_path, output_path):
   
-  # Use specified tab dataset (ground truth or predicted)
+  # Acquire raw lines
   with io.open(input_path, 'r', newline='\n', encoding='utf-8') as file:
-    samples = from_tab(file)
+    lines = [(index, line.strip()) for index, line in enumerate(file)]
   
-  # Extract items
+  # Automatically extract ingredients
+  food_tagger = get_food_tagger()
   ingredient_classifier = get_ingredient_classifier()
+  samples = []
+  for index, line in tqdm(lines):
+    tokens_with_positions = list(tokenize(line))
+    tokens = [token for token, _, _ in tokens_with_positions]
+    food_tags = food_tagger(tokens)
+    entities = [(start, end) for tag, start, end in entity_ranges(food_tags) if tag == 'ITEM']
+    for start, end in entities:
+      label = ingredient_classifier(tokens[start : end])
+      text = line[tokens_with_positions[start][1] : tokens_with_positions[end - 1][2]]
+      sample = (text, label)
+      # TODO maybe keep index for debugging
+      samples.append(sample)
+  
+  # Acquire existing samples
+  with io.open('ingredient.train.txt', 'r', newline='\n', encoding='utf-8') as file:
+    existing_samples = from_row(file)
+  
+  # Get mappings
+  prediction = {text : label for text, label in samples}
+  truth = {text : label for text, label in existing_samples}
+  
+  # Build table
+  items = []
+  for text, predicted_label in prediction.items():
+    true_label = truth.get(text, '')
+    item = (true_label, predicted_label, text)
+    items.append(item)
+  items.sort()
+  
+  # Export table
   with io.open(output_path, 'w', newline='\n', encoding='utf-8') as file:
-    file.write('\n')
-    for text, tokens, _, food_tags in samples:
-      entities = [(start, end) for tag, start, end in entity_ranges(food_tags) if tag == 'ITEM']
-      if len(entities) > 0:
-        file.write('# ' + text + '\n')
-        for start, end in entities:
-          tag = ingredient_classifier(tokens[start : end])
-          file.write(' '.join(tokens[start : end]) + '\t' + tag + '\n')
-        file.write('\n')
+    for item in items:
+      file.write('%s\t%s\t%s\n' % item)
