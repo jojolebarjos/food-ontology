@@ -7,14 +7,18 @@ import csv
 import regex as re
 import pycrfsuite
 import random
+import difflib
 from tqdm import tqdm
+
+import ontology
+import util
 
 
 # Get local directory
 HERE = os.path.dirname(os.path.realpath(__file__))
 POS_CRFSUITE = os.path.join(HERE, 'pos.crfsuite')
 FOOD_CRFSUITE = os.path.join(HERE, 'food.crfsuite')
-INGREDIENT_CRFSUITE = os.path.join(HERE, 'ingredient.crfsuite')
+INGREDIENT_PICKLE = os.path.join(HERE, 'ingredient.pickle')
 
 
 # Use simple rules to tokenize text
@@ -317,8 +321,14 @@ def ingredient_extract_features(tokens):
   # TODO improve features, especially regarding lemmatization
   # TODO maybe also use embeddings and clusters
   # TODO maybe use PoS tags?
-  # TODO also consider bigrams and trigrams
-  features = [simplify(token) for token in tokens]
+  words = [simplify(token) for token in tokens]
+  features = {}
+  features['0'] = 1.0
+  for i in range(len(tokens)):
+    features['1_%s' % words[i]] = 1.0
+  for i in range(len(tokens) - 1):
+    features['2_%s_%s' % (words[i], words[i + 1])] = 1.0
+  # TODO maybe use unordered bigrams
   return features
 
 
@@ -330,28 +340,33 @@ def ingredient_train():
   with io.open(path, 'r', newline='\n', encoding='utf-8') as file:
     samples = from_row(file)
   
-  # TODO also acquire samples from ontology
+  # Import core ontology names
+  labels = {}
+  with io.open('../data/core.txt', 'r', newline='\n', encoding='utf-8') as file:
+    for left, relationship, right in ontology.iterate(file):
+      if relationship == 'label' and left != 'misc':
+        sample = (right.lower(), left)
+        samples.append(sample)
   
   # Create trainer
-  trainer = pycrfsuite.Trainer(verbose=True)
-  trainer.set_params({
-    'c1': 1.0,
-    'c2': 1e-3,
-    'max_iterations': 50,
-    'feature.possible_transitions': True
-  })
+  trainer = util.MLPTrainer(
+    # TODO tweak network configuration
+    hidden_layer_sizes=(32,),
+    max_iterations=1000,
+    verbose=True
+  )
   
   # Generate training samples
   for text, label in samples:
     tokens = [token for token, _, _ in tokenize(text)]
     features = ingredient_extract_features(tokens)
-    trainer.append([features], [label])
+    trainer.append(features, label)
   
   # Additional sample to "force" miscellaneous label on unknown words
   trainer.append(ingredient_extract_features([]), 'misc')
   
   # Train
-  trainer.train(INGREDIENT_CRFSUITE)
+  trainer.train(INGREDIENT_PICKLE)
   
   # TODO print infos
   # TODO test model
@@ -361,13 +376,12 @@ def ingredient_train():
 def get_ingredient_classifier():
   # TODO ingredient classification should use ontology to improve accuracy
   try:
-    tagger = pycrfsuite.Tagger()
-    tagger.open(INGREDIENT_CRFSUITE)
+    tagger = util.MLPTagger(INGREDIENT_PICKLE)
     def tag(tokens):
       features = ingredient_extract_features(tokens)
-      return tagger.tag([features])[0]
+      return tagger.tag(features)
   except:
-    def tag(tokens, pos_tags=None):
+    def tag(tokens):
       return 'misc'
   return tag
 
@@ -411,6 +425,10 @@ def ingredient_generate(input_path, output_path):
   # Acquire raw lines
   with io.open(input_path, 'r', newline='\n', encoding='utf-8') as file:
     lines = [(index, line.strip()) for index, line in enumerate(file)]
+  
+  # Use only a subset
+  random.shuffle(lines)
+  lines = lines[:1000]
   
   # Automatically extract ingredients
   food_tagger = get_food_tagger()
