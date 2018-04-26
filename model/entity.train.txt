@@ -107,7 +107,7 @@ I	PRON	O
 like	VERB	O
 the	DET	O
 new	ADJ	O
-neon	NOUN	O
+neon	ADJ	O
 colors	NOUN	O
 )	PUNCT	O
 
@@ -123,12 +123,12 @@ or	CCONJ	O
 /	NUM	I-AMOUNT
 4	NUM	I-AMOUNT
 cup	NOUN	B-UNIT
-brown	NOUN	B-ITEM
+brown	ADJ	B-ITEM
 sugar	NOUN	I-ITEM
 
 # 2 cups four cheese blend, shredded (8 oz.)
 2	NUM	B-AMOUNT
-cups	NUM	B-UNIT
+cups	NOUN	B-UNIT
 four	NUM	B-ITEM
 cheese	NOUN	I-ITEM
 blend	NOUN	I-ITEM
@@ -159,7 +159,7 @@ cup	NOUN	B-UNIT
 feta	NOUN	B-ITEM
 cheese	NOUN	I-ITEM
 ,	PUNCT	O
-crumbled	PROPN	O
+crumbled	VERB	O
 (	PUNCT	O
 for	ADP	O
 garnish	NOUN	O
@@ -217,7 +217,7 @@ cream	NOUN	I-ITEM
 /	NUM	I-AMOUNT
 8	NUM	I-AMOUNT
 cup	NOUN	B-UNIT
-red	NOUN	B-ITEM
+red	ADJ	B-ITEM
 chili	NOUN	I-ITEM
 powder	NOUN	I-ITEM
 (	PUNCT	O
@@ -283,9 +283,9 @@ optional	ADJ	O
 
 # 16 reduced-fat vanilla wafers, finely ground in a food processor
 16	NUM	B-AMOUNT
-reduced	NOUN	B-ITEM
+reduced	ADJ	B-ITEM
 -	PUNCT	I-ITEM
-fat	ADJ	I-ITEM
+fat	NOUN	I-ITEM
 vanilla	NOUN	I-ITEM
 wafers	NOUN	I-ITEM
 ,	PUNCT	O
@@ -301,7 +301,7 @@ processor	NOUN	O
 /	NUM	I-AMOUNT
 2	NUM	I-AMOUNT
 cup	NOUN	B-UNIT
-cooked	NOUN	B-ITEM
+cooked	VERB	B-ITEM
 bacon	NOUN	I-ITEM
 ,	PUNCT	O
 pieces	NOUN	O
