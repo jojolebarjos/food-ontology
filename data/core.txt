@@ -89,6 +89,7 @@ turbinado_sugar
 sugar_substitute
   kind_of sweetener
   label Sugar substitute
+  label Artificial sweetener
   foodb 676
 
 aspartame
@@ -1967,6 +1968,11 @@ welsh_onion
   foodb 241
   wikipedia Allium_fistulosum
 
+white_onion
+  kind_of onion
+  label White onion
+  wikipedia White_onion
+
 yellow_onion
   kind_of onion
   label Yellow onion
@@ -2677,6 +2683,7 @@ celery
 chinese_water_chestnut
   kind_of vegetable
   label Chinese water chestnut
+  label Water chestnut
   foodb 337
   wikipedia Eleocharis_dulcis
 
@@ -7984,6 +7991,7 @@ caramel_custard
 
 chocolate_pudding
   kind_of pudding
+  made_of chocolate
   label Chocolate pudding
 
 coconut_pudding

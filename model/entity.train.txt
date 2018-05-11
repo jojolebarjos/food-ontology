@@ -286,7 +286,7 @@ optional	ADJ	O
 reduced	ADJ	B-ITEM
 -	PUNCT	I-ITEM
 fat	NOUN	I-ITEM
-vanilla	NOUN	I-ITEM
+vanilla	ADJ	I-ITEM
 wafers	NOUN	I-ITEM
 ,	PUNCT	O
 finely	ADV	O
@@ -633,4 +633,650 @@ in	ADP	O
 4	NUM	I-AMOUNT
 inch	NOUN	B-UNIT
 slices	NOUN	O
+
+
+# whipped vanilla frosting (1 tub)
+whipped	VERB	B-ITEM
+vanilla	ADJ	I-ITEM
+frosting	NOUN	I-ITEM
+(	PUNCT	O
+1	NUM	B-AMOUNT
+tub	NOUN	B-UNIT
+)	PUNCT	O
+
+# 1/2 tablespoon fresh minced ginger
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+tablespoon	NOUN	B-UNIT
+fresh	ADJ	B-ITEM
+minced	VERB	I-ITEM
+ginger	NOUN	I-ITEM
+
+# 4 cups fresh, finely chopped pineapple
+4	NUM	B-AMOUNT
+cups	NOUN	B-UNIT
+fresh	ADJ	B-ITEM
+,	PUNCT	I-ITEM
+finely	ADV	I-ITEM
+chopped	VERB	I-ITEM
+pineapple	NOUN	I-ITEM
+
+# 1 package washed whole cranberries
+1	NUM	B-AMOUNT
+package	NOUN	B-UNIT
+washed	VERB	O
+whole	ADJ	O
+cranberries	NOUN	B-ITEM
+
+# 1 ounce bread, 1 sandwich bread, without added flavorings, or
+1	NUM	B-AMOUNT
+ounce	NOUN	B-UNIT
+bread	NOUN	B-ITEM
+,	PUNCT	O
+1	NUM	B-AMOUNT
+sandwich	NOUN	B-ITEM
+bread	NOUN	I-ITEM
+,	PUNCT	O
+without	SCONJ	O
+added	VERB	O
+flavorings	NOUN	O
+,	PUNCT	O
+or	CCONJ	O
+
+# 4-6 teaspoons butter, divided
+4	NUM	B-AMOUNT
+-	NUM	I-AMOUNT
+6	NUM	I-AMOUNT
+teaspoons	NOUN	B-UNIT
+butter	NOUN	B-ITEM
+,	PUNCT	O
+divided	VERB	O
+
+# cornstarch, if needed (optional)
+cornstarch	NOUN	B-ITEM
+,	PUNCT	O
+if	SCONJ	O
+needed	VERB	O
+(	PUNCT	O
+optional	ADJ	O
+)	PUNCT	O
+
+# 2-3 hoagie rolls (or enough crusty bread chunks to cover bottom of your pan)
+2	NUM	B-AMOUNT
+-	NUM	I-AMOUNT
+3	NUM	I-AMOUNT
+hoagie	NOUN	B-ITEM
+rolls	NOUN	I-ITEM
+(	PUNCT	O
+or	CCONJ	O
+enough	DET	O
+crusty	ADJ	B-ITEM
+bread	NOUN	I-ITEM
+chunks	NOUN	I-ITEM
+to	PART	O
+cover	VERB	O
+bottom	NOUN	O
+of	ADP	O
+your	PRON	O
+pan	NOUN	O
+)	PUNCT	O
+
+# 1 tablespoon cashew nuts, chopped
+1	NUM	B-AMOUNT
+tablespoon	NOUN	B-UNIT
+cashew	NOUN	B-ITEM
+nuts	NOUN	I-ITEM
+,	PUNCT	O
+chopped	VERB	O
+
+# 2 ml ground cloves
+2	NUM	B-AMOUNT
+ml	NOUN	B-UNIT
+ground	ADJ	B-ITEM
+cloves	NOUN	I-ITEM
+
+# 2 slices toasted white bread
+2	NUM	B-AMOUNT
+slices	NOUN	B-UNIT
+toasted	VERB	B-ITEM
+white	ADJ	I-ITEM
+bread	NOUN	I-ITEM
+
+# 2 tablespoons of fresh pressed garlic
+2	NUM	B-AMOUNT
+tablespoons	NOUN	B-UNIT
+of	ADP	O
+fresh	ADJ	B-ITEM
+pressed	VERB	I-ITEM
+garlic	NOUN	I-ITEM
+
+# 2 teaspoons bicarbonate of soda
+2	NUM	B-AMOUNT
+teaspoons	NOUN	B-UNIT
+bicarbonate	NOUN	B-ITEM
+of	ADP	I-ITEM
+soda	NOUN	I-ITEM
+
+# 2 teaspoons brown sugar (not packed)
+2	NUM	B-AMOUNT
+teaspoons	NOUN	B-UNIT
+brown	ADJ	B-ITEM
+sugar	NOUN	I-ITEM
+(	PUNCT	O
+not	PART	O
+packed	VERB	O
+)	PUNCT	O
+
+# 1 (20 ounce) can cream of mushroom soup, or
+1	NUM	B-AMOUNT
+(	PUNCT	O
+20	NUM	B-AMOUNT
+ounce	NOUN	B-UNIT
+)	PUNCT	O
+can	NOUN	B-UNIT
+cream	VERB	B-ITEM
+of	ADP	I-ITEM
+mushroom	NOUN	I-ITEM
+soup	NOUN	I-ITEM
+,	PUNCT	O
+or	CCONJ	O
+
+# 1 cup small diced carrot
+1	NUM	B-AMOUNT
+cup	NOUN	B-UNIT
+small	ADJ	B-ITEM
+diced	VERB	I-ITEM
+carrot	NOUN	I-ITEM
+
+# 4 ounces fruit salsa (Mango, raspberry, whatevers preferred, can probably use traditional salsa also)
+4	NUM	B-AMOUNT
+ounces	NOUN	B-UNIT
+fruit	NOUN	B-ITEM
+salsa	NOUN	I-ITEM
+(	PUNCT	O
+Mango	NOUN	B-ITEM
+,	PUNCT	O
+raspberry	NOUN	B-ITEM
+,	PUNCT	O
+whatevers	NOUN	O
+preferred	ADJ	O
+,	PUNCT	O
+can	AUX	O
+probably	ADV	O
+use	VERB	O
+traditional	ADJ	B-ITEM
+salsa	NOUN	I-ITEM
+also	ADV	O
+)	PUNCT	O
+
+# 2 cups low sodium vegetable broth (can use chicken broth if you prefer)
+2	NUM	B-AMOUNT
+cups	NOUN	B-UNIT
+low	ADJ	B-ITEM
+sodium	NOUN	I-ITEM
+vegetable	NOUN	I-ITEM
+broth	NOUN	I-ITEM
+(	PUNCT	O
+can	AUX	O
+use	VERB	O
+chicken	NOUN	O
+broth	NOUN	O
+if	SCONJ	O
+you	PRON	O
+prefer	VERB	O
+)	PUNCT	O
+
+# 3 teaspoons parsley, finely chopped
+3	NUM	B-AMOUNT
+teaspoons	NOUN	B-UNIT
+parsley	NOUN	B-ITEM
+,	PUNCT	O
+finely	ADV	O
+chopped	VERB	O
+
+# 1 small eggplant, peeled and cut into 1/2 inch cubes
+1	NUM	B-AMOUNT
+small	ADJ	B-ITEM
+eggplant	NOUN	I-ITEM
+,	PUNCT	O
+peeled	VERB	O
+and	CCONJ	O
+cut	VERB	O
+into	ADP	O
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+inch	NOUN	B-UNIT
+cubes	NOUN	I-UNIT
+
+# 6 cups butterscotch ripple ice cream
+6	NUM	B-AMOUNT
+cups	NOUN	B-UNIT
+butterscotch	NOUN	B-ITEM
+ripple	NOUN	I-ITEM
+ice	NOUN	I-ITEM
+cream	NOUN	I-ITEM
+
+# 6-8 tablespoons lemon juice, can use lime juice
+6	NUM	B-AMOUNT
+-	NUM	I-AMOUNT
+8	NUM	I-AMOUNT
+tablespoons	NOUN	B-UNIT
+lemon	NOUN	B-ITEM
+juice	NOUN	I-ITEM
+,	PUNCT	O
+can	AUX	O
+use	VERB	O
+lime	NOUN	B-ITEM
+juice	NOUN	I-ITEM
+
+# 1 onion, thinly sliced
+1	NUM	B-AMOUNT
+onion	NOUN	B-ITEM
+,	PUNCT	O
+thinly	ADV	O
+sliced	VERB	O
+
+# 1.5 (4 ounce) packages baker's white chocolate (6 ounces)
+1	NUM	B-AMOUNT
+.	NUM	I-AMOUNT
+5	NUM	I-AMOUNT
+(	PUNCT	O
+4	NUM	B-AMOUNT
+ounce	NOUN	B-UNIT
+)	PUNCT	O
+packages	NOUN	B-UNIT
+baker	PROPN	B-ITEM
+'	PART	I-ITEM
+s	PART	I-ITEM
+white	ADJ	I-ITEM
+chocolate	NOUN	I-ITEM
+(	PUNCT	O
+6	NUM	B-AMOUNT
+ounces	NOUN	B-UNIT
+)	PUNCT	O
+
+# 1/4 cup fresh cilantro leaves, washed and dried
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+4	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+fresh	ADJ	B-ITEM
+cilantro	NOUN	I-ITEM
+leaves	NOUN	I-ITEM
+,	PUNCT	O
+washed	VERB	O
+and	CCONJ	O
+dried	VERB	O
+
+# 1 cup finely shredded low-fat cheddar cheese (4 ozs.)
+1	NUM	B-AMOUNT
+cup	NOUN	B-UNIT
+finely	NOUN	B-ITEM
+shredded	VERB	I-ITEM
+low	ADJ	I-ITEM
+-	PUNCT	I-ITEM
+fat	NOUN	I-ITEM
+cheddar	NOUN	I-ITEM
+cheese	NOUN	I-ITEM
+(	PUNCT	O
+4	NUM	B-AMOUNT
+ozs	NOUN	B-UNIT
+.	PUNCT	O
+)	PUNCT	O
+
+# 2 onions, cut into 1/2-inch slices
+2	NUM	B-AMOUNT
+onions	NOUN	B-ITEM
+,	PUNCT	O
+cut	VERB	O
+into	ADP	O
+1	NUM	O
+/	NUM	O
+2	NUM	O
+-	PUNCT	O
+inch	NOUN	O
+slices	NOUN	O
+
+# 1 tablespoon mince fresh oregano or 1 teaspoon dried oregano
+1	NUM	B-AMOUNT
+tablespoon	NOUN	B-UNIT
+mince	VERB	O
+fresh	ADJ	B-ITEM
+oregano	NOUN	I-ITEM
+or	CCONJ	O
+1	NUM	B-AMOUNT
+teaspoon	NOUN	B-UNIT
+dried	ADJ	B-ITEM
+oregano	NOUN	I-ITEM
+
+# 4 white mushrooms, sliced
+4	NUM	B-AMOUNT
+white	ADJ	B-ITEM
+mushrooms	NOUN	I-ITEM
+,	PUNCT	O
+sliced	VERB	O
+
+# 3 tablespoons finely diced red bell peppers or 3 tablespoons yellow bell peppers or 3 tablespoons green bell peppers
+3	NUM	B-AMOUNT
+tablespoons	NOUN	B-UNIT
+finely	ADV	O
+diced	VERB	O
+red	ADJ	B-ITEM
+bell	NOUN	I-ITEM
+peppers	NOUN	I-ITEM
+or	CCONJ	O
+3	NUM	B-AMOUNT
+tablespoons	NOUN	B-UNIT
+yellow	ADJ	B-ITEM
+bell	NOUN	I-ITEM
+peppers	NOUN	I-ITEM
+or	CCONJ	O
+3	NUM	B-AMOUNT
+tablespoons	NOUN	B-UNIT
+green	ADJ	B-ITEM
+bell	NOUN	I-ITEM
+peppers	NOUN	I-ITEM
+
+# 2-3 large potatoes, peeled, chopped into chunks
+2	NUM	B-AMOUNT
+-	NUM	I-AMOUNT
+3	NUM	I-AMOUNT
+large	ADJ	B-ITEM
+potatoes	NOUN	I-ITEM
+,	PUNCT	O
+peeled	VERB	O
+,	PUNCT	O
+chopped	VERB	O
+into	ADP	O
+chunks	NOUN	O
+
+# 2 1/2 lbs sole fillets or 2 1/2 lbs flounder fillets or 2 1/2 lbs orange roughy fillets
+2	NUM	B-AMOUNT
+1	NUM	I-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+lbs	NOUN	B-UNIT
+sole	NOUN	B-ITEM
+fillets	NOUN	I-ITEM
+or	CCONJ	O
+2	NUM	B-AMOUNT
+1	NUM	I-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+lbs	NOUN	B-UNIT
+flounder	NOUN	B-ITEM
+fillets	NOUN	I-ITEM
+or	CCONJ	O
+2	NUM	B-AMOUNT
+1	NUM	I-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+lbs	NOUN	B-UNIT
+orange	ADJ	B-ITEM
+roughy	NOUN	I-ITEM
+fillets	NOUN	I-ITEM
+
+# 1/4 ounce Apfelkorn
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+4	NUM	I-AMOUNT
+ounce	NOUN	B-UNIT
+Apfelkorn	NOUN	B-ITEM
+
+# 2 ounces feta (or more) or 2 ounces kasseri cheese (or more)
+2	NUM	B-AMOUNT
+ounces	NOUN	B-UNIT
+feta	NOUN	B-ITEM
+(	PUNCT	O
+or	CCONJ	O
+more	ADV	O
+)	PUNCT	O
+or	CCONJ	O
+2	NUM	B-AMOUNT
+ounces	NOUN	B-UNIT
+kasseri	NOUN	B-ITEM
+cheese	NOUN	I-ITEM
+(	PUNCT	O
+or	CCONJ	O
+more	ADV	O
+)	PUNCT	O
+
+# 8 tablespoons butter, chilled (1 stick)
+8	NUM	B-AMOUNT
+tablespoons	NOUN	B-UNIT
+butter	NOUN	B-ITEM
+,	PUNCT	O
+chilled	NOUN	O
+(	PUNCT	O
+1	NUM	B-AMOUNT
+stick	NOUN	B-UNIT
+)	PUNCT	O
+
+# salt and pepper
+salt	NOUN	B-ITEM
+and	CCONJ	O
+pepper	NOUN	B-ITEM
+
+# salt
+salt	NOUN	B-ITEM
+
+# 2 eggs
+2	NUM	B-AMOUNT
+eggs	NOUN	B-ITEM
+
+# 1 egg, beaten
+1	NUM	B-AMOUNT
+egg	NOUN	B-ITEM
+,	PUNCT	O
+beaten	VERB	O
+
+# 1 teaspoon baking powder
+1	NUM	B-AMOUNT
+teaspoon	NOUN	B-UNIT
+baking	NOUN	B-ITEM
+powder	NOUN	I-ITEM
+
+# 1 garlic clove, minced
+1	NUM	B-AMOUNT
+garlic	NOUN	B-ITEM
+clove	NOUN	I-ITEM
+,	PUNCT	O
+minced	VERB	O
+
+# 1 bay leaf
+1	NUM	B-AMOUNT
+bay	NOUN	B-ITEM
+leaf	NOUN	I-ITEM
+
+# cooking spray
+cooking	NOUN	B-ITEM
+spray	NOUN	I-ITEM
+
+# salt, to taste
+salt	NOUN	B-ITEM
+,	PUNCT	O
+to	ADP	O
+taste	VERB	O
+
+# 1 egg
+1	NUM	B-AMOUNT
+egg	NOUN	B-ITEM
+
+# 2 tablespoons Dijon mustard
+2	NUM	B-AMOUNT
+tablespoons	NOUN	B-UNIT
+Dijon	PROPN	B-ITEM
+mustard	NOUN	I-ITEM
+
+# 1/2 cup parmesan cheese, grated
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+parmesan	NOUN	B-ITEM
+cheese	NOUN	I-ITEM
+,	PUNCT	O
+grated	VERB	O
+
+# 3 tablespoons butter, melted
+3	NUM	B-AMOUNT
+tablespoons	NOUN	B-UNIT
+butter	NOUN	B-ITEM
+,	PUNCT	O
+melted	VERB	O
+
+# 1 (15 ounce) can tomato sauce
+1	NUM	B-AMOUNT
+(	PUNCT	O
+15	NUM	B-AMOUNT
+ounce	NOUN	B-UNIT
+)	PUNCT	O
+can	NOUN	B-UNIT
+tomato	VERB	B-ITEM
+sauce	NOUN	I-ITEM
+
+# 1 cup half-and-half
+1	NUM	B-AMOUNT
+cup	NOUN	B-UNIT
+half	NOUN	B-ITEM
+-	PUNCT	I-ITEM
+and	CCONJ	I-ITEM
+-	PUNCT	I-ITEM
+half	NOUN	I-ITEM
+
+# 1/8 teaspoon ground nutmeg
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+8	NUM	I-AMOUNT
+teaspoon	NOUN	B-UNIT
+ground	ADJ	B-ITEM
+nutmeg	NOUN	I-ITEM
+
+# 1 cup confectioners' sugar
+1	NUM	B-AMOUNT
+cup	NOUN	B-UNIT
+confectioners	NOUN	B-ITEM
+'	PUNCT	I-ITEM
+sugar	NOUN	I-ITEM
+
+# 4 ounces cream cheese, softened
+4	NUM	B-AMOUNT
+ounces	NOUN	B-UNIT
+cream	NOUN	B-ITEM
+cheese	NOUN	I-ITEM
+,	PUNCT	O
+softened	VERB	O
+
+# 1/3 cup artificial sweetener, we use Altern by WalMart, may use 2/3 cup confectioner's sugar XXX if you have no dietary concerns
+1	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+3	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+artificial	ADJ	B-ITEM
+sweetener	NOUN	I-ITEM
+,	PUNCT	O
+we	PRON	O
+use	VERB	O
+Altern	PROPN	O
+by	ADP	O
+WalMart	PROPN	O
+,	PUNCT	O
+may	AUX	O
+use	VERB	O
+2	NUM	B-AMOUNT
+/	NUM	I-AMOUNT
+3	NUM	I-AMOUNT
+cup	NOUN	B-UNIT
+confectioner	NOUN	B-ITEM
+'	PART	I-ITEM
+s	PART	I-ITEM
+sugar	NOUN	I-ITEM
+XXX	NOUN	I-ITEM
+if	SCONJ	O
+you	PRON	O
+have	VERB	O
+no	DET	O
+dietary	ADJ	O
+concerns	NOUN	O
+
+# 1 1/2 lbs mussels, scrubbed and debearded (see note)
+1	NUM	B-AMOUNT
+1	NUM	I-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+lbs	NOUN	B-UNIT
+mussels	NOUN	B-ITEM
+,	PUNCT	O
+scrubbed	VERB	O
+and	CCONJ	O
+debearded	VERB	O
+(	PUNCT	O
+see	VERB	O
+note	NOUN	O
+)	PUNCT	O
+
+# bought lime aioli, to serve
+bought	VERB	B-ITEM
+lime	NOUN	I-ITEM
+aioli	NOUN	I-ITEM
+,	PUNCT	O
+to	PART	O
+serve	VERB	O
+
+# 2 cups jasmine rice (not instant or parboiled) or 2 cups long-grain white rice (not instant or parboiled)
+2	NUM	B-AMOUNT
+cups	NOUN	B-UNIT
+jasmine	NOUN	B-ITEM
+rice	NOUN	I-ITEM
+(	PUNCT	O
+not	PART	O
+instant	ADJ	O
+or	CCONJ	O
+parboiled	ADJ	O
+)	PUNCT	O
+or	CCONJ	O
+2	NUM	B-AMOUNT
+cups	NOUN	B-UNIT
+long	ADJ	B-ITEM
+-	PUNCT	I-ITEM
+grain	NOUN	I-ITEM
+white	ADJ	I-ITEM
+rice	NOUN	I-ITEM
+(	PUNCT	O
+not	PART	O
+instant	ADJ	O
+or	CCONJ	O
+parboiled	ADJ	O
+)	PUNCT	O
+
+# 1 pint malt vinegar
+1	NUM	B-AMOUNT
+pint	NOUN	B-UNIT
+malt	NOUN	B-ITEM
+vinegar	NOUN	I-ITEM
+
+# 2 granny smith apples, medium sized, julienned
+2	NUM	B-AMOUNT
+granny	PROPN	B-ITEM
+smith	PROPN	I-ITEM
+apples	NOUN	I-ITEM
+,	PUNCT	O
+medium	ADV	O
+sized	ADJ	O
+,	PUNCT	O
+julienned	VERB	O
+
+# 1 1/2 cups finely ground graham cracker crumbs
+1	NUM	B-AMOUNT
+1	NUM	I-AMOUNT
+/	NUM	I-AMOUNT
+2	NUM	I-AMOUNT
+cups	NOUN	B-UNIT
+finely	ADV	O
+ground	VERB	O
+graham	PROPN	B-ITEM
+cracker	PROPN	I-ITEM
+crumbs	NOUN	I-ITEM
 
