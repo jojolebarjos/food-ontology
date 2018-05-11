@@ -1,12 +1,12 @@
 
-# lettuce or other salad greens
+# text = lettuce or other salad greens
 lettuce	NOUN	B-ITEM
 or	CCONJ	O
 other	DET	B-ITEM
 salad	NOUN	I-ITEM
 greens	NOUN	I-ITEM
 
-# 6 hard-boiled eggs, separated
+# text = 6 hard-boiled eggs, separated
 6	NUM	B-AMOUNT
 hard	ADJ	B-ITEM
 -	PUNCT	I-ITEM
@@ -15,13 +15,13 @@ eggs	NOUN	I-ITEM
 ,	PUNCT	O
 separated	VERB	B-MODIFIER
 
-# 3 firm ripe pears
+# text = 3 firm ripe pears
 3	NUM	B-AMOUNT
 firm	ADJ	B-MODIFIER
 ripe	ADJ	B-MODIFIER
 pears	NOUN	B-ITEM
 
-# 4 green bell peppers, chopped
+# text = 4 green bell peppers, chopped
 4	NUM	B-AMOUNT
 green	ADJ	B-ITEM
 bell	NOUN	I-ITEM
@@ -29,7 +29,7 @@ peppers	NOUN	I-ITEM
 ,	PUNCT	O
 chopped	VERB	B-MODIFIER
 
-# 1 (4 ounce) jar pimientos, with juice, chopped
+# text = 1 (4 ounce) jar pimientos, with juice, chopped
 1	NUM	B-AMOUNT
 (	PUNCT	O
 4	NUM	B-AMOUNT
@@ -43,7 +43,7 @@ juice	NOUN	I-MODIFIER
 ,	PUNCT	O
 chopped	VERB	B-MODIFIER
 
-# 8 ounces bittersweet chocolate or 8 ounces semisweet chocolate
+# text = 8 ounces bittersweet chocolate or 8 ounces semisweet chocolate
 8	NUM	B-AMOUNT
 ounces	NOUN	B-UNIT
 bittersweet	ADJ	B-ITEM
@@ -54,7 +54,7 @@ ounces	NOUN	B-UNIT
 semisweet	ADJ	B-ITEM
 chocolate	NOUN	I-ITEM
 
-# 8 snow peas, cut the same way
+# text = 8 snow peas, cut the same way
 8	NUM	B-AMOUNT
 snow	NOUN	B-ITEM
 peas	NOUN	I-ITEM
@@ -64,7 +64,7 @@ the	DET	I-MODIFIER
 same	ADJ	I-MODIFIER
 way	NOUN	I-MODIFIER
 
-# 1 green capsicum, seeded and sliced
+# text = 1 green capsicum, seeded and sliced
 1	NUM	B-AMOUNT
 green	ADJ	B-ITEM
 capsicum	NOUN	I-ITEM
@@ -73,7 +73,7 @@ seeded	VERB	B-MODIFIER
 and	CCONJ	O
 sliced	VERB	B-MODIFIER
 
-# 1/2 cup parmesan cheese (grated extra)
+# text = 1/2 cup parmesan cheese (grated extra)
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 2	NUM	I-AMOUNT
@@ -85,7 +85,7 @@ grated	VERB	B-MODIFIER
 extra	ADJ	I-MODIFIER
 )	PUNCT	O
 
-# 1 1/2 cups peanut butter (I used creamy)
+# text = 1 1/2 cups peanut butter (I used creamy)
 1	NUM	B-AMOUNT
 1	NUM	I-AMOUNT
 /	NUM	I-AMOUNT
@@ -99,7 +99,7 @@ used	VERB	I-COMMENT
 creamy	ADJ	I-COMMENT
 )	PUNCT	O
 
-# food coloring (I like the new neon colors)
+# text = food coloring (I like the new neon colors)
 food	NOUN	B-ITEM
 coloring	NOUN	I-ITEM
 (	PUNCT	O
@@ -111,7 +111,7 @@ neon	ADJ	I-COMMENT
 colors	NOUN	I-COMMENT
 )	PUNCT	O
 
-# 1/4 cup muscovado sugar or 1/4 cup brown sugar
+# text = 1/4 cup muscovado sugar or 1/4 cup brown sugar
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 4	NUM	I-AMOUNT
@@ -126,7 +126,7 @@ cup	NOUN	B-UNIT
 brown	ADJ	B-ITEM
 sugar	NOUN	I-ITEM
 
-# 2 cups four cheese blend, shredded (8 oz.)
+# text = 2 cups four cheese blend, shredded (8 oz.)
 2	NUM	B-AMOUNT
 cups	NOUN	B-UNIT
 four	NUM	B-ITEM
@@ -140,7 +140,7 @@ oz	NOUN	B-UNIT
 .	PUNCT	I-UNIT
 )	PUNCT	O
 
-# 2 (10 ounce) packages Hershey chocolate kisses
+# text = 2 (10 ounce) packages Hershey chocolate kisses
 2	NUM	B-AMOUNT
 (	PUNCT	O
 10	NUM	B-AMOUNT
@@ -151,7 +151,7 @@ Hershey	PROPN	B-ITEM
 chocolate	NOUN	I-ITEM
 kisses	NOUN	I-ITEM
 
-# 1/3 cup feta cheese, crumbled (for garnish)
+# text = 1/3 cup feta cheese, crumbled (for garnish)
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 3	NUM	I-AMOUNT
@@ -165,7 +165,7 @@ for	ADP	B-COMMENT
 garnish	NOUN	I-COMMENT
 )	PUNCT	O
 
-# 2 wiennie franks or 1 small potato, peeled and diced
+# text = 2 wiennie franks or 1 small potato, peeled and diced
 2	NUM	B-AMOUNT
 wiennie	NOUN	B-UNIT
 franks	NOUN	B-ITEM
@@ -178,7 +178,7 @@ peeled	VERB	B-MODIFIER
 and	CCONJ	O
 diced	VERB	B-MODIFIER
 
-# 1 stalk lemongrass, white part only, very finely shredded
+# text = 1 stalk lemongrass, white part only, very finely shredded
 1	NUM	B-AMOUNT
 stalk	NOUN	B-ITEM
 lemongrass	NOUN	I-ITEM
@@ -191,7 +191,7 @@ very	ADV	B-MODIFIER
 finely	ADJ	I-MODIFIER
 shredded	VERB	I-MODIFIER
 
-# 1 cup whipping cream, whipped stiff
+# text = 1 cup whipping cream, whipped stiff
 1	NUM	B-AMOUNT
 cup	NOUN	B-UNIT
 whipping	NOUN	B-ITEM
@@ -200,7 +200,7 @@ cream	NOUN	I-ITEM
 whipped	VERB	B-MODIFIER
 stiff	ADJ	I-MODIFIER
 
-# 8 tablespoons , creme fraiche or 8 tablespoons sour cream
+# text = 8 tablespoons , creme fraiche or 8 tablespoons sour cream
 8	NUM	B-AMOUNT
 tablespoons	NOUN	B-UNIT
 ,	PUNCT	O
@@ -212,7 +212,7 @@ tablespoons	NOUN	B-UNIT
 sour	NOUN	B-ITEM
 cream	NOUN	I-ITEM
 
-# 1/8 cup red chili powder (to sprinkle on meat)
+# text = 1/8 cup red chili powder (to sprinkle on meat)
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 8	NUM	I-AMOUNT
@@ -227,7 +227,7 @@ on	ADP	I-COMMENT
 meat	NOUN	I-COMMENT
 )	PUNCT	O
 
-# 8 ounces broccoli stems, finely chopped
+# text = 8 ounces broccoli stems, finely chopped
 8	NUM	B-AMOUNT
 ounces	NOUN	B-UNIT
 broccoli	NOUN	B-ITEM
@@ -236,7 +236,7 @@ stems	NOUN	I-ITEM
 finely	ADV	B-MODIFIER
 chopped	VERB	I-MODIFIER
 
-# 1 lb chorizo sausage (optional)
+# text = 1 lb chorizo sausage (optional)
 1	NUM	B-AMOUNT
 lb	NOUN	B-UNIT
 chorizo	NOUN	B-ITEM
@@ -245,7 +245,7 @@ sausage	NOUN	I-ITEM
 optional	ADJ	B-COMMENT
 )	PUNCT	O
 
-# 1/3 cup heath almond toffee pieces
+# text = 1/3 cup heath almond toffee pieces
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 3	NUM	I-AMOUNT
@@ -255,7 +255,7 @@ almond	NOUN	I-ITEM
 toffee	NOUN	I-ITEM
 pieces	NOUN	I-ITEM
 
-# 4 cups potatoes, sliced 1/8 inch thick
+# text = 4 cups potatoes, sliced 1/8 inch thick
 4	NUM	B-AMOUNT
 cups	NOUN	B-UNIT
 potatoes	NOUN	B-ITEM
@@ -267,7 +267,7 @@ sliced	VERB	B-MODIFIER
 inch	NOUN	I-MODIFIER
 thick	NOUN	I-MODIFIER
 
-# 1/2 jalapeno pepper (finely chopped) (optional)
+# text = 1/2 jalapeno pepper (finely chopped) (optional)
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 2	NUM	I-AMOUNT
@@ -281,7 +281,7 @@ chopped	VERB	I-MODIFIER
 optional	ADJ	B-COMMENT
 )	PUNCT	O
 
-# 16 reduced-fat vanilla wafers, finely ground in a food processor
+# text = 16 reduced-fat vanilla wafers, finely ground in a food processor
 16	NUM	B-AMOUNT
 reduced	ADJ	B-ITEM
 -	PUNCT	I-ITEM
@@ -296,7 +296,7 @@ a	DET	I-MODIFIER
 food	NOUN	I-MODIFIER
 processor	NOUN	I-MODIFIER
 
-# 1/2 cup cooked bacon, pieces
+# text = 1/2 cup cooked bacon, pieces
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 2	NUM	I-AMOUNT
@@ -306,13 +306,13 @@ bacon	NOUN	I-ITEM
 ,	PUNCT	O
 pieces	NOUN	B-MODIFIER
 
-# 20 ml tequila liqueur
+# text = 20 ml tequila liqueur
 20	NUM	B-AMOUNT
 ml	NOUN	B-UNIT
 tequila	NOUN	B-ITEM
 liqueur	NOUN	I-ITEM
 
-# 1 medium banana (frozen or fresh)
+# text = 1 medium banana (frozen or fresh)
 1	NUM	B-AMOUNT
 medium	ADJ	B-ITEM
 banana	NOUN	I-ITEM
@@ -322,7 +322,7 @@ or	CCONJ	O
 fresh	ADJ	B-MODIFIER
 )	PUNCT	O
 
-# 1 cup coarse polenta (cornmeal)
+# text = 1 cup coarse polenta (cornmeal)
 1	NUM	B-AMOUNT
 cup	NOUN	B-UNIT
 coarse	ADJ	B-ITEM
@@ -331,7 +331,7 @@ polenta	NOUN	I-ITEM
 cornmeal	NOUN	B-COMMENT
 )	PUNCT	O
 
-# 3-4 teaspoons massel vegetable stock
+# text = 3-4 teaspoons massel vegetable stock
 3	NUM	B-AMOUNT
 -	NUM	I-AMOUNT
 4	NUM	I-AMOUNT
@@ -340,7 +340,7 @@ massel	NOUN	B-ITEM
 vegetable	NOUN	I-ITEM
 stock	NOUN	I-ITEM
 
-# 2 tablespoons prepared yellow mustard (no other kind will taste right!)
+# text = 2 tablespoons prepared yellow mustard (no other kind will taste right!)
 2	NUM	B-AMOUNT
 tablespoons	NOUN	B-UNIT
 prepared	VERB	B-ITEM
@@ -356,7 +356,7 @@ right	ADV	I-COMMENT
 !	PUNCT	I-COMMENT
 )	PUNCT	O
 
-# 3 medium poblano peppers, seeded and white ribs removed, finely diced (about 4 ounces each)
+# text = 3 medium poblano peppers, seeded and white ribs removed, finely diced (about 4 ounces each)
 3	NUM	B-AMOUNT
 medium	ADJ	B-ITEM
 poblano	NOUN	I-ITEM
@@ -377,13 +377,13 @@ ounces	NOUN	I-COMMENT
 each	DET	I-COMMENT
 )	PUNCT	O
 
-# 1 cup soft tofu
+# text = 1 cup soft tofu
 1	NUM	B-AMOUNT
 cup	NOUN	B-UNIT
 soft	ADJ	B-ITEM
 tofu	NOUN	I-ITEM
 
-# 2 cups cubed cooked ham (10 oz.)
+# text = 2 cups cubed cooked ham (10 oz.)
 2	NUM	B-AMOUNT
 cups	NOUN	B-UNIT
 cubed	VERB	O
@@ -395,7 +395,7 @@ oz	NOUN	B-UNIT
 .	PUNCT	I-UNIT
 )	PUNCT	O
 
-# 1 cup frozen vegetables, thawed and drained
+# text = 1 cup frozen vegetables, thawed and drained
 1	NUM	B-AMOUNT
 cup	NOUN	B-UNIT
 frozen	ADJ	B-ITEM
@@ -405,7 +405,7 @@ thawed	VERB	B-MODIFIER
 and	CCONJ	O
 drained	VERB	B-MODIFIER
 
-# salt and pepper, freshly ground
+# text = salt and pepper, freshly ground
 salt	NOUN	B-ITEM
 and	CCONJ	O
 pepper	NOUN	B-ITEM
@@ -413,7 +413,7 @@ pepper	NOUN	B-ITEM
 freshly	ADV	B-MODIFIER
 ground	VERB	I-MODIFIER
 
-# 1 lb lean beef chuck, trimmed and cut into cubes
+# text = 1 lb lean beef chuck, trimmed and cut into cubes
 1	NUM	B-AMOUNT
 lb	NOUN	B-UNIT
 lean	ADJ	B-ITEM
@@ -426,7 +426,7 @@ cut	VERB	B-MODIFIER
 into	ADP	I-MODIFIER
 cubes	NOUN	I-MODIFIER
 
-# 1/4 cup loosely packed fresh oregano leaves
+# text = 1/4 cup loosely packed fresh oregano leaves
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 4	NUM	I-AMOUNT
@@ -437,14 +437,14 @@ fresh	ADJ	B-ITEM
 oregano	NOUN	I-ITEM
 leaves	NOUN	I-ITEM
 
-# 1 pinch dried tarragon leaf
+# text = 1 pinch dried tarragon leaf
 1	NUM	B-AMOUNT
 pinch	NOUN	B-UNIT
 dried	ADJ	B-ITEM
 tarragon	NOUN	I-ITEM
 leaf	NOUN	I-ITEM
 
-# milk, little at a time
+# text = milk, little at a time
 milk	NOUN	B-ITEM
 ,	PUNCT	O
 little	DET	B-COMMENT
@@ -452,7 +452,7 @@ at	ADP	I-COMMENT
 a	DET	I-COMMENT
 time	NOUN	I-COMMENT
 
-# 2 large red peppers, seeded, cut into 2 inch squares
+# text = 2 large red peppers, seeded, cut into 2 inch squares
 2	NUM	B-AMOUNT
 large	ADJ	B-ITEM
 red	ADJ	I-ITEM
@@ -466,14 +466,14 @@ into	ADP	I-MODIFIER
 inch	NOUN	I-MODIFIER
 squares	NOUN	I-MODIFIER
 
-# 500 g macaroni pasta shells
+# text = 500 g macaroni pasta shells
 500	NUM	B-AMOUNT
 g	NOUN	B-UNIT
 macaroni	NOUN	B-ITEM
 pasta	NOUN	I-ITEM
 shells	NOUN	I-ITEM
 
-# 1-20 ounce cherry pie filling
+# text = 1-20 ounce cherry pie filling
 1	NUM	B-AMOUNT
 -	NUM	I-AMOUNT
 20	NUM	I-AMOUNT
@@ -482,7 +482,7 @@ cherry	NOUN	B-ITEM
 pie	NOUN	I-ITEM
 filling	NOUN	I-ITEM
 
-# 2 (16 ounce) boxes chicken broth
+# text = 2 (16 ounce) boxes chicken broth
 2	NUM	B-AMOUNT
 (	PUNCT	O
 16	NUM	B-AMOUNT
@@ -492,7 +492,7 @@ boxes	NOUN	B-UNIT
 chicken	NOUN	B-ITEM
 broth	NOUN	I-ITEM
 
-# 1/2 cup mesquite barbecue sauce
+# text = 1/2 cup mesquite barbecue sauce
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 2	NUM	I-AMOUNT
@@ -501,14 +501,14 @@ mesquite	NOUN	B-ITEM
 barbecue	NOUN	I-ITEM
 sauce	NOUN	I-ITEM
 
-# 1 cup thousand island dressing
+# text = 1 cup thousand island dressing
 1	NUM	B-AMOUNT
 cup	NOUN	B-UNIT
 thousand	NOUN	B-ITEM
 island	NOUN	I-ITEM
 dressing	NOUN	I-ITEM
 
-# 12 ounces fat-free cool whip
+# text = 12 ounces fat-free cool whip
 12	NUM	B-AMOUNT
 ounces	NOUN	B-UNIT
 fat	NOUN	B-ITEM
@@ -517,7 +517,7 @@ free	ADJ	I-ITEM
 cool	PROPN	I-ITEM
 whip	PROPN	I-ITEM
 
-# 1/3 cup sliced Spanish olives with pimento
+# text = 1/3 cup sliced Spanish olives with pimento
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 3	NUM	I-AMOUNT
@@ -528,7 +528,7 @@ olives	NOUN	I-ITEM
 with	ADP	I-ITEM
 pimento	NOUN	I-ITEM
 
-# 1 1/2 tablespoons yeast
+# text = 1 1/2 tablespoons yeast
 1	NUM	B-AMOUNT
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
@@ -536,7 +536,7 @@ pimento	NOUN	I-ITEM
 tablespoons	NOUN	B-UNIT
 yeast	NOUN	B-ITEM
 
-# 1/4 cup light rum (or pineapple flavored works good in this)
+# text = 1/4 cup light rum (or pineapple flavored works good in this)
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 4	NUM	I-AMOUNT
@@ -553,7 +553,7 @@ in	ADP	I-COMMENT
 this	PRON	I-COMMENT
 )	PUNCT	O
 
-# 6 sprigs fresh thyme or 2-3 teaspoons dried thyme
+# text = 6 sprigs fresh thyme or 2-3 teaspoons dried thyme
 6	NUM	B-AMOUNT
 sprigs	NOUN	B-UNIT
 fresh	ADJ	B-ITEM
@@ -566,7 +566,7 @@ teaspoons	NOUN	B-UNIT
 dried	ADJ	B-ITEM
 thyme	NOUN	I-ITEM
 
-# 3 ounces carrots, medium dice
+# text = 3 ounces carrots, medium dice
 3	NUM	B-AMOUNT
 ounces	NOUN	B-UNIT
 carrots	NOUN	B-ITEM
@@ -574,7 +574,7 @@ carrots	NOUN	B-ITEM
 medium	ADJ	B-MODIFIER
 dice	NOUN	I-MODIFIER
 
-# 3 cups of diced vegetables (Onions, carrots, broccoli, cauliflower, and celery)
+# text = 3 cups of diced vegetables (Onions, carrots, broccoli, cauliflower, and celery)
 3	NUM	B-AMOUNT
 cups	NOUN	B-UNIT
 of	ADP	O
@@ -593,7 +593,7 @@ and	CCONJ	O
 celery	NOUN	B-ITEM
 )	PUNCT	O
 
-# 1 1/2 kg chicken or 1 1/2 kg chicken pieces
+# text = 1 1/2 kg chicken or 1 1/2 kg chicken pieces
 1	NUM	B-AMOUNT
 1	NUM	I-AMOUNT
 /	NUM	I-AMOUNT
@@ -609,7 +609,7 @@ kg	NOUN	B-UNIT
 chicken	NOUN	B-ITEM
 pieces	NOUN	I-ITEM
 
-# 1/2 cup oil, we use Smart Balance
+# text = 1/2 cup oil, we use Smart Balance
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 2	NUM	I-AMOUNT
@@ -621,7 +621,7 @@ use	VERB	I-COMMENT
 Smart	PROPN	I-COMMENT
 Balance	PROPN	I-COMMENT
 
-# 2 avocados, sliced lengthwise in 1/4 inch slices
+# text = 2 avocados, sliced lengthwise in 1/4 inch slices
 2	NUM	B-AMOUNT
 avocados	NOUN	B-ITEM
 ,	PUNCT	O
@@ -635,7 +635,7 @@ inch	NOUN	I-MODIFIER
 slices	NOUN	I-MODIFIER
 
 
-# whipped vanilla frosting (1 tub)
+# text = whipped vanilla frosting (1 tub)
 whipped	VERB	B-ITEM
 vanilla	ADJ	I-ITEM
 frosting	NOUN	I-ITEM
@@ -644,7 +644,7 @@ frosting	NOUN	I-ITEM
 tub	NOUN	B-UNIT
 )	PUNCT	O
 
-# 1/2 tablespoon fresh minced ginger
+# text = 1/2 tablespoon fresh minced ginger
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 2	NUM	I-AMOUNT
@@ -653,7 +653,7 @@ fresh	ADJ	B-ITEM
 minced	VERB	I-ITEM
 ginger	NOUN	I-ITEM
 
-# 4 cups fresh, finely chopped pineapple
+# text = 4 cups fresh, finely chopped pineapple
 4	NUM	B-AMOUNT
 cups	NOUN	B-UNIT
 fresh	ADJ	B-MODIFIER
@@ -662,14 +662,14 @@ finely	ADV	B-MODIFIER
 chopped	VERB	I-MODIFIER
 pineapple	NOUN	B-ITEM
 
-# 1 package washed whole cranberries
+# text = 1 package washed whole cranberries
 1	NUM	B-AMOUNT
 package	NOUN	B-UNIT
 washed	VERB	B-MODIFIER
 whole	ADJ	B-MODIFIER
 cranberries	NOUN	B-ITEM
 
-# 1 ounce bread, 1 sandwich bread, without added flavorings, or
+# text = 1 ounce bread, 1 sandwich bread, without added flavorings, or
 1	NUM	B-AMOUNT
 ounce	NOUN	B-UNIT
 bread	NOUN	B-ITEM
@@ -684,7 +684,7 @@ flavorings	NOUN	I-MODIFIER
 ,	PUNCT	O
 or	CCONJ	O
 
-# 4-6 teaspoons butter, divided
+# text = 4-6 teaspoons butter, divided
 4	NUM	B-AMOUNT
 -	NUM	I-AMOUNT
 6	NUM	I-AMOUNT
@@ -693,7 +693,7 @@ butter	NOUN	B-ITEM
 ,	PUNCT	O
 divided	VERB	B-MODIFIER
 
-# cornstarch, if needed (optional)
+# text = cornstarch, if needed (optional)
 cornstarch	NOUN	B-ITEM
 ,	PUNCT	O
 if	SCONJ	B-COMMENT
@@ -702,7 +702,7 @@ needed	VERB	I-COMMENT
 optional	ADJ	B-COMMENT
 )	PUNCT	O
 
-# 2-3 hoagie rolls (or enough crusty bread chunks to cover bottom of your pan)
+# text = 2-3 hoagie rolls (or enough crusty bread chunks to cover bottom of your pan)
 2	NUM	B-AMOUNT
 -	NUM	I-AMOUNT
 3	NUM	I-AMOUNT
@@ -722,7 +722,7 @@ your	PRON	I-COMMENT
 pan	NOUN	I-COMMENT
 )	PUNCT	O
 
-# 1 tablespoon cashew nuts, chopped
+# text = 1 tablespoon cashew nuts, chopped
 1	NUM	B-AMOUNT
 tablespoon	NOUN	B-UNIT
 cashew	NOUN	B-ITEM
@@ -730,20 +730,20 @@ nuts	NOUN	I-ITEM
 ,	PUNCT	O
 chopped	VERB	B-MODIFIER
 
-# 2 ml ground cloves
+# text = 2 ml ground cloves
 2	NUM	B-AMOUNT
 ml	NOUN	B-UNIT
 ground	ADJ	B-ITEM
 cloves	NOUN	I-ITEM
 
-# 2 slices toasted white bread
+# text = 2 slices toasted white bread
 2	NUM	B-AMOUNT
 slices	NOUN	B-UNIT
 toasted	VERB	B-MODIFIER
 white	ADJ	B-ITEM
 bread	NOUN	I-ITEM
 
-# 2 tablespoons of fresh pressed garlic
+# text = 2 tablespoons of fresh pressed garlic
 2	NUM	B-AMOUNT
 tablespoons	NOUN	B-UNIT
 of	ADP	O
@@ -751,14 +751,14 @@ fresh	ADJ	B-MODIFIER
 pressed	VERB	B-MODIFIER
 garlic	NOUN	B-ITEM
 
-# 2 teaspoons bicarbonate of soda
+# text = 2 teaspoons bicarbonate of soda
 2	NUM	B-AMOUNT
 teaspoons	NOUN	B-UNIT
 bicarbonate	NOUN	B-ITEM
 of	ADP	I-ITEM
 soda	NOUN	I-ITEM
 
-# 2 teaspoons brown sugar (not packed)
+# text = 2 teaspoons brown sugar (not packed)
 2	NUM	B-AMOUNT
 teaspoons	NOUN	B-UNIT
 brown	ADJ	B-ITEM
@@ -768,7 +768,7 @@ not	PART	B-COMMENT
 packed	VERB	I-COMMENT
 )	PUNCT	O
 
-# 1 (20 ounce) can cream of mushroom soup, or
+# text = 1 (20 ounce) can cream of mushroom soup, or
 1	NUM	B-AMOUNT
 (	PUNCT	O
 20	NUM	B-AMOUNT
@@ -782,14 +782,14 @@ soup	NOUN	I-ITEM
 ,	PUNCT	O
 or	CCONJ	O
 
-# 1 cup small diced carrot
+# text = 1 cup small diced carrot
 1	NUM	B-AMOUNT
 cup	NOUN	B-UNIT
 small	ADJ	B-ITEM
 diced	VERB	I-ITEM
 carrot	NOUN	I-ITEM
 
-# 4 ounces fruit salsa (Mango, raspberry, whatevers preferred, can probably use traditional salsa also)
+# text = 4 ounces fruit salsa (Mango, raspberry, whatevers preferred, can probably use traditional salsa also)
 4	NUM	B-AMOUNT
 ounces	NOUN	B-UNIT
 fruit	NOUN	B-ITEM
@@ -810,7 +810,7 @@ salsa	NOUN	I-COMMENT
 also	ADV	I-COMMENT
 )	PUNCT	O
 
-# 2 cups low sodium vegetable broth (can use chicken broth if you prefer)
+# text = 2 cups low sodium vegetable broth (can use chicken broth if you prefer)
 2	NUM	B-AMOUNT
 cups	NOUN	B-UNIT
 low	ADJ	B-ITEM
@@ -827,7 +827,7 @@ you	PRON	I-COMMENT
 prefer	VERB	I-COMMENT
 )	PUNCT	O
 
-# 3 teaspoons parsley, finely chopped
+# text = 3 teaspoons parsley, finely chopped
 3	NUM	B-AMOUNT
 teaspoons	NOUN	B-UNIT
 parsley	NOUN	B-ITEM
@@ -835,7 +835,7 @@ parsley	NOUN	B-ITEM
 finely	ADV	B-MODIFIER
 chopped	VERB	I-MODIFIER
 
-# 1 small eggplant, peeled and cut into 1/2 inch cubes
+# text = 1 small eggplant, peeled and cut into 1/2 inch cubes
 1	NUM	B-AMOUNT
 small	ADJ	B-ITEM
 eggplant	NOUN	I-ITEM
@@ -850,7 +850,7 @@ into	ADP	I-MODIFIER
 inch	NOUN	I-MODIFIER
 cubes	NOUN	I-MODIFIER
 
-# 6 cups butterscotch ripple ice cream
+# text = 6 cups butterscotch ripple ice cream
 6	NUM	B-AMOUNT
 cups	NOUN	B-UNIT
 butterscotch	NOUN	B-ITEM
@@ -858,7 +858,7 @@ ripple	NOUN	I-ITEM
 ice	NOUN	I-ITEM
 cream	NOUN	I-ITEM
 
-# 6-8 tablespoons lemon juice, can use lime juice
+# text = 6-8 tablespoons lemon juice, can use lime juice
 6	NUM	B-AMOUNT
 -	NUM	I-AMOUNT
 8	NUM	I-AMOUNT
@@ -871,14 +871,14 @@ use	VERB	I-COMMENT
 lime	NOUN	I-COMMENT
 juice	NOUN	I-COMMENT
 
-# 1 onion, thinly sliced
+# text = 1 onion, thinly sliced
 1	NUM	B-AMOUNT
 onion	NOUN	B-ITEM
 ,	PUNCT	O
 thinly	ADV	B-MODIFIER
 sliced	VERB	I-MODIFIER
 
-# 1.5 (4 ounce) packages baker's white chocolate (6 ounces)
+# text = 1.5 (4 ounce) packages baker's white chocolate (6 ounces)
 1	NUM	B-AMOUNT
 .	NUM	I-AMOUNT
 5	NUM	I-AMOUNT
@@ -897,7 +897,7 @@ chocolate	NOUN	I-ITEM
 ounces	NOUN	B-UNIT
 )	PUNCT	O
 
-# 1/4 cup fresh cilantro leaves, washed and dried
+# text = 1/4 cup fresh cilantro leaves, washed and dried
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 4	NUM	I-AMOUNT
@@ -910,7 +910,7 @@ washed	VERB	B-MODIFIER
 and	CCONJ	O
 dried	VERB	B-MODIFIER
 
-# 1 cup finely shredded low-fat cheddar cheese (4 ozs.)
+# text = 1 cup finely shredded low-fat cheddar cheese (4 ozs.)
 1	NUM	B-AMOUNT
 cup	NOUN	B-UNIT
 finely	NOUN	B-MODIFIER
@@ -926,7 +926,7 @@ ozs	NOUN	B-UNIT
 .	PUNCT	I-UNIT
 )	PUNCT	O
 
-# 2 onions, cut into 1/2-inch slices
+# text = 2 onions, cut into 1/2-inch slices
 2	NUM	B-AMOUNT
 onions	NOUN	B-ITEM
 ,	PUNCT	O
@@ -939,7 +939,7 @@ into	ADP	I-MODIFIER
 inch	NOUN	I-MODIFIER
 slices	NOUN	I-MODIFIER
 
-# 1 tablespoon mince fresh oregano or 1 teaspoon dried oregano
+# text = 1 tablespoon mince fresh oregano or 1 teaspoon dried oregano
 1	NUM	B-AMOUNT
 tablespoon	NOUN	B-UNIT
 mince	VERB	O
@@ -951,14 +951,14 @@ teaspoon	NOUN	B-UNIT
 dried	ADJ	B-ITEM
 oregano	NOUN	I-ITEM
 
-# 4 white mushrooms, sliced
+# text = 4 white mushrooms, sliced
 4	NUM	B-AMOUNT
 white	ADJ	B-ITEM
 mushrooms	NOUN	I-ITEM
 ,	PUNCT	O
 sliced	VERB	B-MODIFIER
 
-# 3 tablespoons finely diced red bell peppers or 3 tablespoons yellow bell peppers or 3 tablespoons green bell peppers
+# text = 3 tablespoons finely diced red bell peppers or 3 tablespoons yellow bell peppers or 3 tablespoons green bell peppers
 3	NUM	B-AMOUNT
 tablespoons	NOUN	B-UNIT
 finely	ADV	B-MODIFIER
@@ -979,7 +979,7 @@ green	ADJ	B-ITEM
 bell	NOUN	I-ITEM
 peppers	NOUN	I-ITEM
 
-# 2-3 large potatoes, peeled, chopped into chunks
+# text = 2-3 large potatoes, peeled, chopped into chunks
 2	NUM	B-AMOUNT
 -	NUM	I-AMOUNT
 3	NUM	I-AMOUNT
@@ -992,7 +992,7 @@ chopped	VERB	B-MODIFIER
 into	ADP	I-MODIFIER
 chunks	NOUN	I-MODIFIER
 
-# 2 1/2 lbs sole fillets or 2 1/2 lbs flounder fillets or 2 1/2 lbs orange roughy fillets
+# text = 2 1/2 lbs sole fillets or 2 1/2 lbs flounder fillets or 2 1/2 lbs orange roughy fillets
 2	NUM	B-AMOUNT
 1	NUM	I-AMOUNT
 /	NUM	I-AMOUNT
@@ -1018,14 +1018,14 @@ orange	ADJ	B-ITEM
 roughy	NOUN	I-ITEM
 fillets	NOUN	I-ITEM
 
-# 1/4 ounce Apfelkorn
+# text = 1/4 ounce Apfelkorn
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 4	NUM	I-AMOUNT
 ounce	NOUN	B-UNIT
 Apfelkorn	NOUN	B-ITEM
 
-# 2 ounces feta (or more) or 2 ounces kasseri cheese (or more)
+# text = 2 ounces feta (or more) or 2 ounces kasseri cheese (or more)
 2	NUM	B-AMOUNT
 ounces	NOUN	B-UNIT
 feta	NOUN	B-ITEM
@@ -1043,7 +1043,7 @@ or	CCONJ	B-COMMENT
 more	ADV	I-COMMENT
 )	PUNCT	O
 
-# 8 tablespoons butter, chilled (1 stick)
+# text = 8 tablespoons butter, chilled (1 stick)
 8	NUM	B-AMOUNT
 tablespoons	NOUN	B-UNIT
 butter	NOUN	B-ITEM
@@ -1054,63 +1054,63 @@ chilled	NOUN	B-MODIFIER
 stick	NOUN	B-UNIT
 )	PUNCT	O
 
-# salt and pepper
+# text = salt and pepper
 salt	NOUN	B-ITEM
 and	CCONJ	O
 pepper	NOUN	B-ITEM
 
-# salt
+# text = salt
 salt	NOUN	B-ITEM
 
-# 2 eggs
+# text = 2 eggs
 2	NUM	B-AMOUNT
 eggs	NOUN	B-ITEM
 
-# 1 egg, beaten
+# text = 1 egg, beaten
 1	NUM	B-AMOUNT
 egg	NOUN	B-ITEM
 ,	PUNCT	O
 beaten	VERB	B-MODIFIER
 
-# 1 teaspoon baking powder
+# text = 1 teaspoon baking powder
 1	NUM	B-AMOUNT
 teaspoon	NOUN	B-UNIT
 baking	NOUN	B-ITEM
 powder	NOUN	I-ITEM
 
-# 1 garlic clove, minced
+# text = 1 garlic clove, minced
 1	NUM	B-AMOUNT
 garlic	NOUN	B-ITEM
 clove	NOUN	I-ITEM
 ,	PUNCT	O
 minced	VERB	B-MODIFIER
 
-# 1 bay leaf
+# text = 1 bay leaf
 1	NUM	B-AMOUNT
 bay	NOUN	B-ITEM
 leaf	NOUN	I-ITEM
 
-# cooking spray
+# text = cooking spray
 cooking	NOUN	B-ITEM
 spray	NOUN	I-ITEM
 
-# salt, to taste
+# text = salt, to taste
 salt	NOUN	B-ITEM
 ,	PUNCT	O
 to	ADP	B-AMOUNT
 taste	VERB	I-AMOUNT
 
-# 1 egg
+# text = 1 egg
 1	NUM	B-AMOUNT
 egg	NOUN	B-ITEM
 
-# 2 tablespoons Dijon mustard
+# text = 2 tablespoons Dijon mustard
 2	NUM	B-AMOUNT
 tablespoons	NOUN	B-UNIT
 Dijon	PROPN	B-ITEM
 mustard	NOUN	I-ITEM
 
-# 1/2 cup parmesan cheese, grated
+# text = 1/2 cup parmesan cheese, grated
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 2	NUM	I-AMOUNT
@@ -1120,14 +1120,14 @@ cheese	NOUN	I-ITEM
 ,	PUNCT	O
 grated	VERB	B-MODIFIER
 
-# 3 tablespoons butter, melted
+# text = 3 tablespoons butter, melted
 3	NUM	B-AMOUNT
 tablespoons	NOUN	B-UNIT
 butter	NOUN	B-ITEM
 ,	PUNCT	O
 melted	VERB	B-MODIFIER
 
-# 1 (15 ounce) can tomato sauce
+# text = 1 (15 ounce) can tomato sauce
 1	NUM	B-AMOUNT
 (	PUNCT	O
 15	NUM	B-AMOUNT
@@ -1137,7 +1137,7 @@ can	NOUN	B-UNIT
 tomato	VERB	B-ITEM
 sauce	NOUN	I-ITEM
 
-# 1 cup half-and-half
+# text = 1 cup half-and-half
 1	NUM	B-AMOUNT
 cup	NOUN	B-UNIT
 half	NOUN	B-ITEM
@@ -1146,7 +1146,7 @@ and	CCONJ	I-ITEM
 -	PUNCT	I-ITEM
 half	NOUN	I-ITEM
 
-# 1/8 teaspoon ground nutmeg
+# text = 1/8 teaspoon ground nutmeg
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 8	NUM	I-AMOUNT
@@ -1154,14 +1154,14 @@ teaspoon	NOUN	B-UNIT
 ground	ADJ	B-ITEM
 nutmeg	NOUN	I-ITEM
 
-# 1 cup confectioners' sugar
+# text = 1 cup confectioners' sugar
 1	NUM	B-AMOUNT
 cup	NOUN	B-UNIT
 confectioners	NOUN	B-ITEM
 '	PUNCT	I-ITEM
 sugar	NOUN	I-ITEM
 
-# 4 ounces cream cheese, softened
+# text = 4 ounces cream cheese, softened
 4	NUM	B-AMOUNT
 ounces	NOUN	B-UNIT
 cream	NOUN	B-ITEM
@@ -1169,7 +1169,7 @@ cheese	NOUN	I-ITEM
 ,	PUNCT	O
 softened	VERB	B-MODIFIER
 
-# 1/3 cup artificial sweetener, we use Altern by WalMart, may use 2/3 cup confectioner's sugar XXX if you have no dietary concerns
+# text = 1/3 cup artificial sweetener, we use Altern by WalMart, may use 2/3 cup confectioner's sugar XXX if you have no dietary concerns
 1	NUM	B-AMOUNT
 /	NUM	I-AMOUNT
 3	NUM	I-AMOUNT
@@ -1201,7 +1201,7 @@ no	DET	I-COMMENT
 dietary	ADJ	I-COMMENT
 concerns	NOUN	I-COMMENT
 
-# 1 1/2 lbs mussels, scrubbed and debearded (see note)
+# text = 1 1/2 lbs mussels, scrubbed and debearded (see note)
 1	NUM	B-AMOUNT
 1	NUM	I-AMOUNT
 /	NUM	I-AMOUNT
@@ -1217,7 +1217,7 @@ see	VERB	B-COMMENT
 note	NOUN	I-COMMENT
 )	PUNCT	O
 
-# bought lime aioli, to serve
+# text = bought lime aioli, to serve
 bought	VERB	B-ITEM
 lime	NOUN	I-ITEM
 aioli	NOUN	I-ITEM
@@ -1225,7 +1225,7 @@ aioli	NOUN	I-ITEM
 to	PART	B-COMMENT
 serve	VERB	I-COMMENT
 
-# 2 cups jasmine rice (not instant or parboiled) or 2 cups long-grain white rice (not instant or parboiled)
+# text = 2 cups jasmine rice (not instant or parboiled) or 2 cups long-grain white rice (not instant or parboiled)
 2	NUM	B-AMOUNT
 cups	NOUN	B-UNIT
 jasmine	NOUN	B-ITEM
@@ -1251,13 +1251,13 @@ or	CCONJ	I-COMMENT
 parboiled	ADJ	I-COMMENT
 )	PUNCT	O
 
-# 1 pint malt vinegar
+# text = 1 pint malt vinegar
 1	NUM	B-AMOUNT
 pint	NOUN	B-UNIT
 malt	NOUN	B-ITEM
 vinegar	NOUN	I-ITEM
 
-# 2 granny smith apples, medium sized, julienned
+# text = 2 granny smith apples, medium sized, julienned
 2	NUM	B-AMOUNT
 granny	PROPN	B-ITEM
 smith	PROPN	I-ITEM
@@ -1268,7 +1268,7 @@ sized	ADJ	I-COMMENT
 ,	PUNCT	O
 julienned	VERB	B-MODIFIER
 
-# 1 1/2 cups finely ground graham cracker crumbs
+# text = 1 1/2 cups finely ground graham cracker crumbs
 1	NUM	B-AMOUNT
 1	NUM	I-AMOUNT
 /	NUM	I-AMOUNT

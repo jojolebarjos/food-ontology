@@ -5,6 +5,7 @@ import os
 import io
 import collections
 import random
+import pandas
 
 from .text import tokenize
 from .pos import get_tagger as get_pos_tagger
@@ -55,10 +56,29 @@ def generate_entities(input_path, output_path, count=50, by_frequency=True):
   with io.open(output_path, 'w', newline='\n', encoding='utf-8') as file:
     file.write('\n')
     for line in lines:
-      file.write('# ' + line + '\n')
+      file.write('# text = ' + line + '\n')
       tokens = [token for token, _, _ in tokenize(line)]
       pos_tags = pos_tagger(tokens)
       entity_tags = entity_tagger(tokens, pos_tags)
       for token, pos_tag, entity_tag in zip(tokens, pos_tags, entity_tags):
         file.write(token + '\t' + pos_tag + '\t' + entity_tag + '\n')
+      file.write('\n')
+
+
+# Convert tab-separated file to Excel file
+def to_excel(input_path, output_path):
+  data = pandas.read_csv(input_path, encoding='utf-8', delimiter='\t', quoting=3, skip_blank_lines=False, keep_default_na=False, header=None, names=['token', 'pos', 'entity'], dtype=object)
+  data.to_excel(output_path, index=False, header=False)
+
+
+# Convert Excel file to tab-separated file
+def to_tab(input_path, output_path):
+  data = pandas.read_excel(input_path, keep_default_na=False, header=None, names=['token', 'pos', 'entity'], dtype=object)
+  text = io.StringIO()
+  data.to_csv(text, index=False, header=False, sep='\t', doublequote=False)
+  text.seek(0)
+  text = text.read()
+  with io.open(output_path, 'w', newline='\n', encoding='utf-8') as file:
+    for line in text.split('\n'):
+      file.write(line.rstrip())
       file.write('\n')

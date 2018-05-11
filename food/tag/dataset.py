@@ -41,7 +41,8 @@ def from_tab(file):
     
     # Keep comments as text reference
     if line[0] == '#':
-      text = line[2:]
+      if line.startswith('# text = '):
+        text = line[9:]
       continue
     
     # Accumulate tokens
