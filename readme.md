@@ -32,6 +32,8 @@ Other relationships and attributes can be used to refine taxonomies:
 
 ## License
 
-The content of the project itself is licensed under the [Creative Commons Attribution Share Alike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/), and the underlying source code used to process and format that content is licensed under [The Unlicense](https://unlicense.org/UNLICENSE).
+The content of the ontology itself is licensed under the [Creative Commons Attribution Share Alike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/), and the underlying source code used to process and format that content is licensed under [The Unlicense](https://unlicense.org/UNLICENSE).
 
 Note that this does not apply to referenced corpora, which are often in public domain. Please consult the official websites for more information.
+
+Additional corpora that are included for convenience have dedicated licenses, e.g. English Universal Dependencies corpus is under [Creative Commons Attribution Share Alike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
