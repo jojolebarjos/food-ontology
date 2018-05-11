@@ -46,7 +46,7 @@ def from_tab(file):
       continue
     
     # Accumulate tokens
-    token, pos_tag, entity_tag = line.split('\t')
+    _, token, pos_tag, entity_tag = line.split('\t')
     tokens.append(token)
     pos_tags.append(pos_tag)
     entity_tags.append(entity_tag)

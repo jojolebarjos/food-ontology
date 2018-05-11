@@ -60,8 +60,8 @@ def generate_entities(input_path, output_path, count=50, by_frequency=True):
       tokens = [token for token, _, _ in tokenize(line)]
       pos_tags = pos_tagger(tokens)
       entity_tags = entity_tagger(tokens, pos_tags)
-      for token, pos_tag, entity_tag in zip(tokens, pos_tags, entity_tags):
-        file.write(token + '\t' + pos_tag + '\t' + entity_tag + '\n')
+      for index, (token, pos_tag, entity_tag) in enumerate(zip(tokens, pos_tags, entity_tags)):
+        file.write('%d\t%s\t%s\t%s\n' % (index + 1, token, pos_tag, entity_tag))
       file.write('\n')
 
 
