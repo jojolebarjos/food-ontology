@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="brat/style-vis.css"/>
+    <script type="text/javascript" src="brat/head.load.min.js"></script>
+    <style>
+      
+      html, body {
+        height : 100%;
+        padding : 0;
+      }
+      
+      .box {
+        display : flex;
+        flex-flow : column;
+        height : 100%;
+      }
+      
+      .box .row_header {
+        flex : 0 1 auto;
+        padding : 10px;
+      }
+      
+      .box .row_body {
+        flex : 1 1 auto;
+        padding : 10px;
+      }
+      
+      #brat {
+      }
+      
+      #data {
+        box-sizing : border-box;
+        -moz-box-sizing : border-box;
+        -webkit-box-sizing : border-box;
+        font-family : monospace;
+        tab-size : 16;
+        width : 100%;
+        height : 100vh;
+        margin: 0;
+        padding: 0;
+        resize : none;
+        overflow : auto;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="box">
+    <div class="row_header">
+    <div id="brat"></div>
+    </div>
+    <div class="row_body">
+    <textarea id="data" placeholder="...">
+# text = 1/4 cup fresh cilantro leaves, washed and dried
+1	1	NUM	B-AMOUNT
+2	/	NUM	I-AMOUNT
+3	4	NUM	I-AMOUNT
+4	cup	NOUN	B-UNIT
+5	fresh	ADJ	B-ITEM
+6	cilantro	NOUN	I-ITEM
+7	leaves	NOUN	I-ITEM
+8	,	PUNCT	O
+9	washed	VERB	B-MODIFIER
+10	and	CCONJ	O
+11	dried	VERB	B-MODIFIER
+</textarea>
+    </div>
+    </div>
+    <script>
+      
+      // Acquire objects
+      var brat = document.getElementById('brat');
+      var area = document.getElementById('data');
+      
+      // Allow tab in text area
+      area.onkeydown = function (e) {
+        if (e.keyCode === 9) {
+          var val = this.value;
+          var start = this.selectionStart;
+          var end = this.selectionEnd;
+          this.value = val.substring(0, start) + '\t' + val.substring(end);
+          this.selectionStart = this.selectionEnd = start + 1;
+          return false;
+        }
+      };
+      
+      // Define collection data
+      var collData = {
+        entity_types : [
+          {
+            type : 'AMOUNT',
+            labels : ['Amount', 'A'],
+            bgColor : '#7fa2ff',
+            borderColor : 'darken'
+          },
+          {
+            type : 'UNIT',
+            labels : ['Unit', 'U'],
+            bgColor : '#7fa2ff',
+            borderColor : 'darken'
+          },
+          {
+            type : 'ITEM',
+            labels : ['Item', 'I'],
+            bgColor : '#7fa2ff',
+            borderColor : 'darken'
+          },
+          {
+            type : 'MODIFIER',
+            labels : ['Modifier', 'M'],
+            bgColor : '#7fa2ff',
+            borderColor : 'darken'
+          },
+          {
+            type : 'COMMENT',
+            labels : ['Comment', 'C'],
+            bgColor : '#7fa2ff',
+            borderColor : 'darken'
+          }
+        ]
+      };
+      
+      // Load additional Brat components
+      head.js(
+        'brat/jquery.min.js',
+        'brat/jquery.svg.min.js',
+        'brat/jquery.svgdom.min.js',
+        'brat/configuration.js',
+        'brat/util.js',
+        'brat/annotation_log.js',
+        'brat/dispatcher.js',
+        'brat/url_monitor.js',
+        'brat/visualizer.js'
+      );
+      
+      // Parse tab-separated samples
+      function parse(content) {
+        var samples = [];
+        var text = null;
+        var tokens = [];
+        var pos_tags = [];
+        var entity_tags = [];
+        var lines = content.split('\n');
+        for (var index = 0; index < lines.length; ++index) {
+          var line = lines[index].trimRight();
+          
+          // Empty line marks end-of-sample
+          if (line.length == 0) {
+            if (text != null && tokens.length > 0) {
+              
+              // Acquire tokens
+              var offset = 0;
+              var parts = [];
+              for (var index = 0; index < tokens.length; ++index) {
+                var start = text.indexOf(tokens[index], offset);
+                offset = start + tokens[index].length;
+                var part = {
+                  text : tokens[index],
+                  start : start,
+                  end : offset,
+                  pos_tag : pos_tags[index],
+                  entity_tag : entity_tags[index]
+                };
+                parts.push(part);
+              }
+              
+              // Acquire entities
+              var index = 0;
+              var entities = [];
+              while (index < tokens.length) {
+                if (parts[index].entity_tag != 'O') {
+                  var entity = {
+                    label : parts[index].entity_tag.substr(2),
+                    start : index
+                  }
+                  ++index;
+                  while (index < tokens.length && parts[index].entity_tag.startsWith('I'))
+                    ++index;
+                  entity.end = index;
+                  entities.push(entity);
+                } else
+                  ++index;
+              }
+              
+              // Register sample
+              var sample = {
+                text : text,
+                tokens : parts,
+                entities : entities
+              };
+              samples.push(sample);
+            }
+            
+            // Clear buffers and continue
+            text = null;
+            tokens = [];
+            pos_tags = [];
+            entity_tags = [];
+            continue;
+          }
+          
+          // Keep comments as text reference
+          if (line.startsWith('#')) {
+            if (line.startsWith('# text = '))
+              text = line.substr(9);
+            continue;
+          }
+          
+          // Accumulate tokens
+          var parts = line.split('\t');
+          tokens.push(parts[1]);
+          pos_tags.push(parts[2]);
+          entity_tags.push(parts[3]);
+        }
+        
+        // Ready
+        return samples;
+      }
+      
+      // Convert parsed sample into Brat document
+      function encode(sample) {
+        
+        // Accumulate basic entities
+        var entities = [];
+        for (var index = 0; index < sample.entities.length; ++index) {
+          var entity = sample.entities[index];
+          entities.push(['E' + index, entity.label, [[sample.tokens[entity.start].start, sample.tokens[entity.end - 1].end]]]);
+        }
+        
+        // Ready
+        var document = {
+          text : sample.text,
+          entities : entities
+        };
+        return document;
+      }
+      
+      // Change Brat content
+      function update(content) {
+        var samples = parse(content);
+        var documents = [];
+        for (var index = 0; index < samples.length; ++index) {
+          var document = encode(samples[index]);
+          if (document != null)
+            documents.push(document);
+        }
+        dispatcher.post('requestRenderData', documents);
+      }
+      
+      // Set default when Brat is ready
+      var dispatcher = null;
+      head.ready(function () {
+        dispatcher = Util.embed('brat', collData, {text : 'Hello, world!'}, []);
+        update(area.value);
+      });
+      
+      // Also update on text change
+      area.onchange = function (e) {
+        update(area.value);
+      };
+      
+    </script>
+  </body>
+</html>
