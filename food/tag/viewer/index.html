@@ -87,18 +87,18 @@
       };
       
       // Define collection data
-      var collData = {
+      var collection = {
         entity_types : [
           {
             type : 'AMOUNT',
             labels : ['Amount', 'A'],
-            bgColor : '#7fa2ff',
+            bgColor : '#7fffa2',
             borderColor : 'darken'
           },
           {
             type : 'UNIT',
             labels : ['Unit', 'U'],
-            bgColor : '#7fa2ff',
+            bgColor : '#a2ff7f',
             borderColor : 'darken'
           },
           {
@@ -110,13 +110,13 @@
           {
             type : 'MODIFIER',
             labels : ['Modifier', 'M'],
-            bgColor : '#7fa2ff',
+            bgColor : '#a27fff',
             borderColor : 'darken'
           },
           {
             type : 'COMMENT',
             labels : ['Comment', 'C'],
-            bgColor : '#7fa2ff',
+            bgColor : '#777777',
             borderColor : 'darken'
           }
         ]
@@ -210,9 +210,9 @@
           
           // Accumulate tokens
           var parts = line.split('\t');
-          tokens.push(parts[1]);
-          pos_tags.push(parts[2]);
-          entity_tags.push(parts[3]);
+          tokens.push(parts[1] || '');
+          pos_tags.push(parts[2] || 'X');
+          entity_tags.push(parts[3] || 'O');
         }
         
         // Ready
@@ -252,14 +252,16 @@
       // Set default when Brat is ready
       var dispatcher = null;
       head.ready(function () {
-        dispatcher = Util.embed('brat', collData, {text : 'Hello, world!'}, []);
+        dispatcher = Util.embed('brat', collection, {text : 'Hello, world!'}, []);
         update(area.value);
       });
       
       // Also update on text change
-      area.onchange = function (e) {
+      function react(e) {
         update(area.value);
-      };
+      }
+      area.onchange = react;
+      area.onkeyup = react;
       
     </script>
   </body>
