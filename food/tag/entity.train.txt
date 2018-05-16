@@ -167,8 +167,8 @@
 
 # text = 2 wiennie franks or 1 small potato, peeled and diced
 1	2	NUM	B-AMOUNT
-2	wiennie	NOUN	B-UNIT
-3	franks	NOUN	B-ITEM
+2	wiennie	NOUN	B-ITEM
+3	franks	NOUN	I-ITEM
 4	or	CCONJ	O
 5	1	NUM	B-AMOUNT
 6	small	ADJ	B-ITEM
@@ -200,7 +200,7 @@
 6	whipped	VERB	B-MODIFIER
 7	stiff	ADJ	I-MODIFIER
 
-# text = 8 tablespoons , creme fraiche or 8 tablespoons sour cream
+# text = 8 tablespoons, creme fraiche or 8 tablespoons sour cream
 1	8	NUM	B-AMOUNT
 2	tablespoons	NOUN	B-UNIT
 3	,	PUNCT	O
@@ -216,7 +216,7 @@
 1	1	NUM	B-AMOUNT
 2	/	NUM	I-AMOUNT
 3	8	NUM	I-AMOUNT
-4	cup	NOUN	B-UNIT
+4	cup	NOUN	B-UNIT 1
 5	red	ADJ	B-ITEM
 6	chili	NOUN	I-ITEM
 7	powder	NOUN	I-ITEM
@@ -283,11 +283,11 @@
 
 # text = 16 reduced-fat vanilla wafers, finely ground in a food processor
 1	16	NUM	B-AMOUNT
-2	reduced	ADJ	B-ITEM
-3	-	PUNCT	I-ITEM
-4	fat	NOUN	I-ITEM
-5	vanilla	ADJ	I-ITEM
-6	wafers	NOUN	I-ITEM
+2	reduced	ADJ	B-MODIFIER
+3	-	PUNCT	I-MODIFIER
+4	fat	NOUN	I-MODIFIER
+5	vanilla	ADJ	B-MODIFIER
+6	wafers	NOUN	B-ITEM
 7	,	PUNCT	O
 8	finely	ADV	B-MODIFIER
 9	ground	VERB	I-MODIFIER
@@ -301,8 +301,8 @@
 2	/	NUM	I-AMOUNT
 3	2	NUM	I-AMOUNT
 4	cup	NOUN	B-UNIT
-5	cooked	VERB	B-ITEM
-6	bacon	NOUN	I-ITEM
+5	cooked	VERB	B-MODIFIER
+6	bacon	NOUN	B-ITEM
 7	,	PUNCT	O
 8	pieces	NOUN	B-MODIFIER
 
@@ -386,8 +386,8 @@
 # text = 2 cups cubed cooked ham (10 oz.)
 1	2	NUM	B-AMOUNT
 2	cups	NOUN	B-UNIT
-3	cubed	VERB	O
-4	cooked	VERB	O
+3	cubed	VERB	B-MODIFIER
+4	cooked	VERB	B-MODIFIER
 5	ham	NOUN	B-ITEM
 6	(	PUNCT	O
 7	10	NUM	B-AMOUNT

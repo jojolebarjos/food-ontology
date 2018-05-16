@@ -121,6 +121,14 @@
             borderColor : 'darken'
           }
         ],
+				entity_attribute_types : [
+          {
+            type : 'ROOT',
+            values : {
+              'Root' : { 'glyph' : '★' }
+            }
+          }
+        ],
 				relation_types : [
           {
             type : 'LINK',
@@ -245,6 +253,7 @@
       function encode(samples) {
         var text = '';
         var entities = [];
+				var attributes = [];
 				var relations = [];
         for (var i = 0; i < samples.length; ++i) {
           var sample = samples[i];
@@ -253,12 +262,15 @@
             entities.push(['E' + i + '_' + j, entity.label, [[sample.tokens[entity.start].start + text.length, sample.tokens[entity.end - 1].end + text.length]]]);
 						if (entity.parent >= 0)
 							relations.push(['R' + relations.length, 'LINK', [['Child', 'E' + i + '_' + j], ['Parent', 'E' + i + '_' + sample.tokens[entity.parent].entity]]]);
+						else if (entity.label == 'ITEM')
+							attributes.push(['A' + attributes.length, 'ROOT', 'E' + i + '_' + j]);
           }
           text += sample.text + '\n';
         }
         var document = {
           text : text,
           entities : entities,
+					attributes : attributes,
 					relations : relations
         };
 				console.log(document);

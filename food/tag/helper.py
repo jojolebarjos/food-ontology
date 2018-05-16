@@ -67,13 +67,13 @@ def generate_entities(input_path, output_path, count=50, by_frequency=True):
 
 # Convert tab-separated file to Excel file
 def to_excel(input_path, output_path):
-  data = pandas.read_csv(input_path, encoding='utf-8', delimiter='\t', quoting=3, skip_blank_lines=False, keep_default_na=False, header=None, names=['token', 'pos', 'entity'], dtype=object)
+  data = pandas.read_csv(input_path, encoding='utf-8', delimiter='\t', quoting=3, skip_blank_lines=False, keep_default_na=False, header=None, names=['index', 'token', 'pos', 'entity'], dtype=object)
   data.to_excel(output_path, index=False, header=False)
 
 
 # Convert Excel file to tab-separated file
 def to_tab(input_path, output_path):
-  data = pandas.read_excel(input_path, keep_default_na=False, header=None, names=['token', 'pos', 'entity'], dtype=object)
+  data = pandas.read_excel(input_path, keep_default_na=False, header=None, names=['index', 'token', 'pos', 'entity'], dtype=object)
   text = io.StringIO()
   data.to_csv(text, index=False, header=False, sep='\t', doublequote=False)
   text.seek(0)
