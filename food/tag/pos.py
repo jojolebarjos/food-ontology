@@ -51,14 +51,14 @@ def extract_features(tokens):
 
 
 # Train Part-of-Speech tagger
-def train():
+def train(max_iterations=50):
   
   # Create trainer
   trainer = pycrfsuite.Trainer(verbose=True)
   trainer.set_params({
     'c1': 1.0,
     'c2': 1e-3,
-    'max_iterations': 50,
+    'max_iterations': max_iterations,
     'feature.possible_transitions': True
   })
   

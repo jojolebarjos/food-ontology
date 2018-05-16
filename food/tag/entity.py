@@ -28,7 +28,7 @@ def extract_features(tokens, pos_tags):
 
 
 # Train food entity tagger
-def train():
+def train(max_iterations=50):
   
   # Import specialized food entity file
   samples = get_entity_dataset(test=False)
@@ -38,7 +38,7 @@ def train():
   trainer.set_params({
     'c1': 1.0,
     'c2': 1e-3,
-    'max_iterations': 50,
+    'max_iterations': max_iterations,
     'feature.possible_transitions': True
   })
   

@@ -147,8 +147,8 @@
 4	ounce	NOUN	B-UNIT
 5	)	PUNCT	O
 6	packages	NOUN	B-UNIT
-7	Hershey	PROPN	B-ITEM
-8	chocolate	NOUN	I-ITEM
+7	Hershey	PROPN	B-BRAND
+8	chocolate	NOUN	B-ITEM
 9	kisses	NOUN	I-ITEM
 
 # text = 1/3 cup feta cheese, crumbled (for garnish)
@@ -250,8 +250,8 @@
 2	/	NUM	I-AMOUNT
 3	3	NUM	I-AMOUNT
 4	cup	NOUN	B-UNIT
-5	heath	NOUN	B-ITEM
-6	almond	NOUN	I-ITEM
+5	heath	PROPN	B-BRAND
+6	almond	NOUN	B-ITEM
 7	toffee	NOUN	I-ITEM
 8	pieces	NOUN	I-ITEM
 
@@ -286,7 +286,7 @@
 2	reduced	ADJ	B-MODIFIER
 3	-	PUNCT	I-MODIFIER
 4	fat	NOUN	I-MODIFIER
-5	vanilla	ADJ	B-MODIFIER
+5	vanilla	NOUN	B-FLAVOR
 6	wafers	NOUN	B-ITEM
 7	,	PUNCT	O
 8	finely	ADV	B-MODIFIER
@@ -478,8 +478,8 @@
 2	-	NUM	I-AMOUNT
 3	20	NUM	I-AMOUNT
 4	ounce	NOUN	B-UNIT
-5	cherry	NOUN	B-ITEM
-6	pie	NOUN	I-ITEM
+5	cherry	NOUN	B-FLAVOR
+6	pie	NOUN	B-ITEM
 7	filling	NOUN	I-ITEM
 
 # text = 2 (16 ounce) boxes chicken broth
@@ -511,11 +511,11 @@
 # text = 12 ounces fat-free cool whip
 1	12	NUM	B-AMOUNT
 2	ounces	NOUN	B-UNIT
-3	fat	NOUN	B-ITEM
-4	-	PUNCT	I-ITEM
-5	free	ADJ	I-ITEM
-6	cool	PROPN	I-ITEM
-7	whip	PROPN	I-ITEM
+3	fat	NOUN	B-MODIFIER
+4	-	PUNCT	I-MODIFIER
+5	free	ADJ	I-MODIFIER
+6	cool	PROPN	B-BRAND
+7	whip	PROPN	I-BRAND
 
 # text = 1/3 cup sliced Spanish olives with pimento
 1	1	NUM	B-AMOUNT
@@ -525,8 +525,8 @@
 5	sliced	VERB	B-MODIFIER
 6	Spanish	ADJ	B-ITEM
 7	olives	NOUN	I-ITEM
-8	with	ADP	I-ITEM
-9	pimento	NOUN	I-ITEM
+8	with	ADP	B-FLAVOR
+9	pimento	NOUN	I-FLAVOR
 
 # text = 1 1/2 tablespoons yeast
 1	1	NUM	B-AMOUNT
@@ -636,9 +636,9 @@
 
 
 # text = whipped vanilla frosting (1 tub)
-1	whipped	VERB	B-ITEM
-2	vanilla	ADJ	I-ITEM
-3	frosting	NOUN	I-ITEM
+1	whipped	VERB	B-MODIFIER
+2	vanilla	ADJ	B-FLAVOR
+3	frosting	NOUN	B-ITEM
 4	(	PUNCT	O
 5	1	NUM	B-AMOUNT
 6	tub	NOUN	B-UNIT
@@ -649,9 +649,9 @@
 2	/	NUM	I-AMOUNT
 3	2	NUM	I-AMOUNT
 4	tablespoon	NOUN	B-UNIT
-5	fresh	ADJ	B-ITEM
-6	minced	VERB	I-ITEM
-7	ginger	NOUN	I-ITEM
+5	fresh	ADJ	B-MODIFIER
+6	minced	VERB	B-MODIFIER
+7	ginger	NOUN	B-ITEM
 
 # text = 4 cups fresh, finely chopped pineapple
 1	4	NUM	B-AMOUNT
@@ -887,10 +887,10 @@
 6	ounce	NOUN	B-UNIT
 7	)	PUNCT	O
 8	packages	NOUN	B-UNIT
-9	baker	PROPN	B-ITEM
-10	'	PART	I-ITEM
-11	s	PART	I-ITEM
-12	white	ADJ	I-ITEM
+9	baker	PROPN	B-BRAND
+10	'	PART	I-BRAND
+11	s	PART	I-BRAND
+12	white	ADJ	B-ITEM
 13	chocolate	NOUN	I-ITEM
 14	(	PUNCT	O
 15	6	NUM	B-AMOUNT
@@ -1280,3 +1280,520 @@
 9	cracker	PROPN	I-ITEM
 10	crumbs	NOUN	I-ITEM
 
+
+# id = SR_43497
+# text = Jellyfish, dried, salted
+1	Jellyfish	NOUN	B-ITEM
+2	,	PUNCT	O
+3	dried	VERB	B-MODIFIER
+4	,	PUNCT	O
+5	salted	ADJ	B-MODIFIER
+
+# id = SR_19077
+# text = Baking chocolate, unsweetened, liquid
+1	Baking	ADJ	B-ITEM
+2	chocolate	NOUN	I-ITEM
+3	,	PUNCT	O
+4	unsweetened	ADJ	B-ITEM
+5	,	PUNCT	O
+6	liquid	ADJ	B-MODIFIER
+
+# id = SR_5170
+# text = Turkey, skin from whole (light and dark), roasted
+1	Turkey	NOUN	B-ITEM
+2	,	PUNCT	O
+3	skin	NOUN	B-ITEM
+4	from	ADP	I-ITEM
+5	whole	NOUN	I-ITEM
+6	(	PUNCT	O
+7	light	ADJ	B-COMMENT
+8	and	CCONJ	I-COMMENT
+9	dark	ADJ	I-COMMENT
+10	)	PUNCT	O
+11	,	PUNCT	O
+12	roasted	VERB	B-MODIFIER
+
+# id = SR_23196
+# text = Beef, rib eye steak, boneless, lip-on, separable lean and fat, trimmed to 1/8" fat, select, cooked, grilled
+1	Beef	NOUN	B-ITEM
+2	,	PUNCT	O
+3	rib	NOUN	B-ITEM
+4	eye	NOUN	I-ITEM
+5	steak	NOUN	I-ITEM
+6	,	PUNCT	O
+7	boneless	ADJ	B-MODIFIER
+8	,	PUNCT	O
+9	lip	NOUN	B-MODIFIER
+10	-	PUNCT	I-MODIFIER
+11	on	NOUN	I-MODIFIER
+12	,	PUNCT	O
+13	separable	ADJ	B-MODIFIER
+14	lean	NOUN	I-MODIFIER
+15	and	CCONJ	I-MODIFIER
+16	fat	NOUN	I-MODIFIER
+17	,	PUNCT	O
+18	trimmed	VERB	B-MODIFIER
+19	to	ADP	I-MODIFIER
+20	1	NUM	I-MODIFIER
+21	/	NUM	I-MODIFIER
+22	8	NUM	I-MODIFIER
+23	"	SYM	I-MODIFIER
+24	fat	NOUN	I-MODIFIER
+25	,	PUNCT	O
+26	select	NOUN	B-MODIFIER
+27	,	PUNCT	O
+28	cooked	VERB	B-MODIFIER
+29	,	PUNCT	O
+30	grilled	VERB	B-MODIFIER
+
+# id = SR_13801
+# text = Beef, composite of trimmed retail cuts, separable lean and fat, trimmed to 1/8" fat, prime, raw
+1	Beef	NOUN	B-ITEM
+2	,	PUNCT	O
+3	composite	NOUN	B-ITEM
+4	of	SCONJ	I-ITEM
+5	trimmed	VERB	I-ITEM
+6	retail	NOUN	I-ITEM
+7	cuts	NOUN	I-ITEM
+8	,	PUNCT	O
+9	separable	ADJ	B-MODIFIER
+10	lean	NOUN	I-MODIFIER
+11	and	CCONJ	I-MODIFIER
+12	fat	NOUN	I-MODIFIER
+13	,	PUNCT	O
+14	trimmed	VERB	B-MODIFIER
+15	to	ADP	I-MODIFIER
+16	1	NUM	I-MODIFIER
+17	/	NUM	I-MODIFIER
+18	8	NUM	I-MODIFIER
+19	"	SYM	I-MODIFIER
+20	fat	NOUN	I-MODIFIER
+21	,	PUNCT	O
+22	prime	ADJ	B-MODIFIER
+23	,	PUNCT	O
+24	raw	ADJ	B-MODIFIER
+
+# id = SR_4611
+# text = Margarine, regular, 80% fat, composite, tub, with salt
+1	Margarine	NOUN	B-ITEM
+2	,	PUNCT	O
+3	regular	ADJ	B-MODIFIER
+4	,	PUNCT	O
+5	80	NUM	B-MODIFIER
+6	%	SYM	I-MODIFIER
+7	fat	NOUN	I-MODIFIER
+8	,	PUNCT	O
+9	composite	ADJ	B-MODIFIER
+10	,	PUNCT	O
+11	tub	NOUN	B-MODIFIER
+12	,	PUNCT	O
+13	with	ADP	B-MODIFIER
+14	salt	NOUN	I-MODIFIER
+
+# id = SR_42186
+# text = Frozen yogurts, chocolate
+1	Frozen	ADJ	B-ITEM
+2	yogurts	NOUN	I-ITEM
+3	,	PUNCT	O
+4	chocolate	NOUN	B-FLAVOR
+
+# id = SR_28067
+# text = KEEBLER, CLUB, Multigrain Crackers
+1	KEEBLER	PROPN	B-BRAND
+2	,	PUNCT	O
+3	CLUB	PROPN	B-BRAND
+4	,	PUNCT	O
+5	Multigrain	NOUN	B-ITEM
+6	Crackers	NOUN	I-ITEM
+
+# id = SR_3220
+# text = Babyfood, dessert, dutch apple, strained
+1	Babyfood	PROPN	B-MODIFIER
+2	,	PUNCT	O
+3	dessert	NOUN	B-ITEM
+4	,	PUNCT	O
+5	dutch	ADJ	B-ITEM
+6	apple	NOUN	I-ITEM
+7	,	PUNCT	O
+8	strained	PROPN	B-MODIFIER
+
+# id = SR_36410
+# text = Restaurant, Latino, pupusas del cerdo (pupusas, pork)
+1	Restaurant	NOUN	B-MODIFIER
+2	,	PUNCT	O
+3	Latino	ADJ	B-MODIFIER
+4	,	PUNCT	O
+5	pupusas	NOUN	B-ITEM
+6	del	DET	I-ITEM
+7	cerdo	NOUN	I-ITEM
+8	(	PUNCT	O
+9	pupusas	NOUN	B-COMMENT
+10	,	PUNCT	I-COMMENT
+11	pork	NOUN	I-COMMENT
+12	)	PUNCT	O
+
+# id = SR_6409
+# text = Soup, beef noodle, canned, prepared with equal volume water
+1	Soup	NOUN	B-ITEM
+2	,	PUNCT	O
+3	beef	NOUN	B-ITEM
+4	noodle	NOUN	I-ITEM
+5	,	PUNCT	O
+6	canned	VERB	B-MODIFIER
+7	,	PUNCT	O
+8	prepared	VERB	B-MODIFIER
+9	with	ADP	I-MODIFIER
+10	equal	ADJ	I-MODIFIER
+11	volume	NOUN	I-MODIFIER
+12	water	NOUN	I-MODIFIER
+
+# id = SR_43060
+# text = Chewing gum, sugarless
+1	Chewing	NOUN	B-ITEM
+2	gum	NOUN	I-ITEM
+3	,	PUNCT	O
+4	sugarless	ADJ	B-MODIFIER
+
+# id = SR_23054
+# text = Beef, chuck, shoulder clod, shoulder tender, medallion, separable lean and fat, trimmed to 0" fat, all grades, cooked, grilled
+1	Beef	NOUN	B-ITEM
+2	,	PUNCT	O
+3	chuck	NOUN	B-ITEM
+4	,	PUNCT	O
+5	shoulder	NOUN	B-ITEM
+6	clod	NOUN	I-ITEM
+7	,	PUNCT	O
+8	shoulder	NOUN	B-ITEM
+9	tender	NOUN	I-ITEM
+10	,	PUNCT	O
+11	medallion	NOUN	B-ITEM
+12	,	PUNCT	O
+13	separable	ADJ	B-MODIFIER
+14	lean	NOUN	I-MODIFIER
+15	and	CCONJ	I-MODIFIER
+16	fat	NOUN	I-MODIFIER
+17	,	PUNCT	O
+18	trimmed	VERB	B-MODIFIER
+19	to	ADP	I-MODIFIER
+20	0	NUM	I-MODIFIER
+21	"	SYM	I-MODIFIER
+22	fat	NOUN	I-MODIFIER
+23	,	PUNCT	O
+24	all	DET	B-MODIFIER
+25	grades	NOUN	I-MODIFIER
+26	,	PUNCT	O
+27	cooked	VERB	B-MODIFIER
+28	,	PUNCT	O
+29	grilled	VERB	B-MODIFIER
+
+# id = SR_6167
+# text = Sauce, homemade, white, thick
+1	Sauce	NOUN	B-ITEM
+2	,	PUNCT	O
+3	homemade	ADJ	B-MODIFIER
+4	,	PUNCT	O
+5	white	ADJ	B-ITEM
+6	,	PUNCT	O
+7	thick	ADJ	B-MODIFIER
+
+# id = SR_8435
+# text = Cereals ready-to-eat, UNCLE SAM CEREAL
+1	Cereals	VERB	B-ITEM
+2	ready	ADJ	I-ITEM
+3	-	PUNCT	I-ITEM
+4	to	ADP	I-ITEM
+5	-	PUNCT	I-ITEM
+6	eat	VERB	I-ITEM
+7	,	PUNCT	O
+8	UNCLE	PROPN	B-BRAND
+9	SAM	PROPN	I-BRAND
+10	CEREAL	PROPN	I-BRAND
+
+# id = SR_5034
+# text = Chicken, broilers or fryers, dark meat, meat and skin, raw
+1	Chicken	NOUN	B-ITEM
+2	,	PUNCT	O
+3	broilers	NOUN	B-ITEM
+4	or	CCONJ	O
+5	fryers	NOUN	B-ITEM
+6	,	PUNCT	O
+7	dark	ADJ	B-MODIFIER
+8	meat	NOUN	I-MODIFIER
+9	,	PUNCT	O
+10	meat	NOUN	B-ITEM
+11	and	CCONJ	O
+12	skin	NOUN	B-ITEM
+13	,	PUNCT	O
+14	raw	ADJ	B-MODIFIER
+
+# id = SR_19042
+# text = Snacks, potato chips, barbecue-flavor
+1	Snacks	NOUN	B-ITEM
+2	,	PUNCT	O
+3	potato	NOUN	B-ITEM
+4	chips	NOUN	I-ITEM
+5	,	PUNCT	O
+6	barbecue	NOUN	B-FLAVOR
+7	-	PUNCT	I-FLAVOR
+8	flavor	NOUN	I-FLAVOR
+
+# id = SR_22947
+# text = SUPPER BAKES MEAL KITS, Lemon Chicken with herb rice (chicken not included)
+1	SUPPER	PROPN	B-BRAND
+2	BAKES	PROPN	I-BRAND
+3	MEAL	PROPN	I-BRAND
+4	KITS	PROPN	I-BRAND
+5	,	PUNCT	O
+6	Lemon	NOUN	B-ITEM
+7	Chicken	NOUN	I-ITEM
+8	with	ADP	B-FLAVOR
+9	herb	NOUN	I-FLAVOR
+10	rice	NOUN	I-FLAVOR
+11	(	PUNCT	O
+12	chicken	NOUN	B-COMMENT
+13	not	PART	I-COMMENT
+14	included	VERB	I-COMMENT
+15	)	PUNCT	O
+
+# id = SR_14047
+# text = Beverages, UNILEVER, SLIMFAST Shake Mix, powder, 3-2-1 Plan
+1	Beverages	NOUN	B-ITEM
+2	,	PUNCT	O
+3	UNILEVER	PROPN	B-BRAND
+4	,	PUNCT	O
+5	SLIMFAST	PROPN	B-BRAND
+6	Shake	NOUN	B-ITEM
+7	Mix	NOUN	I-ITEM
+8	,	PUNCT	O
+9	powder	NOUN	B-ITEM
+10	,	PUNCT	O
+11	3	PROPN	B-BRAND
+12	-	PROPN	I-BRAND
+13	2	PROPN	I-BRAND
+14	-	PROPN	I-BRAND
+15	1	PROPN	I-BRAND
+16	Plan	PROPN	I-BRAND
+
+# id = SR_9153
+# text = Lemon juice from concentrate, canned or bottled
+1	Lemon	NOUN	B-ITEM
+2	juice	NOUN	I-ITEM
+3	from	ADP	I-ITEM
+4	concentrate	NOUN	I-ITEM
+5	,	PUNCT	O
+6	canned	VERB	B-MODIFIER
+7	or	CCONJ	O
+8	bottled	VERB	B-MODIFIER
+
+# id = SR_11203
+# text = Cress, garden, raw
+1	Cress	NOUN	B-ITEM
+2	,	PUNCT	O
+3	garden	NOUN	B-MODIFIER
+4	,	PUNCT	O
+5	raw	ADJ	B-MODIFIER
+
+# id = SR_16363
+# text = Cowpeas, common (blackeyes, crowder, southern), mature seeds, cooked, boiled, with salt
+1	Cowpeas	NOUN	B-ITEM
+2	,	PUNCT	O
+3	common	ADJ	B-ITEM
+4	(	PUNCT	O
+5	blackeyes	NOUN	B-ITEM
+6	,	PUNCT	O
+7	crowder	NOUN	B-ITEM
+8	,	PUNCT	O
+9	southern	ADJ	B-ITEM
+10	)	PUNCT	O
+11	,	PUNCT	O
+12	mature	ADJ	B-MODIFIER
+13	seeds	NOUN	I-MODIFIER
+14	,	PUNCT	O
+15	cooked	VERB	B-MODIFIER
+16	,	PUNCT	O
+17	boiled	VERB	B-MODIFIER
+18	,	PUNCT	O
+19	with	ADP	B-MODIFIER
+20	salt	NOUN	I-MODIFIER
+
+# id = SR_11242
+# text = Kohlrabi, cooked, boiled, drained, without salt
+1	Kohlrabi	NOUN	B-ITEM
+2	,	PUNCT	O
+3	cooked	VERB	B-MODIFIER
+4	,	PUNCT	O
+5	boiled	VERB	B-MODIFIER
+6	,	PUNCT	O
+7	drained	VERB	B-MODIFIER
+8	,	PUNCT	O
+9	without	ADP	B-MODIFIER
+10	salt	NOUN	I-MODIFIER
+
+# id = SR_21335
+# text = McDONALD'S, Hot Caramel Sundae
+1	McDONALD	PROPN	B-BRAND
+2	'	PART	I-BRAND
+3	S	PART	I-BRAND
+4	,	PUNCT	O
+5	Hot	ADJ	B-MODIFIER
+6	Caramel	NOUN	B-FLAVOR
+7	Sundae	NOUN	B-ITEM
+
+# id = SR_9074
+# text = Cherries, sweet, canned, pitted, heavy syrup pack, solids and liquids
+1	Cherries	NOUN	B-ITEM
+2	,	PUNCT	O
+3	sweet	ADJ	B-ITEM
+4	,	PUNCT	O
+5	canned	VERB	B-MODIFIER
+6	,	PUNCT	O
+7	pitted	VERB	B-MODIFIER
+8	,	PUNCT	O
+9	heavy	ADJ	B-MODIFIER
+10	syrup	NOUN	I-MODIFIER
+11	pack	NOUN	I-MODIFIER
+12	,	PUNCT	O
+13	solids	NOUN	B-MODIFIER
+14	and	CCONJ	O
+15	liquids	NOUN	B-MODIFIER
+
+# id = SR_16522
+# text = WORTHINGTON Vegetable Steaks, canned, unprepared
+1	WORTHINGTON	PROPN	B-BRAND
+2	Vegetable	NOUN	B-ITEM
+3	Steaks	NOUN	I-ITEM
+4	,	PUNCT	O
+5	canned	VERB	B-MODIFIER
+6	,	PUNCT	O
+7	unprepared	VERB	B-MODIFIER
+
+# id = SR_28313
+# text = Rolls, hamburger or hot dog, whole wheat
+1	Rolls	NOUN	B-ITEM
+2	,	PUNCT	O
+3	hamburger	NOUN	B-ITEM
+4	or	CCONJ	O
+5	hot	ADJ	B-ITEM
+6	dog	NOUN	I-ITEM
+7	,	PUNCT	O
+8	whole	ADJ	B-MODIFIER
+9	wheat	NOUN	I-MODIFIER
+
+# id = SR_17124
+# text = Veal, shoulder, arm, separable lean and fat, cooked, roasted
+1	Veal	NOUN	B-ITEM
+2	,	PUNCT	O
+3	shoulder	NOUN	B-ITEM
+4	,	PUNCT	O
+5	arm	NOUN	B-ITEM
+6	,	PUNCT	O
+7	separable	ADJ	B-MODIFIER
+8	lean	NOUN	I-MODIFIER
+9	and	CCONJ	I-MODIFIER
+10	fat	NOUN	I-MODIFIER
+11	,	PUNCT	O
+12	cooked	VERB	B-MODIFIER
+13	,	PUNCT	O
+14	roasted	VERB	B-MODIFIER
+
+# id = SR_20302
+# text = Macaroni, protein-fortified, cooked, enriched, (n x 6.25)
+1	Macaroni	NOUN	B-ITEM
+2	,	PUNCT	O
+3	protein	NOUN	B-MODIFIER
+4	-	PUNCT	I-MODIFIER
+5	fortified	ADJ	I-MODIFIER
+6	,	PUNCT	O
+7	cooked	VERB	B-MODIFIER
+8	,	PUNCT	O
+9	enriched	ADJ	B-MODIFIER
+10	,	PUNCT	O
+11	(	PUNCT	O
+12	n	NUM	B-COMMENT
+13	x	SYM	I-COMMENT
+14	6	NUM	I-COMMENT
+15	.	NUM	I-COMMENT
+16	25	NUM	I-COMMENT
+17	)	PUNCT	O
+
+# id = SR_13365
+# text = Beef, composite of trimmed retail cuts, separable lean only, trimmed to 0" fat, choice, cooked
+1	Beef	NOUN	B-ITEM
+2	,	PUNCT	O
+3	composite	NOUN	B-ITEM
+4	of	SCONJ	I-ITEM
+5	trimmed	VERB	I-ITEM
+6	retail	NOUN	I-ITEM
+7	cuts	NOUN	I-ITEM
+8	,	PUNCT	O
+9	separable	ADJ	B-MODIFIER
+10	lean	NOUN	I-MODIFIER
+11	only	ADV	I-MODIFIER
+12	,	PUNCT	O
+13	trimmed	VERB	B-MODIFIER
+14	to	ADP	I-MODIFIER
+15	0	NUM	I-MODIFIER
+16	"	SYM	I-MODIFIER
+17	fat	NOUN	I-MODIFIER
+18	,	PUNCT	O
+19	choice	NOUN	B-MODIFIER
+20	,	PUNCT	O
+21	cooked	VERB	B-MODIFIER
+
+# id = SR_11218
+# text = Gourd, white-flowered (calabash), raw
+1	Gourd	NOUN	B-ITEM
+2	,	PUNCT	O
+3	white	ADJ	B-ITEM
+4	-	PUNCT	I-ITEM
+5	flowered	NOUN	I-ITEM
+6	(	PUNCT	O
+7	calabash	NOUN	B-COMMENT
+8	)	PUNCT	O
+9	,	PUNCT	O
+10	raw	ADJ	B-MODIFIER
+
+# id = SR_10978
+# text = Pork, ground, 84% lean / 16% fat, cooked, pan-broiled
+1	Pork	NOUN	B-ITEM
+2	,	PUNCT	O
+3	ground	NOUN	B-ITEM
+4	,	PUNCT	O
+5	84	NUM	B-MODIFIER
+6	%	SYM	I-MODIFIER
+7	lean	NOUN	I-MODIFIER
+8	/	PUNCT	I-MODIFIER
+9	16	NUM	I-MODIFIER
+10	%	SYM	I-MODIFIER
+11	fat	NOUN	I-MODIFIER
+12	,	PUNCT	O
+13	cooked	VERB	B-MODIFIER
+14	,	PUNCT	O
+15	pan	NOUN	B-MODIFIER
+16	-	PUNCT	I-MODIFIER
+17	broiled	NOUN	I-MODIFIER
+
+# id = SR_4639
+# text = Salad dressing, ranch dressing, regular
+1	Salad	NOUN	B-ITEM
+2	dressing	NOUN	I-ITEM
+3	,	PUNCT	O
+4	ranch	ADJ	B-ITEM
+5	dressing	NOUN	B-ITEM
+6	,	PUNCT	O
+7	regular	ADJ	B-MODIFIER
+
+# id = SR_14162
+# text = Beverages, Apple juice drink, light, fortified with vitamin C
+1	Beverages	NOUN	B-ITEM
+2	,	PUNCT	O
+3	Apple	NOUN	B-ITEM
+4	juice	NOUN	I-ITEM
+5	drink	NOUN	I-ITEM
+6	,	PUNCT	O
+7	light	ADJ	B-MODIFIER
+8	,	PUNCT	O
+9	fortified	VERB	B-MODIFIER
+10	with	ADP	I-MODIFIER
+11	vitamin	NOUN	I-MODIFIER
+12	C	NOUN	I-MODIFIER

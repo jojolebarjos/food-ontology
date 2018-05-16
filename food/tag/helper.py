@@ -44,7 +44,6 @@ def generate_entities(input_path, output_path, count=50, by_frequency=True):
         lines[line] += 1
   
   # Select random samples
-  # TODO add option to output most common lines
   lines = [line for line, _ in lines.most_common()]
   if not by_frequency:
     random.shuffle(lines)
@@ -58,6 +57,38 @@ def generate_entities(input_path, output_path, count=50, by_frequency=True):
     for line in lines:
       file.write('# text = ' + line + '\n')
       tokens = [token for token, _, _ in tokenize(line)]
+      pos_tags = pos_tagger(tokens)
+      entity_tags = entity_tagger(tokens, pos_tags)
+      for index, (token, pos_tag, entity_tag) in enumerate(zip(tokens, pos_tags, entity_tags)):
+        file.write('%d\t%s\t%s\t%s\n' % (index + 1, token, pos_tag, entity_tag))
+      file.write('\n')
+
+
+# Generate additional samples for Part-of-Speech and food entities, with identifier
+def generate_entities_with_source(input_path, output_path, count=50):
+  
+  # Acquire existing lines
+  with io.open(os.path.join(HERE, 'entity.train.txt'), 'r', newline='\n', encoding='utf-8') as file:
+    existing_lines = {line[1:].strip() for line in file if line.startswith('#')}
+  
+  # Acquire raw lines
+  lines = pandas.read_csv(input_path, encoding='utf-8', delimiter='\t', quoting=3, keep_default_na=False, dtype=object)
+  lines = lines[['ID', 'LABEL']].values
+  lines = [line for line in lines if line[1] not in existing_lines]
+  
+  # Select random samples
+  random.shuffle(lines)
+  lines = lines[:count]
+  
+  # Automatically annotate
+  pos_tagger = get_pos_tagger()
+  entity_tagger = get_entity_tagger(pos_tagger)
+  with io.open(output_path, 'w', newline='\n', encoding='utf-8') as file:
+    file.write('\n')
+    for id, text in lines:
+      file.write('# id = ' + id + '\n')
+      file.write('# text = ' + text + '\n')
+      tokens = [token for token, _, _ in tokenize(text)]
       pos_tags = pos_tagger(tokens)
       entity_tags = entity_tagger(tokens, pos_tags)
       for index, (token, pos_tag, entity_tag) in enumerate(zip(tokens, pos_tags, entity_tags)):
