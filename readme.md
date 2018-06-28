@@ -39,6 +39,14 @@ python -c "import food.scraper.main"
 ```
 
 
+# Annotator
+
+...
+
+```
+python -c "import food.parser.main"
+```
+
 ## License
 
 The content of the ontology itself is licensed under the [Creative Commons Attribution Share Alike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/), and the underlying source code used to process and format that content is licensed under [The Unlicense](https://unlicense.org/UNLICENSE).
