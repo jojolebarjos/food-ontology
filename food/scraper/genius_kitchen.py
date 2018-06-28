@@ -15,16 +15,19 @@ class GeniusKitchenSpider(scrapy.Spider):
     
     # Acquire all recipes in expected identifier range
     def start_requests(self):
-        for id in range(1000): #550000
+        for id in range(1, 550000):
             yield scrapy.Request('http://www.geniuskitchen.com/%d' % id)
     
     # Do the parsing
     def parse(self, response):
-        self.logger.info('Yay: %s', response.url)
         
         # Get main identifiers
         url = response.url
-        id = int(url[url.rindex('-')+1:])
+        self.logger.info('%s', url)
+        try:
+            id = int(url[url.rindex('-')+1:])
+        except:
+            return
         title = response.selector.xpath('//h1/text()').extract_first()
         
         # Get average rating

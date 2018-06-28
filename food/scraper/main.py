@@ -23,18 +23,18 @@ settings = {
     # Try to be nice
     'ROBOTSTXT_OBEY' : True,
     'DOWNLOAD_DELAY' : 1,
-    'CONCURRENT_REQUESTS_PER_IP' : 1,
+    'AUTOTHROTTLE_ENABLED' : True,
+    'CONCURRENT_REQUESTS_PER_IP' : 4,
     
     # Use local cache
-    # TODO maybe define a more compact cache?
     'HTTPCACHE_ENABLED' : True,
-    'HTTPCACHE_GZIP' : True,
     'HTTPCACHE_EXPIRATION_SECS' : 0,
     'HTTPCACHE_DIR' : CACHE_FOLDER,
     'HTTPCACHE_IGNORE_HTTP_CODES' : [],
-    'HTTPCACHE_STORAGE' : 'scrapy.extensions.httpcache.FilesystemCacheStorage',
+    'HTTPCACHE_STORAGE' : 'food.scraper.cache.CacheStorage',
     
     # Disable irrelevant stuff
+    'LOG_LEVEL' : 'INFO',
     'COOKIES_ENABLED' : False,
     'TELNETCONSOLE_ENABLED' : False
 }
