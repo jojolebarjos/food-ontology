@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="/static/d3.v5.min.js"></script>
+    <style>
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: #ddd;
+            font-family: sans-serif;
+        }
+        
+        #container {
+            width: 75%;
+            margin: auto;
+            margin-top: 32px;
+        }
+        
+        #samples {
+            position: relative;
+        }
+        
+        .sample {
+            position: absolute;
+            width: 100%;
+            background-color: #eee;
+            margin: 0 0 .3em 0.1em;
+            padding: 0.1em 1em 0.1em .75em;
+            border-radius: 5px 15px 5px 15px;
+        }
+        
+        .left {
+            display: inline-block;
+            width: 48px;
+            vertical-align: top;
+            cursor: default;
+        }
+        
+        .right {
+            display: inline-block;
+        }
+        
+        .text {
+            display: block;
+            font-size: 24px;
+        }
+        
+        .tags {
+            display: block;
+            cursor: default;
+        }
+        
+        .tag {
+            display: inline-block;
+            margin: 0 0 .3em 0.1em;
+            padding: 0.1em 1em 0.1em .75em;
+            background-color: #444;
+            border-radius: 5px 15px 5px 15px;
+            color: #fff;
+            font-size: 13px;
+            -webkit-transition: .2s;
+            transition: .2s;
+        }
+        
+        .tag:hover {
+            background-color: #fff;
+            color: #444;
+        }
+        
+        .label {
+            display: inline-block;
+        }
+        
+        .tick {
+            display: inline-block;
+            width: 1.1em;
+            height: 1.1em;
+            text-align: center;
+            margin: 0.1em;
+            margin-left: 0.3em;
+            padding: 0.1em;
+            line-height: 1.1em;
+            border-radius: 3px;
+            background-color: #4b4;
+            color: #fff;
+            font-size: 10px;
+            -webkit-transition: .2s;
+            transition: .2s;
+        }
+        
+        .tick:hover {
+            background-color: #9f9;
+            color: #444;
+        }
+        
+        .cross {
+            display: inline-block;
+            width: 1.1em;
+            height: 1.1em;
+            text-align: center;
+            margin: 0.1em;
+            margin-left: 0.3em;
+            padding: 0.1em;
+            line-height: 1.1em;
+            border-radius: 3px;
+            background-color: #b44;
+            color: #fff;
+            font-size: 10px;
+            -webkit-transition: .2s;
+            transition: .2s;
+        }
+        
+        .cross:hover {
+            background-color: #f99;
+            color: #444;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="samples">
+            <div class="sample">
+                <div class="left">
+                    <div class="tick">&#10003;</div><div class="cross">&#10007;</div>
+                </div>
+                <div class="right">
+                    <div class="text">Hello, world!</div>
+                    <div class="tags">
+                        <div class="tag"><div class="label">salt</div><div class="tick">&#10003;</div><div class="cross">&#10007;</div></div>
+                        <div class="tag">pepper</div>
+                        <div class="tag">chocolate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var samples = [];
+        var next_id = 0;
+        
+        function acquire(count) {
+            d3
+                .json('/api/sample')
+                .then(function (data) {
+                    console.log(data);
+                    if (data.samples && data.samples.length > 0) {
+                        for (var i = 0; i < data.samples.length; ++i) {
+                            var sample = data.samples[i];
+                            sample.id = next_id;
+                            ++next_id;
+                            samples.push(sample);
+                        }
+                    }
+                    update();
+                });
+        }
+        
+        function update() {
+            
+            var update = d3
+                .select('#samples')
+                .selectAll('div')
+                .data(samples, function (s) { return s.id; });
+            
+            var enter = update
+                .enter()
+                .append('div')
+                .attr('class', 'sample')
+                .style('top', function (s, i) { console.log(i); return i * 32; })
+                .text(function (s) { return s.text; });
+            
+            
+            /*selection_enter
+                .append('div')
+                .text(function (s) { return s.text; });*/
+            
+            
+            update
+                .style('top', function (s, i) { return i * 32; });
+            
+            // to have all new items: update.merge(enter)
+            
+            var exit = update.exit();
+            
+            exit.remove();
+        }
+        
+    </script>
+</body>
+</html>
