@@ -7,7 +7,6 @@
         
         html, body {
             width: 100%;
-            height: 100%;
             margin: 0;
             padding: 0;
             background: #ddd;
@@ -21,15 +20,15 @@
         }
         
         #samples {
-            position: relative;
+            
         }
         
         .sample {
-            position: absolute;
             width: 100%;
             background-color: #eee;
             margin: 0 0 .3em 0.1em;
             padding: 0.1em 1em 0.1em .75em;
+            margin-top: 16px;
             border-radius: 5px 15px 5px 15px;
         }
         
@@ -51,6 +50,10 @@
         
         .tags {
             display: block;
+        }
+        
+        .container {
+            display: inline-block;
             cursor: default;
         }
         
@@ -119,25 +122,39 @@
             color: #444;
         }
         
+        .tagholder {
+            display: inline-block;
+            margin: 0 0 .3em 0.1em;
+            padding: 0.05em 1em 0.05em .75em;
+            background-color: #fff;
+            border-radius: 5px 15px 5px 15px;
+            color: #000;
+            font-size: 13px;
+        }
+        
+        .tagholder input {
+            border: none;
+        }
+        
     </style>
 </head>
 <body>
     
     <div id="container">
         <div id="samples">
-            <div class="sample">
-                <div class="left">
-                    <div class="tick">&#10003;</div><div class="cross">&#10007;</div>
-                </div>
-                <div class="right">
-                    <div class="text">Hello, world!</div>
-                    <div class="tags">
-                        <div class="tag"><div class="label">salt</div><div class="tick">&#10003;</div><div class="cross">&#10007;</div></div>
-                        <div class="tag">pepper</div>
-                        <div class="tag">chocolate</div>
-                    </div>
-                </div>
-            </div>
+            <!-- <div class="sample"> -->
+                <!-- <div class="left"> -->
+                    <!-- <div class="tick">&#10003;</div><div class="cross">&#10007;</div> -->
+                <!-- </div> -->
+                <!-- <div class="right"> -->
+                    <!-- <div class="text">Hello, world!</div> -->
+                    <!-- <div class="tags"> -->
+                        <!-- <div class="tag"><div class="label">salt</div><div class="tick">&#10003;</div><div class="cross">&#10007;</div></div> -->
+                        <!-- <div class="tag">pepper</div> -->
+                        <!-- <div class="tag">chocolate</div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
         </div>
     </div>
     <script>
@@ -158,38 +175,98 @@
                             samples.push(sample);
                         }
                     }
-                    update();
+                    update_samples();
                 });
         }
         
-        function update() {
+        // Update layout for current samples
+        function update_samples() {
             
             var update = d3
                 .select('#samples')
-                .selectAll('div')
+                .selectAll('.sample')
                 .data(samples, function (s) { return s.id; });
             
             var enter = update
                 .enter()
                 .append('div')
-                .attr('class', 'sample')
-                .style('top', function (s, i) { console.log(i); return i * 32; })
+                .attr('class', 'sample');
+            
+            var enter_left = enter
+                .append('div')
+                .attr('class', 'left');
+            
+            var enter_left_tick = enter_left
+                .append('div')
+                .attr('class', 'tick')
+                .text('\u2713');
+            
+            var enter_left_cross = enter_left
+                .append('div')
+                .attr('class', 'cross')
+                .text('\u2717');
+            
+            var enter_right = enter
+                .append('div')
+                .attr('class', 'right');
+            
+            var enter_right_text = enter_right
+                .append('div')
+                .attr('class', 'text')
                 .text(function (s) { return s.text; });
             
-            
-            /*selection_enter
+            var enter_right_tags = enter_right
                 .append('div')
-                .text(function (s) { return s.text; });*/
+                .attr('class', 'tags');
             
+            enter_right_tags
+                .each(function (s) {
+                    var parent = d3.select(this);
+                    var container = parent
+                        .append('div')
+                        .attr('class', 'container');
+                    s.container = container;
+                    update_tags(s);
+                    parent
+                        .append('div')
+                        .attr('class', 'tagholder')
+                        .append('input')
+                        .attr('type', 'text')
+                        .attr('placeholder', '...');
+                });
             
-            update
-                .style('top', function (s, i) { return i * 32; });
+            // Kill old items
+            update.exit().remove();
+        }
+        
+        function update_tags(sample) {
             
-            // to have all new items: update.merge(enter)
+            // Build tag list
+            var tags = [];
+            for (var label in sample.prediction) {
+                tags.push({
+                    'label' : label,
+                    'probability' : sample.prediction[label]
+                });
+            }
             
-            var exit = update.exit();
-            
-            exit.remove();
+            //
+            var update = sample.container
+                .selectAll('.tag')
+                .data(tags, function (t) { return t.label; });
+            var enter = update
+                .enter()
+                .append('div')
+                .attr('class', 'tag');
+            enter
+                .append('div')
+                .attr('class', 'label')
+                .text(function (t) { return t.label; });
+            enter
+                .append('div')
+                .attr('class', 'cross')
+                .text('\u2717');
+            update.exit().remove();
         }
         
     </script>
