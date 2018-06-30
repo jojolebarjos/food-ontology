@@ -55,8 +55,12 @@ class API:
     # TODO annotation accessors
     
     # Provide information about ontology
-    async def ontology(self, identifiers=None):
-        pass
+    async def label(self, identifiers=None):
+        ontology = await self._ontology.get()
+        if identifiers is None:
+            identifiers = ontology.get_identifiers()
+        labels = {id : ontology.get_properties(id) for id in identifiers}
+        return {'labels' : labels}
     
     # Train classifier based on existing samples
     async def train(self):

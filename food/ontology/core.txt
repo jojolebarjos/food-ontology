@@ -3100,12 +3100,12 @@ cowpea
   wikipedia Cowpea
 
 snap_pea
-  kind_of pea
+  kind_of legume
   label Snap pea
   wikipedia Snap_pea
 
 snow_pea
-  kind_of pea
+  kind_of legume
   label Snow pea
   label Mangetout
   wikipedia Snow_pea
@@ -3852,6 +3852,10 @@ turkey
 # Common mammals (mostly cattle)
 # TODO bovidae taxonomy
 
+human
+  label Human
+  wikipedia Human
+
 beef
   # NOTE here beef is used to describe cows, while this is usually related to any cattle meat
   kind_of animal
@@ -3885,13 +3889,20 @@ goat
   label Goat
   foodb 541
 
-mutton
+sheep
+  # TODO is this sheep/mutton distinction relevant?
   kind_of animal
+  label Sheep
+  wikipedia Sheep
+  wikipedia Lamb_and_mutton
+
+mutton
+  kind_of sheep
   label Mutton
   foodb 483
 
 lamb
-  kind_of mutton
+  kind_of sheep
   label Lamb
 
 horse
@@ -6039,7 +6050,7 @@ wine_substitute
 fortified_wine
   kind_of alcohol
   made_of wine
-  made_of distilled_alcohol
+  made_of liquor
   label Fortified wine
   foodb 278
   wikipedia Fortified_wine

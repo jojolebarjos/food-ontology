@@ -20,6 +20,19 @@ routes = web.RouteTableDef()
 # Static files
 routes.static('/static/', os.path.join(HERE, 'static'))
 
+# Query ontology properties
+@routes.get('/api/label')
+async def handle_api_label(request):
+    api = request.app['api']
+    if 'id' in request.query:
+        identifiers = request.query.getall('id')
+    else:
+        identifiers = None
+    # if len(id) == 0:
+        # raise web.HTTPBadRequest()
+    result = await api.label(identifiers)
+    return web.json_response(result)
+
 # Query random samples
 @routes.get('/api/sample')
 async def handle_api_sample(request):

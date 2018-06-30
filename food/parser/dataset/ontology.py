@@ -9,12 +9,52 @@ import os
 from food.ontology.reader import iterate
 
 
+# Attributes with structural meaning
+HIERARCHICAL_ATTRIBUTES = {
+    'product_of',
+    'derivative_of',
+    'part_of',
+    'made_of',
+    'kind_of'
+    # TODO substitute-of, modifier
+}
+
+
 # Ontology
 class Ontology:
     def __init__(self, entries):
-        self._entries = entries
+        self._attributes = {}
+        self._ascendants = {}
+        self._descendants = {}
+        for id, relationships in entries.items():
+            attributes = {}
+            ascendants = {}
+            for key, values in relationships.items():
+                collection = ascendants if key in HIERARCHICAL_ATTRIBUTES else attributes
+                collection[key] = values
+            self._attributes[id] = attributes
+            self._ascendants[id] = ascendants
+            self._descendants[id] = collections.defaultdict(list)
+        for id, relationships in self._ascendants.items():
+            for key, values in relationships.items():
+                for value in values:
+                    self._descendants[value][key].append(id)
     
-    # TODO ontology accessors
+    # Get all identifiers
+    def get_identifiers(self):
+        return self._attributes.keys()
+    
+    # Get nicely formatted properties of a single entry
+    def get_properties(self, identifier):
+        attributes = self._attributes.get(identifier)
+        if attributes is None:
+            return None
+        return {
+            'id' : identifier,
+            **attributes,
+            'ascendants' : self._ascendants[identifier],
+            'descendants' : self._descendants[identifier]
+        }
 
 
 # Asynchronous ontology container, with automatic refresh from disk
@@ -39,7 +79,7 @@ class OntologyContainer:
                 return self._ontology
         
         # Reload data
-        now = datetime.now()
+        now = datetime.now().timestamp()
         entries = collections.defaultdict(lambda: collections.defaultdict(list))
         for path in self._paths:
             with io.open(path, 'r', encoding='utf-8') as file:
