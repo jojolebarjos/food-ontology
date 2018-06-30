@@ -5,16 +5,13 @@ import os
 import asyncio
 from aiohttp import web
 import concurrent.futures
-import random
+
+from .api import API
+from .log import Log
 
 
 # Get model paths
 HERE = os.path.dirname(os.path.realpath(__file__))
-
-
-# Load data
-from .item import ItemCollection
-items = ItemCollection(os.path.join(HERE, 'ingredients.txt'))
 
 
 # Prepare routing table
@@ -26,35 +23,43 @@ routes.static('/static/', os.path.join(HERE, 'static'))
 # Query random samples
 @routes.get('/api/sample')
 async def handle_api_sample(request):
-    text = await items.get_random_item()
-    dummy = ['salt', 'pepper', 'chocolate', 'milk', 'egg']
-    random.shuffle(dummy)
-    dummy = dummy[:random.randint(0, len(dummy))]
-    dummy = {x : random.random() for x in dummy}
-    result = {
-        'samples' : [{
-            'text' : text,
-            'truth' : ['misc'],
-            'prediction' : dummy
-        }]
-    }
+    api = request.app['api']
+    result = await api.sample()
     return web.json_response(result)
 
 # Ask for model retraining
 @routes.post('/api/train')
 async def handle_api_train(request):
-    #asyncio.ensure_future(classifier.train())
-    await asyncio.sleep(1.0 + random.random() * 3)
+    api = request.app['api']
+    status = await api.train()
     return web.json_response({ 'success' : True })
+
+# Add logging middleware
+@web.middleware
+async def middleware(request, handler):
+    log = request.app['log']
+    _, result = await asyncio.gather(
+        log.info('%s %s' % (request.method, request.url)),
+        handler(request)
+    )
+    return result 
 
 
 # Create web server
-app = web.Application()
+app = web.Application(middlewares=[middleware])
 app.router.add_routes(routes)
 
 # Instantiate some workers
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
     app['executor'] = executor
+    
+    # Provide log manager
+    log = Log(executor)
+    app['log'] = log
+    
+    # Instantiate API container
+    api = API(executor, log)
+    app['api'] = api
 
     # Run web server
     web.run_app(app)
