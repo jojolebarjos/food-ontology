@@ -42,13 +42,13 @@ class NaiveBagOfWordModel(Model):
         
         # Load existing model, if available
         if self._path is not None and os.path.exists(self._path):
-            with io.open(self._path) as file:
+            with io.open(self._path, 'rb') as file:
                 dump = pickle.load(file)
             self._vocabulary, self._model, self._labels = dump
             self._vocabulary_map = {token : index for index, token in enumerate(self._vocabulary)}
     
     # Annotate text with current model
-    def classify(self, text):
+    def classify(self, text, verbose=False):
         if self._model is None:
             return None
         tokens = tokenize(text)
@@ -57,12 +57,19 @@ class NaiveBagOfWordModel(Model):
             j = self._vocabulary_map.get(token)
             if j is not None:
                 features[0, j] = 1.0
-        outputs = self._model.predict(features)
-        # TODO also output probabilities
-        return self._labels[outputs[0]]
+        if verbose:
+            probabilities = self._model.predict_proba(features)[0]
+            probabilities = [{'label' : l, 'probability' : p} for p, l in sorted(zip(probabilities, self._labels), reverse=True) if p > 0.1]
+            return probabilities
+        output = self._model.predict(features)[0]
+        return self._labels[output]
     
     # Train whole model from given samples
     def train(self, samples):
+        
+        # Handle multi labels as separate samples
+        samples = [(text, label) for text, labels in samples for label in labels]
+        print(samples)
         
         # Tokenize samples
         tokenized_samples = [tokenize(text) for text, _ in samples]
@@ -95,7 +102,8 @@ class NaiveBagOfWordModel(Model):
         # Create and train model
         model = sklearn.linear_model.LogisticRegression(
             solver = 'lbfgs',
-            multi_class = 'multinomial'
+            multi_class = 'multinomial',
+            n_jobs = 1
         )
         model.fit(features, outputs)
         

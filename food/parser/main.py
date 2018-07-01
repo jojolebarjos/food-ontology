@@ -28,24 +28,64 @@ async def handle_api_label(request):
         identifiers = request.query.getall('id')
     else:
         identifiers = None
-    # if len(id) == 0:
-        # raise web.HTTPBadRequest()
     result = await api.label(identifiers)
+    return web.json_response(result)
+
+# Classify specified text
+@routes.get('/api/classify')
+async def handle_api_classify(request):
+    api = request.app['api']
+    if 'text' not in request.query:
+        raise web.HTTPBadRequest()
+    text = request.query['text']
+    # TODO allow some threshold/limit parameter
+    result = await api.classify(text)
     return web.json_response(result)
 
 # Query random samples
 @routes.get('/api/sample')
 async def handle_api_sample(request):
     api = request.app['api']
-    result = await api.sample()
+    try:
+        count = int(request.query.get('count', 1))
+    except:
+        raise web.HTTPBadRequest()
+    result = await api.sample(count)
+    return web.json_response(result)
+
+# Add annotation
+@routes.post('/api/annotate')
+async def handle_api_sample(request):
+    api = request.app['api']
+    try:
+        payload = await request.json()
+    except:
+        raise web.HTTPBadRequest()
+    if type(payload) is not dict:
+        raise web.HTTPBadRequest()
+    samples = payload.get('samples', [payload])
+    entries = []
+    for sample in samples:
+        text = sample.get('text')
+        truth = sample.get('truth')
+        if type(truth) is str:
+            truth = [truth]
+        if type(text) is not str or not type(truth) is list or any(type(t) is not str for t in truth):
+            raise web.HTTPBadRequest()
+        entry = {
+            'key' : text,
+            'truth' : truth
+        }
+        entries.append(entry)
+    result = await api.annotate(entries)
     return web.json_response(result)
 
 # Ask for model retraining
 @routes.post('/api/train')
 async def handle_api_train(request):
     api = request.app['api']
-    status = await api.train()
-    return web.json_response({ 'success' : True })
+    result = await api.train()
+    return web.json_response(result)
 
 # Add logging middleware
 @web.middleware
