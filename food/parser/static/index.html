@@ -308,8 +308,20 @@
             update.exit().remove();
         }
         
+        // Ask for retraining
+        function train() {
+            d3.json('/api/train', {
+                method : 'POST',
+                body: JSON.stringify({}),
+                headers: {
+                    'Content-type' : 'application/json; charset=UTF-8'
+                }
+            });
+        }
+        
         // Start with some items
-        acquire(5);
+        acquire(25);
+        train();
         
     </script>
 </body>

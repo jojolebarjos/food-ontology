@@ -5553,6 +5553,10 @@ vegetable_oil
   label vegetable oil
   foodb 804
 
+cooking_oil
+  kind_of vegetable_oil
+  label Cooking oil
+
 almond_oil
   kind_of vegetable_oil
   label Almond oil
