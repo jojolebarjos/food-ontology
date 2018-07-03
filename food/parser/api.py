@@ -62,17 +62,39 @@ class API:
             # Acquire random sample
             text = await self._items.get_random_item()
             
+            # Compute prediction
+            predictions = await self._classifier.classify(text, verbose=True)
+            
             # Check if we have some annotation
             truth = await self._annotations.get(text)
+            truth = truth or []
+            truth = set(truth)
             
-            # Compute prediction
-            prediction = await self._classifier.classify(text, verbose=True)
+            # Pack labels
+            labels = {}
+            for label, probability in predictions.items():
+                labels[label] = {
+                    'type' : 'prediction',
+                    'label' : label,
+                    'probability' : probability
+                }
+            for label in truth:
+                if label in labels:
+                    labels[label]['type'] = 'truth'
+                else:
+                    labels[label] = {
+                        'type' : 'truth',
+                        'label' : label,
+                        'probability' : 0.0
+                    }
+            
+            # Keep only relevant values
+            labels = sorted([v for v in labels.values() if v['probability'] > 0.05 or v['type'] == 'truth'], key=lambda v: -v['probability'])
             
             # Register sample
             sample = {
                 'text' : text,
-                'truth' : truth,
-                'prediction' : prediction
+                'labels' : labels
             }
             samples.append(sample)
         return {

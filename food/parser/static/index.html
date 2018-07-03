@@ -61,7 +61,6 @@
             display: inline-block;
             margin: 0 0 .3em 0.1em;
             padding: 0.1em 1em 0.1em .75em;
-            background-color: #444;
             border-radius: 5px 15px 5px 15px;
             color: #fff;
             font-size: 13px;
@@ -72,6 +71,16 @@
         .tag:hover {
             background-color: #fff;
             color: #444;
+        }
+        
+        .truth {
+            background-color: #444;
+            border: 2px solid #444;
+        }
+        
+        .prediction {
+            background-color: #888;
+            border: 2px dashed #444;
         }
         
         .label {
@@ -141,85 +150,89 @@
 <body>
     
     <div id="container">
-        <div id="samples">
-            <!-- <div class="sample"> -->
-                <!-- <div class="left"> -->
-                    <!-- <div class="tick">&#10003;</div><div class="cross">&#10007;</div> -->
-                <!-- </div> -->
-                <!-- <div class="right"> -->
-                    <!-- <div class="text">Hello, world!</div> -->
-                    <!-- <div class="tags"> -->
-                        <!-- <div class="tag"><div class="label">salt</div><div class="tick">&#10003;</div><div class="cross">&#10007;</div></div> -->
-                        <!-- <div class="tag">pepper</div> -->
-                        <!-- <div class="tag">chocolate</div> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        </div>
+        <div id="samples"></div>
     </div>
     <script>
         
+        // Internal data storage
         var samples = [];
-        var next_id = 0;
         
+        // Ask for more data
         function acquire(count) {
             d3
-                .json('/api/sample')
+                .json('/api/sample?count=' + count)
                 .then(function (data) {
-                    console.log(data);
-                    if (data.samples && data.samples.length > 0) {
-                        for (var i = 0; i < data.samples.length; ++i) {
-                            var sample = data.samples[i];
-                            sample.id = next_id;
-                            ++next_id;
-                            samples.push(sample);
-                        }
+                    if (data.samples) {
+                        samples.push.apply(samples, data.samples);
+                        update_samples();
                     }
-                    update_samples();
                 });
         }
         
         // Update layout for current samples
         function update_samples() {
             
+            // Select samples elements
             var update = d3
                 .select('#samples')
                 .selectAll('.sample')
-                .data(samples, function (s) { return s.id; });
+                .data(samples, function (s) { return s.text; });
             
+            // Create layout
             var enter = update
                 .enter()
                 .append('div')
                 .attr('class', 'sample');
-            
             var enter_left = enter
                 .append('div')
                 .attr('class', 'left');
-            
-            var enter_left_tick = enter_left
-                .append('div')
-                .attr('class', 'tick')
-                .text('\u2713');
-            
-            var enter_left_cross = enter_left
-                .append('div')
-                .attr('class', 'cross')
-                .text('\u2717');
-            
             var enter_right = enter
                 .append('div')
                 .attr('class', 'right');
             
-            var enter_right_text = enter_right
+            // Create sample buttons
+            enter_left
+                .append('div')
+                .attr('class', 'tick')
+                .text('\u2713')
+                .on('click', function (s) {
+                    var labels = [];
+                    for (var i = 0; i < s.labels.length; ++i)
+                        if (s.labels[i].type == 'truth')
+                            labels.push(s.labels[i].label);
+                    var annotation = {
+                        'text' : s.text,
+                        'truth' : labels
+                    };
+                    d3.json('/api/annotate', {
+                        method : 'POST',
+                        body: JSON.stringify(annotation),
+                        headers: {
+                            'Content-type' : 'application/json; charset=UTF-8'
+                        }
+                    });
+                    samples = samples.filter(function (i) { return i.text != s.text; });
+                    update_samples();
+                });
+            enter_left
+                .append('div')
+                .attr('class', 'cross')
+                .text('\u2717')
+                .on('click', function (s, i) {
+                    samples = samples.filter(function (i) { return i.text != s.text; });
+                    update_samples();
+                });
+            
+            // Create text area
+            enter_right
                 .append('div')
                 .attr('class', 'text')
                 .text(function (s) { return s.text; });
             
-            var enter_right_tags = enter_right
+            // Create tag area
+            enter_right
                 .append('div')
-                .attr('class', 'tags');
-            
-            enter_right_tags
+                .attr('class', 'tags')
                 .each(function (s) {
                     var parent = d3.select(this);
                     var container = parent
@@ -232,42 +245,71 @@
                         .attr('class', 'tagholder')
                         .append('input')
                         .attr('type', 'text')
-                        .attr('placeholder', '...');
+                        .attr('placeholder', '...')
+                        .on('keydown', function (s) {
+                            if (event.keyCode == 13) {
+                                var candidate = this.value;
+                                this.value = '';
+                                for (var i = 0; i < s.labels.length; ++i)
+                                    if (s.labels[i].label == candidate) {
+                                        s.labels[i].type = 'truth';
+                                        update_tags(s);
+                                        return;
+                                    }
+                                s.labels.push({
+                                    'type' : 'truth',
+                                    'label' : candidate,
+                                    'probability' : 0.0
+                                })
+                                update_tags(s);
+                            }
+                        });
                 });
             
             // Kill old items
             update.exit().remove();
         }
         
+        // Update layout for a single sample
         function update_tags(sample) {
             
-            // Build tag list
-            var tags = [];
-            for (var label in sample.prediction) {
-                tags.push({
-                    'label' : label,
-                    'probability' : sample.prediction[label]
-                });
-            }
-            
-            //
+            // Select tag elements
             var update = sample.container
                 .selectAll('.tag')
-                .data(tags, function (t) { return t.label; });
+                .data(sample.labels, function (t) { return t.label; });
+            
+            // Create elements for new tags
             var enter = update
                 .enter()
-                .append('div')
-                .attr('class', 'tag');
+                .append('div');
             enter
                 .append('div')
                 .attr('class', 'label')
-                .text(function (t) { return t.label; });
+                .text(function (t) { return t.label + ' ' + Math.round(t.probability * 1000) / 10 + '%'; })
+                .on('click', function (t) {
+                    t.type = t.type == 'truth' ? 'prediction' : 'truth';
+                    update_tags(sample);
+                });
             enter
                 .append('div')
                 .attr('class', 'cross')
-                .text('\u2717');
+                .text('\u2717')
+                .on('click', function (t) {
+                    sample.labels = sample.labels.filter(function (i) { return i.label != t.label; });
+                    update_tags(sample);
+                });
+            
+            // Update tags
+            var merge = update.merge(enter);
+            merge
+                .attr('class', function (t) { return 'tag ' + t.type; });               
+            
+            // Remove old tags
             update.exit().remove();
         }
+        
+        // Start with some items
+        acquire(5);
         
     </script>
 </body>

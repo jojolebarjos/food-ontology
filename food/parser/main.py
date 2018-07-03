@@ -55,10 +55,11 @@ async def handle_api_sample(request):
 
 # Add annotation
 @routes.post('/api/annotate')
-async def handle_api_sample(request):
+async def handle_api_annotate(request):
     api = request.app['api']
     try:
         payload = await request.json()
+        print(payload)
     except:
         raise web.HTTPBadRequest()
     if type(payload) is not dict:

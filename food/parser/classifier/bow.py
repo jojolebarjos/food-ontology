@@ -59,7 +59,7 @@ class NaiveBagOfWordModel(Model):
                 features[0, j] = 1.0
         if verbose:
             probabilities = self._model.predict_proba(features)[0]
-            probabilities = [{'label' : l, 'probability' : p} for p, l in sorted(zip(probabilities, self._labels), reverse=True) if p > 0.1]
+            probabilities = dict(zip(self._labels, probabilities))
             return probabilities
         output = self._model.predict(features)[0]
         return self._labels[output]
