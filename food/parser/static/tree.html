@@ -113,12 +113,19 @@
                 .enter()
                 .append('g');
             enter
+                .attr('transform', function (n) { return 'translate(' + (n.x * 32.0) + ',' + (n.y * 32.0) + ')'; })
+                .style('opacity', 0.0)
+                .transition()
+                .delay(500)
+                .duration(250)
+                .style('opacity', 1.0);
+            enter
                 .append('rect')
-                .attr('width', 100.0)
+                .attr('width', 160.0)
                 .attr('height', 20.0)
                 .attr('rx', 2.0)
                 .attr('ry', 2.0)
-                .style('fill', '#fff')
+                .style('fill', '#839CA5')
                 .on('click', function (n) {
                     if (n.entry) {
                         expanded[n.entry.id] = !expanded[n.entry.id];
@@ -127,18 +134,59 @@
                 });
             enter
                 .append('text')
-                .attr('x', 4.0)
+                .attr('x', 24.0)
                 .attr('y', 14.0)
+                .style('pointer-events', 'none')
+                .style('font-family', 'sans-serif')
+                .style('font-size', 12)
                 .text(function (n) { return n.entry ? n.entry.id : '<>'; });
+            enter
+                .append('circle')
+                .attr('class', 'count')
+                .attr('cx', 10.0)
+                .attr('cy', 10.0)
+                .attr('r', 7.0)
+                .style('pointer-events', 'none')
+                .attr('fill', '#bbb')
+            enter
+                .append('text')
+                .attr('class', 'count')
+                .attr('x', 10.0)
+                .attr('y', 13.0)
+                .style('font-family', 'sans-serif')
+                .style('font-size', 8)
+                .attr('fill', '#444')
+                .attr('text-anchor', 'middle')
+                .style('pointer-events', 'none')
+                .text(function (n) { return n.children.length; })
             
             // Move items to their new location
             var merge = selection.merge(enter);
             merge
+                .transition()
+                .delay(250)
+                .style('opacity', 1.0)
+                .duration(250)
                 .attr('transform', function (n) { return 'translate(' + (n.x * 32.0) + ',' + (n.y * 32.0) + ')'; });
+            merge
+                .select('circle.count')
+                .transition()
+                .delay(250)
+                .duration(250)
+                .attr('fill', function (n) { return !n.entry || expanded[n.entry.id] ? '#ccc' : '#222'; })
+            merge
+                .select('text.count')
+                .transition()
+                .delay(250)
+                .duration(250)
+                .attr('fill', function (n) { return !n.entry || expanded[n.entry.id] ? '#222' : '#ccc'; })
             
             // Remove old items
             selection
                 .exit()
+                .transition()
+                .duration(250)
+                .style('opacity', 0.0)
                 .remove();
         }
         
