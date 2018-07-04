@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="/static/d3.v5.min.js"></script>
+    <style>
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: #ddd;
+            margin: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <svg id="display", width="100%" height="100%"></svg>
+    <script>
+        
+        // Add root group to apply pan&zoom behavior
+        var zoom = d3.zoom();
+        var svg = d3
+            .select('#display')
+            .call(
+                zoom.on('zoom', function () {
+                    svg.attr('transform', d3.event.transform);
+                })
+            )
+            .on('dblclick.zoom', null)
+            .append('g');
+        
+        // Acquire ontology
+        var ontology = null;
+        var root = null;
+        var nodes = [];
+        var expanded = {'' : true};
+        
+        // Reload ontology
+        function load() {
+            d3
+                .json('/api/label')
+                .then(function (data) {
+                    ontology = data.labels;
+                    
+                    // Create container
+                    root = {
+                        'id' : 0,
+                        'entry' : null,
+                        'x' : 0,
+                        'y' : 0,
+                        'parent' : null,
+                        'children' : []
+                    };
+                    var next_id = 1;
+                    
+                    // Recursive traversal
+                    function build(parent, entry) {
+                        var node = {
+                            'id' : next_id,
+                            'entry' : entry,
+                            'x' : 0,
+                            'y' : 0,
+                            'parent' : parent,
+                            'children' : []
+                        }
+                        ++next_id;
+                        parent.children.push(node);
+                        if (entry.descendants.kind_of)
+                            for (var i = 0; i < entry.descendants.kind_of.length; ++i)
+                                build(node, ontology[entry.descendants.kind_of[i]]);
+                    }
+                    
+                    // Register root nodes and their children
+                    for (var id in ontology) {
+                        var entry = ontology[id];
+                        if (!entry.ascendants.kind_of || entry.ascendants.kind_of.length == 0)
+                            build(root, entry);
+                    }
+                    
+                    // Refresh rendering
+                    update();
+                });
+        }
+        
+        // Refresh whole visualization
+        function update() {
+            
+            // Prepare flat list
+            nodes = [];
+            function prepare(node) {
+                nodes.push(node);
+                var height = 1;
+                if (node.entry == null || expanded[node.entry.id]) {
+                    for (var i = 0; i < node.children.length; ++i) {
+                        var child = node.children[i];
+                        child.x = node.x + 1;
+                        child.y = node.y + height;
+                        height += prepare(child);
+                    }
+                }
+                return height;
+            }
+            prepare(root);
+            
+            // Update interface
+            var selection = svg
+                .selectAll('g')
+                .data(nodes, function (n) { return n.id; });
+            
+            // Create new items
+            var enter = selection
+                .enter()
+                .append('g');
+            enter
+                .append('rect')
+                .attr('width', 100.0)
+                .attr('height', 20.0)
+                .attr('rx', 2.0)
+                .attr('ry', 2.0)
+                .style('fill', '#fff')
+                .on('click', function (n) {
+                    if (n.entry) {
+                        expanded[n.entry.id] = !expanded[n.entry.id];
+                        update();
+                    }
+                });
+            enter
+                .append('text')
+                .attr('x', 4.0)
+                .attr('y', 14.0)
+                .text(function (n) { return n.entry ? n.entry.id : '<>'; });
+            
+            // Move items to their new location
+            var merge = selection.merge(enter);
+            merge
+                .attr('transform', function (n) { return 'translate(' + (n.x * 32.0) + ',' + (n.y * 32.0) + ')'; });
+            
+            // Remove old items
+            selection
+                .exit()
+                .remove();
+        }
+        
+        // Start with only the roots
+        load();
+        
+    </script>
+</body>
+</html>

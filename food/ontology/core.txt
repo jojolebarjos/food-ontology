@@ -7749,10 +7749,6 @@ ice_cream
   label Ice cream
   foodb 641
 
-ice_cream
-  kind_of ice_cream
-  label Vanilla ice cream
-
 frozen_yoghurt
   kind_of ice_cream
   made_of yoghurt
