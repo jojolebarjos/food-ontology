@@ -38,7 +38,7 @@ class API:
         self._annotations = AnnotationDataset(ANNOTATIONS_JSON, self._executor)
         
         # Acquire raw items
-        self._items = ItemCollection(INGREDIENTS_TXT)
+        self._items = ItemCollection(INGREDIENTS_TXT, self._ontology, self._annotations, self._classifier, self._executor)
     
     # Provide information about ontology
     async def label(self, identifiers=None):
@@ -48,18 +48,23 @@ class API:
         labels = {id : ontology.get_properties(id) for id in identifiers}
         return {'labels' : labels}
     
+    # Auto-completion tool
+    async def suggest(self, query):
+        return await self._ontology.suggest(query)
+    
     # Annotate specified text
     async def classify(self, text):
         return await self._classifier.classify(text, verbose=True)
     
     # Acquire samples according to specified rules
-    async def sample(self, count=1):
+    async def sample(self, count=1, parents=None):
         # TODO add sampling parameters (e.g. expected class)
         # TODO add sampling priority based on usage in recipes (i.e. recipes almost complete should be focused)
         samples = []
         for i in range(count):
             
             # Acquire random sample
+            # TODO restrict to specified parents
             text = await self._items.get_random_item()
             
             # Compute prediction

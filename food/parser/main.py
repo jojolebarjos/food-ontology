@@ -31,6 +31,18 @@ async def handle_api_label(request):
     result = await api.label(identifiers)
     return web.json_response(result)
 
+# Get close ontology match
+@routes.get('/api/suggest')
+async def handle_api_suggest(request):
+    api = request.app['api']
+    if 'query' not in request.query:
+        raise web.HTTPBadRequest()
+    query = request.query['query']
+    result = {
+        'labels' : await api.suggest(query)
+    }
+    return web.json_response(result)
+
 # Classify specified text
 @routes.get('/api/classify')
 async def handle_api_classify(request):

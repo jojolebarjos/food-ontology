@@ -69,7 +69,6 @@ class NaiveBagOfWordModel(Model):
         
         # Handle multi labels as separate samples
         samples = [(text, label) for text, labels in samples for label in labels]
-        print(samples)
         
         # Tokenize samples
         tokenized_samples = [tokenize(text) for text, _ in samples]

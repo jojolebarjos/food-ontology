@@ -4,6 +4,7 @@
 import asyncio
 import collections
 from datetime import datetime
+import difflib
 import io
 import os
 from food.ontology.reader import iterate
@@ -55,6 +56,10 @@ class Ontology:
             'ascendants' : self._ascendants[identifier],
             'descendants' : self._descendants[identifier]
         }
+    
+    # Find closest entries
+    def get_close_matches(self, query):
+        return difflib.get_close_matches(query, list(self._attributes), n=16, cutoff=0.01)
 
 
 # Asynchronous ontology container, with automatic refresh from disk
@@ -94,5 +99,11 @@ class OntologyContainer:
         loop = asyncio.get_event_loop()
         async with self._lock:
             return await loop.run_in_executor(self._executor, self._get)
-            
+    
+    # Acquire suggestions
+    async def suggest(self, query):
+        ontology = await self.get()
+        loop = asyncio.get_event_loop()
+        return await loop.run_in_executor(self._executor, ontology.get_close_matches, query)
+    
     # TODO nice API

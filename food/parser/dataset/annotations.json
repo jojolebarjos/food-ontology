@@ -63,3 +63,9 @@
 {"key": "salt and pepper (careful here, your stock already contains some salt)", "truth": ["salt", "pepper"]}
 {"key": "1 large under ripe banana", "truth": ["banana"]}
 {"key": "2 teaspoons shortening or 2 teaspoons cooking oil", "truth": ["shortening", "cooking_oil"]}
+{"key": "mini chocolate chip, for garnish", "truth": ["chocolate"]}
+{"key": "2 tablespoons ground thyme", "truth": ["thyme"]}
+{"key": "6 large carrots, peeled and cut in slices of 3/4 inch", "truth": ["carrot"]}
+{"key": "4 stalks celery, cut into 2 inch lengths", "truth": ["celery"]}
+{"key": "3 lbs finely cut green tomatoes", "truth": ["green_tomato"]}
+{"key": "4 ounces mortadella, chopped", "truth": ["mortadella"]}

@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <script src="/static/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="awesomplete.css" />
+    <script src="/static/awesomplete.min.js"></script>
     <style>
         
         html, body {
@@ -148,11 +150,24 @@
     </style>
 </head>
 <body>
-    
     <div id="container">
         <div id="samples"></div>
     </div>
     <script>
+        
+        // Load ontology
+        var labels = [];
+        d3
+            .json('/api/label')
+            .then(function (data) {
+                for (var id in data.labels)
+                    labels.push(id);
+                labels.sort();
+                
+                // Acquire some elements, when we are ready
+                acquire(25);
+                train();
+            });
         
         // Internal data storage
         var samples = [];
@@ -240,7 +255,9 @@
                         .attr('class', 'container');
                     s.container = container;
                     update_tags(s);
-                    parent
+                    
+                    // Create additional input
+                    var input = parent
                         .append('div')
                         .attr('class', 'tagholder')
                         .append('input')
@@ -264,10 +281,24 @@
                                 update_tags(s);
                             }
                         });
+                    
+                    // Create 
+                    element = input.node();
+                    element.awesomplete = new Awesomplete(element, {
+                        list: labels,
+                        filter: Awesomplete.FILTER_CONTAINS
+                    });
                 });
             
             // Kill old items
-            update.exit().remove();
+            var exit = update.exit();
+            exit
+                .selectAll('.tagholder input')
+                .each(function (s) {
+                    this.awesomplete.destroy();
+                });
+            exit
+                .remove();
         }
         
         // Update layout for a single sample
@@ -318,10 +349,6 @@
                 }
             });
         }
-        
-        // Start with some items
-        acquire(25);
-        train();
         
     </script>
 </body>
