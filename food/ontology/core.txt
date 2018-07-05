@@ -2359,6 +2359,16 @@ lettuce
   kind_of leaf_vegetables
   label Lettuce
   foodb 95
+  wikipedia Lettuce
+
+curly_lettuce
+  kind_of lettuce
+  label Curly lettuce
+  label Wavy lettuce
+
+iceberg_lettuce
+  kind_of lettuce
+  label Iceberg lettuce
 
 romaine_lettuce
   kind_of lettuce
@@ -2858,6 +2868,11 @@ green_tomato
 orange_tomato
   kind_of tomato
   label Orange tomato
+
+plum_tomato
+  kind_of tomato
+  label Plum tomato
+  wikipedia Plum_tomato
 
 yellow_tomato
   kind_of tomato

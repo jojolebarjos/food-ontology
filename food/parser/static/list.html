@@ -265,7 +265,16 @@
                         .attr('placeholder', '...')
                         .on('keydown', function (s) {
                             if (event.keyCode == 13) {
+                                
+                                // If dropdown is shown, validate current selection
+                                this.awesomplete.select();
+                                
+                                // Make sure something is typed
                                 var candidate = this.value;
+                                if (candidate == '')
+                                    return;
+                                
+                                // Otherwise, add the tag
                                 this.value = '';
                                 for (var i = 0; i < s.labels.length; ++i)
                                     if (s.labels[i].label == candidate) {

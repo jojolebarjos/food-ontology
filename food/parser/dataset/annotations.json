@@ -69,3 +69,36 @@
 {"key": "4 stalks celery, cut into 2 inch lengths", "truth": ["celery"]}
 {"key": "3 lbs finely cut green tomatoes", "truth": ["green_tomato"]}
 {"key": "4 ounces mortadella, chopped", "truth": ["mortadella"]}
+{"key": "1/4 cup fresh blueberries (washed)", "truth": ["blueberry"]}
+{"key": "4 cups fresh tomatoes (peeled, or use canned Italian plum tomatoes)", "truth": ["tomato", "plum_tomato"]}
+{"key": "1 medium head iceberg lettuce, chopped", "truth": ["iceberg_lettuce"]}
+{"key": "2 teaspoons lime juice (from about 2 medium limes)", "truth": ["lime_juice"]}
+{"key": "1/8 cup orange juice", "truth": ["orange_juice"]}
+{"key": "3/4 cup blueberry jam, warmed in the microwave for 10-15 seconds", "truth": ["blueberry", "jam"]}
+{"key": "3 leaves lettuce, wavy", "truth": ["curly_lettuce"]}
+{"key": "1 1/2 cups california walnuts, toasted", "truth": ["walnut"]}
+{"key": "1 cup cheddar cheese, shredded, I like Mexican blend", "truth": ["cheddar_cheese"]}
+{"key": "1 egg, hard boiled cut in forths", "truth": ["hard_boiled_egg"]}
+{"key": "1 (8 ounce) container strawberries, quartered", "truth": ["strawberry"]}
+{"key": "3/4 cup milk (a bit more if using whole wheat flour)", "truth": ["milk"]}
+{"key": "1/3 cup pineapple juice, chilled", "truth": ["pineapple", "juice"]}
+{"key": "12 graham crackers (5-inch By 2 1/2-inch each)", "truth": ["graham_cracker"]}
+{"key": "1 cup shredded swiss cheese (4oz)", "truth": ["swiss_cheese"]}
+{"key": "1 1/4 teaspoons vinegar", "truth": ["vinegar"]}
+{"key": "2 tomatoes, peeled & chopped", "truth": ["tomato"]}
+{"key": "1 cup chopped black walnut (optional)", "truth": ["black_walnut"]}
+{"key": "1/3 cup butter (Smart Balance brand preferred)", "truth": ["butter"]}
+{"key": "1/4 cup pickled jalapeno pepper, diced (you can adjust this amount based on how spicy you like it)", "truth": ["chili_pepper"]}
+{"key": "2 cups pinto beans, fully cooked and drained", "truth": ["pinto_bean"]}
+{"key": "8 cherry tomatoes, quartered (about 3 ounces)", "truth": ["cherry_tomato"]}
+{"key": "2 heads garlic, outer skin removed, cut in half", "truth": ["garlic"]}
+{"key": "4 ounces snow peas, thinly sliced", "truth": ["snow_pea"]}
+{"key": "8 ounces chilled cream cheese, do not use whipped", "truth": ["cream_cheese"]}
+{"key": "1/4 lb melted honey", "truth": ["honey"]}
+{"key": "1/2 small cauliflower, broken into flowerets", "truth": ["cauliflower"]}
+{"key": "2 green apples", "truth": ["apple"]}
+{"key": "1 lb boneless pork, in 1 inch cubes", "truth": ["pork"]}
+{"key": "1 few sprigs fresh thyme leave", "truth": ["thyme"]}
+{"key": "1/3 cup fresh blueberries (thawed) or 1/3 cup frozen blueberries (thawed)", "truth": ["blueberry"]}
+{"key": "2 tablespoons dry poppy seeds", "truth": ["poppy_seed"]}
+{"key": "4 pieces mozzarella string cheese, cut in half", "truth": ["mozzarella_cheese"]}
