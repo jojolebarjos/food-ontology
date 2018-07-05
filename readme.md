@@ -44,6 +44,10 @@ python -c "import food.scraper.main"
 ...
 
 ```
+pip install CyHunspell regex
+```
+
+```
 python -c "import food.parser.main"
 ```
 

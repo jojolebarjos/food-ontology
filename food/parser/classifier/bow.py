@@ -2,6 +2,7 @@
 
 
 import collections
+import hunspell
 import io
 import numpy
 import os
@@ -12,25 +13,6 @@ import sklearn.linear_model
 from .core import Model
 
 
-# Simple token pattern
-token_regex = regex.compile(r'\s*(?:(\p{L}+)|.)', regex.UNICODE)
-
-# Tokenize and simplify in a language-agnostic manner
-def tokenize(text):
-    tokens = []
-    index = 0
-    while True:
-        match = token_regex.match(text, index)
-        if match is None:
-            return tokens
-        index = match.end(0)
-        word = match.group(1)
-        if word is not None:
-            # TODO apply basic stemming strategy?
-            token = word.lower()
-            tokens.append(token)
-
-
 # Basic token-based logistic regression
 class NaiveBagOfWordModel(Model):
     def __init__(self, path=None, min_token_count=1):
@@ -39,6 +21,8 @@ class NaiveBagOfWordModel(Model):
         self._vocabulary = None
         self._model = None
         self._labels = None
+        self._token_regex = regex.compile(r'\s*(?:(\p{L}+)|.)', regex.UNICODE)
+        self._hunspell = hunspell.Hunspell()
         
         # Load existing model, if available
         if self._path is not None and os.path.exists(self._path):
@@ -47,11 +31,27 @@ class NaiveBagOfWordModel(Model):
             self._vocabulary, self._model, self._labels = dump
             self._vocabulary_map = {token : index for index, token in enumerate(self._vocabulary)}
     
+    # Tokenize and simplify in a language-agnostic manner
+    def _tokenize(self, text):
+        tokens = []
+        index = 0
+        while True:
+            match = self._token_regex.match(text, index)
+            if match is None:
+                return tokens
+            index = match.end(0)
+            word = match.group(1)
+            if word is not None:
+                token = word.lower()
+                lemmas = self._hunspell.stem(token)
+                lemma = lemmas[0] if len(lemmas) > 0 else token
+                tokens.append(lemma)
+    
     # Annotate text with current model
     def classify(self, text, verbose=False):
         if self._model is None:
             return None
-        tokens = tokenize(text)
+        tokens = self._tokenize(text)
         features = scipy.sparse.dok_matrix((1, len(self._vocabulary)), dtype=numpy.float32)
         for token in tokens:
             j = self._vocabulary_map.get(token)
@@ -71,7 +71,7 @@ class NaiveBagOfWordModel(Model):
         samples = [(text, label) for text, labels in samples for label in labels]
         
         # Tokenize samples
-        tokenized_samples = [tokenize(text) for text, _ in samples]
+        tokenized_samples = [self._tokenize(text) for text, _ in samples]
         
         # Create vocabulary
         vocabulary = collections.Counter(token for tokens in tokenized_samples for token in tokens)

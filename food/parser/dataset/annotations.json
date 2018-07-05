@@ -11,13 +11,13 @@
 {"key": "2/3 cup granulated sugar (more or less, adjust to taste)", "truth": ["granulated_sugar"]}
 {"key": "9 ounces brown button mushrooms", "truth": ["brown_mushroom"]}
 {"key": "1 banana, sliced and frozen", "truth": ["banana"]}
-{"key": "onion, 2 table spoons", "truth": []}
+{"key": "onion, 2 table spoons", "truth": ["onion"]}
 {"key": "2 slices yellow American cheese", "truth": ["american_cheese"]}
 {"key": "buttermilk, as needed to desired texture", "truth": ["buttermilk"]}
 {"key": "1 1/2 cups butter (I have not tried this with margarine I do not like using it)", "truth": ["butter"]}
 {"key": "500 g of your favourite rice (like egg fried rice or pilau rice)", "truth": ["rice"]}
 {"key": "1 bunch cilantro, rinsed, rough-chopped", "truth": ["cilantro"]}
-{"key": "1/8 cup sliced red cabbage", "truth": []}
+{"key": "1/8 cup sliced red cabbage", "truth": ["red_cabbage"]}
 {"key": "2 (8 ounce) packages flour tortillas (8- or 10 pkg)", "truth": ["flour", "tortilla"]}
 {"key": "1-2 lb boneless chicken breast", "truth": ["chicken", "breast"]}
 {"key": "1-2 tablespoon chopped basil", "truth": ["basil"]}
@@ -102,3 +102,19 @@
 {"key": "1/3 cup fresh blueberries (thawed) or 1/3 cup frozen blueberries (thawed)", "truth": ["blueberry"]}
 {"key": "2 tablespoons dry poppy seeds", "truth": ["poppy_seed"]}
 {"key": "4 pieces mozzarella string cheese, cut in half", "truth": ["mozzarella_cheese"]}
+{"key": "1 cup sugar, and", "truth": ["sugar"]}
+{"key": "salted butter (lightly spread over bun halves)", "truth": ["salted_butter"]}
+{"key": "3 (8 ounce) cans pitted black olives, drained", "truth": ["black_olive"]}
+{"key": "1/2 lb uncooked shrimp, cleaned, shelled, deveined", "truth": ["shrimp"]}
+{"key": "1 medium zucchini, peeled", "truth": ["zucchini_squash"]}
+{"key": "3/4 cup diced peeled mango", "truth": ["mango"]}
+{"key": "1 tablespoon salt (i use kosher)", "truth": ["kosher_salt"]}
+{"key": "1/2-1 cup margarine or 1/2-1 cup butter", "truth": ["butter", "margarine"]}
+{"key": "sesame seed oil", "truth": ["sesame_oil"]}
+{"key": "1 1/2 teaspoons butter, for greasing pan", "truth": ["butter"]}
+{"key": "1/2 cup ground flax seeds (or any mix of ground seeds i.e. pumpkin, sesame, etc)", "truth": ["flaxseed", "seed"]}
+{"key": "1/2 Chinese cabbage (wombok)", "truth": ["chinese_cabbage"]}
+{"key": "1 cup sharp cheddar cheese or 1 cup gruyere cheese, 4 ounces shredded", "truth": ["cheddar_cheese", "gruyere_cheese"]}
+{"key": "3/4 cup romano cheese, dried, grated", "truth": ["romano_cheese"]}
+{"key": "2 scallions, white part only, trimmed and split lengthwise", "truth": ["scallion"]}
+{"key": "1 teaspoon dehydrated onion powder", "truth": ["onion_powder"]}
