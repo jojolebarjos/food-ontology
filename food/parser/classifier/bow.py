@@ -10,7 +10,39 @@ import pickle
 import regex
 import scipy.sparse
 import sklearn.linear_model
+import unidecode
 from .core import Model
+
+
+# Get supported character set
+LATIN_1_CHARACTERS = set(bytes((byte,)).decode('latin-1') for byte in range(256))
+
+# Convert character to latin-1
+def latinize_char(char):
+    if char in LATIN_1_CHARACTERS:
+        return char
+    codepoint = ord(char)
+    if codepoint > 0xeffff:
+        return ''
+    if 0xd800 <= codepoint and codepoint <= 0xdfff:
+        return ''
+    section = codepoint >> 8
+    position = codepoint % 256
+    try:
+        table = unidecode.Cache[section]
+    except KeyError:
+        try:
+            mod = __import__('unidecode.x%03x' % section, globals(), locals(), ['data'])
+            unidecode.Cache[section] = table = mod.data
+        except ImportError:
+            unidecode.Cache[section] = table = None
+        if table and len(table) > position:
+            return table[position]
+    return ''
+
+# Convert string to latin-1
+def latinize(text):
+    return ''.join(latinize_char(char) for char in text)
 
 
 # Basic token-based logistic regression
@@ -43,6 +75,7 @@ class NaiveBagOfWordModel(Model):
             word = match.group(1)
             if word is not None:
                 token = word.lower()
+                token = latinize(token)
                 lemmas = self._hunspell.stem(token)
                 lemma = lemmas[0] if len(lemmas) > 0 else token
                 tokens.append(lemma)
@@ -102,7 +135,8 @@ class NaiveBagOfWordModel(Model):
         model = sklearn.linear_model.LogisticRegression(
             solver = 'lbfgs',
             multi_class = 'multinomial',
-            n_jobs = 1
+            n_jobs = 1,
+            max_iter = 100
         )
         model.fit(features, outputs)
         

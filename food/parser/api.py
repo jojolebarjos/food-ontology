@@ -94,7 +94,7 @@ class API:
                     }
             
             # Keep only relevant values
-            labels = sorted([v for v in labels.values() if v['probability'] > 0.05 or v['type'] == 'truth'], key=lambda v: -v['probability'])
+            labels = sorted([v for v in labels.values() if v['probability'] > 0.01 or v['type'] == 'truth'], key=lambda v: -v['probability'])
             
             # Register sample
             sample = {
@@ -113,7 +113,22 @@ class API:
     
     # Train classifier based on existing samples
     async def train(self):
+        
+        # Get samples from ontology
+        ontology = await self._ontology.get()
+        ontology_samples = []
+        for id in ontology.get_identifiers():
+            properties = ontology.get_properties(id)
+            for text in properties['label']:
+                sample = (text, [id])
+                ontology_samples.append(sample)
+        print(ontology_samples)
+        
+        # Get samples from annotations
         annotations = await self._annotations.get()
-        samples = [(a['key'], a['truth']) for a in annotations.values()]
+        annotations_samples = [(a['key'], a['truth']) for a in annotations.values()]
+        
+        # Train model
+        samples = ontology_samples * 5 + annotations_samples
         await self._classifier.train(samples)
         return { 'success' : True }
