@@ -54,7 +54,7 @@ class API:
     
     # Annotate specified text
     async def classify(self, text, threshold=None):
-        results = await self._classifier.classify(text, verbose=True)
+        results = await self._classifier.classify(text)
         threshold = threshold or 0.0
         results = {label : probability for label, probability in sorted(results.items(), key=lambda x: x[1], reverse=True) if probability >= threshold}
         return results

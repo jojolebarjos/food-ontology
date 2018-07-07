@@ -37,11 +37,11 @@ class ModelClassifier(Classifier):
         self._lock = asyncio.Lock()
     
     # Run synchronous model in background
-    async def classify(self, text, verbose=False):
+    async def classify(self, text):
         async with self._lock:
             model = self._model
         loop = asyncio.get_event_loop()
-        return await loop.run_in_executor(self._executor, model.classify, text, verbose)
+        return await loop.run_in_executor(self._executor, model.classify, text)
     
     # Ask for retraining (old model should be available during training)
     async def train(self, samples):

@@ -91,7 +91,7 @@ class Vocabulary:
                 if j is not None:
                     # TODO maybe use frequency-based weighting
                     features[i, j] = 1.0
-        return features
+        return features.tocsc()
     
     # Create vocabulary from samples and return one-hot encoded data
     def fit_transform(self, texts):
