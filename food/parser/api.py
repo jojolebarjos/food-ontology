@@ -53,8 +53,11 @@ class API:
         return await self._ontology.suggest(query)
     
     # Annotate specified text
-    async def classify(self, text):
-        return await self._classifier.classify(text, verbose=True)
+    async def classify(self, text, threshold=None):
+        results = await self._classifier.classify(text, verbose=True)
+        threshold = threshold or 0.0
+        results = {label : probability for label, probability in sorted(results.items(), key=lambda x: x[1], reverse=True) if probability >= threshold}
+        return results
     
     # Acquire samples according to specified rules
     async def sample(self, count=1, parents=None):

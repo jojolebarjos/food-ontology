@@ -47,11 +47,22 @@ async def handle_api_suggest(request):
 @routes.get('/api/classify')
 async def handle_api_classify(request):
     api = request.app['api']
+    
+    # Get text sample
     if 'text' not in request.query:
         raise web.HTTPBadRequest()
     text = request.query['text']
-    # TODO allow some threshold/limit parameter
-    result = await api.classify(text)
+    
+    # Get probability threshold
+    try:
+        threshold = float(request.query.get('threshold', 0.0))
+    except:
+        raise web.HTTPBadRequest()
+    
+    # TODO allow some limit parameter?
+    
+    # Classify sample
+    result = await api.classify(text, threshold)
     return web.json_response(result)
 
 # Query random samples
