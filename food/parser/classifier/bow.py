@@ -11,6 +11,8 @@ import sklearn.feature_extraction.text
 import sklearn.linear_model
 import sklearn.pipeline
 import sklearn.preprocessing
+import sklearn_hierarchical.classifier
+from tqdm import tqdm
 
 from .core import Classifier
 from .vocabulary import tokenize
@@ -54,9 +56,10 @@ class HierarchyEncoder:
 
 # Scikit-Learn container
 class Model:
-    def __init__(self):
+    def __init__(self, hierarchical=False):
         self._hierarchy = None
         self._pipeline = None
+        self._hierarchical = hierarchical
     
     # Apply classification on a single sample
     def classify(self, text):
@@ -78,7 +81,7 @@ class Model:
         y = [hierarchy.label_map[i] for i in y]
         
         # Convert words to boolean arrays
-        count_vectorizer = sklearn.feature_extraction.text.CountVectorizer(
+        vectorizer = sklearn.feature_extraction.text.CountVectorizer(
             tokenizer = tokenize,
             # TODO ngram_range = (1, 1),
             # TODO stop_words = [...],
@@ -86,18 +89,31 @@ class Model:
             dtype = numpy.int32
         )
         
-        # Create basic classifier
-        logistic_regression = sklearn.linear_model.LogisticRegression(
-            solver = 'lbfgs',
-            multi_class = 'multinomial',
-            n_jobs = 1,
-            max_iter = 100
-        )
+        # If hierarchical classifier is requested, use dedicated package
+        print(self._hierarchical)
+        if self._hierarchical:
+            # TODO stopping_criteria provides suboptimal quality
+            classifier = sklearn_hierarchical.classifier.HierarchicalClassifier(
+                class_hierarchy = hierarchy.descendants,
+                root = 0,
+                prediction_depth = 'nmlnp',
+                stopping_criteria = 0.1,
+                progress_wrapper = tqdm
+            )
+        
+        # Otherwise, use a single logistic regression
+        else:
+            classifier = sklearn.linear_model.LogisticRegression(
+                solver = 'lbfgs',
+                multi_class = 'multinomial',
+                n_jobs = 1,
+                max_iter = 100
+            )
         
         # Create and train pipeline
         pipeline = sklearn.pipeline.Pipeline([
-            ('vectorizer', count_vectorizer),
-            ('classifier', logistic_regression)
+            ('vectorizer', vectorizer),
+            ('classifier', classifier)
         ])
         pipeline.fit(X, y)
         
@@ -120,10 +136,11 @@ class Model:
 
 # Asynchronous wrapper
 class BagOfWordClassifier(Classifier):
-    def __init__(self, path, executor):
+    def __init__(self, path, executor, hierarchical=False):
         self._path = path
         self._executor = executor
-        self._model = Model()
+        self._hierarchical = hierarchical
+        self._model = Model(self._hierarchical)
         self._lock = asyncio.Lock()
         try:
             self._model.load(self._path)
@@ -139,7 +156,7 @@ class BagOfWordClassifier(Classifier):
     
     # Ask for retraining (old model should be available during training)
     async def train(self, samples, adjacency):
-        model = Model()
+        model = Model(self._hierarchical)
         hierarchy = HierarchyEncoder(adjacency)
         loop = asyncio.get_event_loop()
         await loop.run_in_executor(self._executor, model.train, samples, hierarchy)

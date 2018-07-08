@@ -119,3 +119,6 @@
 {"key": "2 scallions, white part only, trimmed and split lengthwise", "truth": ["scallion"]}
 {"key": "1 teaspoon dehydrated onion powder", "truth": ["onion_powder"]}
 {"key": "250 g applesauce", "truth": ["applesauce"]}
+{"key": "1 medium tomatoes, cored and diced", "truth": ["tomato"]}
+{"key": "4 portabello mushrooms, thin sliced (4 slices each, 1-2 large slices per sandwich)", "truth": ["portobello_mushroom"]}
+{"key": "cabbage, shredded", "truth": ["cabbage"]}

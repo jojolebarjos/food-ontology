@@ -25,16 +25,32 @@ class API:
         self._log = log
         
         # Acquire default ontology
-        self._ontology = OntologyContainer([ONTOLOGY_TXT], self._executor)
+        self._ontology = OntologyContainer(
+            [ONTOLOGY_TXT],
+            self._executor
+        )
         
         # Create basic classifier
-        self._classifier = BagOfWordClassifier(CLASSIFIER_PKL, self._executor)
+        self._classifier = BagOfWordClassifier(
+            CLASSIFIER_PKL,
+            self._executor,
+            hierarchical = False
+        )
         
         # Prepare basic annotation dataset
-        self._annotations = AnnotationDataset(ANNOTATIONS_JSON, self._executor)
+        self._annotations = AnnotationDataset(
+            ANNOTATIONS_JSON,
+            self._executor
+        )
         
         # Acquire raw items
-        self._items = ItemCollection(INGREDIENTS_TXT, self._ontology, self._annotations, self._classifier, self._executor)
+        self._items = ItemCollection(
+            INGREDIENTS_TXT,
+            self._ontology,
+            self._annotations,
+            self._classifier,
+            self._executor
+        )
     
     # Provide information about ontology
     async def label(self, identifiers=None):

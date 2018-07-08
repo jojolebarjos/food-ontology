@@ -45,6 +45,7 @@ python -c "import food.scraper.main"
 
 ```
 pip install CyHunspell regex
+pip install git+https://github.com/globality-corp/sklearn-hierarchical-classification.git
 ```
 
 ```
