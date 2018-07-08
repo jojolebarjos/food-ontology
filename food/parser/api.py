@@ -4,8 +4,9 @@
 import asyncio
 import os
 import random
+import time
 
-from .classifier import ModelClassifier, NaiveBagOfWordModel
+from .classifier import BagOfWordClassifier
 from .dataset import AnnotationDataset, ItemCollection, OntologyContainer
 
 
@@ -27,12 +28,7 @@ class API:
         self._ontology = OntologyContainer([ONTOLOGY_TXT], self._executor)
         
         # Create basic classifier
-        def factory():
-            # TODO model parameters
-            return NaiveBagOfWordModel(
-                path = CLASSIFIER_PKL
-            )
-        self._classifier = ModelClassifier(factory, self._executor)
+        self._classifier = BagOfWordClassifier(CLASSIFIER_PKL, self._executor)
         
         # Prepare basic annotation dataset
         self._annotations = AnnotationDataset(ANNOTATIONS_JSON, self._executor)
@@ -71,7 +67,7 @@ class API:
             text = await self._items.get_random_item()
             
             # Compute prediction
-            predictions = await self._classifier.classify(text, verbose=True)
+            predictions = await self._classifier.classify(text)
             
             # Check if we have some annotation
             truth = await self._annotations.get(text)
@@ -116,6 +112,7 @@ class API:
     
     # Train classifier based on existing samples
     async def train(self):
+        start = time.perf_counter()
         
         # Get samples from ontology
         ontology = await self._ontology.get()
@@ -125,13 +122,31 @@ class API:
             for text in properties['label']:
                 sample = (text, [id])
                 ontology_samples.append(sample)
-        print(ontology_samples)
         
         # Get samples from annotations
         annotations = await self._annotations.get()
         annotations_samples = [(a['key'], a['truth']) for a in annotations.values()]
         
-        # Train model
+        # Properly weight samples
         samples = ontology_samples * 5 + annotations_samples
-        await self._classifier.train(samples)
-        return { 'success' : True }
+        
+        # Acquire hierarchy
+        ontology = await self._ontology.get()
+        identifiers = ontology.get_identifiers()
+        adjacency = {}
+        for id in identifiers:
+            properties = ontology.get_properties(id)
+            descendants = properties['descendants']
+            children = set()
+            for key, values in descendants.items():
+                for value in values:
+                    children.add(value)
+            adjacency[id] = children
+        
+        # Train model
+        await self._classifier.train(samples, adjacency)
+        end = time.perf_counter()
+        return {
+            'success' : True,
+            'time_elapsed' : end - start
+        }

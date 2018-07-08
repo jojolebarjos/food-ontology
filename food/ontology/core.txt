@@ -532,6 +532,7 @@ bay
 
 chive
   kind_of herb
+  kind_of allium
   label Chive
   foodb 9
   wikipedia Chives
@@ -539,6 +540,8 @@ chive
 coriander
   kind_of herb
   label Coriander
+  label Cilantro
+  label Chinese parsley
   foodb 61
   wikipedia Coriander
 
@@ -1935,6 +1938,16 @@ allium
   foodb 5
   wikipedia Allium
 
+chinese_onion
+  kind_of allium
+  label Chinese onion
+  label Chinese scallion
+  label Glittering chive
+  label Japanese scallion
+  label Kiangsi scallion
+  label Oriental onion
+  wikipedia Allium_chinense
+
 garlic
   kind_of allium
   label Garlic
@@ -1946,6 +1959,17 @@ soft_garlic
   label Soft-necked garlic
   foodb 880
 
+wild_garlic
+  kind_of allium
+  label Wild garlic
+  label Ramsons
+  label Buckrams
+  label Broad-leaved garlic
+  label Wood garlic
+  label Bear leek
+  label Bear's garlic
+  wikipedia Allium_ursinum
+
 leek
   kind_of allium
   label Leek
@@ -1955,18 +1979,25 @@ leek
 onion
   kind_of allium
   label Onion
+  label Bulb onion
+  label Common onion
   foodb 6
+
+red_onion
+  kind_of onion
+  label Red onion
+  wikipedia Red_onion
+
+shallot
+  kind_of onion
+  label Shallot
+  foodb 243
+  wikipedia Shallot
 
 sweet_onion
   kind_of onion
   label Sweet onion
   wikipedia Sweet_onion
-
-welsh_onion
-  kind_of onion
-  label Welsh onion
-  foodb 241
-  wikipedia Allium_fistulosum
 
 white_onion
   kind_of onion
@@ -1976,18 +2007,25 @@ white_onion
 yellow_onion
   kind_of onion
   label Yellow onion
+  label Brown onion
   wikipedia Yellow_onion
 
 scallion
   kind_of allium
   label Scallion
+  label Spring onion
+  label Green onion
+  label Salad onion
   wikipedia Scallion
 
-shallot
-  kind_of allium
-  label Shallot
-  foodb 243
-  wikipedia Shallot
+welsh_onion
+  kind_of scallion
+  label Welsh onion
+  label Bunching onion
+  label Long green onion
+  label Japanese bunching onion
+  foodb 241
+  wikipedia Allium_fistulosum
 
 wild_leek
   kind_of allium
@@ -3477,6 +3515,7 @@ coriander_seed
   kind_of seed
   part_of coriander
   label Coriander seed
+  label Cilantro seed
 
 cottonseed
   kind_of seed

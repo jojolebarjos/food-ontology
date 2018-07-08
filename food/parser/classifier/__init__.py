@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-from .bow import NaiveBagOfWordModel
+from .bow import BagOfWordClassifier
 from .cache import MemoryCacheClassifier
-from .core import Classifier, Model, ModelClassifier
+from .core import Classifier

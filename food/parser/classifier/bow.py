@@ -1,117 +1,146 @@
 # -*- coding: utf-8 -*-
 
 
+import asyncio
 import collections
 import io
 import numpy
 import os
 import pickle
+import sklearn.feature_extraction.text
 import sklearn.linear_model
+import sklearn.pipeline
+import sklearn.preprocessing
 
-from .core import Model
-from .vocabulary import Vocabulary
+from .core import Classifier
+from .vocabulary import tokenize
 
 
-# Simple classifier
-class LogisticNode:
+# Convert a dictionary of list (i.e. parent to children mapping)
+class HierarchyEncoder:
+    def __init__(self, adjacency, root='<root>'):
+        
+        # Extract labels
+        labels = set(adjacency.keys())
+        for children in adjacency.values():
+            labels.update(children)
+        if root in labels:
+            labels.remove(root)
+        label_list = [root] + sorted(labels)
+        label_map = {label : index for index, label in enumerate(label_list)}
+        
+        # Find parents
+        ascendants = collections.defaultdict(set)
+        descendants = collections.defaultdict(set)
+        for parent, children in adjacency.items():
+            parent = label_map[parent]
+            for child in children:
+                child = label_map[child]
+                ascendants[child].add(parent)
+                descendants[parent].add(child)
+        
+        # Make sure there is only one root
+        for child, parents in ascendants.items():
+            if child != 0 and 0 not in ascendants:
+                parents.add(0)
+                descendants[0].add(child)
+        
+        # Keep relevant information
+        self.label_list = label_list
+        self.label_map = label_map
+        self.ascendants = ascendants
+        self.descendants = descendants
+
+
+# Scikit-Learn container
+class Model:
     def __init__(self):
-        self._labels = None
-        self._mask = None
-        self._model = None
+        self._hierarchy = None
+        self._pipeline = None
     
-    # Train model from given samples
-    def fit(self, features, labels):
+    # Apply classification on a single sample
+    def classify(self, text):
+        if self._pipeline is None:
+            return {}
+        probabilities = self._pipeline.predict_proba([text])[0]
+        return dict(zip(self._hierarchy.label_list, probabilities))
+    
+    # Use samples to train a model from scratch
+    def train(self, samples, hierarchy):
         
-        # Wipe old model
-        self._labels = None
-        self._mask = None
-        self._model = None
+        # Split multilabels into separate samples
+        samples = [(text, label) for text, labels in samples for label in labels]
+        X, y = zip(*samples)
         
-        # Create tag set
-        self._labels = sorted(set(labels))
-        label_map = {label : index for index, label in enumerate(self._labels)}
+        # Encode labels
+        y = [hierarchy.label_map[i] for i in y]
         
-        # Handle naive tagset
-        if len(self._labels) == 0:
-            return
-        if len(self._labels) == 1:
-            self._labels = self._labels[0]
-            return
+        # Convert words to boolean arrays
+        count_vectorizer = sklearn.feature_extraction.text.CountVectorizer(
+            tokenizer = tokenize,
+            # TODO ngram_range = (1, 1),
+            # TODO stop_words = [...],
+            binary = True,
+            dtype = numpy.int32
+        )
         
-        # Build output vector
-        outputs = numpy.empty(len(labels), numpy.int32)
-        for i, label in enumerate(labels):
-            outputs[i] = label_map[label]
-        
-        # Build input mask (to avoid fitting unobserved words)
-        _, self._mask = (features.sum(axis=0) > 0).nonzero()
-        features = features[:, self._mask]
-        
-        # Fit model
-        # TODO remove warning related to n_jobs
-        model = sklearn.linear_model.LogisticRegression(
+        # Create basic classifier
+        logistic_regression = sklearn.linear_model.LogisticRegression(
             solver = 'lbfgs',
             multi_class = 'multinomial',
             n_jobs = 1,
             max_iter = 100
         )
-        model.fit(features, outputs)
-        self._model = model
+        
+        # Create and train pipeline
+        pipeline = sklearn.pipeline.Pipeline([
+            ('vectorizer', count_vectorizer),
+            ('classifier', logistic_regression)
+        ])
+        pipeline.fit(X, y)
+        
+        # Store relevant information
+        self._hierarchy = hierarchy
+        self._pipeline = pipeline
     
-    # Predict class probabilities of a single sample
-    def predict(self, features):
-        if self._labels is None:
-            return None
-        if type(self._labels) is not list:
-            return self._labels
-        features = features[:, self._mask]
-        probabilities = self._model.predict_proba(features)
-        return [dict(zip(self._labels, result)) for result in probabilities]
-
-
-# Flat classifier
-class FlatArchitecture:
-    def __init__(self, min_token_count=1):
-        self._node = LogisticNode()
-        self._vocabulary = Vocabulary(min_token_count)
+    # Export model to file
+    def save(self, path):
+        dump = (self._hierarchy, self._pipeline)
+        with io.open(path, 'wb') as file:
+            pickle.dump(dump, file)
     
-    def fit(self, texts, labels):
-        features = self._vocabulary.fit_transform(texts)
-        self._node.fit(features, labels)
-    
-    # Predict class probabilities of a single sample
-    def predict(self, text):
-        features = self._vocabulary.transform([text])
-        return self._node.predict(features)[0]
+    # Import model from file
+    def load(self, path):
+        with io.open(path, 'rb') as file:
+            dump = pickle.load(file)
+        self._hierarchy, self._pipeline = dump
 
 
-# TODO hierarchy-aware model
-
-
-# Basic token-based logistic regression
-class NaiveBagOfWordModel(Model):
-    def __init__(self, path=None, min_token_count=1):
+# Asynchronous wrapper
+class BagOfWordClassifier(Classifier):
+    def __init__(self, path, executor):
         self._path = path
-        self._architecture = FlatArchitecture(min_token_count)
-        if self._path is not None and os.path.exists(self._path):
-            with io.open(self._path, 'rb') as file:
-                self._architecture = pickle.load(file)
+        self._executor = executor
+        self._model = Model()
+        self._lock = asyncio.Lock()
+        try:
+            self._model.load(self._path)
+        except:
+            pass
     
-    # Annotate text with current model
-    def classify(self, text):
-        return self._architecture.predict(text)
+    # Run synchronous model in background
+    async def classify(self, text):
+        async with self._lock:
+            model = self._model
+        loop = asyncio.get_event_loop()
+        return await loop.run_in_executor(self._executor, model.classify, text)
     
-    # Train whole model from given samples
-    def train(self, samples):
-        
-        # Handle multi labels as separate samples
-        # TODO handle multi-labels at some point (e.g. need to split comma)
-        samples = [(text, label) for text, labels in samples for label in labels]
-        
-        # Create and train model
-        self._architecture.fit(*zip(*samples))
-        
-        # Export model
-        if self._path is not None:
-            with io.open(self._path, 'wb') as file:
-                pickle.dump(self._architecture, file)
+    # Ask for retraining (old model should be available during training)
+    async def train(self, samples, adjacency):
+        model = Model()
+        hierarchy = HierarchyEncoder(adjacency)
+        loop = asyncio.get_event_loop()
+        await loop.run_in_executor(self._executor, model.train, samples, hierarchy)
+        async with self._lock:
+            await loop.run_in_executor(self._executor, model.save, self._path)
+            self._model = model

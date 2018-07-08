@@ -16,7 +16,7 @@
 {"key": "buttermilk, as needed to desired texture", "truth": ["buttermilk"]}
 {"key": "1 1/2 cups butter (I have not tried this with margarine I do not like using it)", "truth": ["butter"]}
 {"key": "500 g of your favourite rice (like egg fried rice or pilau rice)", "truth": ["rice"]}
-{"key": "1 bunch cilantro, rinsed, rough-chopped", "truth": ["cilantro"]}
+{"key": "1 bunch cilantro, rinsed, rough-chopped", "truth": ["coriander"]}
 {"key": "1/8 cup sliced red cabbage", "truth": ["red_cabbage"]}
 {"key": "2 (8 ounce) packages flour tortillas (8- or 10 pkg)", "truth": ["flour", "tortilla"]}
 {"key": "1-2 lb boneless chicken breast", "truth": ["chicken", "breast"]}
@@ -44,7 +44,7 @@
 {"key": "1 cup mayonnaise (adding more after tossing with salad ingredients for more creaminess if desired)", "truth": ["mayonnaise"]}
 {"key": "1/2 teaspoon dried basil (can use fresh if you have it)", "truth": ["basil"]}
 {"key": "150 ml natural yoghurt or 150 ml Greek yogurt", "truth": ["yoghurt", "greek_yoghurt"]}
-{"key": "1 pinch cilantro (fresh is best)", "truth": ["cilantro"]}
+{"key": "1 pinch cilantro (fresh is best)", "truth": ["coriander"]}
 {"key": "2 cups heavy cream, sweetened with", "truth": ["heavy_cream"]}
 {"key": "5 cups watermelon, seeded and cubed (as sweet a melon as you can get)", "truth": ["watermelon"]}
 {"key": "1 tablespoon roasted red pepper, Chopped", "truth": ["red_bell_pepper"]}
@@ -118,3 +118,4 @@
 {"key": "3/4 cup romano cheese, dried, grated", "truth": ["romano_cheese"]}
 {"key": "2 scallions, white part only, trimmed and split lengthwise", "truth": ["scallion"]}
 {"key": "1 teaspoon dehydrated onion powder", "truth": ["onion_powder"]}
+{"key": "250 g applesauce", "truth": ["applesauce"]}

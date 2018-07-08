@@ -23,7 +23,7 @@ class MemoryCacheClassifier(Classifier):
         return result
     
     # Invalidate cache when underlying model is ready
-    async def train(self, samples):
+    async def train(self, samples, adjacency):
         await self._classifier.train(samples)
         async with self._lock:
             self._cache.clear()
