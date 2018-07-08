@@ -63,7 +63,9 @@ class Model:
         if self._pipeline is None:
             return {}
         probabilities = self._pipeline.predict_proba([text])[0]
-        return dict(zip(self._hierarchy.label_list, probabilities))
+        classes = self._pipeline.steps[-1][1].classes_
+        result = {self._hierarchy.label_list[classes[i]] : probability for i, probability in enumerate(probabilities)}
+        return result
     
     # Use samples to train a model from scratch
     def train(self, samples, hierarchy):
