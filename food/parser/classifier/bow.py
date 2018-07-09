@@ -15,7 +15,7 @@ import sklearn_hierarchical.classifier
 from tqdm import tqdm
 
 from .core import Classifier
-from .vocabulary import tokenize
+from ..text import tokenize
 
 
 # Convert a dictionary of list (i.e. parent to children mapping)
