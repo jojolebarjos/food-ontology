@@ -2,8 +2,14 @@
 
 
 import asyncio
+import collections
 import io
+import os
+import pickle
 import random
+from tqdm import tqdm
+
+from ..text import tokenize
 
 
 # Raw dataset container
@@ -14,10 +20,85 @@ class ItemCollection:
         self._annotations = annotations
         self._classifier = classifier
         self._executor = executor
+        self._lock = asyncio.Lock()
         with io.open(self._path, 'r', encoding='utf-8') as file:
             self._items = [line.strip() for line in file]
+        self._items_tokens = None
+        self._annotated_items = None
     
     # Naive random sampling
     async def get_random_item(self):
         index = random.randint(0, len(self._items))
         return self._items[index]
+    
+    # Invalidate and rebuild cache
+    def _rebuild(self, annotations):
+        
+        # Make sure items are tokenized and indexed
+        if self._items_tokens is None:
+            
+            # Use cache, if fresh
+            cache_path = self._path + '.pkl'
+            if os.path.exists(cache_path) and os.path.getmtime(cache_path) >= os.path.getmtime(self._path):
+                print('Reusing tokenized corpus')
+                with io.open(cache_path, 'rb') as file:
+                    self._items_tokens = pickle.load(file)
+            
+            # Otherwise, tokenize the whole corpus
+            else:
+                print('Tokenizing corpus...')
+                self._items_tokens = [set(tokenize(item)) for item in tqdm(self._items)]
+                with io.open(cache_path, 'wb') as file:
+                    pickle.dump(self._items_tokens, file)
+            
+            # Compute additional values
+            self._items_token_map = collections.defaultdict(list)
+            for index, tokens in enumerate(self._items_tokens):
+                for token in tokens:
+                    self._items_token_map[token].append(index)
+            self._items_token_count = collections.Counter({token : len(indices) for token, indices in self._items_token_map.items()})
+            print(self._items_token_count.most_common(20))
+        
+        # Acquire annotations and related tokens
+        print('Tokenizing annotations...')
+        self._annotated_items = [(a['key'], a['truth']) for a in annotations.values()]
+        self._annotated_items_tokens = [set(tokenize(key)) for key, _ in tqdm(self._annotated_items)]
+        self._annotated_items_token_set = {token for tokens in self._annotated_items_tokens for token in tokens}
+        
+        # Acquire most common unknown word
+        unknown_words = dict(self._items_token_count)
+        for token in self._annotated_items_token_set:
+            del unknown_words[token]
+        unknown_words = sorted(unknown_words.items(), key=lambda x: -x[1])
+        total = sum(count for _, count in unknown_words)
+        self._unknown_words = [(word, count / total) for word, count in unknown_words]
+        print(self._unknown_words[:20])
+    
+    # Lock-free invalidation
+    async def _invalidate(self):
+        loop = asyncio.get_event_loop()
+        annotations = await self._annotations.get()
+        await loop.run_in_executor(self._executor, self._rebuild, annotations)
+    
+    # Invalidate cache (useful after annotation or retraining)
+    async def invalidate(self):
+        async with self._lock:
+            await self._invalidate()
+    
+    # Sample items with unknown words that have high frequency
+    async def get_random_unknown_item(self):
+        async with self._lock:
+            
+            # Make sure we have cached data
+            if self._annotated_items is None:
+                await self._invalidate()
+            
+            # Sample candidate that have an unknown word, with respect to distribution
+            score = random.random()
+            for word, probability in self._unknown_words:
+                score -= probability
+                if score < 0.0:
+                    indices = self._items_token_map[word]
+                    index = indices[random.randint(0, len(indices))]
+                    return self._items[index]
+            return None

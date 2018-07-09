@@ -17,7 +17,6 @@ class AnnotationDataset:
         self._last = None
         self._lock = asyncio.Lock()
     
-    
     # Internal data acquisition
     def _get(self):
         
