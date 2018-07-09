@@ -142,10 +142,8 @@ class BagOfWordClassifier(Classifier):
         self._hierarchical = hierarchical
         self._model = Model(self._hierarchical)
         self._lock = asyncio.Lock()
-        try:
+        if os.path.exists(self._path):
             self._model.load(self._path)
-        except:
-            pass
     
     # Run synchronous model in background
     async def classify(self, text):

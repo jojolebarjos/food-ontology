@@ -80,9 +80,7 @@ class API:
             
             # Acquire random sample
             # TODO restrict to specified parents
-            text = await self._items.get_random_unknown_item()
-            if text is None:
-                text = await self._items.get_random_item()
+            text = await self._items.get_random_uncertain_item()
             
             # Compute prediction
             predictions = await self._classifier.classify(text)
