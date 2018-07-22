@@ -7,7 +7,7 @@ import random
 
 from .classifier import LogisticClassifier
 from .dataset import AnnotationDataset, OntologyContainer
-from .sampler import AnnotationSampler, LineSampler, PredictionSampler
+from .sampler import AnnotationSampler, ConfidenceSampler, LineSampler, PredictionSampler
 
 
 # Get folders and paths
@@ -47,7 +47,8 @@ class API:
         # Sample generator
         line_sampler = LineSampler(INGREDIENTS_TXT)
         prediction_sampler = PredictionSampler(line_sampler, self._classifier)
-        annotation_sampler = AnnotationSampler(prediction_sampler, self._annotations)
+        confidence_sampler = ConfidenceSampler(prediction_sampler, oversampling=5)
+        annotation_sampler = AnnotationSampler(confidence_sampler, self._annotations)
         self._sampler = annotation_sampler
     
     # Provide information about ontology
