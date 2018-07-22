@@ -34,21 +34,23 @@ settings = {
     'HTTPCACHE_STORAGE' : 'food.scraper.cache.CacheStorage',
     
     # Disable irrelevant stuff
-    'LOG_LEVEL' : 'INFO',
+    #'LOG_LEVEL' : 'INFO',
     'COOKIES_ENABLED' : False,
     'TELNETCONSOLE_ENABLED' : False
 }
 
 # Select spiders
 from .genius_kitchen import GeniusKitchenSpider
+from .bbc_good_food import BBCGoodFoodSpider
 spiders = [
-    GeniusKitchenSpider
+    BBCGoodFoodSpider
+    #GeniusKitchenSpider
 ]
 
 # Create process
 process = scrapy.crawler.CrawlerProcess(settings)
 for spider in spiders:
-    process.crawl(GeniusKitchenSpider)
+    process.crawl(spider)
 
 # Run
 process.start()

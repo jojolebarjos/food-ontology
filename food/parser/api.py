@@ -6,7 +6,7 @@ import os
 import random
 import time
 
-from .classifier import BagOfWordClassifier
+from .classifier import LogisticClassifier
 from .dataset import AnnotationDataset, ItemCollection, OntologyContainer
 
 
@@ -31,7 +31,7 @@ class API:
         )
         
         # Create basic classifier
-        self._classifier = BagOfWordClassifier(
+        self._classifier = LogisticClassifier(
             CLASSIFIER_PKL,
             self._executor,
             hierarchical = False
@@ -80,7 +80,8 @@ class API:
             
             # Acquire random sample
             # TODO restrict to specified parents
-            text = await self._items.get_random_uncertain_item()
+            text = await self._items.get_random_item()
+            # text = await self._items.get_random_uncertain_item()
             
             # Compute prediction
             predictions = await self._classifier.classify(text)

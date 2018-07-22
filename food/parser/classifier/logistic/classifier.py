@@ -14,8 +14,8 @@ import sklearn.preprocessing
 import sklearn_hierarchical.classifier
 from tqdm import tqdm
 
-from .core import Classifier
-from ..text import tokenize
+from ..classifier import Classifier
+from food.parser.text import tokenize
 
 
 # Convert a dictionary of list (i.e. parent to children mapping)
@@ -135,7 +135,7 @@ class Model:
 
 
 # Asynchronous wrapper
-class BagOfWordClassifier(Classifier):
+class LogisticClassifier(Classifier):
     def __init__(self, path, executor, hierarchical=False):
         self._path = path
         self._executor = executor

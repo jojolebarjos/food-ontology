@@ -2,7 +2,7 @@
 
 
 import asyncio
-from .core import Classifier
+from .classifier import Classifier
 
 
 # Simple cache strategy (no discard)

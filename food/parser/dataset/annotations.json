@@ -122,3 +122,6 @@
 {"key": "1 medium tomatoes, cored and diced", "truth": ["tomato"]}
 {"key": "4 portabello mushrooms, thin sliced (4 slices each, 1-2 large slices per sandwich)", "truth": ["portobello_mushroom"]}
 {"key": "cabbage, shredded", "truth": ["cabbage"]}
+{"key": "cilantro, chopped,to garnish (optional)", "truth": ["coriander"]}
+{"key": "3-4 ripe mangoes, cubed", "truth": ["mango"]}
+{"key": "2 cinnamon sticks, snapped in half", "truth": ["cinnamon"]}
