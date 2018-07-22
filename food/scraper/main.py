@@ -17,7 +17,7 @@ settings = {
     'BOT_NAME' : 'scraper',
     
     # Export to JSON file
-    'FEED_URI' : pathlib.Path(os.path.join(HERE, 'export.json')).as_uri(),
+    'FEED_URI' : pathlib.Path(os.path.join(HERE, 'export')).as_uri() + '/%(name)s.json',
     'FEED_EXPORT_ENCODING' : 'UTF-8',
     
     # Try to be nice
@@ -41,10 +41,10 @@ settings = {
 
 # Select spiders
 from .genius_kitchen import GeniusKitchenSpider
-from .bbc_good_food import BBCGoodFoodSpider
+from .epicurious import EpicuriousSpider
 spiders = [
-    BBCGoodFoodSpider
-    #GeniusKitchenSpider
+    GeniusKitchenSpider,
+    EpicuriousSpider
 ]
 
 # Create process
