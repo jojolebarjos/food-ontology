@@ -6,7 +6,8 @@ import os
 import random
 
 from .classifier import LogisticClassifier
-from .dataset import AnnotationDataset, OntologyContainer
+from .annotation import AnnotationDataset
+from .ontology import OntologyContainer
 from .sampler import AnnotationSampler, ConfidenceSampler, LineSampler, PredictionSampler
 
 
