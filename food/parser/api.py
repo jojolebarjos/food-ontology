@@ -4,7 +4,6 @@
 import asyncio
 import os
 import random
-import time
 
 from .classifier import LogisticClassifier
 from .dataset import AnnotationDataset, ItemCollection, OntologyContainer
@@ -30,16 +29,17 @@ class API:
             self._executor
         )
         
-        # Create basic classifier
-        self._classifier = LogisticClassifier(
-            CLASSIFIER_PKL,
-            self._executor,
-            hierarchical = False
-        )
-        
         # Prepare basic annotation dataset
         self._annotations = AnnotationDataset(
             ANNOTATIONS_JSON,
+            self._executor
+        )
+        
+        # Create basic classifier
+        self._classifier = LogisticClassifier(
+            self._ontology,
+            self._annotations,
+            CLASSIFIER_PKL,
             self._executor
         )
         
@@ -66,40 +66,42 @@ class API:
     
     # Annotate specified text
     async def classify(self, text, threshold=None):
-        results = await self._classifier.classify(text)
+        results = await self._classifier.classify([text])
+        results = results[0]
         threshold = threshold or 0.0
         results = {label : probability for label, probability in sorted(results.items(), key=lambda x: x[1], reverse=True) if probability >= threshold}
         return results
     
     # Acquire samples according to specified rules
     async def sample(self, count=1, parents=None):
-        # TODO add sampling parameters (e.g. expected class)
-        # TODO add sampling priority based on usage in recipes (i.e. recipes almost complete should be focused)
-        samples = []
-        for i in range(count):
-            
-            # Acquire random sample
-            # TODO restrict to specified parents
+        
+        # Acquire random samples
+        texts = []
+        for _ in range(count):
             text = await self._items.get_random_item()
-            # text = await self._items.get_random_uncertain_item()
-            
-            # Compute prediction
-            predictions = await self._classifier.classify(text)
-            
-            # Check if we have some annotation
-            truth = await self._annotations.get(text)
-            truth = truth or []
-            truth = set(truth)
-            
-            # Pack labels
+            texts.append(text)
+        
+        # Predict labels
+        predictions = await self._classifier.classify(texts)
+        
+        # Acquire any existing annotation
+        annotations = []
+        for text in texts:
+            annotation = await self._annotations.get(text)
+            annotation = set(annotation or [])
+            annotations.append(annotation)
+        
+        # Pack samples
+        samples = []
+        for text, prediction, annotation in zip(texts, predictions, annotations):
             labels = {}
-            for label, probability in predictions.items():
+            for label, probability in prediction.items():
                 labels[label] = {
                     'type' : 'prediction',
                     'label' : label,
                     'probability' : probability
                 }
-            for label in truth:
+            for label in annotation:
                 if label in labels:
                     labels[label]['type'] = 'truth'
                 else:
@@ -118,6 +120,8 @@ class API:
                 'labels' : labels
             }
             samples.append(sample)
+        
+        # Ready
         return {
             'samples' : samples
         }
@@ -129,41 +133,4 @@ class API:
     
     # Train classifier based on existing samples
     async def train(self):
-        start = time.perf_counter()
-        
-        # Get samples from ontology
-        ontology = await self._ontology.get()
-        ontology_samples = []
-        for id in ontology.get_identifiers():
-            properties = ontology.get_properties(id)
-            for text in properties['label']:
-                sample = (text, [id])
-                ontology_samples.append(sample)
-        
-        # Get samples from annotations
-        annotations = await self._annotations.get()
-        annotations_samples = [(a['key'], a['truth']) for a in annotations.values()]
-        
-        # Properly weight samples
-        samples = ontology_samples * 5 + annotations_samples
-        
-        # Acquire hierarchy
-        ontology = await self._ontology.get()
-        identifiers = ontology.get_identifiers()
-        adjacency = {}
-        for id in identifiers:
-            properties = ontology.get_properties(id)
-            descendants = properties['descendants']
-            children = set()
-            for key, values in descendants.items():
-                for value in values:
-                    children.add(value)
-            adjacency[id] = children
-        
-        # Train model
-        await self._classifier.train(samples, adjacency)
-        end = time.perf_counter()
-        return {
-            'success' : True,
-            'time_elapsed' : end - start
-        }
+        return await self._classifier.train()
