@@ -12,6 +12,7 @@ from .log import Log
 
 # Get model paths
 HERE = os.path.dirname(os.path.realpath(__file__))
+SERVER_LOG = os.path.join(HERE, 'model', 'server.log')
 
 
 # Prepare routing table
@@ -131,7 +132,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
     app['executor'] = executor
     
     # Provide log manager
-    log = Log(executor)
+    log = Log(SERVER_LOG, executor)
     app['log'] = log
     
     # Instantiate API container

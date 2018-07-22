@@ -4,20 +4,13 @@
 import asyncio
 from datetime import datetime
 import io
-import os
-
-
-# Get local directory
-HERE = os.path.dirname(os.path.realpath(__file__))
-SERVER_LOG = os.path.join(HERE, 'server.log')
 
 
 # Basic log manager
 class Log:
-    def __init__(self, executor):
+    def __init__(self, path, executor):
         self._executor = executor
-        self._path = SERVER_LOG
-        self._file = io.open(self._path, 'a', encoding='utf-8', newline='\n')
+        self._file = io.open(path, 'a', encoding='utf-8', newline='\n')
         self._lock = asyncio.Lock()
         self._print('Log file open')
     

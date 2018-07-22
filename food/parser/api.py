@@ -6,15 +6,16 @@ import os
 import random
 
 from .classifier import LogisticClassifier
-from .dataset import AnnotationDataset, ItemCollection, OntologyContainer
+from .dataset import AnnotationDataset, OntologyContainer
+from .sampler import AnnotationSampler, LineSampler, PredictionSampler
 
 
 # Get folders and paths
 HERE = os.path.dirname(os.path.realpath(__file__))
 ONTOLOGY_TXT = os.path.join(HERE, '..', 'ontology', 'core.txt')
-INGREDIENTS_TXT = os.path.join(HERE, 'dataset', 'ingredients.txt')
-ANNOTATIONS_JSON = os.path.join(HERE, 'dataset', 'annotations.json')
-CLASSIFIER_PKL = os.path.join(HERE, 'classifier', 'model.pkl')
+INGREDIENTS_TXT = os.path.join(HERE, 'model', 'ingredients.txt')
+ANNOTATIONS_JSON = os.path.join(HERE, 'model', 'annotations.json')
+CLASSIFIER_PKL = os.path.join(HERE, 'model', 'model.pkl')
 
 
 # Main logic container
@@ -43,14 +44,11 @@ class API:
             self._executor
         )
         
-        # Acquire raw items
-        self._items = ItemCollection(
-            INGREDIENTS_TXT,
-            self._ontology,
-            self._annotations,
-            self._classifier,
-            self._executor
-        )
+        # Sample generator
+        line_sampler = LineSampler(INGREDIENTS_TXT)
+        prediction_sampler = PredictionSampler(line_sampler, self._classifier)
+        annotation_sampler = AnnotationSampler(prediction_sampler, self._annotations)
+        self._sampler = annotation_sampler
     
     # Provide information about ontology
     async def label(self, identifiers=None):
@@ -73,55 +71,12 @@ class API:
         return results
     
     # Acquire samples according to specified rules
-    async def sample(self, count=1, parents=None):
-        
-        # Acquire random samples
-        texts = []
-        for _ in range(count):
-            text = await self._items.get_random_item()
-            texts.append(text)
-        
-        # Predict labels
-        predictions = await self._classifier.classify(texts)
-        
-        # Acquire any existing annotation
-        annotations = []
-        for text in texts:
-            annotation = await self._annotations.get(text)
-            annotation = set(annotation or [])
-            annotations.append(annotation)
-        
-        # Pack samples
-        samples = []
-        for text, prediction, annotation in zip(texts, predictions, annotations):
-            labels = {}
-            for label, probability in prediction.items():
-                labels[label] = {
-                    'type' : 'prediction',
-                    'label' : label,
-                    'probability' : probability
-                }
-            for label in annotation:
-                if label in labels:
-                    labels[label]['type'] = 'truth'
-                else:
-                    labels[label] = {
-                        'type' : 'truth',
-                        'label' : label,
-                        'probability' : 0.0
-                    }
-            
-            # Keep only relevant values
-            labels = sorted([v for v in labels.values() if v['probability'] > 0.01 or v['type'] == 'truth'], key=lambda v: -v['probability'])
-            
-            # Register sample
-            sample = {
-                'text' : text,
-                'labels' : labels
-            }
-            samples.append(sample)
-        
-        # Ready
+    async def sample(self, count=1):
+        samples = await self._sampler.sample(count)
+        for sample in samples:
+            prediction = sample.get('prediction', {})
+            prediction = {label : probability for label, probability in prediction.items() if probability > 0.01}
+            sample['prediction'] = prediction
         return {
             'samples' : samples
         }

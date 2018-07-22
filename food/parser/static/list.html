@@ -178,7 +178,35 @@
                 .json('/api/sample?count=' + count)
                 .then(function (data) {
                     if (data.samples) {
-                        samples.push.apply(samples, data.samples);
+                        var new_samples = [];
+                        for (var i = 0; i < data.samples.length; ++i) {
+                            var s = data.samples[i];
+                            var sample = {
+                                'text' : s.text,
+                                'labels' : []
+                            };
+                            for (var l in s.prediction) {
+                                var p = s.prediction[l];
+                                var label = {
+                                    'type' : 'prediction',
+                                    'label' : l,
+                                    'probability' : p
+                                };
+                                sample.labels.push(label);
+                            }
+                            if (s.annotation)
+                                for (var j = 0; j < s.annotation.length; ++j) {
+                                    var l = s.annotation[j];
+                                    var label = {
+                                        'type' : 'annotation',
+                                        'label' : l,
+                                        'probability' : s.prediction[l] || 0.0
+                                    }
+                                    sample.labels.push(label);
+                                }
+                            new_samples.push(sample);
+                        }
+                        samples.push.apply(samples, new_samples);
                         update_samples();
                     }
                 });
