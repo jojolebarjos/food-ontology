@@ -17,6 +17,10 @@ class Model:
     # Classify each sample used trained model
     def classify(self, texts):
         
+        # Trivial case
+        if len(texts) == 0:
+            return []
+        
         # If no model has been trained, give nothing
         if self._pipeline is None:
             return [{} for _ in texts]

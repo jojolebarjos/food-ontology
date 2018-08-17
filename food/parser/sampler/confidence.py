@@ -15,9 +15,19 @@ class ConfidenceSampler(Sampler):
     
     # Generate and prune samples
     async def sample(self, count=1):
-        oversamples = await self._sampler.sample(count * self._oversampling)
-        random.shuffle(oversamples)
+        overcount = count * self._oversampling
+        oversamples = await self._sampler.sample(overcount)
+        
+        # If insufficient samples are available, take as much as possible, based on confidence
+        if len(oversamples) < overcount:
+            oversamples.sort(key=lambda s: max(s.get('prediction', {}).values()))
+            samples = oversamples[:count]
+            random.shuffle(samples)
+            return oversamples
+        
+        # Otherwise, use chunk based sampling (to avoid using only the worst ones)
         samples = []
+        random.shuffle(oversamples)
         for i in range(count):
             batch = oversamples[i * self._oversampling : (i + 1) * self._oversampling]
             worst_sample = None

@@ -46,7 +46,7 @@ class API:
         )
         
         # Sample generator
-        line_sampler = LineSampler(INGREDIENTS_TXT)
+        line_sampler = LineSampler(INGREDIENTS_TXT, self._annotations)
         prediction_sampler = PredictionSampler(line_sampler, self._classifier)
         confidence_sampler = ConfidenceSampler(prediction_sampler, oversampling=5)
         annotation_sampler = AnnotationSampler(confidence_sampler, self._annotations)
