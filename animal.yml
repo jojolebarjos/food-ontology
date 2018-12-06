@@ -1,0 +1,1989 @@
+
+
+# TODO major cleaning and simplification needed
+
+#
+# Mammals
+#
+
+
+# Human, hopefully used for its milk only
+# TODO other monkey?
+
+human:
+  kind_of: mammal
+  label: Human
+  wikipedia: Human
+
+
+# Cingulata
+
+cingulata:
+  kind_of: mammalia
+  label: Cingulata
+  wikipedia: Cingulata
+  
+armadillo:
+  kind_of: cingulata
+  label: Armadillo
+
+
+# Artiodactyla animal
+
+artiodactyla:
+  kind_of: mammal
+  label: Artiodactyla
+  
+# Camelidae
+
+camelidae:
+  kind_of: artiodactyla
+  label: Camelidae
+  
+camel:
+  kind_of: camelidae
+  label: Camel
+  wikipedia: Camel
+  
+dromedary:
+  kind_of: camelidae
+  label: Dromedary
+  wikipedia: Dromedary
+
+  
+# Cervidae
+  
+cervidae:
+  kind_of: artiodactyla
+  label: Cervidae
+
+# Caribou related animal
+  
+capreolinae:
+  kind_of: cervidae
+  label: Capreolinae
+
+caribou:
+  kind_of: capreolinae
+  label: Caribou
+  label: Reindeer
+  foodb: 324
+  wikipedia: Reindeer
+
+moose:
+  kind_of: capreolinae
+  label: Moose
+  foodb: 415
+  
+# Deer related animal
+  
+cervinae:
+  kind_of: cervidae
+  label: Cervinae
+
+deer:
+  kind_of: cervinae
+  label: Deep
+  label: Venison
+  foodb: 535
+  wikipedia: Deer
+
+mule_deer:
+  kind_of: deer
+  label: Mule deer
+  foodb: 353
+
+sitka_deer:
+  kind_of: deer
+  label: Sitka deer
+
+elk:
+  kind_of: cervinae
+  label: Elk
+  foodb: 364
+  
+# Pork related animal
+  
+suidae:
+  kind_of: artiodactyla
+  label: Suidae
+  
+sus:
+  kind_of: suidae
+  label: Sus
+
+swine:
+  kind_of: sus
+  label: Swine
+  label: Domestic pig
+  label: Hog
+  wikipedia: Domestic_pig
+
+boar:
+  kind_of: sus
+  label: Boar
+  foodb: 310
+  wikipedia: Wild_boar
+
+pork:
+  kind_of: sus
+  label: Pork
+  foodb: 549
+  wikipedia: Pork
+
+
+
+
+# Bovids
+
+bovid:
+  kind_of: mammal
+  label:
+    - Bovid
+    - Bovidae
+  description: Cloven-hoofed ruminant mammal
+  wikipedia: Bovidae
+
+antelope:
+  kind_of: bovid
+  label: Antelope
+  foodb: 543
+  wikipedia: Antelope
+
+nilgai:
+  kind_of: antelope
+  label:
+    - Nilgai
+    - Blue bull
+  wikipedia: Nilgai
+
+# Cattle
+  
+bovini:
+  kind_of: bovinae
+  label: Bovini
+
+beef:
+  kind_of: bovini
+  label: Beef
+  foodb: 506
+  wikipedia: Beef
+
+veal:
+  kind_of: beef
+  label: Veal
+  wikipedia: Veal
+
+wagyu:
+  kind_of: beef
+  label: Wagyu
+  wikipedia: Wagyu
+
+beefalo:
+  kind_of: bovini
+  label: Beefalo
+  foodb: 542
+  wikipedia: Beefalo
+
+bison:
+  kind_of: bovini
+  label: Bison
+  foodb: 303
+  wikipedia: Bison
+
+buffalo:
+  kind_of: bovini
+  label: Buffalo
+  foodb: 316
+  wikipedia: African_buffalo
+  
+# Goat-related animal
+  
+aegodontia:
+  kind_of: bovidae
+  label: Aegodontia
+  
+alcelaphinae:
+  kind_of: aegodontia
+  label: Alcelaphinae
+
+topi:
+  kind_of: alcelaphinae
+  label: Topi
+  wikipedia: Topi
+
+caprinae:
+  kind_of: aegodontia
+  label: Caprinae
+  wikipedia: Caprinae
+
+goat:
+  kind_of: caprinae
+  label: Goat
+  foodb: 541
+  wikipedia: Goat
+
+sheep:
+  # TODO is this sheep/mutton distinction relevant?
+  kind_of: caprinae
+  label: Sheep
+  wikipedia: Sheep
+
+mutton:
+  kind_of: sheep
+  label: Mutton
+  foodb: 483
+  wikipedia: Lamb_and_mutton
+
+lamb:
+  kind_of: sheep
+  label: Lamb
+  wikipedia: Lamb_and_mutton
+
+caprini:
+  kind_of: caprinae
+  label: Caprini
+
+ovibovini:
+  kind_of: caprinae
+  label: Ovibovini
+
+hippotraginae:
+  kind_of: aegodontia
+  label: Hippotraginae
+  
+oryx:
+  kind_of: hippotraginae
+  label: Oryx
+  wikipedia: Oryx
+  
+# Carnivora animal
+
+carnivora:
+  kind_of: mammal
+  label: Carnivora
+  
+procyonidae:
+  kind_of: carnivora
+  label: Procyonidae
+
+raccoon:
+  kind_of: procyonidae
+  label: Raccoon
+  foodb: 452
+  wikipedia: Raccoon
+  
+pinnipedia:
+  kind_of: carnivora
+  label: Pinnipedia
+  
+odobenidae:
+  kind_of: pinnipedia
+  label: Odobenidae
+
+walrus:
+  kind_of: odobenidae
+  label: Walrus
+  foodb: 550
+  wikipedia: Walrus
+  
+otariidae:
+  kind_of: pinnipedia
+  label: Otariidae
+
+sea_lion:
+  kind_of: otariidae
+  label: Sea lion
+  wikipedia: Sea_lion
+
+steller_sea_lion:
+  kind_of: sea_lion
+  label: Steller sea lion
+  foodb: 475
+  wikipedia: Steller_sea_lion
+  
+phocidae:
+  kind_of: pinnipedia
+  label: Phocidae
+
+seal:
+  kind_of: phocidae
+  label: Seal
+
+bearded_seal:
+  kind_of: seal
+  label: Bearded seal
+  foodb: 476
+  wikipedia: Bearded_seal
+
+harp_seal:
+  kind_of: seal
+  label: Harp seal
+  label: Saddleback
+  wikipedia: Harp_seal
+
+ringed_seal:
+  kind_of: seal
+  label: Ringed seal
+  foodb: 477
+  wikipedia: Ringed_seal
+
+spotted_seal:
+  kind_of: seal
+  label: Spotted seal
+  foodb: 431
+  wikipedia: Spotted_seal
+
+true_seal:
+  kind_of: seal
+  label: True seal
+  foodb: 614
+  wikipedia: Earless_seal
+  
+ursidae:
+  kind_of: carnivora
+  label: Ursidae
+  
+ursus:
+  kind_of: ursidae
+  label: Ursus
+
+bear:
+  kind_of: ursus
+  label: Bear
+  wikipedia: Bear
+
+black_bear:
+  kind_of: bear
+  label: Black bear
+  foodb: 304
+
+american_black_bear:
+  kind_of: black_bear
+  label: American black bear
+  wikipedia: American_black_bear
+
+asian_black_bear:
+  kind_of: black_bear
+  label: Asian black bear
+  wikipedia: Asian_black_bear
+
+brown_bear:
+  kind_of: bear
+  label: Brown bear
+  foodb: 315
+  wikipedia: Brown_bear
+
+polar_bear:
+  kind_of: bear
+  label: Polar bear
+  foodb: 446
+  wikipedia: Polar_bear
+
+
+# Cetaceans
+# TODO maybe define taxonomy for aquatic (freshwater and/or marine) mammals
+
+cetartiodactyla:
+  kind_of: mammal
+  label: Cetartiodactyla
+
+dolphin:
+  kind_of: cetartiodactyla
+  label: Dolphin
+  wikipedia: Dolphin
+
+porpoise:
+  kind_of: cetartiodactyla
+  label: Porpoise
+  wikipedia: Porpoise
+
+whale:
+  kind_of: cetartiodactyla
+  label: Whale
+  foodb: 623
+  wikipedia: Whale
+
+beluga_whale:
+  kind_of: whale
+  label: Beluga whale
+  foodb: 302
+  wikipedia: Beluga_whale
+
+bowhead_whale:
+  kind_of: whale
+  label: Bowhead whale
+  foodb: 311
+  wikipedia: Bowhead_whale
+
+
+# Rabbit-related animal
+# TODO no need for that many levels, just add https://en.wikipedia.org/wiki/Pika
+  
+lagomorpha:
+  kind_of: mammal
+  label: Lagomorpha
+  
+leporidae:
+  kind_of: lagomorpha
+  label: Leporidae
+
+mountain_hare:
+  kind_of: leporidae
+  label: Mountain hare
+  foodb: 595
+  wikipedia: Mountain_hare
+
+rabbit:
+  kind_of: leporidae
+  label: Rabbit
+  foodb: 540
+  wikipedia: Rabbit
+
+european_rabbit:
+  kind_of: rabbit
+  label: European rabbit
+  foodb: 451
+  wikipedia: European_rabbit
+
+
+# Marsupials
+# TODO Well-known marsupials include kangaroos, wallabies, koalas, possums, opossums, wombats, and Tasmanian devils. Some lesser-known marsupials are the potoroo and the quokka.
+
+marsupial:
+  kind_of: mammal
+  label:
+    - Marsupial
+    - Marsupialia
+  wikipedia: Marsupial
+
+opossum:
+  kind_of: marsupialia
+  label: Opossum
+  foodb: 429
+  wikipedia: Opossum
+
+
+# Odd-toed ungulates
+# TODO rhinoceroses, tapirs
+  
+perissodactyla:
+  kind_of: mammal
+  label:
+    - Perissodactyla
+    - Odd-toed ungulate
+  wikipedia: Odd-toed_ungulate
+  
+equidae:
+  kind_of: perissodactyla
+  label: Equidae
+  wikipedia: Equidae
+
+donkey:
+  kind_of: equidae
+  label: Donkey
+  wikipedia: Donkey
+
+horse:
+  kind_of: equidae
+  label: Horse
+  foodb: 383
+  wikipedia: Horse
+
+zebra:
+  kind_of: equidae
+  label: Zebra
+  wikipedia: Zebra
+
+
+# Rodents
+# TODO rename and clean rodents
+  
+rodentia:
+  kind_of: mammal
+  label: Rodentia
+
+castoridae:
+  kind_of: rodentia
+  label: Castoridae
+
+beaver:
+  kind_of: castoridae
+  label: Beaver
+  foodb: 300
+  wikipedia: Beaver
+  
+cricetidae:
+  kind_of: rodentia
+  label: Cricetidae
+
+muskrat:
+  kind_of: cricetidae
+  label: Muskrat
+  foodb: 419
+  wikipedia: Muskrat
+  
+hystricomorpha:
+  kind_of: rodentia
+  label: Hystricomorpha
+  wikipedia: Hystricomorpha
+  
+porcupine:
+  kind_of: hystricomorpha
+  label: Porcupine
+  wikipedia: Porcupine
+  
+sciuridae:
+  kind_of: rodentia
+  label: Sciuridae
+
+squirrel:
+  kind_of: sciuridae
+  label: Squirrel
+  foodb: 492
+  wikipedia: Squirrel
+
+ground_squirrel:
+  kind_of: squirrel
+  label: Ground squirrel
+  foodb: 539
+  wikipedia: Ground_squirrel
+  
+marmota:
+  kind_of: sciuridae
+  label: Marmota
+  
+groundhog:
+  kind_of: sciuridae
+  label: Ground hog
+  label: Groundhog
+  label: Woodchuck
+  label: Wood-shock 
+  label: Groundpig
+  label: Whistlepig
+  label: Whistler
+  label: Thickwood badger
+  label: Canada marmot
+  label: Monax
+  label: Moonack
+  label: Weenusk
+  label: Red monk
+  wikipedia: Groundhog
+
+
+#
+# Poultry
+#
+
+
+# Duck-like
+
+anatidae:
+  kind_of: poultry
+  label: Anatidae
+  foodb: 590
+  wikipedia: Anatidae
+
+duck:
+  kind_of: anatidae
+  label: Duck
+  wikipedia: Duck
+
+mallard_duck:
+  kind_of: duck
+  label: Mallard duck
+  foodb: 358
+  wikipedia: Mallard
+
+scoter:
+  kind_of: duck
+  label: Scoter
+  wikipedia: Scoter
+
+velvet_duck:
+  kind_of: duck
+  label: Velvet scoter
+  label: Velvet duck
+  foodb: 435
+  wikipedia: elvet_scoter
+
+white_pekin:
+  kind_of: duck
+  label: White pekin
+  label: Long island duck
+  wikipedia: American_Pekin
+
+goose:
+  kind_of: anatidae
+  label: Goose
+  wikipedia: Goose
+
+greylag_goose:
+  kind_of: goose
+  label: Greylag goose
+  foodb: 373
+  wikipedia: Greylag_goose
+
+canada_goose:
+  kind_of: goose
+  label: Canada goose
+  wikipedia: Canada_goose
+
+swan:
+  kind_of: anatidae
+  label: Swan
+  wikipedia: Swan
+
+
+# Chicken-like
+# TODO maybe all these subclasses are irrelevant
+
+chicken:
+  kind_of: poultry
+  label: Chicken
+  foodb: 334
+  wikipedia: Chicken
+
+chicken_broiler:
+  kind_of: chicken
+  label: Chicken broiler chicken
+  wikipedia: Broiler
+
+cornish_game_hen:
+  kind_of: chicken_broiler
+  label:
+    - Cornish game hen
+    - Rock cornish hen
+  wikipedia: Cornish_game_hen
+
+chicken_fryer:
+  kind_of: chicken
+  label: Chicken fryer chicken
+
+chicken_roasting:
+  kind_of: chicken
+  label: Chicken roasting chicken
+
+chicken_stewing:
+  kind_of: chicken
+  label: Stewing chicken
+
+capon:
+  kind_of: chicken
+  label: Capon
+  wikipedia: Capon
+
+
+# Pigeon-like
+# TODO https://en.wikipedia.org/wiki/Domestic_pigeon
+
+columbidae:
+  kind_of: poultry
+  label: Columbidae
+  foodb: 624
+  wikipedia: Columbidae
+
+dove:
+  kind_of: columbidae
+  label: Dove
+
+pigeon:
+  kind_of: columbidae
+  label: Pigeon
+
+squab:
+  kind_of: pigeon
+  label: Squab
+  foodb: 491
+  wikipedia: Squab
+
+
+# Other birds
+
+emu:
+  kind_of: poultry
+  label: Emu
+  foodb: 365
+  wikipedia: Emu
+
+grouse:
+  kind_of: poultry
+  label: Grouse
+  wikipedia: Grouse
+
+rock_ptarmigan:
+  kind_of: grouse
+  label:
+    - Rock ptarmigan
+    - Ptarmigan
+  foodb: 611
+  wikipedia: Rock_ptarmigan
+
+ruffed_grouse:
+  kind_of: grouse
+  label: Ruffed grouse
+  wikipedia: Ruffed_grouse
+
+guinea_hen:
+  kind_of: poultry
+  label: Guinea hen
+  label: Guineafowl
+  foodb: 378
+  wikipedia: Guineafowl
+
+horned_owl:
+  kind_of: poultry
+  label: Horned owl
+  foodb: 554
+  wikipedia: Horned_owl
+
+ostrich:
+  kind_of: poultry
+  label: Ostrich
+  foodb: 430
+  wikipedia: Common_ostrich	
+
+pheasant:
+  kind_of: poultry
+  label: Pheasant
+  foodb: 438
+  wikipedia: Pheasant
+
+quail:
+  kind_of: poultry
+  label: Quail
+  foodb: 555
+  wikipedia: Quail
+
+turkey:
+  kind_of: poultry
+  label: Turkey
+  foodb: 505
+  wikipedia: Turkey_(bird)
+
+
+#
+# Amphibia and reptiles
+#
+
+amphibia:
+  kind_of: animal
+  label: Amphibia
+  
+anura:
+  kind_of: amphibia
+  label: Anura
+
+frog:
+  kind_of: anura
+  label: Frog
+  foodb: 592
+  wikipedia: Frog
+  
+reptilia:
+  kind_of: animal
+  label: Reptilia
+  
+crocodilia:
+  kind_of: reptilia
+  label: Crocodilia
+  
+alligator:
+  kind_of: crocodilia
+  label: Alligator
+  wikipedia: Alligator
+  
+crocodile:
+  kind_of: crocodilia
+  label: Crocodile
+  wikipedia: Crocodile
+
+testudines:
+  kind_of: reptilia
+  label: Testudines
+
+turtle:
+  kind_of: testudines
+  label: Turtle
+  foodb: 726
+  wikipedia: Turtle
+
+green_turtle:
+  kind_of: testudines
+  label: Green sea turtle
+  label: Black sea turtle
+  label: Pacific green turtle
+  wikipedia: Green_sea_turtle
+
+
+#
+# Bony fishes 
+#
+
+anchovy:
+  kind_of: bony_fish
+  label: Anchovy
+  foodb: 580
+  wikipedia: Anchovy
+
+european_anchovy:
+  kind_of: anchovy
+  label: European anchovy
+  foodb: 367
+  wikipedia: European_anchovy
+
+anglerfish:
+  kind_of: bony_fish
+  label: Anglerfish
+  wikipedia: Anglerfish
+
+monkfish:
+  kind_of: anglerfish
+  label: Monkfish
+  foodb: 414
+  wikipedia: Lophius
+
+carp:
+  kind_of: bony_fish
+  label: Carp
+  wikipedia: Cyprinidae
+
+carp_bream:
+  kind_of: carp
+  label: Carp bream
+  foodb: 582
+  wikipedia: Common_bream
+
+common_carp:
+  kind_of: carp
+  label: Common carp
+  foodb: 327
+  wikipedia: Common_carp
+
+catfish:
+  kind_of: bony_fish
+  label: Catfish
+  foodb: 619
+  wikipedia: Catfish
+
+channel_catfish:
+  kind_of: catfish
+  label: Channel catfish
+  foodb: 329
+  wikipedia: Channel_catfish
+
+cod:
+  kind_of: bony_fish
+  label: Cod
+  foodb: 594
+  wikipedia: Gadiformes
+
+common_cod:
+  kind_of: cod
+  label: Common cod
+  foodb: 526
+  wikipedia: Gadus
+
+atlantic_cod:
+  kind_of: common_cod
+  label: Atlantic cod
+  foodb: 343
+  wikipedia: Atlantic_cod
+
+pacific_cod:
+  kind_of: common_cod
+  label: Pacific cod
+  foodb: 342
+  wikipedia: Pacific_cod
+
+pollock:
+  kind_of: cod
+  label: Pollock
+  foodb: 524
+  wikipedia: Pollock
+
+alaska_pollock:
+  kind_of: pollock
+  label: Alaska pollock
+  foodb: 508
+  wikipedia: Alaska_pollock
+
+atlantic_pollock:
+  kind_of: pollock
+  label: Atlantic pollock
+  foodb: 296
+
+coalfish_pollock:
+  kind_of: pollock
+  label: Coalfish pollock
+  foodb: 512
+  wikipedia: Pollachius_virens
+
+rockling:
+  kind_of: cod
+  label: Rockling
+  label: Ling
+  wikipedia: Lotidae
+
+burbot:
+  kind_of: rockling
+  label: Burbot
+  foodb: 317
+  wikipedia: Burbot
+
+common_ling:
+  kind_of: rockling
+  label: Common ling
+  foodb: 402
+  wikipedia: Common_ling
+
+cusk:
+  kind_of: rockling
+  label: Cusk
+  foodb: 351
+  wikipedia: Cusk_(fish)
+
+true_cod:
+  kind_of: cod
+  label: True cod
+  wikipedia: Gadidae
+
+blue_whiting:
+  kind_of: true_cod
+  label: Blue whiting
+  foodb: 581
+  wikipedia: Blue_whiting
+
+haddock:
+  kind_of: true_cod
+  label: Haddock
+  foodb: 379
+  wikipedia: Haddock
+
+norway_pout:
+  kind_of: true_cod
+  label: Norway pout
+  foodb: 604
+  wikipedia: Trisopterus_esmarkii
+
+whiting:
+  kind_of: true_cod
+  label: Whiting
+  foodb: 515
+  wikipedia: Merlangius
+
+devilfish:
+  kind_of: bony_fish
+  label: Devilfish
+  foodb: 354
+  wikipedia: Myoxocephalus
+
+eel:
+  kind_of: bony_fish
+  label: Eel
+  foodb: 591
+  wikipedia: Eel
+
+freshwater_eel:
+  kind_of: eel
+  label: Freshwater eel
+  foodb: 362
+  wikipedia: Anguillidae
+
+flatfish:
+  kind_of: bony_fish
+  label: Flatfish
+  foodb: 548
+  wikipedia: Flatfish
+
+flounder:
+  kind_of: flatfish
+  label: Flounder
+  wikipedia: Flounder
+
+righteye_flounder:
+  kind_of: flounder
+  label: Righteye flounder
+  foodb: 610
+  wikipedia: Pleuronectidae
+
+common_dab:
+  kind_of: righteye_flounder
+  label: Common dab
+  foodb: 588
+  wikipedia: Common_dab
+
+halibut:
+  kind_of: righteye_flounder
+  label: Halibut
+  foodb: 380
+  wikipedia: Halibut
+
+atlantic_halibut:
+  kind_of: halibut
+  label: Atlantic halibut
+  foodb: 527
+  wikipedia: Atlantic_halibut
+
+greenland_halibut:
+  kind_of: halibut
+  label: Greenland halibut
+  foodb: 375
+  wikipedia: Greenland_halibut
+
+pacific_halibut:
+  kind_of: halibut
+  label: Pacific halibut
+  foodb: 528
+  wikipedia: Pacific_halibut
+
+lemon_sole:
+  kind_of: righteye_flounder
+  label: Lemon sole
+  foodb: 597
+  wikipedia: Lemon_sole
+
+plaice:
+  kind_of: righteye_flounder
+  label: Plaice
+  wikipedia: Plaice
+
+true_sole:
+  kind_of: flatfish
+  label: True sole
+  foodb: 618
+  wikipedia: Soleidae
+
+turbot:
+  kind_of: flatfish
+  label: Turbot
+  foodb: 369
+  wikipedia: Turbot
+
+european_turbot:
+  kind_of: turbot
+  label: European turbot
+
+herring:
+  kind_of: bony_fish
+  label: Herring
+  foodb: 531
+  wikipedia: Herring
+
+atlantic_herring:
+  kind_of: herring
+  label: Atlantic herring
+  foodb: 293
+  wikipedia: Atlantic_herring
+
+hilsa:
+  kind_of: herring
+  label: Hilsa
+  wikipedia: Ilish
+
+menhaden:
+  kind_of: herring
+  label: Menhaden
+  wikipedia: Menhaden
+
+atlantic_menhaden:
+  kind_of: menhaden
+  label: Atlantic menhaden
+  foodb: 574
+  wikipedia: Atlantic_menhaden
+
+pacific_herring:
+  kind_of: herring
+  label: Pacific herring
+  foodb: 432
+  wikipedia: Pacific_herring
+
+sardine:
+  kind_of: herring
+  label: Sardine
+  wikipedia: Sardine
+
+atlantic_sardine:
+  kind_of: sardine
+  label: Atlantic sardine
+
+pacific_sardine:
+  kind_of: sardine
+  label: Pacific sardine
+  foodb: 471
+  wikipedia: South_American_pilchard
+
+shad:
+  kind_of: herring
+  label: Shad
+  wikipedia: Alosinae
+
+american_shad:
+  kind_of: shad
+  label: American shad
+  foodb: 480
+  wikipedia: American_shad
+
+lingcod:
+  kind_of: bony_fish
+  label: Lingcod
+  foodb: 403
+  wikipedia: Lingcod
+
+lumpsucker:
+  kind_of: bony_fish
+  label: Lumpsucker
+  foodb: 599
+  wikipedia: Lumpsucker
+
+milkfish:
+  kind_of: bony_fish
+  label: Milkfish
+  foodb: 413
+  wikipedia: Milkfish
+
+mullet:
+  kind_of: bony_fish
+  label: Mullet
+  wikipedia: Mullet_(fish)
+
+striped_mullet:
+  kind_of: mullet
+  label: Striped mullet
+  foodb: 418
+  wikipedia: Flathead_grey_mullet
+
+needlefish:
+  kind_of: bony_fish
+  label: Needlefish
+  wikipedia: Needlefish
+
+garfish:
+  kind_of: needlefish
+  label: Garfish
+  foodb: 593
+  wikipedia: Garfish
+
+perciforme:
+  kind_of: bony_fish
+  label: Perciforme
+  foodb: 538
+  wikipedia: Perciformes
+
+amberjack:
+  kind_of: perciforme
+  label: Amberjack
+  wikipedia: Seriola
+
+yellowtail_amberjack:
+  kind_of: amberjack
+  label: Yellowtail amberjack
+  foodb: 523
+  wikipedia: Yellowtail_amberjack
+
+bluefish:
+  kind_of: perciforme
+  label: Bluefish
+  foodb: 309
+  wikipedia: Bluefish
+
+butterfish:
+  kind_of: perciforme
+  label: Butterfish
+  wikipedia: Stromateidae
+
+american_butterfish:
+  kind_of: butterfish
+  label: American butterfish
+  foodb: 319
+  wikipedia: American_butterfish
+
+croaker:
+  kind_of: perciforme
+  label: Croaker
+  wikipedia: Sciaenidae
+
+atlantic_croaker:
+  kind_of: croaker
+  label: Atlantic croaker
+  foodb: 350
+  wikipedia: Atlantic_croaker
+
+freshwater_drum:
+  kind_of: croaker
+  label: Freshwater drum
+  foodb: 357
+  wikipedia: Freshwater_drum
+
+spot_croaker:
+  kind_of: croaker
+  label: Spot croaker
+  foodb: 571
+  wikipedia: Spot_(fish)
+
+dolphin_fish:
+  kind_of: perciforme
+  label:
+    - Mahi-mahi
+    - Common dolphinfish
+  foodb: 356
+  wikipedia: Mahi-mahi
+
+eelpout:
+  kind_of: perciforme
+  label: Eelpout
+  wikipedia: Eelpout
+
+ocean_pout:
+  kind_of: eelpout
+  label: Ocean pout
+  foodb: 424
+  wikipedia: Ocean_pout
+
+jack_mackerel:
+  kind_of: perciforme
+  label: Jack mackerel
+
+pacific_jack_mackerel:
+  kind_of: jack_mackerel
+  label: Pacific jack mackerel
+  foodb: 388
+  wikipedia: Pacific_jack_mackerel
+
+largemouth_bass:
+  kind_of: perciforme
+  label: Largemouth bass
+  label: Freshwater bass
+  wikipedia: Largemouth_bass
+
+perch:
+  kind_of: perciforme
+  label: Perch
+  wikipedia: Percidae
+
+sander:
+  kind_of: perch
+  label: Sander
+  wikipedia: Sander_(genus)
+
+walleye:
+  kind_of: sander
+  label: Walleye
+  foodb: 507
+  wikipedia: Walleye
+
+zander:
+  kind_of: sander
+  label: Zander
+  foodb: 609
+  wikipedia: Zander
+
+percoidei:
+  kind_of: perciforme
+  label: Percoidei
+  foodb: 537
+  wikipedia: Percoidei
+
+bass:
+  kind_of: percoidei
+  label: Bass
+
+striped_bass:
+  kind_of: bass
+  label: Striped bass
+  foodb: 299
+
+seatrout:
+  kind_of: percoidei
+  label: Seatrout
+  foodb: 478
+  wikipedia: Cynoscion
+
+pompano:
+  kind_of: perciforme
+  label: Pompano
+  wikipedia: Pompano
+
+florida_pompano:
+  kind_of: pompano
+  label: Florida pompano
+  foodb: 371
+  wikipedia: Florida_pompano
+
+scombridae:
+  kind_of: perciforme
+  label: Scombridae
+  foodb: 600
+  wikipedia: Scombridae
+  
+barracuda:
+  kind_of: scombridae
+  label: Barracuda
+  wikipedia: Barracuda
+
+bonito:
+  kind_of: scombridae
+  label: Bonito
+  wikipedia: Bonito
+
+mackerel:
+  kind_of: scombridae
+  label: Mackerel
+  wikipedia: Mackerel
+
+atlantic_mackerel:
+  kind_of: mackerel
+  label: Atlantic mackerel
+  foodb: 294
+  wikipedia: Atlantic_mackerel
+
+king_mackerel:
+  kind_of: mackerel
+  label: King mackerel
+  foodb: 397
+  wikipedia: King_mackerel
+
+spanish_mackerel:
+  kind_of: mackerel
+  label: Spanish mackerel
+  foodb: 470
+  wikipedia: Spanish_mackerel
+
+tuna:
+  kind_of: scombridae
+  label: Tuna
+  foodb: 621
+  wikipedia: Thunnus
+
+albacore_tuna:
+  kind_of: tuna
+  label: Albacore tuna
+  foodb: 525
+  wikipedia: Albacore
+
+bluefin_tuna:
+  kind_of: tuna
+  label: Bluefin tuna
+  wikipedia: Bluefin_tuna
+
+northern_bluefin_tuna:
+  kind_of: bluefin_tuna
+  label: Northern bluefin tuna
+  foodb: 308
+  wikipedia: Atlantic_bluefin_tuna
+
+skipjack_tuna:
+  kind_of: tuna
+  label: Skipjack tuna
+  foodb: 486
+  wikipedia: Skipjack_tuna
+
+yellowfin_tuna:
+  kind_of: tuna
+  label: Yellowfin tuna
+  foodb: 522
+  wikipedia: Yellowfin_tuna
+
+sea_bass:
+  kind_of: perciforme
+  label: Sea bass
+  wikipedia: Serranidae
+
+grouper:
+  kind_of: sea_bass
+  label: Grouper
+  foodb: 377
+  wikipedia: Grouper
+
+painted_comber:
+  kind_of: sea_bass
+  label: Painted comber
+  foodb: 295
+  wikipedia: Painted_comber
+
+sea_bream:
+  kind_of: perciforme
+  label: Sea bream
+  label: Porgy
+  wikipedia: Sparidae
+
+scup:
+  kind_of: sea_bream
+  label: Scup
+  foodb: 473
+  wikipedia: Scup
+
+sheepshead:
+  kind_of: sea_bream
+  label: Sheepshead
+  foodb: 484
+  wikipedia: Archosargus_probatocephalus
+
+snapper:
+  kind_of: perciforme
+  label: Snapper
+  foodb: 487
+  wikipedia: Lutjanidae
+
+sunfish:
+  kind_of: perciforme
+  label: Sunfish
+  wikipedia: Centrarchidae
+
+pumpkinseed_sunfish:
+  kind_of: sunfish
+  label: Pumpkinseed sunfish
+  foodb: 497
+  wikipedia: Pumpkinseed
+
+swordfish:
+  kind_of: perciforme
+  label: Swordfish
+  foodb: 498
+  wikipedia: Swordfish
+
+tilefish:
+  kind_of: perciforme
+  label: Tilefish
+  foodb: 501
+  wikipedia: Tilefish
+
+wolffish:
+  kind_of: perciforme
+  label: Wolffish
+  wikipedia: Anarhichadidae
+
+atlantic_wolffish:
+  kind_of: wolffish
+  label: Atlantic wolffish
+  foodb: 297
+  wikipedia: Atlantic_wolffish
+
+pike:
+  kind_of: bony_fish
+  label: Pike
+  wikipedia: Esox
+
+alaska_blackfish:
+  kind_of: pike
+  label: Alaska blackfish
+  foodb: 305
+  wikipedia: Alaska_blackfish
+
+northern_pike:
+  kind_of: pike
+  label: Northern pike
+  foodb: 439
+  wikipedia: Northern_pike
+
+rockfish:
+  kind_of: bony_fish
+  label: Rockfish
+  foodb: 434
+  wikipedia: Sebastes
+
+ocean_perch:
+  kind_of: rockfish
+  label: Ocean perch
+  foodb: 602
+  wikipedia: Rose_fish
+
+atlantic_ocean_perch:
+  kind_of: ocean_perch
+  label: Atlantic ocean perch
+
+pacific_ocean_perch:
+  kind_of: ocean_perch
+  label: Pacific ocean perch
+
+pacific_rockfish:
+  kind_of: rockfish
+  label: Pacific rockfish
+  foodb: 612
+  wikipedia: Pacific_ocean_perch
+
+roughy:
+  kind_of: bony_fish
+  label: Roughy
+  wikipedia: Slimehead
+
+orange_roughy:
+  kind_of: roughy
+  label: Orange roughy
+  foodb: 458
+  wikipedia: Orange_roughy
+
+sablefish:
+  kind_of: bony_fish
+  label: Sablefish
+  foodb: 459
+  wikipedia: Sablefish
+
+salmonidae:
+  kind_of: bony_fish
+  label: Salmonidae
+  foodb: 504
+  wikipedia: Salmonidae
+
+charr:
+  kind_of: salmonidae
+  label: Charr
+  foodb: 585
+  wikipedia: Salvelinus
+
+brook_trout:
+  kind_of: charr
+  label: Brook trout
+  wikipedia: Brook_trout
+
+lake_trout:
+  kind_of: charr
+  label: Lake trout
+  foodb: 596
+  wikipedia: Lake_trout
+
+cisco:
+  kind_of: salmonidae
+  label: Cisco
+  foodb: 339
+  wikipedia: Cisco_(fish)
+
+salmon:
+  kind_of: salmonidae
+  label: Salmon
+  wikipedia: Salmon
+
+atlantic_salmon:
+  kind_of: salmon
+  label: Atlantic salmon
+  foodb: 465
+  wikipedia: Atlantic_salmon
+
+pacific_salmon:
+  kind_of: salmon
+  label: Pacific salmon
+  foodb: 529
+  wikipedia: Oncorhynchus
+
+chinook_salmon:
+  kind_of: pacific_salmon
+  label: Chinook salmon
+  foodb: 464
+  wikipedia: Chinook_salmon
+
+chum_salmon:
+  kind_of: pacific_salmon
+  label: Chum salmon
+  foodb: 461
+  wikipedia: Chum_salmon
+
+coho_salmon:
+  kind_of: pacific_salmon
+  label: Coho salmon
+  foodb: 462
+  wikipedia: Coho_salmon
+
+pink_salmon:
+  kind_of: pacific_salmon
+  label: Pink salmon
+  foodb: 460
+  wikipedia: Pink_salmon
+
+tipnuk_salmon:
+  kind_of: salmon
+  label: Tipnuk salmon
+
+rainbow_trout:
+  kind_of: pacific_salmon
+  label: Rainbow trout
+  foodb: 454
+  wikipedia: Rainbow_trout
+
+steelhead_trout:
+  kind_of: rainbow_trout
+  label: Steelhead trout
+
+sockeye_salmon:
+  kind_of: pacific_salmon
+  label: Sockeye salmon
+  foodb: 463
+  wikipedia: Sockeye_salmon
+
+sheefish:
+  kind_of: salmonidae
+  label: Sheefish
+  foodb: 482
+  wikipedia: Nelma
+
+trout:
+  kind_of: salmonidae
+  label: Trout
+  wikipedia: Trout
+
+whitefish:
+  kind_of: salmonidae
+  label: Whitefish
+  foodb: 514
+  wikipedia: Coregonus
+
+broad_whitefish:
+  kind_of: whitefish
+  label: Broad whitefish
+  foodb: 513
+  wikipedia: Broad_whitefish
+
+smelt:
+  kind_of: bony_fish
+  label: Smelt
+  foodb: 530
+  wikipedia: Smelt_(fish)
+
+rainbow_smelt:
+  kind_of: smelt
+  label: Rainbow smelt
+  foodb: 453
+  wikipedia: Rainbow_smelt
+
+sturgeon:
+  kind_of: bony_fish
+  label: Sturgeon
+  foodb: 584
+  wikipedia: Sturgeon
+
+greater_sturgeon:
+  kind_of: sturgeon
+  label: Greater sturgeon
+  foodb: 494
+
+sucker:
+  kind_of: bony_fish
+  label: Sucker
+  wikipedia: Catostomus
+
+white_sucker:
+  kind_of: sucker
+  label: White sucker
+  foodb: 495
+  wikipedia: White_sucker
+
+tilapia:
+  kind_of: bony_fish
+  label: Tilapia
+  foodb: 723
+  wikipedia: Tilapia
+
+
+#
+# Cartilaginous fishes
+#
+
+dogfish:
+  kind_of: cartilaginous_fish
+  label: Dogfish
+  wikipedia: Squalidae
+
+spiny_dogfish:
+  kind_of: dogfish
+  label: Spiny dogfish
+  foodb: 589
+  wikipedia: Spiny_dogfish
+
+ray:
+  kind_of: cartilaginous_fish
+  label: Ray
+  wikipedia: Batoidea
+
+shark:
+  kind_of: cartilaginous_fish
+  label: Shark
+  foodb: 481
+  wikipedia: Shark
+
+
+#
+# Crustaceans
+#
+
+crab:
+  kind_of: crustacean
+  label: Crab
+  foodb: 587
+  wikipedia: Crab
+
+blue_crab:
+  kind_of: crab
+  label: Blue crab
+  foodb: 306
+  wikipedia: Callinectes_sapidus
+
+dungeness_crab:
+  kind_of: crab
+  label: Dungeness crab
+  foodb: 359
+  wikipedia: Dungeness_crab
+
+king_crab:
+  kind_of: crab
+  label: King crab
+  wikipedia: King_crab
+
+red_king_crab:
+  kind_of: king_crab
+  label: Red king crab
+  foodb: 286
+  wikipedia: Red_king_crab
+
+snow_crab:
+  kind_of: crab
+  label:
+    - Snow crab
+    - Queen crab
+    - Spider crab
+  foodb: 533
+  wikipedia: Chionoecetes
+
+crayfish:
+  kind_of: crustacean
+  label: Crayfish
+  foodb: 547
+  wikipedia: Crayfish
+
+lobster:
+  kind_of: crustacean
+  label: Lobster
+  foodb: 598
+  wikipedia: Lobster
+
+american_lobster:
+  kind_of: lobster
+  label: American lobster
+  foodb: 404
+  wikipedia: American_lobster
+
+northern_lobster:
+  kind_of: lobster
+  label: Northern lobster
+
+norway_lobster:
+  kind_of: lobster
+  label: Norway lobster
+  foodb: 603
+  wikipedia: Nephrops_norvegicus
+
+spiny_lobster:
+  kind_of: lobster
+  label: Spiny lobster
+  foodb: 532
+  wikipedia: Spiny_lobster
+
+prawn:
+  kind_of: crustacean
+  label: Prawn
+  wikipedia: Prawn
+
+shrimp:
+  kind_of: crustacean
+  label: Shrimp
+  foodb: 546
+  wikipedia: Shrimp
+
+
+#
+# Mollusks
+#
+
+bivalvia:
+  kind_of: mollusk
+  label: Bivalvia
+  foodb: 544
+  wikipedia: Bivalvia
+
+clam:
+  kind_of: bivalvia
+  label: Clam
+  wikipedia: Clam
+
+nuttall_cockle:
+  kind_of: clam
+  label: Nuttall's cockle
+  foodb: 340
+  wikipedia: Clinocardium_nuttallii
+
+cockle:
+  kind_of: bivalvia
+  label: Cockle
+  wikipedia: Cockle_(bivalve)
+
+mussel:
+  kind_of: bivalvia
+  label: Mussel
+  foodb: 601
+  wikipedia: Mussel
+
+blue_mussel:
+  kind_of: mussel
+  label: Blue mussel
+  foodb: 307
+  wikipedia: Blue_mussel
+
+oyster:
+  kind_of: bivalvia
+  label: Oyster
+  foodb: 606
+  wikipedia: Oyster
+
+eastern_oyster:
+  kind_of: oyster
+  label: Eastern oyster
+  foodb: 361
+  wikipedia: Eastern_oyster
+
+pacific_oyster:
+  kind_of: oyster
+  label: Pacific oyster
+  foodb: 433
+  wikipedia: Pacific_oyster
+
+scallop:
+  kind_of: bivalvia
+  label: Scallop
+  foodb: 472
+  wikipedia: Scallop
+
+cephalopod:
+  kind_of: mollusk
+  label: Cephalopod
+  wikipedia: Cephalopod
+
+cuttlefish:
+  kind_of: cephalopod
+  label: Cuttlefish
+  foodb: 352
+  wikipedia: Cuttlefish
+
+octopus:
+  kind_of: cephalopod
+  label: Octopus
+  wikipedia: Octopus
+
+common_octopus:
+  kind_of: octopus
+  label: Common octopus
+  foodb: 344
+  wikipedia: Common_octopus
+
+north_pacific_giant_octopus:
+  kind_of: octopus
+  label: North Pacific giant octopus
+  foodb: 425
+  wikipedia: Enteroctopus_dofleini
+
+squid:
+  kind_of: cephalopod
+  label: Squid
+  foodb: 545
+  wikipedia: Squid
+
+chiton:
+  kind_of: mollusk
+  label: Chiton
+  wikipedia: Chiton
+
+gumboot_chiton:
+  kind_of: chiton
+  label: Gumboot chiton
+  wikipedia: Gumboot_chiton
+
+leather_chiton:
+  kind_of: chiton
+  label: Leather chiton
+  foodb: 400
+  wikipedia: Katharina_tunicata
+
+conch:
+  kind_of: mollusk
+  label: Conch
+  foodb: 625
+  wikipedia: Conch
+
+sea_snail:
+  kind_of: mollusk
+  label: Sea snail
+  wikipedia: Sea_snail
+
+abalone:
+  kind_of: sea_snail
+  label: Abalone
+  foodb: 280
+  wikipedia: Abalone
+
+whelk:
+  kind_of: sea_snail
+  label: Whelk
+  foodb: 511
+  wikipedia: Whelk
+
+snail:
+  kind_of: mollusk
+  # TODO is snail really a seafood?
+  label: Snail
+  foodb: 617
+  wikipedia: Snail
+
+
+#
+# Miscellaneous seafood
+#
+
+echinoderm:
+  kind_of: shellfish
+  label: Echinoderm
+  wikipedia: Echinoderm
+
+sea_cucumber:
+  kind_of: echinoderm
+  label: Sea cucumber
+  foodb: 474
+  wikipedia: Sea_cucumber
+
+sea_urchin:
+  kind_of: echinoderm
+  label: Sea urchin
+  wikipedia: Sea_urchin
+
+tunicate:
+  kind_of:
+    - animal
+    - seafood
+  label: Tunicate
+  foodb: 428
+  wikipedia: Tunicate
+
+ascidian:
+  kind_of: tunicate
+  label: Ascidian
+  foodb: 861
+  wikipedia: Ascidiacea
+
+jellyfish:
+  kind_of:
+    - animal
+    - seafood
+  label: Jellyfish
+  foodb: 579
+  wikipedia: Jellyfish
+
+
+#
+# Insects
+#
+
+bee:
+  kind_of: insect
+  label: Bee
+  wikipedia: Bee
+
+grasshopper:
+  kind_of: insect
+  label: Grasshopper
+  wikipedia: Grasshopper

@@ -1,0 +1,1749 @@
+
+
+#
+# Salts
+#
+
+salt:
+  kind_of: seasoning
+  label: Salt
+  foodb: 666
+  wikipedia: Salt
+
+himalayan_salt:
+  kind_of: salt
+  label: Himalayan salt
+  wikipedia: Himalayan_salt
+
+kosher_salt:
+  kind_of: salt
+  label: Kosher salt
+  wikipedia: Kosher_salt
+
+sea_salt:
+  kind_of: salt
+  label: Sea salt
+  wikipedia: Sea_salt
+
+
+#
+# Herbs
+#
+
+alfalfa:
+  kind_of: herb
+  label: Alfalfa
+  foodb: 287
+  wikipedia: Alfalfa
+
+amaranth:
+  kind_of: herb
+  label: Amaranth
+  foodb: 289
+  wikipedia: Amaranth
+
+angelica:
+  kind_of: herb
+  label: Angelica
+  foodb: 1
+  wikipedia: Angelica_archangelica
+
+anise:
+  kind_of: herb
+  label: Anise
+  foodb: 137
+  wikipedia: Anise
+
+anise_seed:
+  kind_of: seed
+  kind_of: anise
+  label: Anise seed
+
+basil:
+  kind_of: herb
+  label: Basil
+  foodb: 119
+  wikipedia: Basil
+
+bay:
+  kind_of: herb
+  label: Bay leaf
+  foodb: 97
+  wikipedia: Laurus_nobilis
+
+chive:
+  kind_of: herb
+  kind_of: allium
+  label: Chive
+  foodb: 9
+  wikipedia: Chives
+
+coriander:
+  kind_of: herb
+  label:
+    - Coriander
+    - Cilantro
+    - Chinese parsley
+  foodb: 61
+  wikipedia: Coriander
+
+coriander_root:
+  kind_of:
+    - coriander
+    - root
+  label:
+    - Coriander root
+    - Cilantro root
+
+dandelion:
+  kind_of: herb
+  label: Dandelion
+  foodb: 181
+  wikipedia: Taraxacum
+
+dill:
+  kind_of: herb
+  label: Dill
+  foodb: 13
+  wikipedia: Dill
+
+dock:
+  kind_of: herb
+  label: Dock
+  foodb: 355
+  wikipedia: Rumex
+
+sorrel:
+  kind_of: dock
+  label: Sorrel
+  foodb: 164
+  wikipedia: Sorrel
+
+sourdock:
+  kind_of: dock
+  label: Sourdock
+  foodb: 572
+  wikipedia: Rumex_arcticus
+
+epazote:
+  kind_of: herb
+  label: Epazote
+  foodb: 566
+  wikipedia: Dysphania_ambrosioides
+
+fennel:
+  kind_of: herb
+  label: Fennel
+  foodb: 82
+  wikipedia: Fennel
+
+fenugreek:
+  kind_of: herb
+  label: Fenugreek
+  foodb: 186
+  wikipedia: Fenugreek
+
+fireweed:
+  kind_of: herb
+  label: Fireweed
+  foodb: 370
+  wikipedia: Chamaenerion_angustifolium
+
+garden_chamomile:
+  kind_of: herb
+  label: Garden chamomile
+  foodb: 46
+  wikipedia: Chamaemelum_nobile
+
+garden_cress:
+  kind_of: herb
+  label: Garden cress
+  foodb: 99
+  wikipedia: Garden_cress
+
+garlic_chive:
+  kind_of: herb
+  label: Garlic chive
+  foodb: 216
+  wikipedia: Allium_tuberosum
+
+hyssop:
+  kind_of: herb
+  label: Hyssop
+  foodb: 89
+  wikipedia: Hyssopus_officinalis
+
+leaf_celery:
+  kind_of: herb
+  label: Leaf celery
+  foodb: 249
+  wikipedia: Leaf_celery
+
+lemon_balm:
+  kind_of: herb
+  label: Lemon balm
+  foodb: 108
+  wikipedia: Lemon_balm
+
+lemon_grass:
+  kind_of: herb
+  label: Lemon grass
+  label: Citronella
+  foodb: 70
+  wikipedia: Cymbopogon
+
+lemon_thyme:
+  kind_of: herb
+  label: Lemon thyme
+  foodb: 238
+  wikipedia: Thymus_pulegioides
+
+lemon_verbena:
+  kind_of: herb
+  label: Lemon verbena
+  foodb: 10
+  wikipedia: Aloysia_citrodora
+
+linden:
+  kind_of: herb
+  label: Linden
+  foodb: 184
+  wikipedia: Tilia
+
+silver_linden:
+  kind_of: linden
+  label: Silver linden
+  foodb: 3
+  wikipedia: Tilia_tomentosa
+
+small_leaf_linden:
+  kind_of: linden
+  label: Small-leaf linden
+  foodb: 185
+  wikipedia: Tilia_cordata
+
+lovage:
+  kind_of: herb
+  label: Lovage
+  foodb: 100
+  wikipedia: Lovage
+
+marjoram:
+  kind_of: herb
+  label: Marjoram
+  foodb: 122
+  wikipedia: Marjoram
+
+mexican_oregano:
+  kind_of: herb
+  label: Mexican oregano
+  foodb: 102
+  wikipedia: Lippia_graveolens
+
+mint:
+  kind_of: herb
+  label: Mint
+  foodb: 109
+  wikipedia: Mentha
+
+corn_mint:
+  kind_of: mint
+  label: Corn mint
+  foodb: 111
+  wikipedia: Mentha_arvensis
+
+peppermint:
+  kind_of: mint
+  label: Peppermint
+  foodb: 113
+  wikipedia: Peppermint
+
+spearmint:
+  kind_of: mint
+  label: Spearmint
+  foodb: 112
+  wikipedia: Spearmint
+
+water_mint:
+  kind_of: mint
+  label: Water mint
+  foodb: 110
+  wikipedia: Mentha_citrata
+
+mugwort:
+  kind_of: herb
+  label: Mugwort
+  foodb: 20
+  wikipedia: Mugwort
+
+oregano:
+  kind_of: herb
+  label: Oregano
+  foodb: 124
+  wikipedia: Oregano
+
+italian_oregano:
+  kind_of: oregano
+  label: Italian oregano
+  foodb: 259
+
+parsley:
+  kind_of: herb
+  label: Parsley
+  foodb: 131
+  wikipedia: Parsley
+
+pineapple_sage:
+  kind_of: herb
+  label: Pineapple sage
+  foodb: 266
+  wikipedia: Salvia_elegans
+
+pot_marjoram:
+  kind_of: herb
+  label: Pot marjoram
+  foodb: 123
+  wikipedia: Origanum_onites
+
+purslane:
+  kind_of: herb
+  label: Purslane
+  foodb: 142
+  wikipedia: Portulaca_oleracea
+
+rose_hip:
+  kind_of: herb
+  label: Rose hip
+  foodb: 456
+  wikipedia: Rose_hip
+
+roselle:
+  kind_of: herb
+  label: Roselle
+  foodb: 457
+  wikipedia: Roselle_(plant)
+
+rosemary:
+  kind_of: herb
+  label: Rosemary
+  foodb: 159
+  wikipedia: Rosemary
+
+sage:
+  kind_of: herb
+  label: Sage
+  foodb: 165
+  wikipedia: Salvia_officinalis
+
+savory:
+  kind_of: herb
+  label: Savory
+  wikipedia: Satureja
+
+summer_savory:
+  kind_of: savory
+  label: Summer savory
+  foodb: 167
+  wikipedia: Summer_savory
+
+winter_savory:
+  kind_of: savory
+  label: Winter savory
+  foodb: 168
+  wikipedia: Winter_savory
+
+tarragon:
+  kind_of: herb
+  label: Tarragon
+  foodb: 19
+  wikipedia: Tarragon
+
+teff:
+  kind_of: herb
+  label: Teff
+  foodb: 500
+  wikipedia: Eragrostis_tef
+
+thyme:
+  kind_of: herb
+  label: Thyme
+  foodb: 183
+  wikipedia: Thymus_vulgaris
+
+verbena:
+  kind_of: herb
+  label: Verbena
+  foodb: 196
+  wikipedia: Verbena_officinalis
+
+watercress:
+  kind_of: herb
+  label: Watercress
+  foodb: 158
+  wikipedia: Watercress
+
+wild_chamomile:
+  kind_of: herb
+  label: Wild chamomile
+  foodb: 107
+  wikipedia: Matricaria_chamomilla
+
+willow:
+  kind_of: herb
+  label: Willow
+  label: Sallow
+  label: Osier
+  wikipedia: Willow
+
+willow_leaf:
+  kind_of: willow
+  label: Willow leaf
+
+willow_tea_leaf:
+  kind_of: willow_leaf
+  label: Tea leaf willow
+  foodb: 517
+  wikipedia: Salix_pulchra
+
+yellow_waterlily:
+  kind_of: herb
+  label: Yellow water-lily
+  foodb: 863
+  wikipedia: Nuphar_lutea
+
+
+#
+# Spices
+#
+
+allspice:
+  kind_of: spice
+  label: Allspice
+  foodb: 288
+  wikipedia: Allspice
+
+caper:
+  kind_of: spice
+  label: Caper
+  foodb: 39
+  wikipedia: Caper
+
+caraway:
+  kind_of: spice
+  label: Caraway
+  foodb: 43
+  wikipedia: Caraway
+
+cardamom:
+  kind_of: spice
+  label: Cardamom
+  foodb: 74
+  wikipedia: Cardamom
+
+cayenne_pepper:
+  kind_of: spice
+  derivative_of: capsicum_annuum
+  label: Cayenne pepper
+  wikipedia: Cayenne_pepper
+
+chervil:
+  kind_of: spice
+  label: Chervil
+  foodb: 332
+  wikipedia: Chervil
+
+chili_powder:
+  kind_of: spice
+  # TODO what is chili powder?
+  label: Chili powder
+  wikipedia: Chili_powder
+
+cinnamon:
+  kind_of: spice
+  label: Cinnamon
+  foodb: 586
+  wikipedia: Cinnamon
+
+ceylon_cinnamon:
+  kind_of: cinnamon
+  label: Ceylon cinnamon
+  foodb: 51
+  wikipedia: Cinnamomum_verum
+
+chinese_cinnamon:
+  kind_of: cinnamon
+  label: Chinese cinnamon
+  foodb: 50
+  wikipedia: Cinnamomum_cassia
+
+clove:
+  kind_of: spice
+  label: Clove
+  foodb: 179
+  wikipedia: Clove
+
+cumin:
+  kind_of: spice
+  label: Cumin
+  foodb: 67
+  wikipedia: Cumin
+
+cumin_seed:
+  kind_of: cumin
+  kind_of: seed
+  label: Cumin seed
+
+galangal:
+  kind_of: spice
+  label: Galangal
+  wikipedia: Galangal
+
+garlic_powder:
+  kind_of: spice
+  derivative_of: garlic
+  label: Garlic powder
+  wikipedia: Garlic_powder
+
+ginger_powder:
+  kind_of: spice
+  derivative_of: ginger
+  label: Ginger powder
+
+ginseng:
+  kind_of: spice
+  label: Ginseng
+  foodb: 219
+  wikipedia: Ginseng
+
+horseradish:
+  kind_of: spice
+  label: Horseradish
+  foodb: 18
+  wikipedia: Horseradish
+
+nutmeg:
+  kind_of: spice
+  label: Nutmeg
+  foodb: 118
+  wikipedia: Nutmeg
+
+mace:
+  kind_of: nutmeg
+  label: Mace
+
+onion_powder:
+  kind_of: spice
+  derivative_of: onion
+  label: Onion powder
+  wikipedia: Onion_powder
+
+paprika:
+  kind_of: spice
+  label: Paprika
+  wikipedia: Paprika
+
+pepper:
+  kind_of: spice
+  label: Pepper
+  foodb: 139
+  wikipedia: Black_pepper
+
+black_pepper:
+  kind_of: pepper
+  label: Black pepper
+  wikipedia: Black_pepper#Black_pepper
+
+green_pepper:
+  kind_of: pepper
+  label: Green pepper
+  wikipedia: Black_pepper#Green_pepper
+
+red_pepper:
+  kind_of: pepper
+  label: Red pepper
+  wikipedia: Black_pepper#Orange_pepper_and_red_pepper
+
+sichuan_pepper:
+  kind_of: pepper
+  label: Sichuan peppercorn
+  label: Szechuan pepper
+  label: Sichuan pepper
+  wikipedia: Sichuan_pepper
+
+white_pepper:
+  kind_of: pepper
+  label: White pepper
+  wikipedia: Black_pepper#White_pepper
+
+saffron:
+  kind_of: spice
+  label: Saffron
+  foodb: 63
+  wikipedia: Saffron
+
+star_anise:
+  kind_of: spice
+  label: Star anise
+  foodb: 90
+  wikipedia: Illicium_verum
+
+turmeric:
+  kind_of: spice
+  label: Turmeric
+  foodb: 68
+  wikipedia: Turmeric
+
+vanilla:
+  kind_of: spice
+  label: Vanilla
+  foodb: 195
+  wikipedia: Vanilla
+
+wasabi:
+  kind_of: spice
+  label: Wasabi
+  foodb: 509
+  wikipedia: Wasabi
+
+wasabi_root:
+  kind_of: wasabi
+  label: Wasabi root
+
+# Herbs and spices mixes
+# TODO improve herb and spice mixes taxonomy
+
+herb_and_spice_mixture:
+  kind_of: herb_and_spice
+  label: Spice mix
+  wikipedia: Spice_mix
+
+curry_powder:
+  kind_of: herb_and_spice_mixture
+  made_of: coriander
+  made_of: turmeric
+  made_of: cumin
+  made_of: fenugreek
+  made_of: chili_pepper
+  made_of: ginger
+  made_of: garlic
+  made_of: fennel_seed
+  made_of: caraway
+  made_of: cinnamon
+  made_of: clove
+  made_of: mustard_seed
+  made_of: cardamom
+  made_of: nutmeg
+  made_of: turmeric
+  made_of: curry_leaf
+  made_of: black_pepper
+  label: Curry powder
+  foodb: 700
+  wikipedia: Curry_powder
+  
+five_spice_powder:
+  kind_of: herb_and_spice_mixture
+  made_of: star_anise
+  made_of: clove
+  made_of: chinese_cinnamon
+  made_of: sichuan_pepper
+  made_of: fennel_seed
+  label: Five-spice powder
+  wikipedia: Five-spice_powder
+
+pumpkin_pie_spice:
+  kind_of: herb_and_spice_mixture
+  made_of: nutmeg_ground
+  made_of: cinnamon_ground
+  made_of: ginger_ground
+  made_of: clove_ground
+  made_of: allspice_ground
+  label: Pumpkin pie spice
+  wikipedia: Pumpkin_pie_spice
+
+remoulade:
+  kind_of: herb_and_spice_mixture
+  kind_of: french_dish
+  made_of: aioli
+  made_of: mayonnaise
+  made_of: horseradish
+  made_of: paprika
+  made_of: anchovy
+  made_of: caper
+  label: Remoulade
+  foodb: 697
+  wikipedia: Remoulade
+
+seasoning_mix:
+  kind_of: herb_and_spice_mixture
+  label: Seasoning mix
+
+miso:
+  kind_of: seasoning
+  kind_of: soy_product
+  label: Miso
+  foodb: 717
+  wikipedia: Miso
+
+poultry_seasoning:
+  kind_of: seasoning
+  label: Poultry seasoning
+
+
+#
+# Vinegars
+#
+
+# TODO connect vinegars to their sources
+
+vinegar:
+  kind_of: seasoning
+  label: Vinegar
+  foodb: 645
+  wikipedia: Vinegar
+
+balsamic_vinegar:
+  kind_of: vinegar
+  derivative_of: grape
+  label: Balsamic vinegar
+  wikipedia: Balsamic_vinegar
+
+cane_vinegar:
+  kind_of: vinegar
+  label: Cane vinegar
+  label: Sukang Iloko
+  label: Sukang maasim
+
+cider_vinegar:
+  kind_of: vinegar
+  derivative_of: cider
+  label: Cider vinegar
+  wikipedia: Apple_cider_vinegar
+
+fruit_vinegar:
+  kind_of: vinegar
+  derivative_of: fruit
+  label: Fruit vinegar
+  wikipedia: Vinegar#Fruit
+  
+apple_vinegar:
+  kind_of: fruit_vinegar
+  derivative: of apple
+  label: Apple vinegar
+  
+blackcurrant_vinegar:
+  kind_of: fruit_vinegar
+  derivative: of blackcurrant
+  label: Blackcurrant vinegar
+ 
+coconut_vinegar:
+  kind_of: fruit_vinegar
+  derivative: of coconut
+  label: Coconut vinegar
+
+jujube_vinegar:
+  kind_of: fruit_vinegar
+  derivative: of jujube
+  label: Jujube vinegar
+  label: Zaocu
+  label: Hongzaocu
+
+kiwi_vinegar:
+  kind_of: fruit_vinegar
+  derivative: of kiwi
+  label: Kiwi vinegar
+  
+palm_vinegar:
+  kind_of: fruit_vinegar
+  label: Palm vinegar
+
+persimmon_vinegar:
+  kind_of: fruit_vinegar
+  derivative: of persimmon
+  label: Persimmon vinegar
+  label: Gam sikcho
+  wikipedia: Persimmon_vinegar
+
+pomegranate_vinegar:
+  kind_of: fruit_vinegar
+  derivative: of pomegranate
+  label: Pomegranate vinegar
+
+quince_vinegar:
+  kind_of: fruit_vinegar
+  derivative: of quince
+  label: Quince vinegar
+
+raisin_vinegar:
+  kind_of: fruit_vinegar
+  derivative: of raisin
+  label: Raisin vinegar
+  label: Khall 'inab
+  
+raspberry_vinegar:
+  kind_of: fruit_vinegar
+  derivative: of raspberry
+  label: Raspberry vinegar
+  
+tomato_vinegar:
+  kind_of: fruit_vinegar
+  derivative: of tomato
+  label: Tomato vinegar
+
+wolfberry_vinegar:
+  kind_of: fruit_vinegar
+  label: Wolfberry vinegar
+  
+grain_vinegar:
+  kind_of: vinegar
+  derivative_of: grain
+  label: Grain vinegar
+  
+malt_vinegar:
+  kind_of: grain_vinegar
+  derivative_of: ale
+  derivative_of: barley
+  label: Malt vinegar
+  label: Alegar
+  wikipedia: Vinegar#Malt
+  
+rice_vinegar:
+  kind_of: grain_vinegar
+  derivative_of: rice
+  label: Rice vinegar
+  wikipedia: Rice_vinegar
+  
+black_rice_vinegar:
+  kind_of: rice_vinegar
+  label: Black rice vinegar
+  
+white_rice_vinegar:
+  kind_of: rice_vinegar
+  label: White rice vinegar
+
+spirit_vinegar:
+  kind_of: vinegar
+  label: Spirit vinegar
+  label: Distilled vinegar
+  label: White vinegar
+
+sherry_vinegar:
+  kind_of: spirit_vinegar
+  label: Sherry vinegar
+
+wine_vinegar:
+  kind_of: vinegar
+  derivative_of: wine
+  label: Wine vinegar
+
+red_wine_vinegar:
+  kind_of: wine_vinegar
+  derivative_of: red_wine
+  label: Red wine vinegar
+
+white_wine_vinegar:
+  kind_of: wine_vinegar
+  derivative_of: white_wine
+  label: White wine vinegar
+
+
+#
+# Sauces and dressings
+#
+
+# TODO sauce taxonomy
+# TODO relate sauces to their sources
+
+sauce:
+  kind_of: seasoning
+  label: Sauce
+  foodb: 665
+  wikipedia: Sauce
+
+# Tomato-based sauces and extract
+
+# TODO tomato sauce is currently set for spaghetti sauce, equivalent? meatless, with meat? differentiate?
+tomato_sauce:
+  kind_of: sauce
+  kind_of: tomato_product
+  label: Tomato sauce
+  label: Salsa di pomodoro
+  wikipedia: Tomato_sauce
+
+marinara_sauce:
+  kind_of: tomato_sauce
+  label: Marinara sauce
+  wikipedia: Marinara_sauce
+
+neapolitan_sauce:
+  kind_of: tomato_sauce
+  label: Neapolitan sauce
+  label: Napoli sauce
+  label: Napoletana sauce
+  wikipedia: Neapolitan_sauce
+
+ketchup:
+  kind_of: tomato_sauce
+  kind_of: sandwich_spread
+  label: Ketchup
+  label: Catsup
+  foodb: 781
+  wikipedia: Ketchup
+
+# Miscellaneous sauces
+
+dressing:
+  kind_of: sauce
+  label: Dressing
+
+creamy_dressing:
+  kind_of: dressing
+  label: Creamy dressing
+
+salad_dressing:
+  kind_of: dressing
+  label: Salad dressing
+  foodb: 664
+  wikipedia: Salad#Dressings
+  
+avocado_dressing:
+  kind_of: salad_dressing
+  made_of: avocado
+  label: Avocado dressing
+
+blue_cheese_dressing:
+  kind_of: salad_dressing
+  label: Blue cheese dressing
+  wikipedia: Blue_cheese_dressing
+
+caesar_dressing:
+  kind_of: salad_dressing
+  label: Caesar dressing
+
+catalina_dressing:
+  kind_of: salad_dressing
+  label: Catalina dressing
+
+cobb_dressing:
+  kind_of: salad_dressing
+  label: Cobb dressing
+
+coleslaw_dressing:
+  kind_of: salad_dressing
+  label: Coleslaw dressing
+
+cornmeal_dressing:
+  kind_of: salad_dressing
+  made_of: cornmeal
+  label: Cornmeal dressing
+
+french_dressing:
+  kind_of: salad_dressing
+  label: French dressing
+  wikipedia: French_dressing
+
+green_goddess_dressing:
+  kind_of: salad_dressing
+  label: Green goddess dressing
+  wikipedia: Green_goddess_dressing
+
+honey_mustard_dressing:
+  kind_of: salad_dressing
+  label: Honey mustard dressing
+
+italian_dressing:
+  kind_of: salad_dressing
+  label: Italian dressing
+  wikipedia: Italian_dressing
+  
+korean_dressing:
+  kind_of: salad_dressing
+  label: Korean dressing
+
+mayonnaise_dressing:
+  kind_of: salad_dressing
+  label: Mayonnaise dressing
+  wikipedia: Mayonnaise
+
+peppercorn_dressing:
+  kind_of: salad_dressing
+  label: Peppercorn dressing
+
+poppyseed_dressing:
+  kind_of: salad_dressing
+  label: Poppyseed dressing
+
+ranch_dressing:
+  kind_of: salad_dressing
+  label: Ranch dressing
+  wikipedia: Ranch_dressing
+
+rice_dressing:
+  kind_of: salad_dressing
+  made_of: rice
+  label: Rice dressing
+
+roquefort_dressing:
+  kind_of: dressing
+  label: Roquefort dressing
+
+russian_dressing:
+  kind_of: salad_dressing
+  kind_of: sandwich_spread
+  label: Russian dressing
+  wikipedia: Russian_dressing
+  
+sesame_dressing:
+  kind_of: salad_dressing
+  label: Sesame dressing
+  label: Ginger dressing
+  wikipedia: Ginger_dressing
+
+sesame_seed_dressing:
+  kind_of: dressing
+  label: Sesame seed dressing
+
+sweet_sour_dressing:
+  kind_of: dressing
+  label: Sweet and sour dressing
+
+thousand_island_dressing:
+  kind_of: salad_dressing
+  kind_of: sandwich_spread
+  label: Thousand island dressing
+  wikipedia: Thousand_Island_dressing
+
+vinaigrette:
+  kind_of: salad_dressing
+  label: Vinaigrette
+  wikipedia: Vinaigrette
+
+sour_dressing:
+  kind_of: dressing
+  label: Sour dressing
+
+yoghurt_dressing:
+  kind_of: dressing
+  label: Yoghurt dressing
+
+
+# 
+# Chili sauce
+#
+
+chili_sauce:
+  kind_of: sauce
+  label: Chili sauce
+  label: Salsa
+  label: Mexican sauce
+  wikipedia: Salsa_(sauce)
+
+carrot_salsa:
+  kind_of: chili_sauce
+  label: Carrot salsa
+
+chipotle_salsa:
+  kind_of: chili_sauce
+  label: Chipotle salsa
+
+corn_salsa:
+  kind_of: chili_sauce
+  label: Corn salsa
+
+creamy_avocado_salsa:
+  kind_of: chili_sauce
+  label: Creamy avocado salsa
+
+habanero_salsa:
+  kind_of: chili_sauce
+  label: Habanero salsa
+
+mango_salsa:
+  kind_of: chili_sauce
+  label: Mango salsa
+
+pepper_salsa:
+  kind_of: chili_sauce
+  label: Pepper salsa
+
+tabasco:
+  kind_of: pepper_salsa
+  label: Tabasco
+  wikipedia: Tabasco_sauce
+
+pico_de_gallo:
+  kind_of: chili_sauce
+  label: Pico de gallo
+  label: Salsa fresca
+  label: Salsa cruda
+  wikipedia: Pico_de_gallo
+
+pineapple_salsa:
+  kind_of: chili_sauce
+  label: Pineapple salsa
+
+salsa_criolla:
+  kind_of: chili_sauce
+  label: Salsa criolla
+  label: Sarza criolla
+  wikipedia: Salsa_criolla
+
+salsa_cruda:
+  kind_of: chili_sauce
+  label: Salsa cruda
+
+salsa_negra:
+  kind_of: chili_sauce
+  label: Salsa negra
+
+salsa_ranchera:
+  kind_of: chili_sauce
+  label: Salsa ranchera
+
+salsa_roja:
+  kind_of: chili_sauce
+  label: Salsa roja
+  wikipedia: Salsa_roja
+
+salsa_taquera:
+  kind_of: chili_sauce
+  label: Salsa taquera
+
+salsa_verde:
+  kind_of: chili_sauce
+  label: Salsa verde
+
+sriracha:
+  kind_of: chili_sauce
+  label: Sriracha
+  wikipedia: Sriracha_sauce
+
+
+# 
+# Dipping sauce
+#
+  
+dipping_sauce:
+  kind_of: sauce
+  label: Dipping sauce
+  label: Dip
+  wikipedia: Dipping_sauce
+
+barbecue_sauce:
+  kind_of: dipping_sauce
+  made_of: vinegar
+  made_of: tomato_puree
+  made_of: mayonnaise
+  made_of: onion_powder
+  made_of: spice
+  label: Barbecue sauce
+  label: BBQ sauce
+  wikipedia: Barbecue_sauce
+
+bean_dip:
+  kind_of: dipping_sauce
+  made_of: bean
+  label: Bean dip
+  wikipedia: Bean_dip
+
+cocktail_sauce:
+  kind_of: dipping_sauce
+  label: Cocktail sauce
+  wikipedia: Cocktail_sauce
+
+curry_sauce:
+  kind_of: dipping_sauce
+  made_of: curry_powder
+  label: Curry sauce
+
+eggplant_dip:
+  kind_of: dipping_sauce
+  made_of: eggplant
+  label: Eggplant dip
+
+garlic_sauce:
+  kind_of: dipping_sauce
+  made_of: garlic
+  label: Garlic sauce
+  wikipedia: Garlic_sauce
+
+agliata:
+  kind_of: garlic_sauce
+  label: Agliata
+  wikipedia: Agliata
+
+aioli:
+  kind_of: garlic_sauce
+  label: Aioli
+  wikipedia: Aioli
+
+filfel_chuma:
+  kind_of: garlic_sauce
+  label: Filfel chuma
+  label: Pilpelshuma
+  label: Maseer
+  wikipedia: Filfel_chuma
+
+honey_garlic_sauce:
+  kind_of: garlic_sauce
+  label: Honey garlic sauce
+  wikipedia: Honey_garlic_sauce
+
+mojo:
+  kind_of: garlic_sauce
+  label: Mojo
+  wikipedia: Mojo_(sauce)
+
+mujdei:
+  kind_of: garlic_sauce
+  label: Mujdei
+  wikipedia: Mujdei
+
+skordalia:
+  kind_of: garlic_sauce
+  label: Skordalia
+  label: Skordhalia
+  label: Skorthalia 
+  wikipedia: Skordalia
+
+taleya:
+  kind_of: garlic_sauce
+  label: Ta'leya
+
+taratoor:
+  kind_of: garlic_sauce
+  label: Taratoor
+
+toum:
+  kind_of: garlic_sauce
+  label: Toum
+  wikipedia: Toum
+
+guacamole:
+  kind_of: dipping_sauce
+  made_of: avocado
+  label: Guacamole
+  wikipedia: Guacamole
+  
+hot_pepper_dip:
+  kind_of: dipping_sauce
+  label: Hot pepper dip
+
+muhammara:
+  kind_of: hot_pepper_dip
+  kind_of: levantine_dish
+  made_of: red_pepper
+  made_of: walnut
+  made_of: bread_crumb
+  made_of: lemon_juice
+  made_of: molasses
+  made_of: red_chili_pepper
+  made_of: salt
+  made_of: olive_oil
+  made_of: cumin
+  label: Mhammara
+  label: Muhammara
+  wikipedia: Muhammara
+
+hummus:
+  kind_of: dipping_sauce
+  kind_of: spread
+  kind_of: levantine_dish
+  kind_of: puree
+  made_of: tahini
+  made_of: chickpea
+  label: Hummus
+  label: Hommus
+  label: Houmous
+  foodb: 874
+  wikipedia: Hummus
+  
+salsa_con_queso:
+  kind_of: dipping_sauce
+  kind_of: chili_sauce
+  label: Salsa con queso
+
+spinach_dip:
+  kind_of: dipping_sauce
+  made_of: spinach
+  label: Spinach dip
+  
+tahini:
+  kind_of: dipping_sauce
+  kind_of: spread
+  made_of: sesame_seed
+  label: Tahini
+  label: Tahina
+  label: Tehina
+  label: Ardeh
+  wikipedia: Tahini
+
+taramasalata:
+  kind_of: dipping_sauce
+  kind_of: levantine_dish
+  made_of: roe
+  made_of: bread_crumb
+  made_of: mashed_potato
+  made_of: lemon_juice
+  made_of: vinegar
+  made_of: olive_oil
+  label: Taramasalata
+  label: Taramosalata 
+  wikipedia: Taramasalata
+
+tzatziki:
+  kind_of: dipping_sauce
+  kind_of: levantine_dish
+  made_of: yoghurt
+  made_of: cucumber
+  made_of: garlic
+  made_of: olive_oil
+  made_of: salt
+  made_of: lemon_juice
+  made_of: dill
+  made_of: mint
+  made_of: parsley
+  label: Tzatziki
+  wikipedia: Tzatziki
+
+
+#
+# Gravy
+#
+
+gravy:
+  kind_of: sauce
+  label: Gravy
+  wikipedia: Gravy
+
+meat_gravy:
+  kind_of: gravy
+  label: Meat gravy
+
+brown_gravy:
+  kind_of: meat_gravy
+  label: Brown gravy
+
+beef_gravy:
+  kind_of: meat_gravy
+  label: Beef gravy
+
+cream_gravy:
+  kind_of: meat_gravy
+  label: Cream gravy
+
+pork_gravy:
+  kind_of: meat_gravy
+  label: Pork gravy
+
+red_eye_gravy:
+  kind_of: pork_gravy
+  label: Red-eye gravy
+
+sausage_gravy:
+  kind_of: meat_gravy
+  label: Sausage gravy
+
+veal_gravy:
+  kind_of: meat_gravy
+  label: Veal gravy
+  
+poultry_gravy:
+  kind_of: gravy
+  label: Poultry gravy
+
+chicken_gravy:
+  kind_of: poultry_gravy
+  label: Chicken gravy
+
+turkey_gravy:
+  kind_of: poultry_gravy
+  label: Turkey gravy
+
+veggie_gravy:
+  kind_of: gravy
+  label: Veggie gravy
+
+chocolate_gravy:
+  kind_of: veggie_gravy
+  derivative_of: chocolate
+  label: Chocolate gravy
+
+egg_gravy:
+  kind_of: veggie_gravy
+  derivative_of: egg
+  label: Egg gravy
+
+onion_gravy:
+  kind_of: veggie_gravy
+  derivative_of: onion
+  label: Onion gravy
+
+mushroom_gravy:
+  kind_of: veggie_gravy
+  derivative_of: mushroom
+  label: Mushroom gravy
+
+vegetable_gravy:
+  kind_of: veggie_gravy
+  derivative_of: vegetable
+  label: Vegetable gravy
+  
+
+# 
+# Various sauce
+#
+
+adobo_fresco:
+  kind_of: sauce
+  made_of: paprika
+  made_of: oregano
+  made_of: salt
+  made_of: garlic
+  made_of: vinegar
+  label: Adobo fresco
+  wikipedia: Adobo
+
+alfredo_sauce:
+  kind_of: sauce
+  label: Alfredo sauce
+
+bean_sauce:
+  kind_of: sauce
+  made_of: soy_bean
+  made_of: flour
+  made_of: salt
+  label: Bean sauce
+  wikipedia: Sweet_bean_sauce
+  
+butter_sauce:
+  kind_of: sauce
+  made_of: butter
+  label: Butter sauce
+  
+brown_sauce:
+  kind_of: sauce
+  made_of: tomato
+  made_of: molasses
+  made_of: date
+  made_of: apple
+  made_of: tamarind
+  made_of: spice
+  made_of: vinegar
+  made_of: raisin
+  label: Brown sauce
+  wikipedia: Brown_sauce
+  
+espagnole_sauce:
+  kind_of: brown_sauce
+  label: Espagnole sauce
+  wikipedia: Espagnole_sauce
+
+steak_sauce:
+  kind_of: brown_sauce
+  label: Steak sauce
+  wikipedia: Steak_sauce
+  
+cassareep:
+  kind_of: sauce
+  made_of: cassava
+  made_of: spice
+  label: Cassareep
+  wikipedia: Cassareep
+  
+cream_sauce:
+  kind_of: sauce
+  made_of: cream
+  label: Cream sauce
+  
+dessert_sauce:
+  kind_of: sauce
+  label: Dessert sauce
+  wikipedia: List_of_dessert_sauces
+
+buffalo_sauce:
+  kind_of: sauce
+  made_of: cayenne_pepper
+  made_of: butter
+  made_of: chili_sauce
+  label: Buffalo sauce
+  wikipedia: Buffalo_wing#Sauce
+
+caramel_sauce:
+  kind_of: sauce
+  made_of: cream
+  made_of: caramel
+  label: Caramel sauce
+  wikipedia: Caramel#Caramel_sauce
+
+cheese_sauce:
+  kind_of: sauce
+  made_of: cheese
+  label: Cheese sauce
+
+duck_sauce:
+  kind_of: sauce
+  made_of: plum
+  made_of: apricot
+  made_of: pineapple
+  made_of: peach
+  made_of: sugar
+  made_of: vinegar
+  made_of: ginger
+  made_of: chili_pepper
+  label: Duck sauce
+  label: Orange sauce
+  wikipedia: Duck_sauce
+
+enchilada_sauce:
+  kind_of: sauce
+  label: Enchilada sauce
+
+fish_sauce:
+  kind_of: sauce
+  made_of: fish
+  label: Fish sauce
+  wikipedia: Fish_sauce
+
+fruit_sauce:
+  kind_of: sauce
+  made_of: fruit
+  label: Fruit sauce
+
+applesauce:
+  kind_of: fruit_sauce
+  made_of: apple
+  label: Apple sauce
+  label: Applesauce
+  wikipedia: Apple_sauce
+
+cranberry_sauce:
+  kind_of: fruit_sauce
+  made_of: cranberry
+  label: Cranberry sauce
+  wikipedia: Cranberry_sauce
+
+guava_sauce:
+  kind_of: fruit_sauce
+  made_of: guava
+  label: Guava sauce
+
+plum_sauce:
+  kind_of: fruit_sauce
+  label: Plum sauce
+  wikipedia: Plum_sauce
+
+raspberry_sauce:
+  kind_of: fruit_sauce
+  made_of: raspberry
+  label: Raspberry sauce
+
+green_sauce:
+  kind_of: sauce
+  made_of: herb
+  label: Green sauce
+  wikipedia: Green_sauce
+
+hard_sauce:
+  kind_of: sauce
+  made_of: butter
+  made_of: sugar
+  label: Hard sauce
+  wikipedia: Hard_sauce
+  
+harissa:
+  kind_of: sauce
+  made_of: red_pepper
+  made_of: chili_pepper
+  made_of: baklouti_pepper
+  made_of: serrano_pepper
+  label: Harissa
+  wikipedia: Harissa
+
+hoisin_sauce:
+  kind_of: sauce
+  made_of:  soy_bean
+  maded_of: fennel_seed
+  made_of: red_chili_pepper
+  made_of: garlic
+  made_of: vinegar
+  made_of: five_spice_powder
+  label: Hoisin
+  wikipedia: Hoisin_sauce
+
+hollandaise_sauce:
+  kind_of: sauce
+  made_of: chicken_egg_yolk
+  made_of: butter
+  label: Hollandaise sauce
+  label: Dutch sauce
+  wikipedia: Hollandaise_sauce
+
+horseradish_sauce:
+  kind_of: sauce
+  made_of: horseradish
+  made_of: vinegar
+  label: Horseradish sauce
+  wikipedia: Horseradish#Culinary_uses
+  
+lobster_sauce:
+  kind_of: sauce
+  made_of: broth
+  label: Lobster sauce
+  
+marinade:
+  kind_of: sauce
+  label: Marinade
+  wikipedia: Marination
+
+mayonnaise:
+  kind_of: sauce
+  kind_of: sandwich_spread
+  made_of: vegetable_oil
+  made_of: chicken_egg_yolk
+  made_of: vinegar
+  made_of: lemon_juice
+  label: Mayonnaise
+  wikipedia: Mayonnaise
+  
+mole_sauce:
+  kind_of: sauce
+  kind_of: mexican_dish
+  made_of: fruit
+  made_of: chili_pepper
+  made_of: nut
+  made_of: black_pepper
+  made_of: cinnamon
+  made_of: cumin
+  made_of: chocolate
+  label: Mole sauce
+  wikipedia: Mole_sauce
+
+mole_poblano_sauce:
+  kind_of: mole_sauce
+  label: Mole poblano sauce
+  wikipedia: Mole_sauce#Poblano
+
+mustard:
+  kind_of: sauce
+  kind_of: sandwich_spread
+  made_of: mustard_seed
+  label: Mustard
+  foodb: 673
+  wikipedia: Mustard_(condiment)
+
+oyster_sauce:
+  kind_of: sauce
+  made_of: oyster
+  made_of: sugar
+  made_of: salt
+  made_of: water
+  made_of: corn_starch
+  label: Oyster sauce
+  wikipedia: Oyster_sauce
+
+peanut_sauce:
+  kind_of: sauce
+  made_of: peanut
+  made_of: water
+  made_of: spice
+  label: Peanut sauce
+  label: Satay sauce
+  label: Bumbu kacang
+  label: Sambal kacang
+  label: Pecel
+  wikipedia: Peanut_sauce
+
+pesto:
+  kind_of: sauce
+  made_of: basil
+  made_of: garlic
+  made_of: vegetable_oil
+  made_of: cheese
+  made_of: pine_nut
+  label: Pesto
+  wikipedia: Pesto
+
+sesame_sauce:
+  kind_of: sauce
+  made_of: sesame_seed
+  label: Sesame sauce
+
+sofrito_sauce:
+  kind_of: sauce
+  label: Sofrito sauce
+
+soy_sauce:
+  kind_of: soy_product
+  kind_of: sauce
+  label: Soy sauce
+  label: Soya sauce
+  foodb: 716
+  wikipedia: Soy_sauce
+
+sweet_sour_sauce:
+  kind_of: sauce
+  made_of: sugar
+  made_of: vinegar
+  label: Sweet and sour sauce
+  wikipedia: Sweet_and_sour
+
+tartar_sauce:
+  kind_of: sauce
+  kind_of: sandwich_spread
+  kind_of: french_dish
+  made_of: mayonnaise
+  made_of: caper
+  made_of: pickle
+  made_of: lemon_juice
+  made_of: tarragon
+  label: Tartar sauce
+  wikipedia: Tartar_sauce
+
+teriyaki_sauce:
+  kind_of: sauce
+  made_of: sake
+  made_of: mirin
+  made_of: sugar
+  label: Teriyaki sauce
+  wikipedia: Teriyaki#Teriyaki_sauce
+
+veloute_sauce:
+  kind_of: sauce
+  made_of: stock
+  label: Velouté sauce
+  label: Velvety sauce
+  wikipedia: Velouté_sauce
+
+white_sauce:
+  kind_of: sauce
+  made_of: butter
+  made_of: flour
+  made_of: cow_milk
+  label: Béchamel sauce
+  label: White sauce
+  wikipedia: Béchamel_sauce
+  
+mornay_sauce:
+  kind_of: white_sauce
+  made_of: gruyere_cheese
+  label: Mornay sauce
+  wikipedia: Mornay_sauce
+
+worcestershire_sauce:
+  kind_of: sauce
+  kind_of: british_dish
+  made_of: malt_vinegar
+  made_of: spirit_vinegar
+  made_of: molasses
+  made_of: sugar
+  made_of: salt
+  made_of: anchovy
+  made_of: tamarind
+  made_of: onion
+  made_of: garlic
+  made_of: spice
+  label: Worcestershire sauce
+  wikipedia: Worcestershire_sauce
+
+
+

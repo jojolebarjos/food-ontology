@@ -1,0 +1,361 @@
+
+
+# TODO handle "chemical" additives? Added vitamins? Removed fat/sodium?
+
+
+
+
+
+
+
+
+
+
+
+#
+# Sugars and sweeteners
+#
+
+# TODO improve sweeteners, especially regarding granularity and source
+
+sweetener:
+  # TODO has sweetener a broader parent (e.g. seasoning)?
+  label: Sweetener
+
+# Common sugars
+# TODO report sugars sources
+
+sugar:
+  kind_of: sweetener
+  label: Sugar
+  foodb: 670
+  wikipedia: Sugar
+
+brown_sugar:
+  kind_of: sugar
+  label: Brown sugar
+  label: Whole cane sugar
+  label: Raw sugar
+  wikipedia: Brown_sugar
+
+granulated_sugar:
+  kind_of: sugar
+  label: Granulated sugar
+  wikipedia: Sucrose#White_refined
+
+maple_sugar:
+  kind_of: sugar
+  label: Maple sugar
+  wikipedia: Maple_sugar
+
+muscovado_sugar:
+  kind_of: sugar
+  label: Muscovado
+  label: Khandsari
+  label: Khand
+  wikipedia: Muscovado
+
+palm_sugar:
+  kind_of: sugar
+  label: Palm sugar
+  wikipedia: Palm sugar
+
+powdered_sugar:
+  kind_of: sugar
+  label: Powdered sugar
+  label: Icing sugar
+  label: Icing cake
+  wikipedia: Powdered_sugar
+
+rock_sugar:
+  kind_of: sugar
+  label: Rock sugar
+  label: Rock candy
+  label: Sugar candy
+  wikipedia: Rock_candy
+
+turbinado_sugar:
+  kind_of: sugar
+  label: Turbinado sugar
+
+sugar_substitute:
+  kind_of: sweetener
+  label: Sugar substitute
+  label: Artificial sweetener
+  foodb: 676
+  wikipedia: Sugar_substitute
+
+aspartame:
+  kind_of: sugar_substitute
+  label: Aspartame
+  wikipedia: Aspartame
+
+fructose:
+  kind_of: sugar_substitute
+  label: Fructose
+  label: Fruit sugar
+  wikipedia: Fructose
+
+saccharin:
+  kind_of: sugar_substitute
+  label: Saccharin
+  wikipedia: Saccharin
+
+stevia:
+  kind_of: sugar_substitute
+  label: Stevia
+  wikipedia: Stevia
+
+sucralose:
+  kind_of: sugar_substitute
+  label: Sucralose
+  wikipedia: Sucralose
+  
+
+# Sugar syrups
+# TODO report syrups sources
+
+syrup:
+  kind_of: sweetener
+  label: Syrup
+  foodb: 695
+  wikipedia: Syrup
+
+agave_syrup:
+  kind_of: syrup
+  made_of: agave
+  label: Agave syrup
+  label: Agave nectar
+  wikipedia: Agave_nectar
+
+cane_syrup:
+  kind_of: syrup
+  label: Cane syrup
+  label: Sugarcane
+  label: Sugar cane
+  wikipedia: Sugarcane
+
+chocolate_syrup:
+  kind_of: syrup
+  label: Chocolate syrup
+  wikipedia: Chocolate_syrup
+
+corn_syrup:
+  kind_of: syrup
+  made_of: corn_starch
+  label: Corn syrup
+  wikipedia: Corn_syrup
+
+glucose_syrup:
+  kind_of: syrup
+  made_of: starch
+  label: Glucose syrup
+  wikipedia: Glucose_syrup
+
+grenadine_syrup:
+  kind_of: syrup
+  label: Grenadine syrup
+  wikipedia: Grenadine
+
+malt_syrup:
+  kind_of: syrup
+  made_of: malt
+  label: Malt syrup
+  wikipedia: Barley_malt_syrup
+
+maple_syrup:
+  kind_of: syrup
+  label: Maple syrup
+  wikipedia: Maple_syrup
+  
+orgeat_syrup:
+  kind_of: syrup
+  made_of: almond
+  made_of: sugar
+  made_of: rose_water
+  made_of: orange_flower_water
+  label: Orgeat syrup
+  wikipedia: Orgeat_syrup
+
+pancake_syrup:
+  kind_of: syrup
+  label: Pancake syrup
+
+sorghum_syrup:
+  kind_of: syrup
+  label: Sorghum syrup
+
+sour_mix:
+  kind_of: syrup
+  made_of: lime_juice
+  made_of: syrup
+  made_of: lemon_juice
+  part_of: cocktail
+  label: Sour mix
+  wikipedia: Sour_mix
+  
+treacle:
+  kind_of: syrup
+  label: Treacle
+  wikipedia: Treacle
+
+golden_syrup:
+  kind_of: treacle
+  label: Golden syrup
+  wikipedia: Golden_syrup
+
+molasses:
+  kind_of: treacle
+  label: Molasses
+  label: Black treacle
+  foodb: 811
+  wikipedia: Molasses
+
+# Flavored syrups, used as beverage
+
+fruit_syrup:
+  kind_of: syrup
+  # TODO how to classify fruit syrup? maybe link to "drink powders"?
+  label: Fruit syrup
+  wikipedia: Fruit_syrup
+
+# Miscellaneous sweeteners
+
+honey:
+  kind_of: sweetener
+  kind_of: spread
+  product_of: bee
+  label: Honey
+  foodb: 643
+  wikipedia: Honey
+
+
+#
+# Jellies
+#
+
+# TODO improve jellies (e.g. agar)
+
+jelly:
+  # TODO has jelly a broader parent?
+  kind_of: fruit_spread
+  label: Jelly
+
+agar:
+  kind_of: jelly
+  derivative_of: red_alga
+  label: Agar
+  foodb: 285
+  wikipedia: Agar
+
+gelatin:
+  kind_of: jelly
+  label: Gelatin
+  foodb: 684
+  wikipedia: Gelatin
+
+pectin:
+  kind_of: jelly
+  label: Pectin
+  foodb: 758
+  wikipedia: Pectin
+
+#
+# Leavening agents
+#
+
+leavening_agent:
+  # TODO maybe define a parent for leavening agents?
+  label: Leavening agent
+  foodb: 682
+  wikipedia: Leavening_agent
+
+baking_powder:
+  kind_of: leavening_agent
+  label: Baking powder
+  wikipedia: Baking_powder
+
+baking_soda:
+  kind_of: leavening_agent
+  label: Baking soda
+  wikipedia: Sodium_bicarbonate
+
+cream_of_tartar:
+  kind_of: leavening_agent
+  label: Cream of tartar
+  wikipedia: Potassium_bitartrate
+
+yeast:
+  kind_of: leavening_agent
+  label: Yeast
+  wikipedia: Yeast
+
+
+#
+# Extract
+#
+
+extract:
+  kind_of: misc
+  label: Extract
+  wikipedia: Extract
+
+vanilla_extract:
+  kind_of: extract
+  made_of: vanilla
+  label: Vanilla extract
+  wikipedia: Vanilla_extract
+
+
+
+#
+# Concentrate
+#
+
+concentrate:
+  kind_of: misc
+  label: Concentrate
+
+fruit_concentrate:
+  kind_of: concentrate
+  made_of: fruit
+  label: Fruit concentrate
+
+lemon_concentrate:
+  kind_of: fruit_concentrate
+  made_of: lemon
+  label: Lemon concentrate
+
+lime_concentrate:
+  kind_of: fruit_concentrate
+  made_of: lime
+  label: Lime concentrate
+
+soy_concentrate:
+  kind_of: concentrate
+  kind_of: soy_product
+  derivative_of: soy_bean
+  label: Soy concentrate
+
+tomato_concentrate:
+  kind_of: concentrate
+  made_of: tomato
+  label: Tomato concentrate
+
+
+#
+# Misc
+#
+
+
+food_coloring:
+  kind_of: misc
+  label: Color additive
+  label: Food coloring
+  wikipedia: Food_coloring
+  
+rennet:
+  kind_of: misc
+  product_of: bovidae
+  label: Rennet
+  wikipedia: Rennet

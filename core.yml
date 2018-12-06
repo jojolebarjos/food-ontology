@@ -1,0 +1,360 @@
+
+
+#
+# Top-level markers
+#
+
+item:
+  label: Item
+  description: Root of all food items
+
+unknown:
+  label: Unknown
+  description: Marker for invalid/unknown stuff
+  foodb: 694
+
+todo:
+  label: ToDo
+  description: Marker for pending stuff
+
+
+#
+# Beverages
+#
+
+beverage:
+  kind_of: item
+  label: Beverage
+  foodb: 902
+  wikipedia: Drink
+
+
+# TODO water
+
+
+# Milks
+
+milk:
+  kind_of: beverage
+  label: Milk
+  wikipedia: Milk
+
+animal_milk:
+  kind_of: milk
+  product_of: animal
+  label: Animal milk
+  foodb: 712
+
+vegetable_milk:
+  # NOTE vegetable milk are often referred as milk substitutes
+  kind_of: milk
+  substitute_of: animal_milk
+  derivative_of: plant
+  label: Vegetable milk
+
+imitation_milk:
+  kind_of: milk
+  substitute_of: animal_milk
+  label:
+    - Imitation milk
+    - Milk substitute
+  foodb: 878
+  wikipedia: Milk_substitute
+
+
+# TODO juices and derivates
+
+
+# TODO alcohol and cocktails
+
+
+#
+# Seasoning and condiments
+#
+
+seasoning:
+  kind_of: item
+  label:
+    - Seasoning
+    - Flavourer
+    - Condiment
+  description: Something added to food primarily for the savor it imparts
+
+herb_and_spice:
+  kind_of: seasoning
+  label: Herbs and spices
+  foodb: 897
+
+herb:
+  kind_of: herb_and_spice
+  # TODO relate herbs to plants
+  label: Herb
+  description: Any green, leafy plant, or parts thereof, used to flavour or season food
+  wikipedia: Herb
+
+# TODO fresh, dried, ground markers?
+
+spice:
+  kind_of: herb_and_spice
+  label: Spice
+  description: Aromatic or pungent plant matter (usually dried) used to season or flavour food
+  wikipedia: Spice
+
+
+#
+# Plants, mushrooms, algae
+#
+
+# TODO fix naming convention, especially for seeds and grains
+# TODO improve plant taxonomies, especially for fruits, vegetables and seeds
+# TODO Maybe need to think again the difference between a source and the actual product (e.g. apple fruit vs apple tree)
+
+
+plant:
+  kind_of: item
+  label: Plant
+  description: Any plant, from algae to vegetables
+
+mushroom:
+  # NOTE while technically not a plant, let's consider mushrooms as such
+  kind_of: plant
+  label: Mushroom
+  foodb: 883
+  wikipedia: Mushroom
+
+# TODO seed, all variations of cereals
+
+
+seaweed:
+  kind_of:
+    - plant
+    - seafood
+  label: Seaweed
+  wikipedia: Seaweed
+
+# TODO extract, concentrate...
+# TODO vinegar
+# TODO sauce, gravy
+
+
+#
+# Animals, fishes, poultry...
+#
+
+# TODO acquire missing items from https://en.wikipedia.org/wiki/List_of_domesticated_animals
+# TODO provide culinary taxonomies (e.g. red meat, white meat)
+# TODO tag game meat
+
+animal:
+  kind_of: item
+  label: Animal
+  description: Any living animal
+  wikipedia: Animal
+
+
+# Mammals
+# TODO refine mammals
+
+mammal:
+  kind_of: animal
+  label:
+    - Mammalia
+    - Mammal
+  wikipedia: Mammal
+
+
+# TODO review bird taxonomy (e.g. poultry is used only for domesticated birds)
+poultry:
+  kind_of: animal
+  label:
+    - Poultry
+    - Fowl
+    - Bird
+  wikpedia:
+    - Poultry
+    - Fowl
+    - Bird
+
+
+# Seafood
+
+seafood:
+  # TODO seafood parent?
+  label: Seafood
+  wikipedia: Seafood
+
+# TODO need to simplify/improve fish taxonomy (i.e. less "biological" intermediate levels)
+# TODO need to properly handle vernacular names, especially if they refer to multiple unrelated families (e.g. trout, whitefish...)
+
+fish:
+  kind_of:
+    - animal
+    - seafood
+  label: Fish
+  foodb: 896
+  wikipedia: Fish
+
+bony_fish:
+  kind_of: fish
+  label: Bony fish
+  wikipedia: Osteichthyes
+
+cartilaginous_fish:
+  kind_of: fish
+  label: Cartilaginous fish
+  wikipedia: Chondrichthyes
+
+shellfish:
+  kind_of:
+    - animal
+    - seafood
+  label: Shellfish
+  wikipedia: Shellfish
+
+crustacean:
+  kind_of: shellfish
+  label: Crustacean
+  foodb: 892
+  wikipedia: Crustacean
+
+mollusk:
+  kind_of: shellfish
+  label: Mollusk
+  foodb: 900
+  wikipedia: Mollusca
+
+
+# Insects and other invertebrates
+
+insect:
+  kind_of: animal
+  label: Insect
+  wikipedia: Insect
+
+# TODO more insects/invertebrates
+
+
+#
+# Animal products (dairies, honey...) and fats/oils
+#
+
+
+# Eggs
+
+egg:
+  kind_of: item
+  product_of: animal
+  label: Egg
+  foodb: 633
+  wikipedia: Egg_as_food
+
+avian_egg:
+  kind_of: egg
+  product_of: poultry
+  label: Avian egg
+
+egg_part:
+  part_of: avian_egg
+  label: Egg part
+
+egg_yolk:
+  kind_of: egg_part
+  label: Egg yolk
+
+egg_white:
+  kind_of: egg_part
+  label: Egg white
+
+egg_substitute:
+  substitute_of: avian_egg
+  label: Egg substitute
+  wikipedia: Egg_substitutes
+
+# TODO dried eggs?
+
+roe:
+  kind_of: egg
+  # TODO technically not "fish" eggs, maybe should discard "egg" root
+  label:
+    - Roe
+    - Fish egg
+  foodb: 722
+  wikipedia: Roe
+
+
+# Animal milk products
+# TODO should probably refactor all kinds of milks
+
+milk_product:
+  kind_of: item
+  derivative_of: animal_milk
+  label: Milk product
+  foodb: 893
+
+# TODO properly define top-level milk products
+
+
+# Cheeses
+
+# TODO refine cheese taxonomy
+# TODO handle cheese substitutes
+
+cheese:
+  kind_of: milk_product
+  derivative_of: milk
+  label: Cheese
+  foodb: 631
+  wikipedia: Cheese
+
+cheese_substitute:
+  kind_of: item
+  substitute_of: cheese
+  label:
+    - Cheese substitute
+    - Cheese imitation
+  wikipedia: Cheese_analogue
+
+
+# Fats and oils
+
+# TODO add fat relationships to animals and plants
+# TODO clean fats
+
+fat:
+  label: Fat
+  foodb: 894
+  wikipedia: Fat
+
+vegetable_fat:
+  kind_of: fat
+  label: Vegetable fat
+
+animal_fat:
+  kind_of: fat
+  derivative_of: animal
+  label: Animal_fat
+  foodb: 704
+  wikipedia: Animal_fat
+
+oil:
+  kind_of: fat
+  label: Oil
+  wikipedia: Oil
+
+vegetable_oil:
+  kind_of: oil
+  derivative_of: vegetable
+  label: Vegetable oil
+  foodb: 804
+  wikipedia: Vegetable_oil
+
+
+
+#
+#
+#
+
+# TODO spread, stuffing
+# TODO sweetener, sugar, syrup, jelly, leavening agent
+
+

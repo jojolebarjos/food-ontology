@@ -1,0 +1,2849 @@
+
+
+
+
+# Beverages
+# TODO Refine cocoa and chocolate beverages, relate to dairies and beverages
+
+hot_chocolate:
+  kind_of: cocoa_product
+  kind_of: beverage
+  made_of: chocolate
+  made_of: cow_milk
+  label: Hot chocolate
+  label: Drinking chocolate
+  label: Chocolate tea
+  foodb: 710
+  wikipedia: Hot_chocolate
+
+chocolate_drink:
+  kind_of: cocoa_product
+  kind_of: beverage
+  label: Chocolate drink
+
+
+#############
+# Beverages #
+#############
+
+beverage:
+  label: Beverage
+  foodb: 902
+  wikipedia: Drink
+
+carob_beverage:
+  kind_of: beverage
+  made_of: carob
+  label: Carob beverage
+
+chicory_beverage:
+  kind_of: beverage
+  made_of: chicory
+  label: Chicory beverage
+
+  
+#
+# Cocktail
+#
+
+cocktail:
+  kind_of: beverage
+  label: Cocktail
+  wikipedia: Cocktail
+
+alcoholic_cocktail:
+  kind_of: cocktail
+  label: Alcoholic cocktail
+  
+alexander_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: cognac
+  made_of: chocolate_liqueur
+  made_of: cream
+  label: Alexander
+  wikipedia: Alexander_(cocktail)
+  
+ambrosia_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: rum
+  made_of: orange_juice
+  made_of: pineapple_juice
+  made_of: grenadine_syrup
+  label: Ambrosia cocktail
+
+black_russian:
+  kind_of: alcoholic_cocktail
+  made_of: vodka
+  made_of: coffee_liqueur
+  label: Black russian
+  wikipedia: Black_Russian
+
+bacardi_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: light_rum
+  made_of: lime_juice
+  made_of: grenadine_syrup
+  label: Bacardi cocktail
+  wikipedia: Bacardi_cocktail
+
+bloody_mary:
+  kind_of: alcoholic_cocktail
+  made_of: vodka
+  made_of: tomato_juice
+  label: Bloody Mary
+  wikipedia: Bloody_Mary_(cocktail)
+  
+brandy_sour:
+  kind_of: alcoholic_cocktail
+  made_of: brandy
+  made_of: citrus_juice
+  label: Brandy sour
+  wikipedia: Brandy_sour
+  
+brandy_daisy:
+  kind_of: brandy_sour
+  label: Brandy daisy
+  wikipedia: Brandy_Daisy
+  
+cyprus_brandy_sour:
+  kind_of: brandy_sour
+  label: Cyprus brandy sour
+  wikipedia: Brandy_sour_(Cyprus)
+  
+sidecar:
+  kind_of: brandy_sour
+  label: Brandy daisy
+  wikipedia: Sidecar_(cocktail)
+  
+caipirinha:
+  kind_of: alcoholic_cocktail
+  made_of: cachaca
+  made_of: lime
+  made_of: sugar
+  label: Caipirinha
+  wikipedia: Caipirinha
+
+cape_cod:
+  kind_of: alcoholic_cocktail
+  made_of: vodka
+  made_of: cranberry_juice
+  label: Cape cod
+  label: Cape codder
+  wikipedia: Cape_Codder_(cocktail)
+
+cosmopolitan:
+  kind_of: alcoholic_cocktail
+  made_of: triple_sec
+  made_of: vodka
+  made_of: cranberry_juice
+  made_of: lime_juice
+  label: Cosmopolitan
+  wikipedia: cosmopolitan_(cocktail)
+
+daiquiri:
+  kind_of: alcoholic_cocktail
+  made_of: rum
+  made_of: citrus_juice
+  label: Daiquiri
+  wikipedia: Daiquiri
+  
+fuzzy_navel:
+  kind_of: alcoholic_cocktail
+  made_of: orange_juice
+  made_of: peach
+  label: Fuzzy navel
+  wikipedia: Fuzzy_navel
+  
+gelatin_shot:
+  kind_of: alcoholic_cocktail
+  made_of: gelatin
+  label: Gelatin shot
+  
+gimlet_coktail:
+  kind_of: alcoholic_cocktail
+  made_of: gin
+  made_of: lime_juice
+  made_of: carbonated_drink
+  label: Gimlet cocktail
+  wikipedia: Gimlet_(cocktail)
+  
+gin_fizz:
+  kind_of: alcoholic_cocktail
+  made_of: gin
+  made_of: lemon_juice
+  made_of: sugar
+  label: Gin fizz
+  wikipedia: Fizz_(cocktail)#Gin_fizz
+  
+gin_rickey:
+  kind_of: alcoholic_cocktail
+  made_of: whisky
+  made_of: lime_juice
+  made_of: sparkling_water
+  label: Gin Rickey
+  wikipedia: Rickey_(cocktail)
+  
+glug_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: raisin
+  made_of: cinnamon
+  made_of: orange_peel
+  made_of: clove
+  made_of: cardamom
+  made_of: wine
+  made_of: brandy
+  made_of: light_rum
+  made_of: sugar
+  label: Glug coktail
+  label: Glögg cocktail
+  
+golden_cadillac_coktail:
+  kind_of: alcoholic_cocktail
+  made_of: cream
+  made_of: chocolate_liqueur
+  made_of: herbal_liqueur
+  label: Golden cadillac cocktail
+  wikipedia: Golden_Cadillac
+  
+greyhound_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: grapefruit_juice
+  made_of: gin
+  label: Greyhound cocktail
+  wikipedia: Greyhound_(cocktail)
+
+grog:
+  kind_of: alcoholic_cocktail
+  made_of: rum
+  made_of: water
+  label: Grog
+  wikipedia: Grog
+  
+# TODO highball is a class of cocktail, check wikipedia and kind_of the good cocktail
+highball_cocktail:
+  kind_of: alcoholic_cocktail
+  label: Highball
+  wikipedia: Highball
+
+hot_toddy:
+  kind_of: alcoholic_cocktail
+  made_of: water
+  made_of: honey
+  made_of: liquor
+  label: Hot toddy
+  label: Hot whisky
+  wikipedia: Hot_toddy
+
+jagerbomb:
+  kind_of: alcoholic_cocktail
+  label: Jägerbomb
+  wikipedia: Jägerbomb
+  
+kamikaze_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: vodka
+  made_of: triple_sec
+  made_of: lime_juice
+  label: Kamikaze cocktail
+  wikipedia: Kamikaze_(cocktail)
+  
+mai_tai:
+  kind_of: alcoholic_cocktail
+  made_of: light_rum
+  made_of: dark_rum
+  made_of: curacao
+  made_of: lime_juice
+  made_of: orgeat_syrup
+  label: Mai Tai
+  wikipedia: Mai_Tai
+
+manhattan_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: whisky
+  made_of: vermouth
+  label: Manhattan cocktail
+  wikipedia: Manhattan_(cocktail)
+
+margarita:
+  kind_of: alcoholic_cocktail
+  made_of: tequila
+  made_of: triple_sec
+  made_of: lime_juice
+  label: Margarita
+  wikipedia: Margarita
+
+martini:
+  kind_of: alcoholic_cocktail
+  made_of: gin
+  made_of: vermouth
+  label: Martini
+  wikipedia: Martini_(cocktail)
+  
+mimosa_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: sparkling_wine
+  made_of: citrus_juice
+  label: Mimosa cocktail
+  wikipedia: Mimosa_(cocktail)
+  
+mint_julep:
+  kind_of: alcoholic_cocktail
+  made_of: whisky
+  made_of: mint
+  made_of: powdered_sugar
+  made_of: water
+  label: Mint julep
+  wikipedia: Mint_julep
+
+# TODO mix cocktail for alcohol + soda, do all the variant? vodka_coca, rum_coca, ...?
+mix_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: alcohol
+  label: Mix cocktail
+  label: Alcohol and soft
+
+mojito:
+  kind_of: alcoholic_cocktail
+  made_of: light_rum
+  made_of: sugar
+  made_of: lime_juice
+  made_of: carbonated_water
+  made_of: mint
+  label: Mojito
+  wikipedia: Mojito
+  
+old_fashioned:
+  kind_of: alcoholic_cocktail
+  made_of: whisky
+  made_of: sugar
+  made_of: water
+  label: Old fashioned
+  wikipedia: Old_Fashioned
+
+orange_blossom_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: gin
+  made_of: grand_marnier
+  made_of: cointreau
+  made_of: orange_juice
+  made_of: lime_juice
+  made_of: grenadine_syrup
+  label: Orange blossom cocktail
+
+pina_colada:
+  kind_of: alcoholic_cocktail
+  made_of: rum
+  made_of: coconut_cream
+  made_of: pineapple_juice
+  label: Pina colada
+  wikipedia: Piña_colada
+
+rob_roy:
+  kind_of: alcoholic_cocktail
+  made_of: scotch_whisky
+  made_of: vermouth
+  label: Rob roy
+  wikipedia: Rob_Roy_(cocktail)
+  
+rum_cooler:
+  kind_of: alcoholic_cocktail
+  made_of: rum
+  made_of: citrus
+  label: Rum cooler
+
+rusty_nail:
+  kind_of: alcoholic_cocktail
+  made_of: scotch_whisky
+  made_of: drambuie
+  label: Rusty nail
+  wikipedia: Rusty_Nail_(cocktail)
+  
+salty_dog_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: gin
+  made_of: grapefruit_juice
+  label: Salty dog cocktail
+  wikipedia: Salty_dog_(cocktail)
+
+screwdriver:
+  kind_of: alcoholic_cocktail
+  made_of: orange_juice
+  made_of: vodka
+  label: Screwdriver
+  wikipedia: Screwdriver_(cocktail)
+  
+seabreeze_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: vodka
+  made_of: cranberry_juice
+  made_of: grapefruit_juice
+  label: Sea Breeze
+  label: Seabreeze
+  wikipedia: Sea_Breeze_(cocktail)
+  
+seven_and_seven:
+  kind_of: alcoholic_cocktail
+  made_of: lemonade
+  made_of: whisky
+  label: Seven and seven
+  wikipedia: 7_and_7
+
+singapore_sling:
+  kind_of: alcoholic_cocktail
+  made_of: gin
+  made_of: grenadine_syrup
+  made_of: cointreau
+  made_of: cherry_liqueur
+  made_of: pineapple_juice
+  made_of: lime_juice
+  label: Singapore sling
+  wikipedia: Singapore_Sling
+
+sloe_gin_fizz:
+  kind_of: alcoholic_cocktail
+  made_of: gin
+  made_of: sugar
+  made_of: sloe_berry
+  label: Sloe gin fizz
+
+spritzer:
+  kind_of: alcoholic_cocktail
+  made_of: white_wine
+  made_of: carbonated_water
+  label: Spritzer
+  wikipedia: Spritzer
+
+tamagozake:
+  kind_of: alcoholic_cocktail
+  made_of: sake
+  made_of: sugar
+  made_of: chicken_egg
+  label: Tamagozake
+  wikipedia: Tamagozake
+
+tequila_sunrise:
+  kind_of: alcoholic_cocktail
+  made_of: tequila
+  made_of: orange_juice
+  made_of: grenadine_syrup
+  label: Tequila sunrise
+  wikipedia: Tequila_Sunrise_(cocktail)
+  
+tom_collins_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: gin
+  made_of: lemon_juice
+  made_of: sugar
+  made_of: carbonated_water
+  label: Tom Collins cocktail
+  wikipedia: Tom_Collins
+  
+whisky_sour:
+  kind_of: alcoholic_cocktail
+  label: Whisky sour
+
+white_russian:
+  kind_of: alcoholic_cocktail
+  made_of: vodka
+  made_of: coffee_liqueur
+  made_of: cream
+  label: White russian
+  wikipedia: White_Russian_(cocktail)
+  
+wine_cooler:
+  kind_of: alcoholic_cocktail
+  made_of: wine
+  made_of: fruit_juice
+  made_of: sugar
+  made_of: carbonated_drink
+  label: Wine cooler
+  wikipedia: Wine_cooler
+  
+wine_spritzer:
+  kind_of: alcoholic_cocktail
+  made_of: wine
+  made_of: carbonated_drink
+  label: Wine spritzer
+  
+zombie_cocktail:
+  kind_of: alcoholic_cocktail
+  made_of: gold_rum
+  made_of: rum
+  made_of: grapefruit_juice
+  made_of: cinnamon
+  made_of: lime_juice
+  made_of: grenadine_syrup
+  made_of: absinthe
+  label: Zombie
+  wikipedia: Zombie_(cocktail)
+
+non_alcoholic_cocktail:
+  kind_of: beverage
+  label: Non alcoholic cocktail
+
+fruit_cocktail:
+  kind_of: non_alcoholic_cocktail
+  kind_of: fruit_drink
+  made_of: fruit
+  label: Fruit cocktail
+
+pink_lemonade:
+  kind_of: fruit_cocktail
+  made_of: fruit_juice
+  label: Pink lemonade
+  wikipedia: Lemonade#Pink_lemonade
+  
+shirley_temple:
+  kind_of: non_alcoholic_cocktail
+  made_of: ginger_ale
+  made_of: grenadine_syrup
+  made_of: maraschino_cherry
+  label: Shirley Temple
+  wikipedia: Shirley_Temple_(drink)
+
+
+#
+# Grain beverage
+#
+
+grain_beverage:
+  kind_of: beverage
+  made_of: grain
+  label: Grain beverage
+
+corn_beverage:
+  kind_of: grain_beverage
+  made_of: corn
+  label: Corn beverage
+
+cornmeal_beverage:
+  kind_of: grain_beverage
+  made_of: cornmeal
+  label: Cornmeal beverage
+  
+atole:
+  kind_of: cornmeal_beverage
+  label: Atole
+  label: Atol
+  label: Atol de elote
+  wikipedia: Atole
+  
+champurrado:
+  kind_of: atole
+  made_of: chocolate
+  label: Champurrado
+  wikipedia: Champurrado
+
+oatmeal_beverage:
+  kind_of: grain_beverage
+  made_of: oat_grain
+  label: Oatmeal beverage
+
+malt_beverage:
+  kind_of: grain_beverage
+  made_of: malt
+  label: Malt beverage
+  wikipedia: Malt_drink
+  
+malternative:
+  kind_of: malt_beverage
+  label: Malternative
+  
+postum:
+  kind_of: grain_beverage
+  made_of: wheat_bran
+  made_of: molasses
+  label: Postum
+  wikipedia: Postum
+
+# Beers
+
+beer:
+  kind_of: malt_beverage
+  label: Beer
+  foodb: 268
+  wikipedia: Beer
+
+ale:
+  kind_of: beer
+  label: Ale beer
+  wikipedia: Ale
+
+cask_ale:
+  kind_of: ale
+  label: Real ale
+  label: Cask ale
+  label: Cask-conditioned beer
+  wikipedia: Cask_ale
+
+cock_ale:
+  kind_of: ale
+  label: Cock ale
+  wikipedia: Cock_ale
+
+ginger_ale:
+  kind_of: ale
+  made_of: ginger
+  label: Ginger ale
+  wikipedia: Ginger_ale
+
+harvest_ale:
+  kind_of: ale
+  label: Harvest ale
+  wikipedia: Harvest_ale
+
+mild_ale:
+  kind_of: ale
+  label: Mild ale
+  wikipedia: Mild_ale
+
+pale_ale:
+  kind_of: ale
+  label: Pale ale
+  wikipedia: Pale_ale
+
+india_pale_ale:
+  kind_of: pale_ale
+  label: India pale ale
+  wikipedia: India_pale_ale
+
+irish_pale_ale:
+  kind_of: pale_ale
+  label: Irish pale ale
+
+spiced_ale:
+  kind_of: pale_ale
+  made_of: spice
+  label: Spiced ale
+  wikipedia: Spiced_ale
+
+strong_ale:
+  kind_of: pale_ale
+  label: Strong ale
+  wikipedia: Strong_ale
+
+aromatised_beer:
+  kind_of: beer
+  label: Aromatised beer
+
+banana_bear:
+  kind_of: aromatised_beer
+  made_of: banana
+  label: Banana beer
+  label: Urwaga
+  wikipedia: Banana_beer
+
+cherry_beer:
+  kind_of: aromatised_beer
+  made_of: cherry
+  label: Cherry beer
+
+christmas_beer:
+  kind_of: aromatised_beer
+  made_of: cinnamon
+  label: Christmas beer
+  wikipedia: Christmas_beer
+
+ginger_beer:
+  kind_of: beer
+  made_of: ginger
+  label: Ginger beer
+  wikipedia: Ginger_beer
+
+kiwi_beer:
+  kind_of: aromatised_beer
+  made_of: kiwifruit
+  label: Kiwi beer
+
+lambic:
+  kind_of: aromatised_beer
+  label: Lambic
+  wikipedia: Lambic
+
+framboise_beer:
+  kind_of: lambic
+  made_of: raspberry
+  label: Framboise beer
+
+gueuze:
+  kind_of: lambic
+  label: Gueuze
+  wikipedia: Gueuze
+
+kriek_lambic:
+  kind_of: lambic
+  made_of: cherry
+  label: Kriek_lambic
+  wikipedia: Kriek_lambic
+
+lemon_beer:
+  kind_of: aromatised_beer
+  made_of: lemon
+  label: Lemon beer
+
+orange_beer:
+  kind_of: aromatised_beer
+  made_of: orange
+  label: Orange beer
+
+raspberry_beer:
+  kind_of: aromatised_beer
+  made_of: raspberry
+  label: Raspberry beer
+
+strawberry_beer:
+  kind_of: aromatised_beer
+  label: Strawberry beer
+
+color_beer:
+  kind_of: beer
+  label: Color beer
+
+amber_beer:
+  kind_of: color_beer
+  label: Amber beer
+
+dark_beer:
+  kind_of: color_beer
+  label: Dark beer
+
+porter_beer:
+  kind_of: dark_beer
+  label: Porter beer
+  wikipedia: Porter_(beer)
+
+stout_beer:
+  kind_of: dark_beer
+  label: Stout beer
+  wikipedia: Stout
+
+light_beer:
+  kind_of: beer
+  label: Light beer
+
+white_beer:
+  kind_of: color_beer
+  label: White beer
+  label: Weissbeer
+  wikipedia: Wheat_beer#Weissbier
+
+draught_beer:
+  kind_of: beer
+  label: Draught beer
+  wikipedia: Draught_beer
+
+grain_beer:
+  kind_of: beer
+  label: Grain beer
+
+corn_beer:
+  kind_of: grain_beer
+  label: Corn beer
+  wikipedia: Corn_beer
+
+chicha:
+  kind_of: corn_beer
+  label: Chicha beer
+  wikipedia: Chicha
+
+malt_beer:
+  kind_of: grain_beer
+  label: Malt beer
+  wikipedia: Malt_beer
+
+millet_beer:
+  kind_of: grain_beer
+  label: Millet beer
+  label: Bantu beer
+  label: Malwa
+  label: Kaffir beer
+  label: Opaque beer
+  label: Pombe
+  wikipedia: Millet_beer
+
+rice_beer:
+  kind_of: grain_beer
+  label: Rice beer
+
+wheat_beer:
+  kind_of: grain_beer
+  label: Wheat beer
+  wikipedia: Wheat_beer
+
+lager:
+  kind_of: beer
+  label: Lager
+  wikipedia: Lager
+
+dark_lager:
+  kind_of: lager
+  label: Dark lager
+  wikipedia: Lager#Dark_lager
+
+pale_lager:
+  kind_of: lager
+  label: Pale lager
+  wikipedia: Lager#Pale_lager
+
+vienna_lager:
+  kind_of: lager
+  label: Vienna lager
+  wikipedia: Lager#Vienna_lager
+
+# TODO: find the right place for root beer
+root_beer:
+  kind_of: beer
+  label: Root beer
+  wikipedia: Root_beer
+  
+strength_beer:
+  kind_of: beer
+  label: Strength beer
+
+low_alcohol_beer:
+  kind_of: strength_beer
+  label: Low-alcohol beer
+  label: Near beer
+  wikipedia: Low-alcohol_beer
+
+strong_beer:
+  kind_of: strength_beer
+  label: Strong beer
+  label: High-alcohol beer
+
+
+#
+# Sugar cane beverage
+#
+
+sugar_cane_beverage:
+  kind_of: beverage
+  made_of: cane_syrup
+  label: Sugar cane beverage
+
+
+#
+# Waters
+#
+
+water:
+  kind_of: beverage
+  label: Water
+  foodb: 685
+
+carbonated_water:
+  # TODO relate carbonated water to carbonated drinks
+  kind_of: water
+  kind_of: carbonated_drink
+  label: Carbonated water
+  label: Bubbly water
+  label: Fizzy water
+  label: Soda water
+  wikipedia: Carbonated_water
+
+sparkling_water:
+  kind_of: carbonated_water
+  label: Sparkling water
+
+tonic_water:
+  kind_of: carbonated_water
+  label: Tonic water
+  label: Indian tonic water
+  wikipedia: Tonic_water
+
+ice:
+  kind_of: water
+  # TODO what is ice?
+  label: Ice
+  wikipedia: Ice
+
+fruit_ice:
+  kind_of: ice
+  label: Fruit ice
+
+cordial:
+  kind_of: beverage
+  label: Cordial
+  label: Squash
+  wikipedia: Squash_(drink)
+
+
+#
+# Juices
+#
+
+# TODO Add missing fruit/vegetable juices
+# TODO think about juice taxonomy (to avoid duplication with fruit taxonomy)
+
+juice:
+  kind_of: beverage
+  label: Juice
+  wikipedia: Juice
+
+smoothie:
+  # TODO what is a smoothie?
+  kind_of: juice
+  label: Smoothie
+  label: Smoothee
+  label: Smoothy
+  wikipedia: Smoothie
+
+fruit_smoothie:
+  kind_of: smoothie
+  made_of: fruit
+  label: Fruit smoothie
+
+vegetable_smoothie:
+  kind_of: smoothie
+  made_of: vegetable
+  label: Vegetable smoothie
+
+# Fruit juices
+
+fruit_juice:
+  kind_of: juice
+  derivative_of: fruit
+  label: Fruit juice
+  foodb: 788
+
+berry_juice:
+  kind_of: fruit_juice
+  derivative_of: berry
+  label: Berry juice
+
+acaiberry_juice:
+  kind_of: berry_juice
+  derivative_of: acai_berry
+  label: Acai berry juice
+
+blackberry_juice:
+  kind_of: berry_juice
+  derivative_of: blackberry
+  label: Blackberry juice
+
+cranberry_juice:
+  kind_of: berry_juice
+  derivative_of: cranberry
+  label: Cranberry juice
+
+raspberry_juice:
+  kind_of: berry_juice
+  derivative_of: raspberry
+  label: Raspberry juice
+
+strawberry_juice:
+  kind_of: berry_juice
+  derivative_of: strawberry
+  label: Strawberry juice
+
+grape_juice:
+  kind_of: berry_juice
+  derivative_of: grape
+  label: Grape juice
+
+citrus_juice:
+  kind_of: fruit_juice
+  derivative_of: citrus
+  label: Citrus juice
+
+grapefruit_juice:
+  kind_of: citrus_juice
+  derivative_of: grapefruit
+  label: Grapefruit juice
+
+key_lime_juice:
+  kind_of: citrus_juice
+  derivative_of: key_lime
+  label: Key lime juice
+
+lemon_juice:
+  kind_of: citrus_juice
+  derivative_of: lemon
+  label: Lemon juice
+
+lime_juice:
+  kind_of: citrus_juice
+  derivative_of: lime
+  label: Lime juice
+
+orange_juice:
+  kind_of: citrus_juice
+  derivative_of: orange
+  label: Orange juice
+
+tangerine_juice:
+  kind_of: citrus_juice
+  derivative_of: tangerine
+  label: Tangerine juice
+
+pomegranate_juice:
+  kind_of: fruit_juice
+  derivative_of: pomegranate
+  label: Pomegranate juice
+
+pome_juice:
+  kind_of: fruit_juice
+  derivative_of: pome
+  label: Pome juice
+
+apple_juice:
+  kind_of: pome_juice
+  derivative_of: apple
+  label: Apple juice
+
+pear_juice:
+  kind_of: pome_juice
+  derivative_of: pear
+  label: Pear juice
+
+stone_fruit_juice:
+  kind_of: fruit_juice
+  derivative_of: stone_fruit
+  label: Stone fruit juice
+
+apricot_juice:
+  kind_of: stone_fruit_juice
+  derivative_of: apricot
+  label: Apricot juice
+
+cherry_juice:
+  kind_of: stone_fruit_juice
+  derivative_of: cherry
+  label: Cherry juice
+
+peach_juice:
+  kind_of: stone_fruit_juice
+  derivative_of: peach
+  label: Peach juice
+
+plum_juice:
+  kind_of: stone_fruit_juice
+  derivative_of: plum
+  label: Plum juice
+
+prune_juice:
+  kind_of: stone_fruit_juice
+  derivative_of: prune
+  label: Prune juice
+
+tropical_fruit_juice:
+  kind_of: fruit_juice
+  derivative_of: tropical_fruit
+  label: Tropical fruit juice
+
+acerola_juice:
+  kind_of: tropical_fruit_juice
+  derivative_of: acerola
+  label: Acerola juice
+
+banana_juice:
+  kind_of: tropical_fruit_juice
+  derivative_of: banana
+  label: Banana juice
+
+guava_juice:
+  kind_of: tropical_fruit_juice
+  derivative_of: guava
+  label: Guava juice
+
+kiwi_juice:
+  kind_of: tropical_fruit_juice
+  derivative_of: kiwifruit
+  label: Kiwi juice
+
+mango_juice:
+  kind_of: tropical_fruit_juice
+  derivative_of: mango
+  label: Mango juice
+
+papaya_juice:
+  kind_of: tropical_fruit_juice
+  derivative_of: papaya
+  label: Papaya juice
+
+passion_fruit_juice:
+  kind_of: tropical_fruit_juice
+  derivative_of: passion_fruit
+  label: Passion-fruit juice
+
+pineapple_juice:
+  kind_of: tropical_fruit_juice
+  derivative_of: pineapple
+  label: Pineapple juice
+
+soursop_juice:
+  kind_of: tropical_fruit_juice
+  derivative_of: soursop
+  label: Soursop juice
+
+tamarind_juice:
+  kind_of: tropical_fruit_juice
+  derivative_of: tamarind
+  label: Tamarind juice
+
+watermelon_juice:
+  kind_of: tropical_fruit_juice
+  derivative_of: watermelon
+  label: Watermelon juice
+
+vegetable_juice:
+  kind_of: juice
+  derivative_of: vegetable
+  label: Vegetable juice
+  foodb: 851
+
+carrot_juice:
+  kind_of: vegetable_juice
+  derivative_of: carrot
+  label: Carrot juice
+
+celery_juice:
+  kind_of: vegetable_juice
+  derivative_of: celery
+  label: Celery juice
+
+fruit_vegetable_juice:
+  kind_of: fruit_juice
+  kind_of: vegetable_juice
+  derivative_of: fruit_vegetable
+  label: Fruit vegetable juice
+
+sweet_potato_juice:
+  kind_of: juice
+  derivative_of: sweet_potato
+  label: Sweet potato juice
+
+tomato_juice:
+  kind_of: fruit_vegetable_juice
+  derivative_of: tomato
+  label: Tomato juice
+
+plant_juice:
+  kind_of: juice
+  derivative_of: herb
+  label: Plant juice
+
+aloe_vera_juice:
+  kind_of: plant_juice
+  kind_of: aloe_vera
+  label: Aloe vera juice
+
+#
+# Nectars
+#
+
+nectar:
+  kind_of: beverage
+  label: Nectar
+  wikipedia: Nectar_(drink)
+
+# Fruit nectars
+
+fruit_nectar:
+  kind_of: nectar
+  derivative_of: fruit
+  label: Fruit nectar
+  foodb: 788
+
+berry_nectar:
+  kind_of: fruit_nectar
+  derivative_of: berry
+  label: Berry nectar
+
+acaiberry_nectar:
+  kind_of: berry_nectar
+  derivative_of: acai_berry
+  label: Acai berry nectar
+
+blackberry_nectar:
+  kind_of: berry_nectar
+  derivative_of: blackberry
+  label: Blackberry nectar
+
+cranberry_nectar:
+  kind_of: berry_nectar
+  derivative_of: cranberry
+  label: Cranberry nectar
+
+raspberry_nectar:
+  kind_of: berry_nectar
+  derivative_of: raspberry
+  label: Raspberry nectar
+
+strawberry_nectar:
+  kind_of: berry_nectar
+  derivative_of: strawberry
+  label: Strawberry nectar
+
+grape_nectar:
+  kind_of: berry_nectar
+  derivative_of: grape
+  label: Grape nectar
+
+citrus_nectar:
+  kind_of: fruit_nectar
+  derivative_of: citrus
+  label: Citrus nectar
+
+grapefruit_nectar:
+  kind_of: citrus_nectar
+  derivative_of: grapefruit
+  label: Grapefruit nectar
+
+lemon_nectar:
+  kind_of: citrus_nectar
+  derivative_of: lemon
+  label: Lemon nectar
+
+lime_nectar:
+  kind_of: citrus_nectar
+  derivative_of: lime
+  label: Lime nectar
+
+orange_nectar:
+  kind_of: citrus_nectar
+  derivative_of: orange
+  label: Orange nectar
+
+tangerine_nectar:
+  kind_of: citrus_nectar
+  derivative_of: tangerine
+  label: Tangerine nectar
+
+pomegranate_nectar:
+  kind_of: fruit_nectar
+  derivative_of: pomegranate
+  label: Pomegranate nectar
+
+pome_nectar:
+  kind_of: fruit_nectar
+  derivative_of: pome
+  label: Pome nectar
+
+apple_nectar:
+  kind_of: pome_nectar
+  derivative_of: apple
+  label: Apple nectar
+
+pear_nectar:
+  kind_of: pome_nectar
+  derivative_of: pear
+  label: Pear nectar
+
+stone_fruit_nectar:
+  kind_of: fruit_nectar
+  derivative_of: stone_fruit
+  label: Stone fruit nectar
+
+apricot_nectar:
+  kind_of: stone_fruit_nectar
+  derivative_of: apricot
+  label: Apricot nectar
+
+peach_nectar:
+  kind_of: stone_fruit_nectar
+  derivative_of: peach
+  label: Peach nectar
+
+tropical_fruit_nectar:
+  kind_of: fruit_nectar
+  derivative_of: tropical_fruit
+  label: Tropical fruit nectar
+
+acerola_nectar:
+  kind_of: tropical_fruit_nectar
+  derivative_of: acerola
+  label: Acerola nectar
+
+banana_nectar:
+  kind_of: tropical_fruit_nectar
+  derivative_of: banana
+  label: Banana nectar
+
+cantaloupe_nectar:
+  kind_of: tropical_fruit_nectar
+  derivative_of: cantaloupe
+  label: Cantaloupe nectar
+
+guava_nectar:
+  kind_of: tropical_fruit_nectar
+  derivative_of: guava
+  label: Guava nectar
+
+mango_nectar:
+  kind_of: tropical_fruit_nectar
+  derivative_of: mango
+  label: Mango nectar
+
+papaya_nectar:
+  kind_of: tropical_fruit_nectar
+  derivative_of: papaya
+  label: Papaya nectar
+
+passion_fruit_nectar:
+  kind_of: tropical_fruit_nectar
+  derivative_of: passion_fruit
+  label: Passion-fruit nectar
+
+pineapple_nectar:
+  kind_of: tropical_fruit_nectar
+  derivative_of: pineapple
+  label: Pineapple nectar
+
+soursop_nectar:
+  kind_of: tropical_fruit_nectar
+  derivative_of: soursop
+  label: Soursop nectar
+  label: Guanabana nectar
+
+tamarind_nectar:
+  kind_of: tropical_fruit_nectar
+  derivative_of: tamarind
+  label: Tamarind nectar
+  
+sugarcane_juice:
+  kind_of: juice
+  kind_of: sugar_cane_beverage
+  derivative_of: cane_syrup
+  label: Sugarcane juice
+  wikipedia: Sugarcane_juice
+  
+#
+# Punch
+#
+
+punch:
+  kind_of: beverage
+  label: Punch
+  made_of: fruit_juice
+  wikipedia: Punch_(drink)
+
+fruit_punch:
+  kind_of: punch
+  made_of: fruit
+  label: Fruit punch
+
+apple_punch:
+  kind_of: fruit_punch
+  made_of: apple
+  label: Apple punch
+
+tropical_punch:
+  kind_of: fruit_punch
+  made_of: tropical_fruit
+  label: Tropical punch
+
+#
+# Alcoholic beverages
+#
+
+# TODO connect alcohols to their sources
+# TODO refine alcohol taxonomy
+
+alcohol:
+  kind_of: beverage
+  label: Alcohol
+  foodb: 884
+  wikipedia: Alcohol
+
+# Distilled alcohols (a.k.a. spirits or liquor)
+# TODO improve distilled alcohol taxonomy (see https://en.wikipedia.org/wiki/Category:Distilled_drinks)
+
+liquor:
+  kind_of: alcohol
+  label: Liquor
+  foodb: 630
+  wikipedia: Distilled_beverage
+  
+absinthe:
+  kind_of: liquor
+  label: Absinthe
+  wikipedia: Absinthe
+
+applejack:
+  kind_of: liquor
+  derivative_of: apple
+  label: Applejack
+  wikipedia: Applejack_(drink)
+
+arak:
+  kind_of: liquor
+  label: Arak
+  wikipedia: Arak_(drink)
+
+brandy:
+  kind_of: liquor
+  made_of: wine
+  label: Brandy
+  wikipedia: Brandy
+
+armenian_brandy:
+  kind_of: brandy
+  label: Armenian brandy
+  wikipedia: Ararat_(brandy)
+
+armagnac:
+  kind_of: brandy
+  label: Armagnac
+  wikipedia: Armagnac_(brandy)
+
+brandy_de_jerez:
+  kind_of: brandy
+  label: Brandy de Jerez
+  wikipedia: Brandy_de_Jerez
+
+cognac:
+  kind_of: brandy
+  label: Cognac
+  wikipedia: Cognac
+
+cyprus_brandy:
+  kind_of: brandy
+  label: Cyprus brandy
+  wikipedia: Cyprus_brandy
+
+greek_brandy:
+  kind_of: brandy
+  made_of: muscat
+  label: Greek brandy
+
+pisco:
+  kind_of: brandy
+  label: Pisco
+  wikipedia: Pisco
+
+calvados:
+  kind_of: liquor
+  derivative_of: apple
+  label: Calvados
+  wikipedia: Calvados
+
+gin:
+  kind_of: liquor
+  label: Gin
+  foodb: 642
+  wikipedia: Gin
+
+kirsch:
+  kind_of: liquor
+  derivative_of: sour_cherry
+  label: Kirsch
+  wikipedia: Kirsch
+
+malt_liquor:
+  kind_of: liquor
+  label: Malt liquor
+
+ouzo:
+  kind_of: liquor
+  label: Ouzo
+  wikipedia: Ouzo
+
+raki:
+  kind_of: liquor
+  label: Raki
+  wikipedia: Rakı
+
+rum:
+  kind_of: liquor
+  label: Rum
+  foodb: 646
+  wikipedia: Rum
+
+dark_rum:
+  kind_of: rum
+  label: Dark rum
+
+black_rum:
+  kind_of: dark_rum
+  label: Black rum
+
+brown_rum:
+  kind_of: dark_rum
+  label: Brown rum
+
+red_rum:
+  kind_of: dark_rum
+  label: Red rum
+
+flavored_rum:
+  kind_of: rum
+  label: Flavored rum
+
+gold_rum:
+  kind_of: rum
+  label: Gold rum
+  label: Amber rum
+
+light_rum:
+  kind_of: rum
+  label: Light rum
+  label: White rum
+  label: Silver rum
+
+cachaca:
+  kind_of: light_rum
+  label: Cachaca
+  label: Pinga
+  label: Caninha
+  wikipedia: Cachaça
+
+overproof_rum:
+  kind_of: rum
+  label: Overproof rum
+
+bacardi_151:
+  kind_of: overproof_rum
+  label: Bacardi 151
+  wikipedia: Bacardi_151
+
+pitorro:
+  kind_of: overproof_rum
+  label: Pitorro
+  label: Moonshine rum
+  label: Pitrinche
+  label: Canita
+  label: Pitriche
+  label: Lagrima de monte
+  label: Lagrima de mangle
+  wikipedia: Pitorro
+
+premium_rum:
+  kind_of: rum
+  label: White rum
+
+spiced_rum:
+  kind_of: rum
+  label: Spiced rum
+
+tequila:
+  kind_of: liquor
+  derivative_of: agave
+  label: Tequila
+  wikipedia: Tequila
+
+vodka:
+  kind_of: liquor
+  label: Vodka
+  foodb: 639
+
+whisky:
+  kind_of: liquor
+  made_of: grain
+  label: Whisky
+  label: Whiskey
+  foodb: 640
+  wikipedia: Whisky
+
+scotch_whisky:
+  kind_of: liquor
+  label: Scotch Whisky
+  wikipedia: Scotch_whisky
+  
+drambuie:
+  kind_of: scotch_whisky
+  made_of: honey
+  made_of: herb
+  made_of: spice
+  label: Drambuie
+  wikipedia: Drambuie
+
+liqueur:
+  kind_of: liquor
+  label: Liqueur
+
+amaretto:
+  kind_of: liqueur
+  derivative_of: almond
+  label: Amaretto
+  wikipedia: Amaretto
+  
+herbal_liqueur:
+  kind_of: liqueur
+  derivative_of: herb
+  label: Herbal liqueur
+  
+anise_liqueur:
+  kind_of: herbal_liqueur
+  derivative_of: anise
+  label: Anise liqueur
+
+anisette:
+  kind_of: anise_liqueur
+  label: Anis
+  label: Anisette
+  wikipedia: Anisette
+
+pastis:
+  kind_of: anise_liqueur
+  label: Pastis 
+  wikipedia: Pastis
+
+ricard:
+  kind_of: anise_liqueur
+  label: Ricard
+  wikipedia: Ricard_(drink)
+
+sambuca:
+  kind_of: anise_liqueur
+  label: Sambuca
+  wikipedia: Sambuca
+
+jagermeister:
+  kind_of: herbal_liqueur
+  label: Jägermeister
+  wikipedia: Jägermeister
+
+mint_liqueur:
+  kind_of: herbal_liqueur
+  label: Mint liqueur
+
+creme_de_menthe:
+  kind_of: mint_liqueur
+  derivative_of: mint
+  label: Crème de menthe
+  wikipedia: Crème_de_menthe
+
+coffee_liqueur:
+  kind_of: liquor
+  derivative_of: coffee
+  label: Coffee liqueur
+
+allens_coffee_brandy:
+  kind_of: coffee_liqueur
+  label: Allen's Coffee Brandy
+  wikipedia: Allen%27s_Coffee_Brandy
+
+cafe_rica:
+  kind_of: coffee_liqueur
+  label: Café Rica
+  wikipedia: Café Rica
+
+kahlua:
+  kind_of: coffee_liqueur
+  label: Kahlua
+  wikipedia: Kahlúa
+
+kamora:
+  kind_of: coffee_liqueur
+  label: Kamora
+  wikipedia: Kamora_(brand)
+
+tia_maria:
+  kind_of: coffee_liqueur
+  label: Tia Maria
+  wikipedia: Tia_Maria
+
+chocolate_liqueur:
+  kind_of: liqueur
+  derivative_of: chocolate
+  label: Chocolate liqueur
+  wikipedia: Chocolate_liqueur
+
+cream_liqueur:
+  kind_of: liqueur
+  derivative_of: cream
+  label: Cream liqueur
+  wikipedia: Cream_liqueur
+
+advocaat:
+  kind_of: cream_liqueur
+  label: Advocaat
+  label: Advocatenborrel 
+  wikipedia: Advocaat
+
+amarula:
+  kind_of: cream_liqueur
+  kind_of: fruit_liqueur
+  label: Amarula
+  wikipedia: Amarula
+
+dooleys:
+  kind_of: cream_liqueur
+  label: Dooley's
+  wikipedia: Dooley%27s
+
+heather_cream:
+  kind_of: cream_liqueur
+  label: Heather cream
+  wikipedia: Heather_Cream
+
+irish_cream:
+  kind_of: cream_liqueur
+  label: Irish cream
+  wikipedia: Irish_cream
+
+baileys:
+  kind_of: irish_cream
+  label: Baileys
+  wikipedia: Baileys_Irish_Cream
+
+carolans:
+  kind_of: irish_cream
+  label: Carolans
+  wikipedia: Carolans
+
+kerrygold:
+  kind_of: irish_cream
+  label: Kerrygold 
+  wikipedia: Kerrygold_Irish_Cream_Liqueur
+
+saint_brendans:
+  kind_of: irish_cream
+  label: Saint Brendan's
+  wikipedia: Saint_Brendan%27s
+
+ponche_crema:
+  kind_of: cream_liqueur
+  label: Ponche crema
+  wikipedia: Ponche_crema
+
+rompope:
+  kind_of: cream_liqueur
+  label: Rompope
+  wikipedia: Rompope
+
+sangsters:
+  kind_of: cream_liqueur
+  label: Sangster's
+  wikipedia: Sangster%27s
+
+triibe:
+  kind_of: cream_liqueur
+  label: Triibe
+  wikipedia: Triibe
+
+vana_tallinn:
+  kind_of: cream_liqueur
+  label: Vana Tallinn
+  wikipedia: Vana_Tallinn
+
+vermeer_dutch_chocolate_cream_liqueur:
+  kind_of: cream_liqueur
+  label: Vermeer Dutch Chocolate Cream Liqueur
+  wikipedia: Vermeer_Dutch_Chocolate_Cream_Liqueur
+
+voodoo_cream_liqueur:
+  kind_of: cream_liqueur
+  label: VOODOO cream liqueur
+  wikipedia: VOODOO_Cream_Liqueur
+  
+creme_liqueur:
+  kind_of: liquor
+  label: Creme liqueur
+  wikipedia: Crème_liqueur
+  
+creme_de_banane:
+  kind_of: creme_liqueur
+  derivative_of: banana
+  label: Crème de banane
+  wikipedia: Crème_de_banane
+
+creme_de_cacao:
+  kind_of: creme_liqueur
+  derivative_of: cocoa_bean
+  label: Crème de cacao
+  wikipedia: Chocolate_liqueur#Crème_de_cacao
+
+creme_de_cerise:
+  kind_of: creme_liqueur
+  derivative_of: cherry
+  label: Crème de cerise
+  wikipedia: crème_de_cerise
+
+creme_de_cassis:
+  kind_of: creme_liqueur
+  derivative_of: blackcurrant
+  label: Crème de cassis
+  wikipedia: Crème_de_cassis
+
+creme_de_noyaux:
+  kind_of: creme_liqueur
+  derivative_of: apricot
+  label: Crème de noyaux
+  wikipedia: Crème_de_noyaux
+
+creme_de_violette:
+  kind_of: creme_liqueur
+  label: Creme de violette
+  wikipedia: Crème_de_violette
+
+creme_yvette:
+  kind_of: creme_liqueur
+  label: Creme Yvette
+  wikipedia: Creme_Yvette
+
+parfait_d_amour:
+  kind_of: creme_liqueur
+  label: Parfait d'amour
+  wikipedia: Parfait_d%27Amour
+  
+fruit_liqueur:
+  kind_of: liqueur
+  label: Fruit liqueur
+  
+cherry_liqueur:
+  kind_of: fruit_liqueur
+  made_of: cherry
+  label: Cherry liqueur
+
+curacao:
+  kind_of: fruit_liqueur
+  label: Curaçao
+  wikipedia: Curaçao_(liqueur)
+
+grand_marnier:
+  kind_of: fruit_liqueur
+  label: Grand Marnier
+  wikipedia: Grand_Marnier
+
+ginjinha:
+  kind_of: fruit_liqueur
+  label: Ginjinha
+  label: Ginja
+  wikipedia: Ginjinha
+
+limoncello:
+  kind_of: fruit_liqueur
+  label: Limoncello
+  wikipedia: Limoncello
+
+malibu:
+  kind_of: fruit_liqueur
+  derivative_of: coconut
+  label: Malibu
+  wikipedia: Malibu_(rum)
+
+passoa:
+  kind_of: fruit_liqueur
+  derivative_of: passion_fruit
+  label: Passoã
+  wikipedia: Passoã
+
+triple_sec:
+  kind_of: fruit_liqueur
+  derivative_of: orange
+  label: Triple sec
+  wikipedia: Triple_sec
+
+cointreau:
+  kind_of: triple_sec
+  derivative_of: orange
+  label: Cointreau
+  wikipedia: Cointreau
+  
+whisky_liqueur:
+  kind_of: liqueur
+  label: Whisky liqueur
+  
+famous_grouse_liqueur:
+  kind_of: whisky_liqueur
+  label: Famouse Grouse liqueur
+  
+jack_daniels:
+  kind_of: whisky_liqueur
+  label: Jack Daniel's
+  wikipedia: Jack_Daniel%27s
+  
+yukon_jack:
+  kind_of: whisky_liqueur
+  label: Yukon Jack
+  wikipedia: Yukon_Jack_(liqueur)
+  
+
+# Wines
+
+wine:
+  kind_of: alcohol
+  label: Wine
+  foodb: 628
+  wikipedia: Wine
+
+fruit_wine:
+  kind_of: wine
+  label: Fruit wine
+  wikipedia: Fruit_wine
+
+berry_wine:
+  kind_of: fruit_wine
+  label: Berry wine
+  foodb: 627
+
+cider:
+  # NOTE historically, cider is not considered as a fruit wine
+  kind_of: fruit_wine
+  derivative_of: apple
+  label: Cider
+  foodb: 629
+  wikipedia: Cider
+
+perry:
+  # NOTE historically, perry is not considered as a fruit wine
+  kind_of: fruit_wine
+  derivative_of: pear
+  label: Perry
+  wikipedia: Perry
+
+# TODO mead/honey-wine (see https://en.wikipedia.org/wiki/Mead)
+
+grape_wine:
+  # NOTE usually, grape wines are separated from fruit wines
+  kind_of: berry_wine
+  label: Grape wine
+  foodb: 626
+
+dessert_wine:
+  kind_of: grape_wine
+  label: Dessert wine
+  label: Sweet wine
+  wikipedia: Dessert_wine
+
+ice_wine:
+  kind_of: dessert_wine
+  label: Ice wine
+  wikipedia: Ice_wine
+
+late_harvest_wine:
+  kind_of: dessert_wine
+  label: Late harvest wine
+  label: Vendange tardive
+  label: Spätlese
+  wikipedia: Late_harvest_wine
+
+noble_rot:
+  kind_of: dessert_wine
+  label: Noble rot
+  label: Botrytized wine
+  label: Botrytis Cinerea wine
+  wikipedia: Noble rot
+
+auslese:
+  kind_of: noble_rot
+  label: Auslese
+  label: Selected harvest
+  wikipedia: Auslese
+
+beerenauslese:
+  kind_of: auslese
+  label: Beerenauslese
+  label: Selected harvest
+  wikipedia: Auslese
+
+trockenbeerenauslese:
+  kind_of: beerenauslese
+  label: Trockenbeerenauslese
+  label: Dried berry selection
+  wikipedia: Trockenbeerenauslese
+
+sauternes:
+  kind_of: noble_rot
+  label: Sauternes
+  wikipedia: Sauternes_(wine)
+
+chateau_yquem:
+  kind_of: sauternes
+  label: Château d'Yquem
+  wikipedia: Château_d%27Yquem
+
+tokaji:
+  kind_of: noble_rot
+  label: Tokaji
+  label: Tokaj
+  label: Tokajské
+  wikipedia: Tokaji
+
+straw_wine:
+  kind_of: dessert_wine
+  label: Raisin wine
+  label: Straw wine
+  label: Straw mat
+  label: Passito
+  label: Strohwein
+  label: Schilfwein
+  label: Vin de paille
+  wikipedia: Straw_wine
+
+vino_santo:
+  kind_of: straw_wine
+  label: Vino Santo
+  label: Vin Santo
+  wikipedia: Vin_Santo
+
+red_wine:
+  kind_of: grape_wine
+  label: Red wine
+  wikipedia: Red_wine
+
+barbera:
+  kind_of: red_wine
+  label: Barbera
+  wikipedia: Barbera
+
+bordeau_wine:
+  kind_of: red_wine
+  label: Bordeau
+  wikipedia: Bordeaux_wine
+  
+burgundy:
+  kind_of: red_wine
+  label: Burgundy
+  wikipedia: Burgundy_wine
+
+cabernet_franc:
+  kind_of: red_wine
+  label: Cabernet_franc
+  wikipedia: Cabernet_Franc
+
+cabernet_sauvignon:
+  kind_of: red_wine
+  label: Cabernet_sauvignon
+  wikipedia: Cabernet_Sauvignon
+
+carignane:
+  kind_of: red_wine
+  label: Carignane
+  label: Mazuelo
+  label: Bovale Grande
+  label: Carinyena
+  label: Samso
+  wikipedia: Carignan
+
+claret:
+  kind_of: red_wine
+  label: Claret
+  wikipedia: Bordeaux_wine#"Claret"_terminology
+
+gamay:
+  kind_of: red_wine
+  label: Gamay
+  wikipedia: Gamay
+
+garanoir:
+  kind_of: red_wine
+  label: Garanoir
+  wikipedia: Garanoir
+
+grenache:
+  kind_of: red_wine
+  label: Grenache
+  label: Garnacha
+  wikipedia: Grenache
+
+lemberger:
+  kind_of: red_wine
+  label: Lemberger
+  label: Blaufränkisch
+  wikipedia: Blaufränkisch
+
+malbec:
+  kind_of: red_wine
+  label: Malbec
+  wikipedia: Malbec
+
+merlot:
+  kind_of: red_wine
+  label: Merlot
+  wikipedia: Merlot
+
+mourvedre:
+  kind_of: red_wine
+  label: Mourvèdre
+  label: Mataro
+  label: Monastrell
+  wikipedia: Mourvèdre
+
+nebbiolo:
+  kind_of: red_wine
+  label: Nebbiolo
+  wikipedia: Nebbiolo
+
+petite_sirah:
+  kind_of: red_wine
+  label: Petite sirah
+  label: Durif
+  wikipedia: Durif
+
+pinot_noir:
+  kind_of: red_wine
+  label: Pinot noir
+  wikipedia: Pinot_noir
+
+sangiovese:
+  kind_of: red_wine
+  label: Sangiovese
+  wikipedia: Sangiovese
+
+syrah:
+  kind_of: red_wine
+  label: Syrah
+  label: Shiraz
+  wikipedia: Syrah
+
+zinfandel:
+  kind_of: red_wine
+  label: Zinfandel
+  wikipedia: Zinfandel
+
+rose_wine:
+  kind_of: grape_wine
+  label: Rosé wine
+  wikipedia: Rosé
+
+white_wine:
+  kind_of: grape_wine
+  label: White wine
+  wikipedia: White_wine
+
+chardonnay:
+  kind_of: white_wine
+  label: Chardonnay
+  wikipedia: Chardonnay
+
+chenin_blanc:
+  kind_of: white_wine
+  label: Chenin blanc
+  wikipedia: Chenin_blanc
+
+gewurztraminer:
+  kind_of: white_wine
+  label: Gewürztraminer
+  wikipedia: Gewürztraminer
+
+gruner_veltiner:
+  kind_of: white_wine
+  label: Grüner veltliner
+  wikipedia: Grüner_Veltliner
+  
+hock_wine:
+  kind_of: white_wine
+  label: Hock wine
+  wikipedia: Hock_(wine)
+
+marsanne:
+  kind_of: white_wine
+  label: Marsanne
+  wikipedia: Marsanne
+
+muller_thurgau:
+  kind_of: white_wine
+  label: Muller Thurgau
+  wikipedia: Müller-Thurgau
+
+muscat:
+  kind_of: white_wine
+  label: Muscat
+  wikipedia: Muscat
+
+pinot_blanc:
+  kind_of: white_wine
+  label: Pinot blanc
+  wikipedia: Pinot_blanc
+
+pinot_gris:
+  kind_of: white_wine
+  label: Pinot gris
+  label: Grigio
+  label: Grauburgunder
+  wikipedia: Pinot_gris
+
+riesling:
+  kind_of: white_wine
+  label: Riesling
+  wikipedia: Riesling
+
+roussanne:
+  kind_of: white_wine
+  label: Roussanne
+  wikipedia: Roussanne
+
+sauvignon:
+  kind_of: white_wine
+  label: Sauvignon
+
+sauvignon_blanc:
+  kind_of: sauvignon
+  label: Sauvignon blanc
+  wikipedia: Sauvignon_blanc
+
+sauvignon_gris:
+  kind_of: sauvignon
+  label: Sauvignon gris
+  wikipedia: Sauvignon_gris
+
+sauvignon_vert:
+  kind_of: sauvignon
+  label: Sauvignon vert
+  wikipedia: Sauvignon_vert
+
+fume_blanc:
+  kind_of: sauvignon
+  label: Fumé blanc
+  wikipedia: Sauvignon_blanc#Fum.C3.A9_blanc
+
+semillon:
+  kind_of: white_wine
+  label: Sémillon
+  wikipedia: Sémillon
+
+viognier:
+  kind_of: white_wine
+  label: Viognier
+  wikipedia: Viognier
+
+sparkling_wine:
+  kind_of: grape_wine
+  label: Sparkling wine
+  wikipedia: Sparkling_wine
+  
+champagne:
+  kind_of: sparkling_wine
+  label: Champagne
+  wikipedia: Champagne
+
+rice_wine:
+  # TODO detailed taxonomy of rice wines
+  kind_of: wine
+  label: Rice wine
+  foodb: 763
+  wikipedia: Rice_wine
+  
+mirin:
+  kind_of: rice_wine
+  label: Mirin
+  wikipedia: Mirin
+
+sake:
+  kind_of: rice_wine
+  label: Sake
+  label: Saké
+  wikipedia: Sake
+
+rotling_wine:
+  kind_of: wine
+  label: Rotling wine
+
+schiller_wine:
+  kind_of: rotling_wine
+  label: Schiller wine
+
+badisch_rotgold:
+  kind_of: rotling_wine
+  label: Badisch Rotgold
+
+wine_substitute:
+  kind_of: wine
+  substitute_of: wine
+  label: Wine substitute
+
+# German classification of wine, see https://en.wikipedia.org/wiki/German_wine_classification
+
+qualitatswein:
+  kind_of: wine
+  label: Qualitätswein
+
+pradikatswein:
+  kind_of: wine
+  label: Prädikatswein
+
+# Wines mixed with spirits
+
+fortified_wine:
+  kind_of: alcohol
+  made_of: wine
+  made_of: liquor
+  label: Fortified wine
+  foodb: 278
+  wikipedia: Fortified_wine
+
+madeira_wine:
+  kind_of: fortified_wine
+  label: Madeira wine
+  foodb: 650
+  wikipedia: Madeira_wine
+
+marsala_wine:
+  kind_of: fortified_wine
+  label: Marsala wine
+  wikipedia: Marsala_wine
+
+port_wine:
+  kind_of: fortified_wine
+  label: Port wine
+  foodb: 647
+  wikipedia: Port_wine
+
+sherry:
+  kind_of: fortified_wine
+  label: Sherry
+  foodb: 649
+  wikipedia: Sherry
+
+aromatised_wine:
+  kind_of: fortified_wine
+  label: Aromatised wine
+  wikipedia: Aromatised_wine
+
+sangria:
+  kind_of: aromatised_wine
+  made_of: fruit
+  made_of: orange
+  label: Sangria
+  wikipedia: Sangria
+
+red_sangria:
+  kind_of: sangria
+  made_of: red_wine
+  label: Red sangria
+  wikipedia: Sangria
+
+white_sangria:
+  kind_of: sangria
+  made_of: white_wine
+  label: White sangria
+  wikipedia: Sangria
+
+vermouth:
+  kind_of: aromatised_wine
+  label: Vermouth
+  foodb: 648
+  wikipedia: Vermouth
+
+
+#
+# Teas and derivatives
+#
+
+# TODO refine tea taxonomy
+# TODO connect teas to their sources
+# TODO how do we handle unbrewed tea (e.g. macha powder)?
+
+tea:
+  kind_of: beverage
+  label: Tea
+  foodb: 38
+  wikipedia: Tea
+
+brewed_tea:
+  kind_of: tea
+  label: Brewed tea
+  wikipedia: Tea
+
+brewed_black_tea:
+  kind_of: brewed_tea
+  label: Brewed black tea
+  wikipedia: Black_tea
+
+brewed_darjeeling_tea:
+  kind_of: brewed_tea
+  label: Brewed darjeeling tea
+  wikipedia: Darjeeling_tea
+
+brewed_green_tea:
+  kind_of: brewed_tea
+  label: Brewed green tea
+  wikipedia: Green_tea
+
+brewed_herb_tea:
+  kind_of: brewed_tea
+  label: Brewed herb tea
+  label: Herbal tea
+  wikipedia: Herbal_tea
+
+camomille_brewed_herb_tea:
+  kind_of: brewed_herb_tea
+  label: Camomille brewed herb tea
+
+brewed_greenthread_tea:
+  kind_of: brewed_herb_tea
+  label: Greenthread tea
+  foodb: 849
+
+brewed_hibiscus_tea:
+  kind_of: brewed_herb_tea
+  made_of: roselle
+  label: Brewed hibiscus tea
+  foodb: 748
+  wikipedia: Hibiscus_tea
+
+brewed_oolong_tea:
+  kind_of: brewed_tea
+  label: Brewed oolong tea
+  wikipedia: Oolong
+
+brewed_pu_erh_tea:
+  kind_of: brewed_tea
+  label: Brewed pu-erh tea
+  wikipedia: Pu%27er_tea
+
+brewed_white_tea:
+  kind_of: brewed_tea
+  label: Brewed white tea
+  wikipedia: White_tea
+
+chai_tea:
+  kind_of: brewed_tea
+  made_of: milk
+  made_of: spice
+  label: Chai tea
+  label: Masala chai
+  wikipedia: Masala_chai
+
+instant_tea:
+  kind_of: tea
+  label: Instant tea
+  wikipedia: Instant_tea
+
+lemon_instant_tea:
+  kind_of: instant_tea
+  label: Lemon instant tea
+
+# TODO maybe ice tea should not be considered as tea
+
+ice_tea:
+  kind_of: tea
+  label: Ice tea
+  wikipedia: Iced_tea
+
+black_ice_tea:
+  kind_of: ice_tea
+  label: Black ice tea
+
+green_ice_tea:
+  kind_of: ice_tea
+  label: Green ice tea
+
+lemon_ice_tea:
+  kind_of: ice_tea
+  label: Lemon ice tea
+
+#
+# Coffee and derivatives
+#
+
+# TODO refine coffee taxonomy
+
+coffee_product:
+  kind_of: beverage
+  # TODO coffee product is not necessarily a beverage
+  label: Coffee product
+  foodb: 891
+
+coffee:
+  kind_of: coffee_product
+  label: Coffee
+  foodb: 58
+  wikipedia: Coffee
+
+arabica_coffee:
+  kind_of: coffee
+  label: Arabica coffee
+  foodb: 59
+  wikipedia: Coffea_arabica
+  
+caffe_macchiato:
+  kind_of: coffee
+  label: Caffè macchiato
+  label: Espresso macchiato
+  wikipedia: Caffè_macchiato
+  
+cappuccino:
+  kind_of: coffee
+  label: Cappuccino
+  wikipedia: Cappuccino
+
+coffee_latte:
+  kind_of: coffee
+  made_of: espresso
+  label: Coffee latte
+  wikipedia: Latte
+
+latte_macchiato:
+  kind_of: coffee_latte
+  made_of: cow_milk
+  made_of: espresso
+  label: Latte macchiato
+  wikipedia: Latte_macchiato
+
+coffee_mocha:
+  kind_of: coffee
+  label: Coffee mocha
+  foodb: 768
+  wikipedia: Caffè_mocha
+  
+coffee_regular:
+  kind_of: coffee
+  made_of: sugar
+  made_of: cream
+  label: Coffee regular
+  wikipedia: Milk_coffee#Coffee_Regular
+  
+espressino:
+  kind_of: coffee
+  made_of: espresso
+  made_of: cocoa_powder
+  label: Espressino
+  wikipedia: Espressino
+
+espresso:
+  kind_of: coffee
+  label: Espresso
+  wikipedia: Espresso
+
+caffe_americano:
+  kind_of: espresso
+  label: Caffè Americano
+  label: Americano coffee
+  wikipedia: Caffè_Americano
+
+lungo_coffee:
+  kind_of: espresso
+  label: Lungo coffee
+  wikipedia: Lungo
+
+cuban_espresso:
+  kind_of: espresso
+  label: Cuban espresso
+  label: Café Cubano
+  label: Cafecito
+  wikipedia: Cuban_espresso
+
+cream_coffee:
+  kind_of: espresso
+  label: Caffè crema
+  label: Cream coffee
+  wikipedia: Caffè_crema
+
+doppio:
+  kind_of: espresso
+  label: Doppio
+  wikipedia: Doppio
+
+cafe_zorro:
+  kind_of: doppio
+  label: Cafe Zorro
+  label: Zorro coffee
+
+espresso_romano:
+  kind_of: espresso
+  made_of: lemon
+  label: Espresso Romano
+
+guillermo:
+  kind_of: espresso
+  made_of: lime
+  label: Guillermo
+
+ristretto:
+  kind_of: espresso
+  label: Ristretto
+  wikipedia: Ristretto
+
+iced_coffee:
+  kind_of: coffee
+  label: Iced coffee
+  wikipedia: Iced_coffee
+
+mocha_iced_coffee:
+  kind_of: iced_coffee
+  label: Mocha iced coffee
+
+vanilla_iced_coffee:
+  kind_of: iced_coffee
+  label: Vanilla iced coffee
+
+instant_coffee:
+  kind_of: coffee
+  label: Instant coffee
+  wikipedia: Instant_coffee
+  
+milk_coffee:
+  kind_of: coffee
+  made_of: cow_milk
+  label: Milk coffee
+  wikipedia: Milk_coffee
+  
+moka_coffee:
+  kind_of: coffee
+  label: Mocha coffee
+  label: Moka coffee
+  label: Mocaccino
+  label: Mochaccino
+  label: Mochachino
+  label: Caffè mocha
+  wikipedia: Caffè_mocha
+
+robusta_coffee:
+  kind_of: coffee
+  label: Robusta coffee
+  foodb: 60
+  wikipedia: Robusta_coffee
+
+turkish_coffee:
+  kind_of: espresso
+  label: Turkish coffee
+  wikipedia: Turkish_coffee
+
+vanilla_coffee:
+  kind_of: coffee
+  made_of: vanilla
+  label: Vanilla coffee
+
+coffee_powder:
+  kind_of: coffee_product
+  label: Coffee powder
+
+coffee_substitute:
+  # TODO what do we do with coffee substitutes?
+  kind_of: coffee_product
+  label: Coffee substitute
+  foodb: 767
+
+
+#
+# Miscellaneous beverages
+#
+
+# TODO refine remaining beverages
+# TODO what do we do with drink powders/mixes?
+
+bean_drink:
+  kind_of: beverage
+  made_of: bean
+  label: Bean drink
+  
+red_bean_ice:
+  kind_of: bean_drink
+  made_of: adzuki_bean
+  made_of: rock_sugar
+  made_of: evaporated_milk
+  label: Red bean ice
+  wikipedia: Red_bean_ice
+
+carbonated_drink:
+  kind_of: beverage
+  label: Carbonated drink
+  label: Soda
+  wikipedia: Carbonated_drink
+
+chocolate_soda:
+  kind_of: carbonated_drink
+  made_of: chocolate
+  label: Chocolate soda
+
+cola:
+  # TODO improve soda taxonomy
+  kind_of: carbonated_drink
+  label: Cola
+  wikipedia: Cola
+
+cherry_cola:
+  kind_of: cola
+  made_of: cherry
+  label: Cherry cola
+  wikipedia: Cherry_cola
+
+vanilla_cola:
+  kind_of: cola
+  made_of: vanilla
+  label: Vanilla cola
+
+cream_soda:
+  kind_of: carbonated_drink
+  label: Cream soda
+  wikipedia: Cream_soda
+
+grape_soda:
+  kind_of: carbonated_drink
+  label: Grape soda
+  label: Grape drink
+  label: Purple drink
+  wikipedia: Grape_drink
+
+ice_cream_soda:
+  kind_of: beverage
+  made_of: ice_cream
+  label: Ice cream soda
+  label: Ice cream float
+  label: Coke float
+  wikipedia: Ice_cream_float
+
+orange_drink:
+  kind_of: carbonated_drink
+  label: Orange drink
+  wikipedia: Orange_drink
+
+lemonade:
+  kind_of: carbonated_drink
+  made_of: lemon
+  label: Lemonade
+  wikipedia: Lemonade
+
+limeade:
+  kind_of: carbonated_drink
+  made_of: lime
+  label: Limeade
+  wikipedia: Lemonade#Limeade
+
+pepper_type_carbonated_drink:
+  # TODO improve soda taxonomy
+  kind_of: carbonated_drink
+  label: Pepper type carbonated drink
+  wikipedia: Dr_Pepper
+
+drink_powder:
+  kind_of: beverage
+  label: Drink powder
+
+fruit_flavor_drink_powder:
+  kind_of: drink_powder
+  label: Fruit flavor drink powder
+
+protein_drink_powder:
+  kind_of: drink_powder
+  label: Protein drink powder
+
+soy_protein_isolate:
+  kind_of: protein_drink_powder
+  label: Soy protein isolate
+  wikipedia: Soy_protein#Isolates
+
+energy_drink:
+  kind_of: beverage
+  label: Energy drink
+  foodb: 727
+  wikipedia: Energy_drink
+
+# TODO relate fruit flavored drinks to associated juices?
+
+flavored_water:
+  kind_of: beverage
+  label: Flavored water
+  
+orange_flower_water:
+  kind_of: flavored_water
+  made_of: orange_flower
+  label: Orange flower water
+  label: Orange blossom water
+  wikipedia: Orange_flower_water
+  
+rose_water:
+  kind_of: flavored_water
+  label: Rose water
+  wikipedia: Rose_water
+
+fruit_drink:
+  kind_of: beverage
+  label: Fruit-flavor drink
+  foodb: 850
+  wikipedia: Drink#Juice_and_juice_drinks
+  
+licuado:
+  kind_of: fruit_drink
+  kind_of: milk_drink
+  made_of: ice
+  label: Preparados
+  label: Licuado
+  label: Batidos
+  wikipedia: Licuado
+
+horchata:
+  kind_of: beverage
+  label: Horchata
+  label: Orxata
+  foodb: 852
+  wikipedia: Horchata
+
+milk_drink:
+  kind_of: beverage
+  kind_of: milk_product
+  label: Milk drink
+  
+flavored_milk:
+  kind_of: milk_drink
+  made_of: sugar
+  label: Flavored milk
+  wikipedia: Flavored_milk
+
+strawberry_milk:
+  kind_of: flavored_milk
+  kind_of: milk_product
+  label: Strawberry milk
+
+vanilla_milk:
+  kind_of: flavored_milk
+  kind_of: milk_product
+  label: Vanilla milk
+
+eggnog:
+  kind_of: milk_drink
+  kind_of: milk_product
+  kind_of: punch
+  made_of: chicken_egg
+  made_of: sugar
+  label: Egg milk punch
+  label: Eggnog
+  label: Egg nog
+  label: Egg-nog
+  wikipedia: Eggnog
+
+milk_chocolate_drink:
+  kind_of: beverage
+  kind_of: milk_drink
+  label: Milk chocolate drink
+
+milkshake:
+  kind_of: milk_drink
+  label: Milkshake
+  label: Thick shake
+  label: Thick milkshake
+  label: Frappe
+  foodb: 855
+  wikipedia: Milkshake
+
+caramel_shake:
+  kind_of: milkshake
+  made_of: caramel
+  label: Caramel shake
+
+chocolate_shake:
+  kind_of: milkshake
+  made_of: chocolate
+  label: Chocolate shake
+
+coffee_shake:
+  kind_of: milkshake
+  made_of: coffee
+  label: Coffee shake
+
+fruit_shake:
+  kind_of: milkshake
+  made_of: fruit
+  label: Fruit shake
+
+strawberry_shake:
+  kind_of: fruit_shake
+  made_of: strawberry
+  label: Strawberry shake
+
+vanilla_shake:
+  kind_of: milkshake
+  made_of: vanilla
+  label: Vanilla shake
+
+nutritional_drink:
+  kind_of: beverage
+  label: Nutritional drink
+  foodb: 779
+
+# TODO relate fruit-based nutritional drinks to associated juices?
+
+rice_drink:
+  kind_of: beverage
+  label: Rice drink
+
+sport_drink:
+  kind_of: nutritional_drink
+  label: Sport drink
+  wikipedia: Sports_drink
+
+

@@ -1,0 +1,373 @@
+
+
+
+
+#
+# Cocoa plant
+#
+
+cocoa_bean:
+  label: Cocoa bean
+  foodb: 182
+  wikipedia: Cocoa_bean
+
+#
+# Cocoa products
+#
+
+cocoa_product:
+  derivative_of: cocoa_bean
+  label: Cocoa product
+  foodb: 890
+
+cocoa_butter:
+  kind_of: cocoa_product
+  kind_of: fat
+  label: Cocoa butter
+  label: Theobroma oil
+  foodb: 706
+  wikipedia: Cocoa_butter
+
+cocoa_liquor:
+  # NOTE do not confuse with chocolate liqueur
+  kind_of: cocoa_product
+  made_of: cocoa_butter
+  made_of: cocoa_powder
+  label: Cocoa liquor
+  foodb: 708
+  wikipedia: Chocolate_liquor
+
+cocoa_powder:
+  kind_of: cocoa_product
+  label: Cocoa powder
+  foodb: 707
+  wikipedia: Cocoa_solids
+
+
+
+#
+# Chocolate
+#
+
+chocolate:
+  # TODO relate chocolates to cocoa powder, cocoa butter, milk products...
+  kind_of: cocoa_product
+  kind_of: candy
+  label: Chocolate
+  foodb: 709
+  wikipedia: Chocolate
+
+dark_chocolate:
+  kind_of: chocolate
+  label: Dark chocolate
+  label: Plain chocolate
+  label: Semisweet chocolate
+  label: Bittersweet chocolate
+  label: Black chocolate
+  wikipedia: Dark_chocolate
+
+baking_chocolate:
+  kind_of: dark_chocolate
+  label: Baking chocolate
+
+milk_chocolate:
+  kind_of: chocolate
+  made_of: milk
+  label: Milk chocolate
+  wikipedia: Types_of_chocolate#Milk_chocolate
+  
+ruby_chocolate:
+  kind_of: chocolate
+  label: Ruby chocolate
+  wikipedia: Ruby_chocolate
+
+sweet_chocolate:
+  kind_of: chocolate
+  label: Sweet chocolate
+
+white_chocolate:
+  kind_of: chocolate
+  made_of: cocoa_butter
+  made_of: sugar
+  made_of: cow_milk
+  label: White chocolate
+  wikipedia: White_chocolate
+
+chocolate_powder:
+  kind_of: cocoa_product
+  made_of: chocolate
+  label: Chocolate powder
+
+
+
+#
+# Vegetable milks
+#
+
+almond_milk:
+  kind_of: vegetable_milk
+  derivative_of: almond
+  label: Almond milk
+  wikipedia: Almond_milk
+
+coconut_milk:
+  kind_of: vegetable_milk
+  derivative_of: coconut
+  label: Coconut milk
+  wikipedia: Coconut_milk
+
+hemp_milk:
+  kind_of: milk_substitute
+  derivative_of: hemp_seed
+  label: Hemp milk
+  wikipedia: Hemp_milk
+
+rice_milk:
+  kind_of: vegetable_milk
+  derivative_of: rice
+  label: Rice milk
+  wikipedia: Rice_milk
+
+soy_milk:
+  kind_of: milk_substitute
+  kind_of: soy_product
+  derivative_of: soy_bean
+  label: Soy milk
+  label: Soymilk
+  foodb: 761
+  wikipedia: Soy_milk
+
+
+#
+# Other plant products
+#
+
+# TODO clean this
+
+butter_substitute:
+  kind_of: fat
+  label: Butter substitute
+  foodb: 668
+
+margarine:
+  kind_of: butter_substitute
+  kind_of: spread
+  label: Margarine
+  foodb: 872
+  wikipedia: Margarine
+
+# Shortening and margarine-like
+
+shortening:
+  kind_of: fat
+  # TODO shortening is sometimes used for lard and butter (i.e. add links to these products?)
+  label: Shortening
+  foodb: 808
+  wikipedia: Shortening
+
+soy_shortening:
+  kind_of: soy_product
+  label: Soy shortening
+
+soy_bean_shortening:
+  kind_of: shortening
+  label: Soybean shortening
+
+vegetable_shortening:
+  kind_of: shortening
+  label: Vegetable shortening
+
+
+# Oils
+
+
+
+cooking_oil:
+  kind_of: vegetable_oil
+  label: Cooking oil
+  wikipedia: Cooking_oil
+
+almond_oil:
+  kind_of: vegetable_oil
+  derivative_of: almond
+  label: Almond oil
+  wikipedia: Almond#Oils
+
+apricot_kernel_oil:
+  kind_of: vegetable_oil
+  derivative_of: apricot
+  label: Apricot kernel oil
+  label: Apricot oil
+  wikipedia: Apricot_oil
+
+avocado_oil:
+  kind_of: vegetable_oil
+  derivative_of: avocado
+  label: Avocado oil
+  wikipedia: Avocado_oil
+
+babassu_oil:
+  kind_of: vegetable_oil
+  label: Babassu oil
+  label: Cusi oil
+  wikipedia: Babassu_oil
+
+canola_oil:
+  kind_of: vegetable_oil
+  derivative_of: rapeseed
+  label: Canola oil
+  wikipedia: Canola_oil
+
+coconut_oil:
+  kind_of: vegetable_oil
+  derivative_of: coconut
+  label: Coconut oil
+  wikipedia: Coconut_oil	
+
+corn_oil:
+  kind_of: vegetable_oil
+  derivative_of: corn
+  label: Corn oil
+  label: Maize oil
+  wikipedia: Corn_oil
+
+cottonseed_oil:
+  kind_of: vegetable_oil
+  derivative_of: cottonseed
+  label: Cottonseed oil
+  wikipedia: Cottonseed_oil
+
+cupu_assu_oil:
+  kind_of: vegetable_oil
+  label: Cupu assu oil
+
+flaxseed_oil:
+  kind_of: vegetable_oil
+  derivative_of: flaxseed
+  label: Flaxseed oil
+  label: Linseed oil
+  label: Flax oil
+  wikipedia: Linseed_oil
+
+grapeseed_oil:
+  kind_of: vegetable_oil
+  derivative_of: grape
+  label: Grapeseed oil
+  wikipedia: Grape_seed_oil
+
+hazelnut_oil:
+  kind_of: vegetable_oil
+  derivative_of: hazelnut
+  label: Hazelnut oil
+
+mustard_oil:
+  kind_of: vegetable_oil
+  derivative_of: mustard_green
+  label: Mustard oil
+  wikipedia: Mustard_oil
+
+nutmeg_oil:
+  kind_of: vegetable_oil
+  derivative_of: nutmeg
+  label: Nutmeg oil
+  wikipedia: Nutmeg_oil
+
+oat_oil:
+  kind_of: vegetable_oil
+  derivative_of: oat_grain
+  label: Oat oil
+
+olive_oil:
+  kind_of: vegetable_oil
+  derivative_of: olive
+  label: Olive oil
+  wikipedia: Olive_oil
+
+palm_oil:
+  kind_of: vegetable_oil
+  derivative_of: palm_heart
+  label: Palm oil
+  wikipedia: Palm_oil
+
+peanut_oil:
+  kind_of: vegetable_oil
+  derivative_of: peanut
+  label: Peanut oil
+  label: Groundnut oil
+  label: Arachis oil
+  wikipedia: Peanut_oil
+
+poppyseed_oil:
+  kind_of: vegetable_oil
+  derivative_of: poppy_seed
+  label: Poppyseed oil
+  wikipedia: Poppyseed_oil
+  
+rapeseed_oil:
+  kind_of: vegetable_oil
+  made_of: rapeseed
+  label: Rapeseed oil
+
+rice_bran_oil:
+  kind_of: vegetable_oil
+  derivative_of: rice_bran
+  label: Rice bran oil
+  wikipedia: Rice_bran_oil
+
+safflower_oil:
+  kind_of: vegetable_oil
+  derivative_of: safflower_seed
+  label: Safflower oil
+
+sesame_oil:
+  kind_of: vegetable_oil
+  derivative_of: sesame_seed
+  label: Sesame oil
+  wikipedia: Sesame_oil
+
+shea_oil:
+  kind_of: vegetable_oil
+  derivative_of: shea_nut
+  label: Shea oil
+
+soybean_oil:
+  kind_of: vegetable_oil
+  derivative_of: soy_bean
+  label: Soybean oil
+  wikipedia: Soybean_oil
+
+sunflower_oil:
+  kind_of: vegetable_oil
+  derivative_of: sunflower_seed
+  label: Sunflower oil
+  wikipedia: Sunflower_oil
+
+teaseed_oil:
+  kind_of: vegetable_oil
+  derivative_of: tea
+  label: Teaseed oil
+
+tomatoseed_oil:
+  kind_of: vegetable_oil
+  derivative_of: tomato
+  label: Tomatoseed oil
+  wikipedia: Tomato_seed_oil
+
+ucuhuba_oil:
+  kind_of: vegetable_oil
+  derivative_of: ucuhuba_seed
+  label: Ucuhuba oil
+
+walnut_oil:
+  kind_of: vegetable_oil
+  derivative_of: walnut
+  label: Walnut oil
+  wikipedia: Walnut_oil
+
+wheat_germ_oil:
+  kind_of: vegetable_oil
+  derivative_of: wheat_sprout
+  label: Wheat germ oil
+  wikipedia: Wheat_germ_oil
+
+

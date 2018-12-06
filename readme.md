@@ -3,9 +3,6 @@
 
 This ontology is designed to handle culinary needs. Biological, chemical and nutritional components are also considered to improve usability and reliability.
 
-
-## Overview
-
 Items are mostly everything, from raw ingredients to compound dishes. This is not limited to edible concepts (e.g. brands and processing indications). Together, a directed acyclic graph is built, as commonly done in ontologies. For simplicity sake's, a custom format with weak annotation is used, which is closer to thesauri formalism than RDF-based ontologies.
 
 In particular, the following relationships exist between items:
@@ -28,34 +25,3 @@ Additional attributes can be specified, including names and references to other 
 Other relationships and attributes can be used to refine taxonomies:
  * _substitute-of_ reports semantical equivalences (e.g. aspartame is a sugar substitute), which does not include practical substitutes (e.g. almond powder is not officially a substitute of flour).
  * _modifier_ markers are used to specify important aspects of the item (e.g. dried, cooked, canned...)
-
-
-## Scraper
-
-...
-
-```
-python -c "import food.scraper.main"
-```
-
-
-# Annotator
-
-...
-
-```
-pip install CyHunspell regex
-pip install git+https://github.com/globality-corp/sklearn-hierarchical-classification.git
-```
-
-```
-python -c "import food.parser.main"
-```
-
-## License
-
-The content of the ontology itself is licensed under the [Creative Commons Attribution Share Alike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/), and the underlying source code used to process and format that content is licensed under [The Unlicense](https://unlicense.org/UNLICENSE).
-
-Note that this does not apply to referenced corpora, which are often in public domain. Please consult the official websites for more information.
-
-Additional corpora that are included for convenience have dedicated licenses, e.g. English Universal Dependencies corpus is under [Creative Commons Attribution Share Alike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).

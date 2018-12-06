@@ -1,0 +1,819 @@
+
+
+#
+# Eggs
+#
+
+# Poultry eggs
+
+chicken_egg:
+  kind_of: egg
+  product_of: chicken
+  label: Chicken egg
+
+duck_egg:
+  kind_of: egg
+  product_of: duck
+  label: Duck egg
+
+goose_egg:
+  kind_of: egg
+  product_of: goose
+  label: Goose egg
+
+quail_egg:
+  kind_of: egg
+  product_of: quail
+  label: Quail egg
+  wikipedia: Quail_eggs
+
+turkey_egg:
+  kind_of: egg
+  product_of: turkey
+  label: Turkey egg
+
+# Roe (a.k.a. fish eggs)
+
+herring_roe:
+  kind_of: roe
+  product_of: herring
+  label: Herring roe
+
+lumpsucker_roe:
+  kind_of: roe
+  product_of: lumpsucker
+  label: Lumpsucker roe
+
+salmon_roe:
+  kind_of: roe
+  product_of: salmon
+  label: Salmon roe
+
+scallop_roe:
+  kind_of: roe
+  product_of: scallop
+  label: Scallop roe
+  
+shad_roe:
+  kind_of: roe
+  product_of: shad
+  label: Shad roe
+
+sea_urchin_roe:
+  kind_of: roe
+  product_of: sea_urchin
+  label: Sea urchin roe
+
+shrimp_roe:
+  kind_of: roe
+  product_of: shrimp
+  label: Shrimp roe
+
+sturgeon_roe:
+  kind_of: roe
+  product_of: sturgeon
+  label: Caviar
+  label: Sturgeon roe
+  wikipedia: Caviar
+
+whitefish_roe:
+  kind_of: roe
+  product_of: whitefish
+  label: Whitefish roe
+
+
+#
+# Milks
+#
+
+buffalo_milk:
+  kind_of: animal_milk
+  product_of: buffalo
+  label: Buffalo milk
+  wikipedia: Water_buffalo#Dairy_products
+
+camel_milk:
+  kind_of: animal_milk
+  product_of: camel
+  label: Camel milk
+  wikipedia: Camel_milk
+
+cow_milk:
+  kind_of: animal_milk
+  product_of: beef
+  label: Cow milk
+  foodb: 632
+
+goat_milk:
+  kind_of: animal_milk
+  product_of: goat
+  label: Goat milk
+  wikipedia: Goat#Milk,_butter_and_cheese
+
+human_milk:
+  # TODO maybe mark human milk as baby food
+  kind_of: animal_milk
+  product_of: human
+  label: Human milk
+  foodb: 687
+  wikipedia: Breast_milk
+
+sheep_milk:
+  kind_of: animal_milk
+  product_of: sheep
+  label: Sheep milk
+  label: Ewes' milk
+  wikipedia: Sheep_milk
+
+
+#
+# Cheeses
+#
+
+# TODO relate cheeses to their source, if applicable
+# TODO add missing cheeses
+
+american_cheese:
+  kind_of: cheese
+  label: American cheese
+  wikipedia: American_cheese
+
+processed_cheese:
+  kind_of: american_cheese
+  label: Processed cheese
+  foodb: 735
+  wikipedia: Processed_cheese
+
+blue_cheese:
+  kind_of: cheese
+  label: Blue cheese
+  wikipedia: Blue_cheese
+
+gorgonzola_cheese:
+  kind_of: blue_cheese
+  made_of: cow_milk
+  label: Gorgonzola cheese
+  wikipedia: Gorgonzola
+
+brick_cheese:
+  kind_of: cheese
+  label: Brick cheese
+  wikipedia: Brick_cheese
+
+brie_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Brie cheese
+  wikipedia: Brie
+
+camembert_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Camembert cheese
+  wikipedia: Camembert
+
+caraway_cheese:
+  kind_of: cheese
+  label: Caraway cheese
+
+cheddar_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Cheddar cheese
+  wikipedia: Cheddar_cheese
+
+cheshire_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Cheshire cheese
+  wikipedia: Cheshire_cheese
+
+colby_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Colby cheese
+  wikipedia: Colby_cheese
+
+cottage_cheese:
+  kind_of: cheese
+  label: Cottage cheese
+  wikipedia: Cottage_cheese
+
+cream_cheese:
+  kind_of: cheese
+  kind_of: spread
+  made_of: cow_milk
+  made_of: cream
+  label: Cream cheese
+  wikipedia: Cream_cheese
+
+mascarpone:
+  kind_of: cream_cheese
+  label: Mascarpone
+  wikipedia: Mascarpone
+
+edam_cheese:
+  kind_of: cheese
+  label: Edam cheese
+  wikipedia: Edam_cheese
+
+feta_cheese:
+  kind_of: cheese
+  derivative_of: sheep_milk
+  derivative_of: goat_milk
+  label: Feta cheese
+  wikipedia: Feta
+
+fontina_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Fontina cheese
+  wikièedia: Fontina
+
+gjetost_cheese:
+  kind_of: cheese
+  label: Gjetost cheese
+
+goat_cheese:
+  kind_of: cheese
+  derivative_of: goat_milk
+  label: Goat cheese
+  wikipedia: Goat_cheese
+
+gouda_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Gouda cheese
+  wikipedia: Gouda_cheese
+
+gruyere_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Gruyere cheese
+  wikipedia: Gruyère_cheese
+
+limburger_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Limburger cheese
+  wikipedia: Limburger
+
+mexican_cheese:
+  kind_of: cheese
+  label: Mexican cheese
+
+oaxaca_cheese:
+  kind_of: mexican_cheese
+  derivative_of: cow_milk
+  label: Queso oaxaca
+  wikipedia: Oaxaca_cheese
+
+queso_anejo:
+  kind_of: mexican_cheese
+  label: Queso anejo
+
+queso_asadero:
+  kind_of: mexican_cheese
+  label: Queso asadero
+
+queso_chihuahua:
+  kind_of: mexican_cheese
+  label: Queso chihuahua
+  label: Queso menonita
+  wikipedia: Queso_Chihuahua
+
+queso_cotija:
+  kind_of: mexican_cheese
+  made_of: goat_milk
+  label: Queso cotija
+  wikipedia: Cotija_cheese
+
+monterey_cheese:
+  kind_of: cheese
+  label: Monterey cheese
+
+monterey_jack:
+  kind_of: cheese
+  made_of: cow_milk
+  label: Monterey Jack
+  wikipedia: Monterey_Jack
+
+colby_jack:
+  kind_of: monterey_jack
+  made_of: colby_cheese
+  label: Colby-Jack
+  label: Co-jack
+  label: Cojack
+  wikipedia: Colby-Jack
+
+cheddar_jack:
+  kind_of: monterey_jack
+  made_of: cheddar_cheese
+  label: Cheddar-Jack
+
+pepper_jack:
+  kind_of: monterey_jack
+  made_of: chili_pepper
+  label: Pepper Jack
+  wikipedia: Monterey_Jack#Pepper_Jack
+
+mozzarella_cheese:
+  kind_of: cheese
+  derivative_of: buffalo_milk
+  label: Mozzarella
+  wikipedia: Mozzarella
+
+muenster_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Muenster cheese
+  wikipedia: Munster_cheese
+
+neufchatel_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Neufchatel cheese
+  wikipedia: Neufchâtel_cheese
+
+parmesan_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Parmesan cheese
+  wikipedia: Parmigiano-Reggiano
+
+pecorino_cheese:
+  kind_of: cheese
+  derivative_of: sheep_milk
+  label: Pecorino cheese
+  wikipedia: Pecorino
+
+pimento_cheese:
+  kind_of: cheese
+  made_of: cheddar_cheese
+  made_of: mayonnaise
+  made_of: pimiento
+  label: Pimento cheese
+  wikipedia: Pimento_cheese
+
+port_de_salut_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Port de salut cheese
+  wikipedia: Port_Salut
+
+provolone_cheese:
+  kind_of: cheese
+  derivative_of: cow_milk
+  label: Provolone cheese
+  wikipedia: Provolone
+
+queso_blanco:
+  kind_of: cheese
+  label: Queso blanco
+  wikipedia: Queso_blanco
+
+queso_fresco:
+  kind_of: cheese
+  label: Queso fresco
+
+queso_seco:
+  kind_of: cheese
+  label: Queso seco
+
+ricotta_cheese:
+  kind_of: cheese
+  label: Ricotta cheese
+  wikipedia: Ricotta
+
+romano_cheese:
+  kind_of: cheese
+  label: Romano cheese
+  wikipedia: Romano_cheese
+
+roquefort_cheese:
+  kind_of: cheese
+  derivative_of: sheep_milk
+  label: Roquefort cheese
+  wikipedia: Roquefort
+
+shanklish:
+  kind_of: cheese
+  kind_of: levantine_dish
+  label: Shanklish
+  label: Shinklish
+  label: Shankleesh
+  label: Sorke
+  label: Sürke
+  wikipedia: Shanklish
+  
+stracchino_cheese:
+  kind_of: cheese
+  made_of: cow_milk
+  label: Stracchino cheese
+  label: Crescenza cheese
+  wikipedia: Stracchino
+
+swiss_cheese:
+  kind_of: cheese
+  label: Swiss cheese
+  wikipedia: Swiss_cheese
+  
+emmental_cheese:
+  kind_of: swiss_cheese
+  made_of: cow_milk
+  label: Emmental cheese
+  wikipedia: Emmental_cheese
+  
+tilsit_cheese:
+  kind_of: cheese
+  label: Tilsit cheese
+  wikipedia: Tilsit_cheese
+
+
+#
+# Other milk products
+#
+
+# TODO clean this
+
+casein:
+  kind_of: milk_product
+  label: Casein
+  foodb: 680
+
+ymer:
+  kind_of: milk_product
+  label: Ymer
+  foodb: 656
+  wikipedia: Ymer_(dairy_product)
+
+condensed_milk:
+  kind_of: milk_product
+  label: Condensed milk
+  foodb: 871
+  wikipedia: Condensed_milk
+
+dried_milk:
+  kind_of: milk_product
+  label: Dried milk
+  foodb: 711
+  wikipedia: Powdered_milk
+
+evaporated_milk:
+  kind_of: milk_product
+  label: Evaporated milk
+  foodb: 824
+  wikipedia: Evaporated_milk
+
+filled_milk:
+  kind_of: milk_product
+  label: Filled milk
+  wikipedia: Filled_milk
+
+lowfat_milk:
+  kind_of: milk
+  label: Lowfat milk
+
+reduced_fat_milk:
+  kind_of: milk_product
+  label: Reduced fat milk
+
+skimmed_milk:
+  kind_of: milk_product
+  label:
+    - Skimmed milk
+    - Fat-free milk
+    - Nonfat milk
+  wikipedia: Skimmed_milk
+
+whole_milk:
+  kind_of: milk_product
+  label: Whole milk
+
+whey:
+  kind_of: milk_product
+  label: Whey
+  foodb: 679
+  wikipedia: Whey
+
+cream:
+  kind_of: milk_product
+  label: Cream
+  foodb: 669
+  wikipedia: Cream
+
+cream_substitute:
+  # TODO refine cream substitutes
+  substitute_of: cream
+  label: Cream substitute
+  foodb: 737
+
+soy_cream:
+  # TODO put soy cream with soy products
+  kind_of:
+    - soy_product
+    - cream_substitute
+  label: Soy cream
+  foodb: 809
+
+# TODO properly handle fatness of cream products
+
+coffee_cream:
+  kind_of: cream
+  label: Coffee cream
+
+heavy_cream:
+  kind_of: cream
+  label: Heavy cream
+
+sour_cream:
+  kind_of: cream
+  label: Sour cream
+  wikipedia: Sour_cream
+
+smetana:
+  kind_of: sour_cream
+  label: Smetana
+  wikipedia: Smetana_(dairy_product)
+
+sour_cream_imitation:
+  # TODO is it relevant to define substitutes for each kind of milk product?
+  kind_of: sour_cream
+  label: Sour cream imitation
+
+whipped_cream:
+  kind_of: cream
+  label: Whipped cream
+  wikipedia: Whipped_cream
+
+whipped_cream_substitute:
+  # TODO is it relevant to define substitutes for each kind of milk product?
+  substitute_of: whipped_cream
+  label: Whipped cream substitute
+
+whipped_topping:
+  substitute_of: whipped_cream_substitute
+  label:
+    - Whipped topping
+    - Squirty cream
+  wikipedia: Whipped_cream#Imitation_whipped_cream
+
+# TODO maybe fermented milk category is irrelevant (i.e. put yoghurt as top-level)
+# TODO maybe annotate yoghurts as fast_food/snack?
+
+fermented_milk:
+  kind_of: milk_product
+  label: Fermented milk
+  foodb: 715
+  wikipedia: Fermented_milk_products
+
+buttermilk:
+  kind_of:
+    - fermented_milk
+    - milk_drink
+  label: Buttermilk
+  foodb: 714
+  wikipedia: Buttermilk
+
+kefir:
+  # TODO what is kefir? maybe should be put in smoothies-like products
+  kind_of: fermented_milk
+  label: Kefir
+  foodb: 713
+  wikipedia: Kefir
+
+yoghurt:
+  # TODO is yoghurt a dish?
+  kind_of: fermented_milk
+  label:
+    - Yoghurt
+    - Yogurt
+  foodb: 634
+  wikipedia: Yogurt
+
+greek_yoghurt:
+  # TODO is it correct to group all theses?
+  kind_of: yoghurt
+  label:
+    - Greek yoghurt
+    - Strained yogurt
+    - Yogurt cheese
+    - Sack yoghurt
+    - Labaneh
+    - Suzma yogurt
+  wikipedia: Strained_yogurt
+
+soy_yoghurt:
+  # TODO put this with soy products
+  kind_of: soy_product
+  label:
+    - Soy yoghurt
+    - Soya yogurt
+    - Soygurt
+    - Yofu
+  wikipedia: Soy_yogurt
+
+tofu_yoghurt:
+  # TODO put this with soy products
+  kind_of: soy_yoghurt
+  label: Tofu yoghurt
+
+
+# Butter and derivatives
+
+butter:
+  kind_of: fat
+  kind_of: spread
+  made_of: cow_milk
+  label: Butter
+  foodb: 667
+  wikipedia: Butter
+
+salted_butter:
+  kind_of: butter
+  kind_of: spread
+  made_of: cow_milk
+  made_of: salt
+  label: Salted butter
+
+butter_oil:
+  kind_of: fat
+  made_of: cow_milk
+  label: Butter oil
+  label: Clarified butter
+  foodb: 785
+  wikipedia: Clarified_butter
+
+ghee:
+  kind_of: butter_oil
+  label: Ghee
+  wikipedia: Ghee
+
+butterfat:
+  kind_of: fat
+  part_of: milk
+  label: Butterfat
+  label: Milkfat  
+  foodb: 785
+  wikipedia: Butterfat
+
+
+# Animal and fish fats
+
+beef_fat:
+  kind_of: animal_fat
+  derivative_of: beef
+  label: Beef fat
+
+chicken_broiler_fat:
+  kind_of: animal_fat
+  derivative_of: chicken_broiler
+  label: Chicken broiler fat
+
+chicken_fat:
+  kind_of: animal_fat
+  derivative_of: chicken
+  label: Chicken fat
+
+chicken_fryer_fat:
+  kind_of: animal_fat
+  derivative_of: chicken_fryer
+  label: Chicken chicken_fryer fat
+
+dripping:
+  kind_of: animal_fat
+  label: Dripping
+  foodb: 857
+  wikipedia: Dripping
+
+duck_fat:
+  kind_of: animal_fat
+  derivative_of: duck
+  label: Duck fat
+
+goose_fat:
+  kind_of: animal_fat
+  derivative_of: goose
+  label: Goose fat
+
+lamb_fat:
+  kind_of: animal_fat
+  derivative_of: lamb
+  label: Lamb fat
+
+pork_fat:
+  kind_of: animal_fat
+  derivative_of: pork
+  label: Pork fat
+
+lard:
+  kind_of: pork_fat
+  label: Lard
+  foodb: 703
+  wikipedia: Lard
+
+seal_oil:
+  kind_of: animal_fat
+  derivative_of: seal
+  label: Seal oil
+
+tallow:
+  kind_of: animal_fat
+  derivative_of: animal
+  label: Tallow
+  foodb: 696
+
+beef_tallow:
+  kind_of: tallow
+  derivative_of: beef
+  label: Beef tallow
+
+mutton_tallow:
+  kind_of: tallow
+  derivative_of: mutton
+  label: Mutton tallow
+
+pork_tallow:
+  kind_of: tallow
+  derivative_of: pork
+  label: Pork tallow
+
+veal_tallow:
+  kind_of: tallow
+  derivative_of: veal
+  label: Veal tallow
+
+turkey_fat:
+  kind_of: animal_fat
+  derivative_of: turkey
+  label: Turkey fat
+
+veal_fat:
+  kind_of: animal_fat
+  derivative_of: veal
+  label: Veal fat
+
+wagyu_fat:
+  kind_of: animal_fat
+  derivative_of: wagyu
+  label: Wagyu fat
+
+walrus_oil:
+  kind_of: animal_fat
+  kind_of: oil
+  derivative_of: walrus
+  label: Walrus oil
+
+whale_oil:
+  kind_of: animal_fat
+  kind_of: oil
+  derivative_of: whale
+  label: Whale oil
+
+fish_oil:
+  kind_of: animal_fat
+  kind_of: oil
+  derivative_of: fish
+  label: Fish oil
+  wikipedia: Fish_oil
+
+bearded_seal_oil:
+  kind_of: fish_oil
+  derivative_of: bearded_seal
+  label: Bearded seal oil
+
+cod_oil:
+  kind_of: fish_oil
+  derivative_of: cod
+  label: Cod oil
+
+cod_liver_oil:
+  kind_of: fish_oil
+  derivative_of: cod
+  label: Cod liver oil
+  wikipedia: Cod_liver_oil
+
+herring_oil:
+  kind_of: fish_oil
+  derivative_of: herring
+  label: Herring oil
+
+menhaden_oil:
+  kind_of: fish_oil
+  derivative_of: menhaden
+  label: Menhaden oil
+
+salmon_oil:
+  kind_of: fish_oil
+  derivative_of: salmon
+  label: Salmon oil
+
+sardine_oil:
+  kind_of: fish_oil
+  derivative_of: sardine
+  label: Sardine oil
+
+spotted_seal_oil:
+  kind_of: fish_oil
+  derivative_of: spotted_seal
+  label: Spotted seal oil
