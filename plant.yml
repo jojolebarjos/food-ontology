@@ -1,33 +1,22 @@
 
 
+# TODO fix naming convention, especially for seeds and grains
+# TODO improve plant taxonomies, especially for fruits, vegetables and seeds
+# TODO maybe need to think again the difference between a source and the actual product (e.g. apple fruit vs apple tree)
+# TODO seed, all variations of cereals
 
-# TODO fruit/vegetable/nut(796) mixes
-aloe_vera:
-  kind_of: plant
-  label: Aloe vera
+plant:
+  kind_of: item
+  label: Plant
+  description: Any plant, from algae to vegetables
 
-cactus:
-  kind_of: plant
-  label: Cactus
-  wikipedia: Cactus
 
-liquorice:
-  kind_of: plant
-  label: Liquorice
-  label: Licorice
-  foodb: 644
-  wikipedia: Liquorice
-  
-woca:
-  kind_of: plant
-  label: Wocas
-  label: Yellow pond lily
-  label: Yellow water-lily
-  wikipedia: Nuphar_lutea
 
 #
-# Fruits
+# Fruit, i.e. fleshy seed-associated structures
 #
+
+# TODO not to be confused with fruit_of -> what are desired parts?
 
 fruit:
   kind_of: plant
@@ -228,7 +217,7 @@ sweet_rowanberry:
 
 rubus:
   kind_of: berry
-  label: Rubus
+  label: Bramble fruit
   foodb: 160
   wikipedia: Rubus
 
@@ -443,6 +432,7 @@ sparkleberry:
   foodb: 190
   wikipedia: Vaccinium_arboreum
 
+
 # Citrus
 
 citrus:
@@ -450,7 +440,7 @@ citrus:
   label: Citrus
   foodb: 889
   wikipedia: Citrus
-  
+
 calamondin:
   kind_of: citrus
   label: Calamondin
@@ -480,11 +470,6 @@ grapefruit_pummelo_hybrid:
   label: Grapefruit/Pummelo hybrid
   foodb: 255
 
-key_lime:
-  kind_of: citrus
-  label: Key lime
-  wikipedia: Key_lime
-
 lemon:
   kind_of: citrus
   label: Lemon
@@ -496,6 +481,34 @@ lime:
   label: Lime
   foodb: 53
   wikipedia: Lime_(fruit)
+
+desert_lime:
+  kind_of: lime
+  label: Desert lime
+  wikipedia: Citrus_glauca
+
+kaffir_lime:
+  kind_of: lime
+  label:
+    - Kaffir lime
+    - Makrut lime
+    - Mauritius papeda
+  wikipedia: Kaffir_lime
+
+key_lime:
+  kind_of: lime
+  label: Key lime
+  wikipedia: Key_lime
+
+persian_lime:
+  kind_of: citrus
+  label:
+    - Persian lime
+    - seedless lime
+    - Bearss lime
+    - Tahiti lime
+  foodb: 557
+  wikipedia: Persian_lime
 
 mandarin:
   kind_of: citrus
@@ -533,25 +546,22 @@ valencia_orange:
   label: Valencia orange
   wikipedia: Valencia_orange
 
-persian_lime:
-  kind_of: citrus
-  label: Persian lime
-  foodb: 557
-  wikipedia: Persian_lime
-
 pummelo:
   kind_of: citrus
-  label: Pummelo
-  label: Pomelo
-  label: Pamplemousse
+  label:
+    - Pummelo
+    - Pomelo
+    - Pamplemousse
   foodb: 55
   wikipedia: Pomelo
 
 tangelo:
   kind_of: citrus
-  label: Tangelo
-  label: Honeybell
+  label:
+    - Tangelo
+    - Honeybell
   wikipedia: Tangelo
+
 
 # Pomes
 
@@ -638,21 +648,23 @@ almond_leave_pear:
 
 anjou_pear:
   kind_of: pear
-  label: D'anjou pear
-  label: Beurré d'Anjou
-  label: Anjou
+  label:
+    - D'anjou pear
+    - Beurré d'Anjou
+    - Anjou
   wikipedia: D'Anjou
 
 asian_pear:
   kind_of: pear
-  label: Asian pear
-  label: Japanese pear
-  label: Taiwanese pear
-  label: Nashi pear
-  label: Korean pear
-  label: Chinese pear
-  label: Apple pear
-  label: Sand pear
+  label:
+    - Asian pear
+    - Japanese pear
+    - Taiwanese pear
+    - Nashi pear
+    - Korean pear
+    - Chinese pear
+    - Apple pear
+    - Sand pear
   foodb: 292
   wikipedia: Pyrus_pyrifolia
 
@@ -663,8 +675,9 @@ apricot_leave_pear:
 
 bartlett_pear:
   kind_of: pear
-  label: Bartlett pear
-  label: William pear
+  label:
+    - Bartlett pear
+    - William pear
   wikipedia: Williams_pear
 
 bosc_pear:
@@ -679,9 +692,10 @@ callery_pear:
 
 chinese_white_pear:
   kind_of: pear
-  label: Chinese white pear
-  label: Ya pear
-  label: Pearple
+  label:
+    - Chinese white pear
+    - Ya pear
+    - Pearple
   wikipedia: Pyrus_×_bretschneideri
 
 european_pear:
@@ -691,9 +705,10 @@ european_pear:
 
 harbin_pear:
   kind_of: pear
-  label: Harbin pear
-  label: Ussurian pear
-  label: Manchurian pear
+  label:
+    - Harbin pear
+    - Ussurian pear
+    - Manchurian pear
   wikipedia: Pyrus_ussuriensis
 
 iberian_pear:
@@ -732,11 +747,14 @@ quince:
   foodb: 69
   wikipedia: Quince
 
+
 # Stone fruits
 
 stone_fruit:
   kind_of: fruit
-  label: Stone fruit
+  label:
+    - Stone fruit
+    - Drupe
   foodb: 143
   wikipedia: Prunus
 
@@ -753,17 +771,19 @@ cherry:
 
 sour_cherry:
   kind_of: cherry
-  label: Sour cherry
-  label: Tart cherry
-  label: Dwarf cherry
+  label:
+    - Sour cherry
+    - Tart cherry
+    - Dwarf cherry
   foodb: 146
   wikipedia: Prunus_cerasus
 
 sweet_cherry:
   kind_of: cherry
-  label: Sweet cherry
-  label: Wild cherry
-  label: Gean
+  label:
+    - Sweet cherry
+    - Wild cherry
+    - Gean
   foodb: 145
   wikipedia: Prunus_avium
 
@@ -779,13 +799,15 @@ maraschino_cherry:
 
 queen_anne_cherry:
   kind_of: sweet_cherry
-  label: Queen Anne cherry
-  label: Royal Ann cherry
+  label:
+    - Queen Anne cherry
+    - Royal Ann cherry
   wikipedia: Royal_Ann_cherry
 
 mango:
-  kind_of: stone_fruit
-  kind_of: tropical_fruit
+  kind_of:
+    - stone_fruit
+    - tropical_fruit
   label: Mango
   foodb: 106
   wikipedia: Mango
@@ -810,17 +832,19 @@ peach:
 
 nectarine:
   kind_of: peach
-  label: Nectarine
-  label: Shaved peach
-  label: Fuzzless peach
+  label:
+    - Nectarine
+    - Shaved peach
+    - Fuzzless peach
   foodb: 229
   wikipedia: Peach#Nectarines
 
 saturn_peach:
   kind_of: peach
-  label: Saturn peach
-  label: Doughnut peach
-  label: Flat peach
+  label:
+    - Saturn peach
+    - Doughnut peach
+    - Flat peach
   foodb: 229
   wikipedia: Saturn_Peach
 
@@ -841,9 +865,10 @@ plum:
 
 wild_plum:
   kind_of: plum
-  label: Wild plum
-  label: American plum
-  label: Large yellow sweet plum
+  label:
+    - Wild plum
+    - American plum
+    - Large yellow sweet plum
   wikipedia: Prunus_americana
 
 prune:
@@ -857,7 +882,9 @@ damson_plum:
   label: Damson plum
   wikipedia: Damson
 
+
 # Tropical fruits
+# TODO is tropical fruit an appropriate classification?
 
 tropical_fruit:
   kind_of: fruit
@@ -935,9 +962,10 @@ durian:
 
 feijoa:
   kind_of: tropical_fruit
-  label: Feijoa
-  label: Pineapple guava
-  label: Guavasteen
+  label:
+    - Feijoa
+    - Pineapple guava
+    - Guavasteen
   foodb: 558
   wikipedia: Acca_sellowiana
 
@@ -961,21 +989,24 @@ java_plum:
 
 kiwifruit:
   kind_of: tropical_fruit
-  label: Kiwi
-  label: Kiwifruit
-  label: Chinese gooseberry
+  label:
+    - Kiwi
+    - Kiwifruit
+    - Chinese gooseberry
   foodb: 4
   wikipedia: Kiwifruit
 
 green_kiwi:
   kind_of: kiwifruit
-  label: Green kiwi
-  label: Green kiwifruit
+  label:
+    - Green kiwi
+    - Green kiwifruit
 
 gold_kiwi:
   kind_of: kiwifruit
-  label: Gold kiwi
-  label: Gold kiwifruit
+  label:
+    - Gold kiwi
+    - Gold kiwifruit
 
 kumquat:
   kind_of: tropical_fruit
@@ -985,8 +1016,9 @@ kumquat:
 
 litchi:
   kind_of: tropical_fruit
-  label: Litchi
-  label: Lychee
+  label:
+    - Litchi
+    - Lychee
   foodb: 103
   wikipedia: Lychee
 
@@ -1075,11 +1107,12 @@ pineapple:
 
 pitanga:
   kind_of: tropical_fruit
-  label: Pitanga
-  label: Surinam cherry
-  label: Brazilian cherry
-  label: Cayenne cherry
-  label: Cerisier Carré
+  label:
+    - Pitanga
+    - Surinam cherry
+    - Brazilian cherry
+    - Cayenne cherry
+    - Cerisier Carré
   foodb: 442
   wikipedia: Eugenia_uniflora
 
@@ -1107,10 +1140,11 @@ prickly_pear:
 
 plains_prickly_pear:
   kind_of: prickly_pear
-  label: Plains prickly pear
-  label: Hairspine cactus
-  label: Panhandle pricklypear
-  label: Starvation pricklypear
+  label:
+    - Plains prickly pear
+    - Hairspine cactus
+    - Panhandle pricklypear
+    - Starvation pricklypear
   foodb: 443
   wikipedia: Opuntia_polyacantha
 
@@ -1133,17 +1167,19 @@ sapodilla:
 
 soursop:
   kind_of: tropical_fruit
-  label: Soursop
-  label: Graviola
-  label: Guyabano
-  label: Guanabana
+  label:
+    - Soursop
+    - Graviola
+    - Guyabano
+    - Guanabana
   foodb: 488
   wikipedia: Soursop
 
 sugar_apple:
   kind_of: tropical_fruit
-  label: Sugar apple
-  label: Sweetsop
+  label:
+    - Sugar apple
+    - Sweetsop
   foodb: 496
   wikipedia: Sugar-apple
 
@@ -1158,6 +1194,7 @@ wax_apple:
   label: Wax apple
   foodb: 78
   wikipedia: Syzygium_samarangense
+
 
 # Miscellaneous fruits
 
@@ -1183,9 +1220,9 @@ fig:
 
 jujube:
   kind_of: fruit
-  label: Jujube
-  label: Red date
-  label: Chinese date
+    - Jujube
+    - Red date
+    - Chinese date
   foodb: 393
   wikipedia: Jujube
 
@@ -1195,62 +1232,13 @@ chinese_jujube:
 
 
 #
-# Fruit Parts and Cuts
-#
-
-coconut_cream:
-  kind_of: cream
-  part_of: coconut
-  label: Coconut cream
-  wikipedia: Coconut_cream
-
-coconut_meat:
-  kind_of: meat
-  part_of: coconut
-  label: Coconut meat
-
-coconut_water:
-  kind_of: flavored_water
-  part_of: coconut
-  label: Coconut water
-  wikipedia: Coconut_water
-  
-fruit_peel:
-  kind_of: peel
-  part_of: fruit
-  label: Fruit peel
-  label: Rind
-  label: Skin
-  wikipedia: Peel_(fruit)
-
-citrus_peel:
-  kind_of: fruit_peel
-  part_of: citrus
-  label: Citrus peel
-
-lemon_peel:
-  kind_of: peel
-  part_of: lemon
-  label: Lemon peel
-
-lime_peel:
-  kind_of: peel
-  part_of: lime
-  label: Lime peel
-
-orange_peel:
-  kind_of: peel
-  part_of: orange
-  label: Orange peel
-
-
-#
 # Vegetables
 #
 
 vegetable:
   kind_of: plant
   label: Vegetable
+
 
 # Onion-like vegetables
 
@@ -1262,12 +1250,13 @@ allium:
 
 chinese_onion:
   kind_of: allium
-  label: Chinese onion
-  label: Chinese scallion
-  label: Glittering chive
-  label: Japanese scallion
-  label: Kiangsi scallion
-  label: Oriental onion
+  label:
+    - Chinese onion
+    - Chinese scallion
+    - Glittering chive
+    - Japanese scallion
+    - Kiangsi scallion
+    - Oriental onion
   wikipedia: Allium_chinense
 
 garlic:
@@ -1283,13 +1272,14 @@ soft_garlic:
 
 wild_garlic:
   kind_of: allium
-  label: Wild garlic
-  label: Ramsons
-  label: Buckrams
-  label: Broad-leaved garlic
-  label: Wood garlic
-  label: Bear leek
-  label: Bear's garlic
+  label:
+    - Wild garlic
+    - Ramsons
+    - Buckrams
+    - Broad-leaved garlic
+    - Wood garlic
+    - Bear leek
+    - Bear's garlic
   wikipedia: Allium_ursinum
 
 leek:
@@ -1300,9 +1290,10 @@ leek:
 
 onion:
   kind_of: allium
-  label: Onion
-  label: Bulb onion
-  label: Common onion
+  label:
+    - Onion
+    - Bulb onion
+    - Common onion
   foodb: 6
   wikipedia: Onion
 
@@ -1329,24 +1320,27 @@ white_onion:
 
 yellow_onion:
   kind_of: onion
-  label: Yellow onion
-  label: Brown onion
+  label:
+    - Yellow onion
+    - Brown onion
   wikipedia: Yellow_onion
 
 scallion:
   kind_of: allium
-  label: Scallion
-  label: Spring onion
-  label: Green onion
-  label: Salad onion
+  label:
+    - Scallion
+    - Spring onion
+    - Green onion
+    - Salad onion
   wikipedia: Scallion
 
 welsh_onion:
   kind_of: scallion
-  label: Welsh onion
-  label: Bunching onion
-  label: Long green onion
-  label: Japanese bunching onion
+  label:
+    - Welsh onion
+    - Bunching onion
+    - Long green onion
+    - Japanese bunching onion
   foodb: 241
   wikipedia: Allium_fistulosum
 
@@ -1355,6 +1349,7 @@ wild_leek:
   label: Wild leek
   foodb: 401
   wikipedia: Allium_ampeloprasum
+
 
 # Cabbages
 
@@ -1379,9 +1374,10 @@ alboglabra:
 
 chinese_broccoli:
   kind_of: alboglabra
-  label: Gai lan
-  label: Chinese kale
-  label: Chinese broccoli
+  label:
+    - Gai lan
+    - Chinese kale
+    - Chinese broccoli
   foodb: 335
   wikipedia: Gai_lan
 
@@ -1409,7 +1405,7 @@ cauliflower:
   foodb: 31
   wikipedia: Cauliflower
 
-capitata 
+capitata:
   kind_of: brassica_oleracea
   label: Capitata
   
@@ -1457,9 +1453,10 @@ rubra:
 
 red_cabbage:
   kind_of: rubra
-  label: Red cabbage
-  label: Purple cabbage
-  label: Red kraut
+  label:
+    - Red cabbage
+    - Purple cabbage
+    - Red kraut
   wikipedia: Red_cabbage
   
 sabauda:
@@ -1516,9 +1513,10 @@ longata:
   
 jersey_cabbage:
   kind_of: longata
-  label: Jersey cabbage
-  label: Cow cabbage
-  label: Jersey kale
+  label:
+    - Jersey cabbage
+    - Cow cabbage
+    - Jersey kale
   wikipedia: Jersey_cabbage
   
 tree_cabbage:
@@ -1539,13 +1537,14 @@ palmifolia:
 
 tuscan_kale:
   kind_of: palmifolia
-  label: Tuscan kale
-  label: Lacitano kale
-  label: Cavolo nero
-  label: Black kale
-  label: Flat back cabbage
-  label: Palm tree kale
-  label: Black Tuscan palm
+  label:
+    - Tuscan kale
+    - Lacitano kale
+    - Cavolo nero
+    - Black kale
+    - Flat back cabbage
+    - Palm tree kale
+    - Black Tuscan palm
   wikipedia: Lacinato kale
 
 viridis:
@@ -1576,11 +1575,13 @@ chinensis:
   label: Chinensis
 
 pak_choi:
-  kind_of: chinensis
-  kind_of: chinese_cabbage
-  label: Pak choi
-  label: Bok choy
-  label: Pok choi
+  kind_of:
+    - chinensis
+    - chinese_cabbage
+  label:
+    - Pak choi
+    - Bok choy
+    - Pok choi
   foodb: 252
   wikipedia: Bok_choy
   
@@ -1589,17 +1590,19 @@ pekinensis:
   label: Pekinensis
 
 chinese_cabbage:
-  kind_of: pekinensis
-  kind_of: chinensis
+  kind_of:
+    - pekinensis
+    - chinensis
   label: Chinese cabbage
   foodb: 35
 
 napa_cabbage:
   kind_of: chinese_cabbage
-  label: Napa cabbage
-  label: Petsai
-  label: Wombok
-  label: Sui choy
+  label:
+    - Napa cabbage
+    - Petsai
+    - Wombok
+    - Sui choy
   foodb: 253
   wikipedia: Napa_cabbage
   
@@ -1634,9 +1637,10 @@ rapifera:
 
 rapini:
   kind_of: rapifera
-  label: Broccoli raab
-  label: Broccoli rabe
-  label: Rapini
+  label:
+    - Broccoli raab
+    - Broccoli rabe
+    - Rapini
   foodb: 314
   wikipedia: Rapini
 
@@ -1647,10 +1651,11 @@ brassica_juncea:
 
 chinese_mustard:
   kind_of: brassica_juncea
-  label: Brown mustard
-  label: Chinese mustard
-  label: Mustard cabbage
-  label: Gai Choy
+  label:
+    - Brown mustard
+    - Chinese mustard
+    - Mustard cabbage
+    - Gai Choy
   foodb: 27
   wikipedia: Brassica_juncea
 
@@ -1665,21 +1670,6 @@ skunk_cabbage:
   wikipedia: Symplocarpus_foetidus
 
 
-# Cabbage products
-
-kimchi:
-  kind_of: plant_product
-  derivative_of: chinese_cabbage
-  label: Kimchi
-  wikipedia: Kimchi
-
-sauerkraut:
-  kind_of: plant_product
-  derivative_of: common_cabbage
-  label: Sauerkraut
-  wikipedia: Sauerkraut
-
-
 # Gourds
 
 gourd:
@@ -1689,9 +1679,10 @@ gourd:
 
 bitter_gourd:
   kind_of: gourd
-  label: Bitter melon
-  label: Bitter gourd
-  label: Balsam pear
+  label:
+    - Bitter melon
+    - Bitter gourd
+    - Balsam pear
   foodb: 115
   wikipedia: Momordica_charantia
 
@@ -1708,18 +1699,20 @@ kanpyo:
 
 chayote:
   kind_of: gourd
-  label: Chayote
-  label: Chaya
-  label: Pataste
-  label: Christophine
-  label: Sayote
+  label:
+    - Chayote
+    - Chaya
+    - Pataste
+    - Christophine
+    - Sayote
   foodb: 330
   wikipedia: Chayote
   
 chinese_okra:
   kind_of: gourd
-  label: Chinese okra
-  label: Luffa
+  label:
+    - Chinese okra
+    - Luffa
   wikipedia: Luffa_acutangula
 
 melon:
@@ -1733,16 +1726,18 @@ banana_melon:
 
 cantaloupe:
   kind_of: melon
-  label: Sweet melon
-  label: Cantaloupe
-  label: Mushmelon
-  label: Rockmelon
+  label:
+    - Sweet melon
+    - Cantaloupe
+    - Mushmelon
+    - Rockmelon
   wikipedia: Cantaloupe
 
 casaba_melon:
   kind_of: melon
-  label: Casaba melon
-  label: Cassaba melon
+  label:
+    - Casaba melon
+    - Cassaba melon
 
 honeydew_melon:
   kind_of: melon
@@ -1763,10 +1758,11 @@ muskmelon:
 
 sponge_gourd:
   kind_of: gourd
-  label: Sponge gourd
-  label: Dishcloth gourd
-  label: Towel gourd
-  label: Towelgourd
+  label:
+    - Sponge gourd
+    - Dishcloth gourd
+    - Towel gourd
+    - Towelgourd
   foodb: 503
   wikipedia: Luffa_aegyptiaca
 
@@ -1803,8 +1799,9 @@ pumpkin:
 
 calabaza:
   kind_of: squash
-  label: Calabaza squash
-  label: Spanish pumpkin
+  label:
+    - Calabaza squash
+    - Spanish pumpkin
   wikipedia: Summer_squash
 
 summer_squash:
@@ -1881,13 +1878,14 @@ watermelon:
 
 wax_gourd:
   kind_of: gourd
-  label: Wax gourd
-  label: Ash gourd
-  label: White gourd
-  label: Winter gourd
-  label: Tallow gourd
-  label: Ash pumpkin
-  label: Winter melon
+  label:
+    - Wax gourd
+    - Ash gourd
+    - White gourd
+    - Winter gourd
+    - Tallow gourd
+    - Ash pumpkin
+    - Winter melon
   foodb: 510
   wikipedia: Wax_gourd
 
@@ -1900,9 +1898,10 @@ leaf_vegetables:
 
 arugula:
   kind_of: leaf_vegetables
-  label: Arugula
-  label: Rocket
-  label: Rucola
+  label:
+    - Arugula
+    - Rocket
+    - Rucola
   foodb: 77
   wikipedia: Eruca_sativa
 
@@ -1913,8 +1912,9 @@ celtuce:
   
 chamnamul:
   kind_of: leaf_vegetables
-  label: Short-fruit pimpinella
-  label: Chamnamul
+  label:
+    - Short-fruit pimpinella
+    - Chamnamul
   wikipedia: Pimpinella_brachycarpa
 
 chicory_leaf:
@@ -1930,8 +1930,9 @@ radicchio:
 
 common_beet:
   kind_of: leaf_vegetables
-  label: Common beet
-  label: Beetroot
+  label:
+    - Common beet
+    - Beetroot
   foodb: 25
   wikipedia: Beetroot
 
@@ -1978,11 +1979,12 @@ jute:
 
 lambsquarter:
   kind_of: leaf_vegetables
-  label: Lambsquarters
-  label: Melde
-  label: White goosefoot
-  label: Manure weed
-  label: Fat-hen
+  label:
+    - Lambsquarters
+    - Melde
+    - White goosefoot
+    - Manure weed
+    - Fat-hen
   foodb: 399
   wikipedia: Chenopodium_album
 
@@ -1994,8 +1996,9 @@ lettuce:
 
 curly_lettuce:
   kind_of: lettuce
-  label: Curly lettuce
-  label: Wavy lettuce
+  label:
+    - Curly lettuce
+    - Wavy lettuce
 
 iceberg_lettuce:
   kind_of: lettuce
@@ -2003,15 +2006,18 @@ iceberg_lettuce:
 
 romaine_lettuce:
   kind_of: lettuce
-  label: Romaine lettuce
-  label: Cos lettuce
+  label:
+    - Romaine lettuce
+    - Cos lettuce
   foodb: 920
+  wikipedia: Romaine_lettuce
 
 malabar_spinach:
   kind_of: leaf_vegetables
-  label: Malabar spinach
-  label: Vine spinach
-  label: Basella
+  label:
+    - Malabar spinach
+    - Vine spinach
+    - Basella
   foodb: 409
   wikipedia: Basella_alba
 
@@ -2108,8 +2114,9 @@ witloof_chicory:
 
 daikon_radish:
   kind_of: root_vegetables
-  label: Daikon radish
-  label: Oriental radish
+  label:
+    - Daikon radish
+    - Oriental radish
   foodb: 261
   wikipedia: Daikon
 
@@ -2121,16 +2128,11 @@ eppaw:
 
 ginger:
   kind_of: root_vegetables
-  label: Ginger
-  label: Ginger root
+  label:
+    - Ginger
+    - Ginger root
   foodb: 206
   wikipedia: Ginger
-
-jicama:
-  kind_of: root_vegetables
-  label: Jicama
-  foodb: 520
-  wikipedia: Pachyrhizus_erosus
 
 parsnip:
   kind_of: root_vegetables
@@ -2152,8 +2154,9 @@ radish:
 
 rapeseed:
   kind_of: root_vegetables
-  label: Rape
-  label: Rapeseed
+  label:
+    - Rape
+    - Rapeseed
   foodb: 29
   wikipedia: Rapeseed
 
@@ -2169,8 +2172,9 @@ salsify:
 
 black_salsify:
   kind_of: salsify
-  label: Black salsify
-  label: Spanish salsify
+  label:
+    - Black salsify
+    - Spanish salsify
   foodb: 613
   wikipedia: Scorzonera_hispanica
 
@@ -2179,29 +2183,20 @@ common_salsify:
   label: Common salsify
   foodb: 467
 
-swede:
-  kind_of: root_vegetables
-  label: Swede
-  foodb: 28
-  
-tannier:
-  kind_of: root_vegetables
-  label: Tannier
-  label: Yautia
-
 taro:
   kind_of: root_vegetables
-  label: Taro
-  label: Dasheen
-  label: Eddoe
-  label: Malanga
-  label: Colcas
-  label: Kolokasi
-  label: Kolokas
-  label: Kalo
-  label: Amateke
-  label: Cocoyam
-  label: Madumbi
+  label:
+    - Taro
+    - Dasheen
+    - Eddoe
+    - Malanga
+    - Colcas
+    - Kolokasi
+    - Kolokas
+    - Kalo
+    - Amateke
+    - Cocoyam
+    - Madumbi
   foodb: 499
   wikipedia: Colocasia_esculenta
 
@@ -2283,16 +2278,18 @@ tapioca:
 
 tapioca_pearl:
   kind_of: tapioca
-  label: Tapioca pearl
-  label: Boba
+  label:
+    - Tapioca pearl
+    - Boba
   foodb: 771
 
 jerusalem_artichoke:
   kind_of: tuber
-  label: Jerusalem artichoke
-  label: Sunroot
-  label: Earth apple
-  label: Topinambour
+  label:
+    - Jerusalem artichoke
+    - Sunroot
+    - Earth apple
+    - Topinambour
   foodb: 392
   wikipedia: Jerusalem_artichoke
 
@@ -2304,8 +2301,8 @@ potato:
 
 blue_potato:
   kind_of: potato
-  label: Blue potato
-  label: Purple potato
+    - Blue potato
+    - Purple potato
 
 fingerling_potato:
   kind_of: potato
@@ -2325,8 +2322,9 @@ red_potato:
 
 yellow_potato:
   kind_of: potato
-  label: Yellow potato
-  label: Yukons potato
+  label:
+    - Yellow potato
+    - Yukons potato
 
 white_potato:
   kind_of: potato
@@ -2346,10 +2344,11 @@ yam:
   
 konjaku:
   kind_of: yam
-  label: Konjaku
-  label: Konjac
-  label: Konnyaku potato
-  label: Voodoo lily
+  label:
+    - Konjaku
+    - Konjac
+    - Konnyaku potato
+    - Voodoo lily
   wikipedia: Konjac
 
 mountain_yam:
@@ -2369,8 +2368,9 @@ agave:
 
 butterbur:
   kind_of: vegetable
-  label: Butterbur
-  label: Coltsfoot
+  label:
+    - Butterbur
+    - Coltsfoot
   foodb: 318
   wikipedia: Petasites
 
@@ -2394,8 +2394,9 @@ celery:
 
 chinese_waterchestnut:
   kind_of: vegetable
-  label: Chinese waterchestnut
-  label: Water chestnut
+  label:
+    - Chinese waterchestnut
+    - Water chestnut
   foodb: 337
   wikipedia: Eleocharis_dulcis
 
@@ -2423,8 +2424,9 @@ nopal:
 
 okra:
   kind_of: vegetable
-  label: Okra
-  label: Okro
+  label:
+    - Okra
+    - Okro
   foodb: 427
   wikipedia: Okra
 
@@ -2453,10 +2455,12 @@ garden_rhubarb:
   label: Garden rhubarb
   foodb: 154
 
-# TODO same than swede?
 rutabaga:
   kind_of: vegetable
-  label: Rutabaga
+  label:
+    - Rutabaga
+    - Swede
+  foodb: 28
   wikipedia: Rutabaga
 
 sacred_lotus:
@@ -2482,289 +2486,18 @@ tree_fern:
   foodb: 823
   wikipedia: Tree_fern
 
-#
-# Vegetable and Herbs Parts and cut
-#
 
-beet_greens:
-  kind_of: greens
-  part_of: common_beet
-  label: Beet greens
-
-dandelion_greens:
-  kind_of: greens
-  part_of: dandelion
-  label: Dandelion greens
-
-tuscan_greens:
-  kind_of: greens
-  part_of: tuscan_kale
-  label: Tuscan greens
-
-turnip_greens:
-  kind_of: greens
-  part_of: turnip
-  label: Turnip greens
-
-broccoli_flower:
-  kind_of: flower
-  part_of: broccoli
-  label: Broccoli flower
-
-orange_flower:
-  kind_of: flower
-  part_of: orange
-  label: Orange flower
-
-pumpkin_flower:
-  kind_of: flower
-  part_of: pumpkin
-  label: Pumpkin flower
-
-alaska_wild_rhubarb_leaf:
-  kind_of: leaf
-  part_of: alaska_wild_rhubarb
-  label: Alaska wild rhubarb leaf
-
-amaranth_leaf:
-  kind_of: leaf
-  part_of: herb
-  label: Amaranth leaf
-
-bean_leaf:
-  kind_of: leaf
-  part_of: bean
-  label: Bean leaf
-
-bitter_gourd_leaf:
-  kind_of: leaf
-  part_of: bitter_gourd
-  label: Bitter gourd leaf
-
-broccoli_leaf:
-  kind_of: leaf
-  part_of: broccoli
-  label: Broccoli leaf
-
-chrysanthemum_leaf:
-  kind_of: leaf
-  part_of: chrysanthemum
-  label: Chrysanthemum leaf
-
-coriander_leaf:
-  kind_of: leaf
-  part_of: coriander
-  label: Coriander leaf
-
-cowpea_leaf:
-  kind_of: leaf
-  part_of: cowpea
-  label: Cow pea leaf
-
-curry_leaf:
-  kind_of: leaf
-  label: Curry leaf
-  wikipedia: Curry_tree
-
-drumstick_leaf:
-  kind_of: leaf
-  label: Drumstick leaf
-
-fireweed_leaf:
-  kind_of: leaf
-  part_of: fireweed
-  label: Fireweed leaf
-
-jute_leaf:
-  kind_of: leaf
-  part_of: jute
-  label: Jute leaf
-
-grape_leaf:
-  kind_of: leaf
-  part_of: grape
-  label: Grape leaf
-
-horseradish_leaf:
-  kind_of: leaf
-  part_of: horseradish
-  label: Horseradish leaf
-
-pumpkin_leaf:
-  kind_of: leaf
-  part_of: pumpkin
-  label: Pumpkin leaf
-
-radish_leaf:
-  kind_of: leaf
-  part_of: radish
-  label: Radish leaf
-
-sorrel_leaf:
-  kind_of: leaf
-  label: Sorrel leaf
-
-sourdock_leaf:
-  kind_of: leaf
-  part_of: sourdock
-  label: Sourdock leaf
-
-squash_leaf:
-  kind_of: leaf
-  part_of: squash
-  label: Squash leaf
-
-sweet_potato_leaf:
-  kind_of: leaf
-  part_of: sweet_potato
-  label: Sweet potato leaf
-
-taro_leaf:
-  kind_of: leaf
-  part_of: taro
-  label: Taro leaf
-  
-thistle_leaf:
-  kind_of: leaf
-  part_of: thistle
-  label: Thistle leaf
-
-winged_bean_leaf:
-  kind_of: leaf
-  part_of: winged_bean
-  label: Winged bean leaf
-
-cowpea_pod:
-  kind_of: pod
-  part_of: cowpea
-  label: Cowpea pod
-
-drumstick_pod:
-  kind_of: pod
-  part_of: horseradish_tree
-  label: Drumstick pod
-
-bitter_gourd_pod:
-  kind_of: pod
-  part_of: bitter_gourd
-  label: Bitter gourd pod
-
-chicory_root:
-  kind_of: root
-  part_of: chicory
-  label: Chicory root
-  foodb: 254
-
-taro_shoot:
-  kind_of: shoot
-  part_of: taro
-  label: Taro shoot
-
-alfalfa_sprout:
-  kind_of: sprout
-  part_of: alfalfa
-  label: Alfalfa sprout
-
-alfalfa_seed_sprout:
-  kind_of: sprout
-  part_of: alfalfa_seed
-  label: Alfalfa seed sprout
-
-bean_sprout:
-  kind_of: sprout
-  part_of: bean
-  label: Bean sprout
-
-broad_bean_sprout:
-  kind_of: bean_sprout
-  part_of: broad_bean
-  label: Broad bean sprout
-
-common_bean_sprout:
-  kind_of: bean_sprout
-  part_of: common_bean
-  label: Common bean sprout
-
-green_bean_sprout:
-  kind_of: bean_sprout
-  part_of: green_bean
-  label: Green bean sprout
-
-kidney_bean_sprout:
-  kind_of: bean_sprout
-  part_of: kidney_bean
-  label: Kidney bean sprout
-
-mung_bean_sprout:
-  kind_of: bean_sprout
-  part_of: mung_bean
-  label: Mung bean sprout
-  wikipedia: Mung_bean_sprout
-
-navy_bean_sprout:
-  kind_of: bean_sprout
-  part_of: navy_bean
-  label: Navy bean sprout
-
-pinto_bean_sprout:
-  kind_of: bean_sprout
-  part_of: pinto_bean
-  label: Pinto bean sprout
-
-soy_bean_sprout:
-  kind_of: bean_sprout
-  part_of: soy_bean
-  label: Soybean sprout
-  wikipedia: Soybean_sprout
-
-common_pea_sprout:
-  kind_of: sprout
-  part_of: common_pea
-  label: Common pea sprout
-
-lentil_sprout:
-  kind_of: sprout
-  part_of: lentil
-  label: Lentil sprout
-
-radish_seed_sprout:
-  kind_of: sprout
-  part_of: radish_seed
-  label: Radish seed sprout
-
-wheat_sprout:
-  kind_of: sprout
-  part_of: wheat
-  label: Wheat sprout
-
-broccoli_stalk:
-  kind_of: stalk
-  part_of: broccoli
-  label: Broccoli stalk
-
-broccoli_spear:
-  kind_of: spear
-  part_of: broccoli
-  label: Broccoli spear
-
-winged_bean_tuber:
-  kind_of: tuber_part
-  part_of: winged_bean
-  label: Winged bean tuber
-
-woca_tuber:
-  kind_of: tuber_part
-  part_of: woca
-  label: Wocas tuber
 
 #
 # Fruit vegetables
 #
 
 fruit_vegetable:
-  kind_of: fruit
-  kind_of: vegetable
+  kind_of:
+    - fruit
+    - vegetable
   label: Fruit vegetable
+
 
 # Peppers
 
@@ -2782,9 +2515,10 @@ capsicum_annuum:
 
 ancho:
   kind_of: capsicum_annuum
-  label: Ancho
-  label: Chile ancho
-  label: Poblano
+  label:
+    - Ancho
+    - Chile ancho
+    - Poblano
   wikipedia: Poblano
 
 bell_pepper:
@@ -2823,9 +2557,10 @@ baklouti_pepper:
 
 banana_pepper:
   kind_of: chili_pepper
-  label: Banana pepper
-  label: Yellow wax pepper
-  label: Banana chili
+  label:
+    - Banana pepper
+    - Yellow wax pepper
+    - Banana chili
   wikipedia: Banana_pepper
 
 chilaca_chili_pepper:
@@ -2834,9 +2569,10 @@ chilaca_chili_pepper:
 
 pasilla:
   kind_of: chilaca_chili_pepper
-  label: Pasilla pepper
-  label: Pasilla chile
-  label: Chile negro
+  label:
+    - Pasilla pepper
+    - Pasilla chile
+    - Chile negro
 
 green_chili_pepper:
   kind_of: chili_pepper
@@ -2868,9 +2604,10 @@ italian_sweet_red_pepper:
 
 pimiento:
   kind_of: capsicum_annuum
-  label: Cherry pepper
-  label: Pimiento
-  label: Pimento
+  label:
+    - Cherry pepper
+    - Pimiento
+    - Pimento
   wikipedia: Pimiento
 
 serrano_pepper:
@@ -2902,9 +2639,10 @@ capsicum_pubescens:
   foodb: 879
   wikipedia: Capsicum_pubescens
 
+
 # Tomatoes
 
-# TODO add red tomato? or considered it as being tomato (currently what is done)? Coherence with chicken_egg and cow_milk?
+# TODO add red tomato? or considered it as being tomato (currently what is done)?
 tomato:
   kind_of: fruit_vegetable
   label: Tomato
@@ -2962,6 +2700,7 @@ yellow_tomato:
   kind_of: tomato
   label: Yellow tomato
 
+
 # Miscellaneous fruit vegetables
 
 avocado:
@@ -2976,8 +2715,9 @@ california_avocado:
 
 eggplant:
   kind_of: fruit_vegetable
-  label: Eggplant
-  label: Aubergine
+  label:
+    - Eggplant
+    - Aubergine
   foodb: 174
   wikipedia: Eggplant
 
@@ -3008,151 +2748,11 @@ green_olive:
 
 tomatillo:
   kind_of: fruit_vegetable
-  label: Tomatillo
-  label: Mexican husk tomato
+  label:
+    - Tomatillo
+    - Mexican husk tomato
   wikipedia: Tomatillo
-  
-#
-# Vegetable product
-#
 
-vegetable_product:
-  kind_of: plant_product
-  made_of: vegetable
-  label: Vegetable product
-
-
-# Tomato products
-
-tomato_product:
-  kind_of: vegetable_product
-  derivative_of: tomato
-  label: Tomato product
-
-tomato_dried:
-  kind_of: tomato_product
-  label: Dried tomato
-  wikipedia: Sun-dried_tomato
-
-tomato_powder:
-  kind_of: tomato_product
-  label: Tomato powder
-
-tomato_puree:
-  kind_of: tomato_product
-  label: Tomato purée
-  label: Tomato paste
-  wikipedia: Tomato_purée
-
-
-# Soybean products
-# TODO properly annotate soy products (e.g. soy meal)
-
-soy_product:
-  kind_of: plant_product
-  derivative_of: soy_bean
-  label: Soy product
-  foodb: 272
-
-edamame:
-  kind_of: soy_product
-  label: Edamame
-  wikipedia: Edamame
-
-natto:
-  kind_of: soy_product
-  kind_of: japanese_dish
-  label: Natto
-  foodb: 815
-  wikipedia: Nattō
-
-okara:
-  kind_of: soy_product
-  label: Soy pulp
-  label: Okara
-  label: Tofu dreg
-  label: Unohana
-  wikipedia: Okara_(food)
-
-tempeh:
-  kind_of: soy_product
-  label: Tempeh
-  wikipedia: Tempeh
-
-tofu:
-  kind_of: soy_product
-  made_of: soy_milk
-  label: Tofu
-  label: Bean curd
-  foodb: 718
-  wikipedia: Tofu
-
-#
-# Pickles
-#
-
-relish:
-  kind_of: vegetable_product
-  label: Relish
-  wikipedia: Relish
-  
-corn_relish:
-  kind_of: relish
-  made_of: corn
-  made_of: green_bell_pepper
-  made_of: red_bell_pepper
-  made_of: sugar
-  made_of: cider_vinegar
-  label: Corn relish
-  wikipedia: Corn_relish
-
-chowchow_relish:
-  kind_of: relish
-  label: Chowchow relish
-  wikipedia: Chow-chow_(food)
-  
-cranberry_relish:
-  kind_of: relish
-  made_of: cranberry
-  label: Cranberry relish
-
-cucumber_relish:
-  kind_of: relish
-  label: Cucumber pickle
-  label: Gherkin
-  wikipedia: Pickled_cucumber
-  
-japanese_pickle:
-  kind_of: relish
-  label: Japanese pickle
-  
-tsukemono:
-  kind_of: japanese_pickle
-  label: Tsukemono
-  wikipedia: Tsukemono
-
-olive_relish:
-  kind_of: relish
-  label: Olive relish
-
-onion_relish:
-  kind_of: relish
-  label: Onion relish
-  
-orange_relish:
-  kind_of: relish
-  made_of: orange
-  label: Orange relish
-  
-tomato_relish:
-  kind_of: relish
-  made_of: tomato
-  label: Tomato relish
-  
-vegetable_relish:
-  kind_of: relish
-  made_of: vegetable
-  label: Vegetable relish
 
 
 #
@@ -3176,11 +2776,12 @@ bean:
 
 adzuki_bean:
   kind_of: bean
-  label: Adzuki bean
-  label: Azuki
-  label: Aduki
-  label: Red mung bean
-  label: Red bean
+  label:
+    - Adzuki bean
+    - Azuki
+    - Aduki
+    - Red mung bean
+    - Red bean
   foodb: 198
   wikipedia: Adzuki_bean
 
@@ -3194,9 +2795,10 @@ black_bean:
 
 broad_bean:
   kind_of: bean
-  label: Broad bean
-  label: Fava bean
-  label: Fara bean
+  label:
+    - Broad bean
+    - Fava bean
+    - Fara bean
   foodb: 197
   wikipedia: Vicia_faba
 
@@ -3232,9 +2834,10 @@ black_turtle_bean:
 
 calypso_bean:
   kind_of: common_bean
-  label: Calypso bean
-  label: Orca bean
-  label: Yin yang bean
+  label:
+    - Calypso bean
+    - Orca bean
+    - Yin yang bean
   wikipedia: Calypso_bean
 
 flageolet_bean:
@@ -3250,14 +2853,16 @@ green_bean:
 
 french_bean:
   kind_of: green_bean
-  label: French bean
-  label: Stringless bean
+  label:
+    - French bean
+    - Stringless bean
   wikipedia: Phaseolus_vulgaris#Green_beans_and_wax_beans
 
 snap_bean:
   kind_of: green_bean
-  label: Snap bean
-  label: String bean
+  label:
+    - Snap bean
+    - String bean
   wikipedia: Phaseolus_vulgaris#Green_beans_and_wax_beans
 
 wax_bean:
@@ -3268,12 +2873,13 @@ wax_bean:
 
 navy_bean:
   kind_of: common_bean
-  label: Navy bean
-  label: Haricot bean
-  label: Pearl haricot bean
-  label: Boston bean
-  label: White pea bean
-  label: Pea bean
+  label:
+    - Navy bean
+    - Haricot bean
+    - Pearl haricot bean
+    - Boston bean
+    - White pea bean
+    - Pea bean
   wikipedia: Navy_bean
 
 pinto_bean:
@@ -3293,8 +2899,9 @@ rattlesnake_bean:
 
 cranberry_bean:
   kind_of: bean
-  label: Cranberry bean
-  label: Roman bean
+  label:
+    - Cranberry bean
+    - Roman bean
   wikipedia: Cranberry_bean
 
 gram_bean:
@@ -3334,9 +2941,10 @@ white_lupine:
 
 moth_bean:
   kind_of: bean
-  label: Moth bean
-  label: Dew bean
-  label: Mat bean
+  label:
+    - Moth bean
+    - Dew bean
+    - Mat bean
   foodb: 416
   wikipedia: Vigna_aconitifolia
 
@@ -3348,8 +2956,9 @@ mung_bean:
 
 mungo_bean:
   kind_of: bean
-  label: Mungo bean
-  label: Black gram
+  label:
+    - Mungo bean
+    - Black gram
   wikipedia: Vigna_mungo
 
 pink_bean:
@@ -3358,8 +2967,9 @@ pink_bean:
 
 runner_bean:
   kind_of: bean
-  label: Runner bean
-  label: Butter bean
+  label:
+    - Runner bean
+    - Butter bean
   wikipedia: Phaseolus_coccineus
 
 scarlet_bean:
@@ -3375,8 +2985,9 @@ shellie_bean:
 
 soy_bean:
   kind_of: bean
-  label: Soy bean
-  label: Soybean
+  label:
+    - Soy bean
+    - Soybean
   foodb: 85
   wikipeia: Soybean
 
@@ -3390,26 +3001,33 @@ great_northern_bean:
 
 winged_bean:
   kind_of: bean
-  label: Winged bean
-  label: Goa bean
-  label: Four-angled bean
-  label: Manila bean
-  label: Dragon bean
+  label:
+    - Winged bean
+    - Goa bean
+    - Four-angled bean
+    - Manila bean
+    - Dragon bean
   foodb: 518
   wikipedia: Winged_bean
 
-# TODO: same than Jicama?
-yambean:
+yam_bean:
   kind_of: bean
   label: Yam bean
+  wikipedia: Pachyrhizus
+
+jicama:
+  kind_of: yam_bean
+  label: Jicama
+  foodb: 520
   wikipedia: Pachyrhizus_erosus
 
 yardlong_bean:
   kind_of: bean
-  label: Yardlong bean
-  label: Asparagus bean
-  label: Snake bean
-  label: Pea bean
+  label:
+    - Yardlong bean
+    - Asparagus bean
+    - Snake bean
+    - Pea bean
   foodb: 553
   wikipedia: Asparagus_bean
 
@@ -3419,14 +3037,16 @@ yellow_bean:
 
 canary_bean:
   kind_of: yellow_bean
-  label: Canary bean
-  label: Mayocoba bean
+  label:
+    - Canary bean
+    - Mayocoba bean
   wikipedia: Phaseolus_vulgaris#Yellow_beans
 
 peruano_bean:
   kind_of: yellow_bean
   label: Peruano bean
   wikipedia: Phaseolus_vulgaris#Yellow_beans
+
 
 # Other legumes and peas
 # TODO improve peas (and the edible-pod issue, associated to beans)
@@ -3439,23 +3059,26 @@ alpine_sweetvetch:
 
 chickpea:
   kind_of: legume
-  label: Chickpea
-  label: Garbanzo bean
-  label: Bengal gram
+  label:
+    - Chickpea
+    - Garbanzo bean
+    - Bengal gram
   foodb: 47
   wikipedia: Chickpea
 
 common_pea:
   kind_of: legume
-  label: Common pea
-  label: Green pea
+  label:
+    - Common pea
+    - Green pea
   foodb: 141
   wikipedia: Pea
 
 cowpea:
   kind_of: legume
-  label: Cow pea
-  label: Cowpea
+  label:
+    - Cow pea
+    - Cowpea
   foodb: 202
   wikipedia: Cowpea
 
@@ -3585,9 +3208,10 @@ japanese_chestnut:
 
 hazelnut:
   kind_of: nut
-  label: Hazelnut
-  label: Cobnut
-  label: Filbert nut
+  label:
+    - Hazelnut
+    - Cobnut
+    - Filbert nut
   foodb: 381
   wikipedia: Hazelnut
 
@@ -3651,8 +3275,9 @@ pili_nut:
 
 pine_nut:
   kind_of: nut
-  label: Pine nut
-  label: Pignolia
+  label:
+    - Pine nut
+    - Pignolia
   foodb: 138
   wikipedia: Pine_nut
 
@@ -3694,115 +3319,573 @@ japanese_walnut:
 
 white_walnut:
   kind_of: walnut
-  label: White walnut
-  label: Butternut
+  label:
+    - White walnut
+    - Butternut
   foodb: 320
   wikipedia: Juglans_cinerea
 
 
 
-
 #
-# Mushrooms
+# Miscellaneous plants
 #
 
-bolete:
-  kind_of: mushroom
-  label: Bolete
-  wikipedia: Bolete
+# TODO fruit/vegetable/nut(796) mixes
 
-chanterelle:
-  kind_of: mushroom
-  label: Chanterelle
-  foodb: 583
-  wikipedia: Chanterelle
+aloe_vera:
+  kind_of: plant
+  label: Aloe vera
 
-cloud_ear_fungus:
-  kind_of: mushroom
-  label: Cloud ear
-  foodb: 568
-  wikipedia: Cloud_ear_fungus
+cactus:
+  kind_of: plant
+  label: Cactus
+  wikipedia: Cactus
 
-common_mushroom:
-  kind_of: mushroom
-  label: Common mushroom
-  foodb: 561
-  wikipedia: Agaricus_bisporus
-
-brown_mushroom:
-  kind_of: common_mushroom
-  label: Brown mushroom
-
-portobello_mushroom:
-  kind_of: common_mushroom
-  label: Portobello mushroom
-  label: Swiss brown mushroom
-  label: Chestnut mushroom
-  wikipedia: Agaricus_bisporus
-
-white_mushroom:
-  kind_of: common_mushroom
-  label: White mushroom
-
-enokitake:
-  kind_of: mushroom
-  label: Enokitake
-  label: Enoki
-  label: Enokidate
-  label: Futu
-  foodb: 565
-  wikipedia: Enokitake
-
-maitake:
-  kind_of: mushroom
-  label: Maitake
-  foodb: 569
-  wikipedia: Grifola_frondosa
-
-morel:
-  kind_of: mushroom
-  label: Morel
-  foodb: 756
-  wikipedia: Morchella
-
-oyster_mushroom:
-  kind_of: mushroom
-  label: Oyster mushroom
-  foodb: 567
-  wikipedia: Pleurotus_ostreatus
-
-shiitake:
-  kind_of: mushroom
-  label: Shiitake
-  foodb: 562
-  wikipedia: Shiitake
-
-straw_mushroom:
-  kind_of: mushroom
-  label: Straw mushroom
-  wikipedia: Volvariella_volvacea
-
-truffle:
-  kind_of: mushroom
-  label: Truffle
-  wikipedia: Truffle
-
-wood_ear:
-  kind_of: mushroom
-  label: Wood ear
-  label: Jew's ear
-  label: Jelly ear
-  label: Pepeao
-  label: Pepeiao
-  wikipedia: Auricularia_auricula-judae
+liquorice:
+  kind_of: plant
+  label:
+    - Liquorice
+    - Licorice
+  foodb: 644
+  wikipedia: Liquorice
+  
+woca:
+  kind_of: plant
+  label:
+    - Wocas
+    - Yellow pond lily
+    - Yellow water-lily
+  wikipedia: Nuphar_lutea
 
 
 
 #
-# Seaweeds
+# Plant seeds
+#
+
+# TODO Do not instanciate seeds directly, but make sure parent does exists
+
+alfalfa_seed:
+  kind_of: seed
+  label: Alfalfa seed
+  foodb: 287
+  wikipedia: Alfalfa
+
+babassu_seed:
+  kind_of: seed
+  label: Babassu seed
+  foodb: 798
+  wikipedia: Attalea_speciosa
+
+borage:
+  kind_of: seed
+  label: Borage
+  foodb: 26
+  wikipedia: Borage
+
+breadfruit_seed:
+  kind_of: seed
+  label: Breadfruit seed
+
+breadnut_seed:
+  kind_of: seed
+  label: Breadnut seed
+  foodb: 313
+  wikipedia: Brosimum_alicastrum
+
+canola_seed:
+  kind_of: seed
+  label: Canola seed
+  foodb: 797
+  wikipedia: Canola
+
+caraway_seed:
+  kind_of: seed
+  label:
+    - Caraway seed
+    - Meridian fennel
+    - Persian cummin
+  wikipedia: Caraway
+
+celery_seed:
+  kind_of: seed
+  label: Celery seed
+  foodb: 15
+  wikipedia: Celery
+
+chia_seed:
+  kind_of: seed
+  label: Chia seed
+  foodb: 333
+  wikipedia: Salvia_hispanica
+
+coriander_seed:
+  kind_of: seed
+  part_of: coriander
+  label:
+    - Coriander seed
+    - Cilantro seed
+
+cottonseed:
+  kind_of: seed
+  label: Cottonseed
+  foodb: 346
+  wikipedia: Cottonseed
+
+dill_seed:
+  kind_of: seed
+  part_of: dill
+  label: Dill seed
+
+fennel_seed:
+  kind_of: seed
+  part_of: fennel
+  label: Fennel seed
+
+fenugreek_seed:
+  kind_of: seed
+  part_of: fenugreek
+  label: Fenugreek seed
+
+flaxseed:
+  kind_of: seed
+  label: Flaxseed
+  foodb: 101
+  wikipedia: Flax
+
+ginkgo_nut:
+  kind_of: seed
+  label: Ginkgo nut
+  foodb: 372
+  wikipedia: Ginkgo_biloba
+
+hedge_mustard_seed:
+  kind_of: seed
+  label: Hedge mustard seed
+  foodb: 485
+  wikipedia: Sisymbrium_officinale
+
+hemp_seed:
+  kind_of: seed
+  label: Hemp seed
+  wikipedia: Hemp
+
+kaniwa:
+  kind_of: seed
+  label:
+    - Kaniwa
+    - Canihua
+    - Cañahua   
+  wikipedia: Chenopodium_pallidicaule
+
+lotus_seed:
+  kind_of: seed
+  label: Lotus seed
+  foodb: 406
+  wikipedia: Lotus_seed
+
+mustard_seed:
+  kind_of: seed
+  label: Mustard seed
+  foodb: 420
+  wikipedia: White_mustard
+
+palm_seed:
+  kind_of: seed
+  label: Palm seed
+  foodb: 605
+
+poppy_seed:
+  kind_of: seed
+  label: Poppy seed
+  foodb: 447
+  wikipedia: Poppy_seed
+
+primrose_seed:
+  kind_of: seed
+  label: Evening primrose
+  foodb: 120
+  wikipedia: Oenothera
+
+pumpkin_seed:
+  kind_of: seed
+  part_of: pumpkin
+  label: Pumpkin seed
+  label: Pepita
+  wikipedia: Pumpkin_seed
+
+quinoa:
+  kind_of: seed
+  label: Quinoa
+  foodb: 450
+  wikipedia: Quinoa
+
+radish_seed:
+  kind_of: seed
+  part_of: radish
+  label: Radish seed
+
+rowal_seed:
+  kind_of: seed
+  label: Rowal seed
+  foodb: 559
+  wikipedia: Pangium_edule
+
+safflower_seed:
+  kind_of: seed
+  label: Safflower seed
+  foodb: 42
+  wikipedia: Safflower
+
+sago_seed:
+  kind_of: seed
+  label: Sago seed
+  foodb: 607
+  wikipedia: Metroxylon_sagu
+
+sesame_seed:
+  kind_of: seed
+  label: Sesame seed
+  foodb: 170
+  wikipedia: Sesame
+
+shea_nut:
+  kind_of: seed
+  label: Shea nut
+  foodb: 800
+  wikipedia: Vitellaria
+
+sisymbrium_seed:
+  kind_of: seed
+  label: Sisymbrium Seed
+
+squash_seed:
+  kind_of: seed
+  part_of: squash
+  label: Squash seed
+
+sunflower_seed:
+  kind_of: seed
+  label: Sunflower seed
+  foodb: 86
+  wikipedia: Sunflower_seed
+
+tea_oil_camellia:
+  kind_of: seed
+  label: Tea oil camellia
+  foodb: 801
+  wikipedia: Camellia_oleifera
+
+ucuhuba_seed:
+  kind_of: seed
+  label: Ucuhuba seed
+  foodb: 802
+  wikipedia: Virola_surinamensis
+
+watermelon_seed:
+  kind_of: seed
+  label: Watermelon seed
+  wikipedia: Watermelon
+
+
+# Grains are grass seeds
+
+grain:
+  kind_of: seed
+  label: Grain
+
+amaranth_grain:
+  kind_of: grain
+  label: Amaranth grain
+  wikipedia: Amaranth_grain
+
+barley:
+  kind_of: grain
+  label: Barley
+  foodb: 88
+  wikipedia: Barley
+
+pearl_barley:
+  kind_of: barley
+  label:
+    - Pearl barley
+    - Pearled barley
+  wikipedia: Pearl_barley
+
+buckwheat:
+  kind_of: grain
+  label: Buckwheat
+  wikipedia: Buckwheat
+
+common_buckwheat:
+  kind_of: buckwheat
+  label:
+    - Common buckwheat
+    - Japanese buckwheat
+    - Silverhull buckwheat
+  foodb: 79
+  wikipedia: Buckwheat
+  
+tartary_buckwheat:
+  kind_of: buckwheat
+  label:
+    - Tartary buckwheat
+    - Green buckwheat
+    - Ku qiao
+    - Bitter buckwheat
+  foodb: 80
+  wikipedia: Fagopyrum_tataricum
+
+corn:
+  kind_of: grain
+  label:
+    - Corn
+    - Maize
+  foodb: 205
+  wikipedia: Maize
+
+blue_corn:
+  kind_of: corn
+  label:
+    - Blue corn
+    - Hopi maize
+  wikipedia: Blue_corn
+
+white_corn:
+  kind_of: corn
+  label: White corn
+
+yellow_corn:
+  kind_of: corn
+  label: Yellow corn
+
+millet_grain:
+  kind_of: grain
+  label: Millet
+  foodb: 126
+  wikipedia: Millet
+
+oat_grain:
+  # TODO review various levels of treatment for grains (see https://wholegrainscouncil.org/whole-grains-101/easy-ways-enjoy-whole-grains/grain-month-calendar/oats-%E2%80%93-january-grain-month/types)
+  kind_of: grain
+  label: Oat
+  foodb: 22
+  wikipedia: Oat
+
+rice:
+  kind_of: grain
+  label: Rice
+  foodb: 125
+  wikipedia: Rice
+
+black_rice:
+  kind_of: rice
+  label:
+    - Black rice
+    - Purple rice
+  wikipedia: Black_rice
+
+# TODO not sure if long/medium/short is relevant
+
+long_black_rice:
+  kind_of: black_rice
+  label: Long-grain black rice
+
+medium_black_rice:
+  kind_of: black_rice
+  label: Medium-grain black rice
+
+short_black_rice:
+  kind_of: black_rice
+  label: Short-grain black rice
+
+brown_rice:
+  kind_of: rice
+  label: Brown rice
+  wikipedia: Brown_rice
+
+long_brown_rice:
+  kind_of: brown_rice
+  label: Long-grain brown rice
+
+medium_brown_rice:
+  kind_of: brown_rice
+  label: Medium-grain brown rice
+
+short_brown_rice:
+  kind_of: brown_rice
+  label: Short-grain brown rice
+
+parboiled_rice:
+  kind_of: rice
+  label: Parboiled rice
+  wikipedia: Parboiled_rice
+
+red_rice:
+  kind_of: rice
+  label: Red rice
+  foodb: 235
+  wikipedia: Red_rice
+
+long_red_rice:
+  kind_of: red_rice
+  label: Long-grain red rice
+
+medium_red_rice:
+  kind_of: red_rice
+  label: Medium-grain red rice
+
+short_red_rice:
+  kind_of: red_rice
+  label: Short-grain red rice
+
+white_rice:
+  kind_of: rice
+  label: White rice
+  wikipedia: White_rice
+
+glutinous_white_rice:
+  kind_of: white_rice
+  label: Glutinous white rice
+
+long_white_rice:
+  kind_of: white_rice
+  label: Long-grain white rice
+
+medium_white_rice:
+  kind_of: white_rice
+  label: Medium-grain white rice
+
+short_white_rice:
+  kind_of: white_rice
+  label: Short-grain white rice
+
+wild_rice:
+  kind_of: rice
+  label: Wild rice
+  foodb: 516
+  # TODO foodb annual_wild_rice 236
+
+annual_wild_rice:
+  kind_of: wild_rice
+  label: Annual wild rice
+  foodb: 236
+
+rye_grain:
+  kind_of: grain
+  label: Rye grain
+  foodb: 169
+  wikipedia: Rye
+
+sorghum_grain:
+  kind_of: grain
+  label: Sorghum grain
+  foodb: 177
+  wikipedia: Sorghum
+
+sweet_corn:
+  kind_of: grain
+  label:
+    - Sweet corn
+    - Sweetcorn
+    - Pole corn
+  wikipedia: Sweet_corn
+
+white_sweet_corn:
+  kind_of: sweet_corn
+  label: White sweet corn
+
+yellow_sweet_corn:
+  kind_of: sweet_corn
+  label: Yellow sweet corn
+
+spelt:
+  kind_of: grain
+  label: Spelt
+  foodb: 489
+  wikipedia: Spelt
+  
+teff:
+  kind_of: grain
+  label:
+    - Teff
+    - Williams' lovegrass
+    - Annual bunch grass
+  wikipedia: Eragrostis_tef
+
+triticale:
+  kind_of: grain
+  label: Triticale
+  foodb: 246
+  wikipedia: Triticale
+
+wheat:
+  kind_of: grain
+  label: Wheat
+  foodb: 575
+  wikipedia: Wheat
+
+common_wheat:
+  kind_of: wheat
+  label: Common wheat
+  foodb: 187
+  wikipedia: Wheat
+
+durum_wheat:
+  kind_of: wheat
+  label: Durum wheat
+  wikipedia: Durum
+
+hard_wheat:
+  kind_of: wheat
+  label: Hard wheat
+  foodb: 242
+
+winter_hard_wheat:
+  kind_of: hard_wheat
+  label: Hard winter wheat
+
+spring_hard_wheat:
+  kind_of: hard_wheat
+  label: Spring winter wheat
+
+oriental_wheat:
+  kind_of: wheat
+  label:
+    - Oriental wheat
+    - Khorasan wheat
+    - Kamut
+  foodb: 552
+  wikipedia: Khorasan_wheat
+
+soft_wheat:
+  kind_of: wheat
+  label: Soft wheat
+  foodb: 242
+
+winter_soft_wheat:
+  kind_of: soft_wheat
+  label: Soft winter wheat
+
+spring_soft_wheat:
+  kind_of: soft_wheat
+  label: Spring winter wheat
+
+
+
+#
+# Seaweed
 #
 
 # TODO improve seaweeds, especially for Asian cuisine
+
+seaweed:
+  kind_of:
+    - plant
+    - seafood
+  label: Seaweed
+  wikipedia: Seaweed
 
 brown_alga:
   kind_of: seaweed
@@ -3861,3 +3944,110 @@ spirulina:
   label: Spirulina
   wikipedia: Spirulina_(dietary_supplement)
   foodb: 490
+
+
+
+#
+# Mushrooms
+#
+
+# NOTE while technically not a plant, let's consider mushrooms as such
+
+mushroom:
+  kind_of: plant
+  label: Mushroom
+  foodb: 883
+  wikipedia: Mushroom
+
+bolete:
+  kind_of: mushroom
+  label: Bolete
+  wikipedia: Bolete
+
+chanterelle:
+  kind_of: mushroom
+  label: Chanterelle
+  foodb: 583
+  wikipedia: Chanterelle
+
+cloud_ear_fungus:
+  kind_of: mushroom
+  label: Cloud ear
+  foodb: 568
+  wikipedia: Cloud_ear_fungus
+
+common_mushroom:
+  kind_of: mushroom
+  label: Common mushroom
+  foodb: 561
+  wikipedia: Agaricus_bisporus
+
+brown_mushroom:
+  kind_of: common_mushroom
+  label: Brown mushroom
+
+portobello_mushroom:
+  kind_of: common_mushroom
+  label:
+    - Portobello mushroom
+    - Swiss brown mushroom
+    - Chestnut mushroom
+  wikipedia: Agaricus_bisporus
+
+white_mushroom:
+  kind_of: common_mushroom
+  label: White mushroom
+
+enokitake:
+  kind_of: mushroom
+  label:
+    - Enokitake
+    - Enoki
+    - Enokidate
+    - Futu
+  foodb: 565
+  wikipedia: Enokitake
+
+maitake:
+  kind_of: mushroom
+  label: Maitake
+  foodb: 569
+  wikipedia: Grifola_frondosa
+
+morel:
+  kind_of: mushroom
+  label: Morel
+  foodb: 756
+  wikipedia: Morchella
+
+oyster_mushroom:
+  kind_of: mushroom
+  label: Oyster mushroom
+  foodb: 567
+  wikipedia: Pleurotus_ostreatus
+
+shiitake:
+  kind_of: mushroom
+  label: Shiitake
+  foodb: 562
+  wikipedia: Shiitake
+
+straw_mushroom:
+  kind_of: mushroom
+  label: Straw mushroom
+  wikipedia: Volvariella_volvacea
+
+truffle:
+  kind_of: mushroom
+  label: Truffle
+  wikipedia: Truffle
+
+wood_ear:
+  kind_of: mushroom
+  label:
+    - Wood ear
+    - Jew's ear
+    - Jelly ear
+    - Pepeao
+    - Pepeiao
+  wikipedia: Auricularia_auricula-judae

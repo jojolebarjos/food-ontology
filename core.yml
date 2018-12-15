@@ -101,36 +101,8 @@ spice:
   wikipedia: Spice
 
 
-#
-# Plants, mushrooms, algae
-#
-
-# TODO fix naming convention, especially for seeds and grains
-# TODO improve plant taxonomies, especially for fruits, vegetables and seeds
-# TODO Maybe need to think again the difference between a source and the actual product (e.g. apple fruit vs apple tree)
 
 
-plant:
-  kind_of: item
-  label: Plant
-  description: Any plant, from algae to vegetables
-
-mushroom:
-  # NOTE while technically not a plant, let's consider mushrooms as such
-  kind_of: plant
-  label: Mushroom
-  foodb: 883
-  wikipedia: Mushroom
-
-# TODO seed, all variations of cereals
-
-
-seaweed:
-  kind_of:
-    - plant
-    - seafood
-  label: Seaweed
-  wikipedia: Seaweed
 
 # TODO extract, concentrate...
 # TODO vinegar
